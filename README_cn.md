@@ -1,30 +1,32 @@
 [//]: # (居中组件)
 <h1 align="center">
-  <br>st-java.github.io<br>
+  <br>st-ssm.github.io<br>
 </h1>
 
 <p align="center">一个用jdk17开发的记事本项目。用来记录我学习java的课程笔记，并帮助零基础的开发者开始走上代码之路。</p>
 
 <div align="center">
 
-<img alt="GitHub" src="https://img.shields.io/github/license/wo1261931780/st-java.github.io?style=for-the-badge" >
 <img src="https://img.shields.io/badge/java-17-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" >
-<img src="https://komarev.com/ghpvc/?username=wo1261931780&style=for-the-badge&label=profile views">
-<img src="https://wakatime.com/badge/user/2e3dbad1-9754-4463-8b48-badfed379466/project/1f95b019-406c-4718-a040-981acab28903.svg?color=%23ca3e47&style=for-the-badge" alt="wakatime" >
-<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/wo1261931780/st-java.github.io?color=%23ca3e47&style=for-the-badge">
+<img src="https://img.shields.io/badge/Spring-2.70-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" >
+<img src="https://img.shields.io/badge/mysql-8.0-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" >
+<img src="https://img.shields.io/badge/maven-3.81-%23C71A36.svg?style=for-the-badge&logo=Apache maven&logoColor=white" >
+<br/>
+<img alt="GitHub" src="https://img.shields.io/github/license/wo1261931780/st-java.github.io?style=for-the-badge" >
+<img src="https://wakatime.com/badge/user/2e3dbad1-9754-4463-8b48-badfed379466/project/ae6f11dd-8983-4dd4-8b5c-1d5761184d46.svg?color=%23ca3e47&style=for-the-badge" alt="wakatime">
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wo1261931780/st-java.github.io?color=%23ca3e47&style=for-the-badge">
 
 <p align="center">
-    <a href="profile_temple.md">English</a>
+    <a href="README.md">English</a>
     ·
-    <a href="./profile_temple_cn.md">简体中文</a>    
+    <a href="./README_cn.md">简体中文</a>    
 <p/>
 
-![Alt](https://repobeats.axiom.co/api/embed/45a614ea242e2cdb9bb06d089e86d2784c4fa8c8.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/66ed964039388308895c005151b626242f0d011c.svg "Repobeats analytics image")
 </div>
 
 <p>
-  <img  align='right' src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwo1261931780%2Fst-java.github.io.svg?type=large">
+<img  align='right' src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwo1261931780%2Fst-ssm.github.io.svg?type=large">
 </p>
 
 ## Features
@@ -34,15 +36,20 @@
 - [x] 使用GPL-3开源证书
 - [ ] io流以后的内容暂未整理完成
 
-## 构造工具
+## Constructing tools
 
 <p>
 <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" style="margin-bottom: 4px;" height="30px">
+<img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" style="margin-bottom: 4px;" height="30px">
+<img src="https://img.shields.io/badge/navicat-f7d856.svg?&style=for-the-badge&logo=navicat&logoColor=white" style="margin-bottom: 4px;" height="30px">
+<img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" style="margin-bottom: 4px;" height="30px">
+<img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" style="margin-bottom: 4px;" height="30px">
 <img src="https://img.shields.io/badge/sonarlint-CB2029.svg?&style=for-the-badge&logo=sonarlint&logoColor=white" style="margin-bottom: 4px;" height="30px">
+<img src="https://img.shields.io/badge/Apache%20Maven-%23C71A36.svg?style=for-the-badge&logo=Apache%20Maven&logoColor=white" style="margin-bottom: 4px;" height="30px">
 <img src="https://img.shields.io/badge/IntelliJ%20IDEA-fd266a.svg?&style=for-the-badge&logo=IntelliJ%20IDEA&logoColor=white" style="margin-bottom: 4px;" height="30px">
 </p>
 
-## 关注我
+## Follow me
 
 <p>
 <a href="https://weibo.com/u/6511079715"><img src="https://img.shields.io/badge/佳珺不谈恋爱-%181717.svg?&style=for-the-badge&logo=sina-weibo&logoColor=white&color=d52c2b" style="margin-bottom: 4px;" height="30px" target="_blank"></a>
@@ -58,7 +65,7 @@
 <a href="https://leetcode.com/junw"><img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" style="margin-bottom: 4px;" height="30px" target="_blank"></a>
 </p>
 
-## 捐献
+## Donation
 
 [//]: # (捐献，这里还没有绑定账号)
 <div>
