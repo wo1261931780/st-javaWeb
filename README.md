@@ -17,9 +17,9 @@
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wo1261931780/st-java.github.io?color=%23ca3e47&style=for-the-badge">
 
 <p align="center">
-    <a href="profile_temple.md">English</a>
+    <a href="README.md">English</a>
     ·
-    <a href="./profile_temple_cn.md">简体中文</a>    
+    <a href="./README_cn.md">简体中文</a>    
 <p/>
 
 ![Alt](https://repobeats.axiom.co/api/embed/66ed964039388308895c005151b626242f0d011c.svg "Repobeats analytics image")
@@ -103,4 +103,3 @@ project. Special thanks to
 
 <h2 align="center"></h2>
  <p align="center"></p>
-
