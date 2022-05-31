@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa001JDBC;
+package com.stssm.github.io.javaweb.aaaJDBC2022年5月31日;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,7 +14,7 @@ import java.sql.Statement;
  */
 public class aaa002 {
     public static void main(String[] args) {
-
+        // 驱动注册可以直接省略
         // String mysqlUrl="jdbc:mysql://....../study001sql";
         // 中间省略了连接的名称
         // String mysqlUrl="jdbc:mysql:///study001sql";
