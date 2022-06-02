@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaaJDBC2022年5月31日;
+package com.stssm.github.io.javaweb.aaa002JDBC2022年5月31日;
 
 import org.junit.jupiter.api.Test;
 
