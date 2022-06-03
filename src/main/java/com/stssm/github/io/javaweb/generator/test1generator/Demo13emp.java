@@ -1,4 +1,4 @@
-package com.stssm.github.io.test1generator;
+package com.stssm.github.io.javaweb.generator.test1generator;
 //
 // import lombok.Data;
 //

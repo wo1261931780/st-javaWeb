@@ -1,4 +1,4 @@
-package com.stssm.github.io.test2generator;
+package com.stssm.github.io.javaweb.generator.test2generator;
 
 
 public class Demo13Emp {

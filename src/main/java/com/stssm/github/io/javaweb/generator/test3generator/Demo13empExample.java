@@ -1,4 +1,4 @@
-package com.stssm.github.io.test3generator;
+package com.stssm.github.io.javaweb.generator.test3generator;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
