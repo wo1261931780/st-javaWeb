@@ -18,7 +18,5 @@ public class demo001 {
 
 	public static void showdemo() {
 		System.out.println("我是方法一");
-
-
 	}
 }
