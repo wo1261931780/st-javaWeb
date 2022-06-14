@@ -25,7 +25,7 @@ public class aaa004StatementTest {
 		final String loginPassword = "LIU18959297292";
 
 		final Connection connection = DriverManager.getConnection(url, loginName, loginPassword);
-		final String sql1 = "update demo14 set balance='3000' where id=1";
+		final String sql1 = "update study002jdbc.demo1 set price='3000' where id=1";
 
 		try {
 			connection.setAutoCommit(false);// 开启事物

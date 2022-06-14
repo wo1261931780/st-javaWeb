@@ -21,7 +21,7 @@ public class aaa003connection {
 		final String loginPassword = "LIU18959297292";
 
 		final Connection connection = DriverManager.getConnection(url, loginName, loginPassword);
-		final String sql1 = "update demo14bankaccount.account_name set balance =2000 where id=1";
+		final String sql1 = "update study002jdbc.demo1 set name =2000 where id=1";
 
 		try {
 			connection.setAutoCommit(false);// 开启事物

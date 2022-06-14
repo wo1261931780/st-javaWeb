@@ -30,6 +30,7 @@ public class aaa001demo {
 		// 首先登录账号，获取连接
 		try (
 				final Connection connect = DriverManager.getConnection(url, user, paw)
+				// getconnection，就相当于我用上面的参数来连接数据库
 		) {
 			final Statement statement = connect.createStatement();// 获取一个statement对象
 			// String demosql = "select * from demo13emp where emp_name is not null";
