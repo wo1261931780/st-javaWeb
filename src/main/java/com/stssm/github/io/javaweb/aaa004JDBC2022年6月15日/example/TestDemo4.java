@@ -18,7 +18,7 @@ import java.util.Properties;
  *
  * @author liujiajun_junw
  */
-public class TestDemo2 {
+public class TestDemo4 {
 	@Test
 	public void test() throws Exception {
 		Properties prop = new Properties();
@@ -26,19 +26,11 @@ public class TestDemo2 {
 		DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
 		Connection connection = dataSource.getConnection();
 		// ******************************************************************************
-		String brandName = "测试";
-		String companyName = "测试2";
-		int ordered = 333;
-		String description = "";
-		int status = 444;
+		int id = 4;
 
-		String demoSql = "insert into study002jdbc.tb_brand(brand_name, company_name, ordered, description, status) values(?,?,?,?,?)";
+		String demoSql = "delete  from study002jdbc.tb_brand where id=?";
 		PreparedStatement preparedStatement = connection.prepareStatement(demoSql);
-		preparedStatement.setString(1, brandName);
-		preparedStatement.setString(2, companyName);
-		preparedStatement.setInt(3, ordered);
-		preparedStatement.setString(4, description);
-		preparedStatement.setInt(5, status);
+		preparedStatement.setInt(1, id);
 
 		int clomn = preparedStatement.executeUpdate();
 
