@@ -11,6 +11,8 @@
 	<groupId>com.st-ssm.github.io</groupId>
 	<artifactId>junw</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<!--<version>0.0.1-REALISE</version>-->
+	<!--什么时候，这个项目可以工作了，就可以开始正式版本了，嘻嘻-->
 	<name>junw</name>
 	<description>st-ssm.github.io</description>
 	<properties>
@@ -22,6 +24,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<!--<scope>test</scope>-->
+			<!--上面Descope表示作用范围-->
+			<!--在没有说明的情况下，scope默认就是compile-->
+			<!--如果我把mysql这些数据库驱动jar包设置为runtime-->
+			<!--那么我在日常使用的过程中，是无法访问这些类的-->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.experimental</groupId>
@@ -131,32 +138,33 @@
 					<groupId>org.junit.platform</groupId>
 					<artifactId>junit-platform-launcher</artifactId>
 					<scope>test</scope>
+					<!--这种比较特殊的，就是自动配置到测试环境中-->
 				</dependency>
 			</dependencies>
 			<build>
 				<plugins>
-					<!--<plugin>-->
-					<!--	<groupId>org.graalvm.buildtools</groupId>-->
-					<!--	<artifactId>native-maven-plugin</artifactId>-->
-					<!--	<version>${native-buildtools.version}</version>-->
-					<!--	<extensions>true</extensions>-->
-					<!--	<executions>-->
-					<!--		<execution>-->
-					<!--			<id>test-native</id>-->
-					<!--			<phase>test</phase>-->
-					<!--			<goals>-->
-					<!--				<goal>test</goal>-->
-					<!--			</goals>-->
-					<!--		</execution>-->
-					<!--		<execution>-->
-					<!--			<id>build-native</id>-->
-					<!--			<phase>package</phase>-->
-					<!--			<goals>-->
-					<!--				<goal>build</goal>-->
-					<!--			</goals>-->
-					<!--		</execution>-->
-					<!--	</executions>-->
-					<!--</plugin>-->
+					<plugin>
+						<groupId>org.graalvm.buildtools</groupId>
+						<artifactId>native-maven-plugin</artifactId>
+						<version>${native-buildtools.version}</version>
+						<extensions>true</extensions>
+						<executions>
+							<execution>
+								<id>test-native</id>
+								<phase>test</phase>
+								<goals>
+									<goal>test</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>build-native</id>
+								<phase>package</phase>
+								<goals>
+									<goal>build</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
 				</plugins>
 			</build>
 		</profile>
