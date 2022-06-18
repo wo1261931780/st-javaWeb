@@ -22,7 +22,7 @@ public class aaa010userLogin {
 		String login = "root";
 		Connection connection = null;
 		try {
-			String name = "demo";
+			String name = "DemoPojo";
 			String password = "123";
 			connection = DriverManager.getConnection(url, login, paw);
 			// 相当于，我设置好了连接以后，直接使用了prepare方法
