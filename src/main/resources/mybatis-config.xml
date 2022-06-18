@@ -42,10 +42,10 @@
 		<!--mapper就是用来操作数据库的SQL语句-->
 		<!--*********************************************************************-->
 		<!--<mapper resource="org/mybatis/example/BlogMapper.xml"/>-->
-		<!--<mapper resource="operateMybatisMapper.xml"/>-->
+		<!--<mapper resource="OperateMybatisMapper.xml"/>-->
 		<!--*********************************************************************-->
 		<!--这里要写相对路径，从而定位到mapper-->
-		<!--<mapper resource="com/stssm/github/io/javaweb/aaa004JDBC2022年6月18日/mapper/operateMybatisMapper.xml"/>-->
+		<!--<mapper resource="com/stssm/github/io/javaweb/aaa004JDBC2022年6月18日/mapper/OperateMybatisMapper.xml"/>-->
 		<!--因为之前修改了对应的mapper文件和xml文件，所以这里需要对应到-->
 		<!--*********************************************************************-->
 		<package name="com.stssm.github.io.javaweb.aaa004JDBC2022年6月18日.mapper"/>

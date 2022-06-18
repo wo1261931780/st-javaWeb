@@ -21,5 +21,5 @@ public interface DemoMapper {
 	// 我从mapper中调用方法，然后方法去xml中执行对应的SQL
 	// SQL执行完毕，在数据库中查询到对应的结果
 	// 然后结果作为一个list返回
-	
+
 }
