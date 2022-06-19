@@ -49,6 +49,7 @@
 		<!--因为之前修改了对应的mapper文件和xml文件，所以这里需要对应到-->
 		<!--*********************************************************************-->
 		<package name="com.stssm.github.io.javaweb.aaa004JDBC2022年6月18日.mapper"/>
+		<package name="com.stssm.github.io.javaweb.aaa005JDBC2022年6月19日.mapper"/>
 		<!--这里直接用包扫描的方式，就可以一次性加载所有的mapper进来-->
 
 
