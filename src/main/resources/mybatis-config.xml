@@ -50,6 +50,7 @@
 		<!--*********************************************************************-->
 		<package name="com.stssm.github.io.javaweb.aaa004JDBC2022年6月18日.mapper"/>
 		<package name="com.stssm.github.io.javaweb.aaa005JDBC2022年6月19日.mapper"/>
+		<package name="com.stssm.github.io.javaweb.aaa005JDBC2022年6月20日.mapper"/>
 		<!--这里直接用包扫描的方式，就可以一次性加载所有的mapper进来-->
 
 
