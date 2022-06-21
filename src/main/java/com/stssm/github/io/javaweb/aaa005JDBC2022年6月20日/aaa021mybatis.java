@@ -1,6 +1,6 @@
 package com.stssm.github.io.javaweb.aaa005JDBC2022年6月20日;
 
-import com.stssm.github.io.javaweb.aaa005JDBC2022年6月19日.mapper.TbBrandMapper;
+import com.stssm.github.io.javaweb.aaa005JDBC2022年6月20日.mapper.TbBrandMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -23,12 +23,14 @@ public class aaa021mybatis {
 	@Test
 	public void test() {
 		String resource = "mybatis-config.xml";
+		Integer id2 = 15;
 		try {
 			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			SqlSession sqlSession = build.openSession(true);
 			TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);
-			
+			mapper.selectAnnotate(id2);
+
 
 			sqlSession.close();
 		} catch (IOException e) {

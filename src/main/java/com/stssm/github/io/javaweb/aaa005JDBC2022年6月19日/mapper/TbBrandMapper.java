@@ -52,4 +52,6 @@ public interface TbBrandMapper {
 	int mybatisChange(TbBrand tbBrand);
 
 	int mybatisChange2(TbBrand tbBrand);
+
+	void selectAnnotate(int i);
 }
