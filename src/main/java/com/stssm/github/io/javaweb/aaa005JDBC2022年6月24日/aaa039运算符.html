@@ -1,0 +1,57 @@
+<!--
+ $ @Author: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @Date: 2022-06-25 21:41:18
+ $ @LastEditors: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @LastEditTime: 2022-06-25 21:41:26
+ $ @FilePath: \st-ssm.github.io\src\main\java\com\stssm\github\io\javaweb\aaa005JDBC2022年6月24日\aaa039运算符.html
+ $ @Description: 1111
+ $ @
+ $ @Copyright (c) 2022 by liujiajun 45444154+wo1261931780@users.noreply.github.com, All Rights Reserved.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>我是运算符测试</div>
+		<script>
+			var demo1 = 20;
+			var demo2 = "20";
+			console.log(demo1 == demo2); //true
+			// js会将两个不同类型的数据，优先转换为相同的类型
+			// 然后再比较
+			// 这就导致二者的内容完全相同的情况下，返回true
+			// -------------------------------------------------------
+			console.log("我是完全比较："); // false
+			console.log("我是完全比较：" + demo1 === demo2); // false
+			// 这里有个问题，不会打印前面的内容，直接展示最终比较结果
+			// -------------------------------------------------------
+			var demo3 = "abc";
+			console.log(demo2 == demo3); // false
+			// 在js中，如果我定义的是一个字符串
+			// 和数字比较的过程中，会将其转换为数字
+			// 但是字符串本身就不是数字，所以展示的结果为NaN
+			// 在上面比较，也就会出现false
+			var demo3 = +"abc"; // js的特殊操作
+			// 在字符串前面直接加上一个+号，就可以将字符串转换为数字了
+			console.log(demo3); // NaN
+			// 因为这里是字符串，所以直接解析就会出现报错
+			// 但是js会强行解释，将其设置为NaN作为结果返回
+			// -------------------------------------------------------
+			var demo4 = "100";
+			console.log(parseInt(demo4) + 1); // 101
+			// 直接使用parseInt转换字符串比较专业
+			// -------------------------------------------------------
+			var demo5 = +false;
+			console.log(demo5); // true
+			// 比较特殊的是这个
+			// 可以对布尔类型的变量进行转换,true就是1，false就是0
+			// 但是好像没有数字类型转换为布尔类型
+			// -------------------------------------------------------
+		</script>
+	</body>
+</html>
