@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+</head>
+<style>
+
+</style>
+<body>
+<div>我是普通单元格</div>
+<hr>
+<table border = "1" spellcheck = "0" width = "400px">
+	<tr>
+		<td colspan = "2">我是单元格1</td>
+		<!--这里col表示横跨列，-->
+		<!--但是不管横跨多少列，最终还是按照所在位置进行计算-->
+		<!--比如我有三列，合并两列，目前一行只有两列-->
+		<!--分别是第一列（1+2）和第二列（3）-->
+	</tr>
+	<tr>
+		<th>我是表头1</th>
+		<th>我是表头2</th>
+		<th>我是表头3</th>
+	</tr>
+	<!--这里也可以看到，表头中的内容，是默认居中的-->
+	<tr>
+		<td>我是内容</td>
+		<td>我是内容</td>
+		<td>我是内容</td>
+	</tr>
+	<tr>
+		<td rowspan = "2">我是内容</td>
+		纵行的合并，必须要使用
+		<td>我是内容</td>
+		<td>我是内容</td>
+	</tr>
+	<tr>
+		<td>我是内容</td>
+		<td>我是内容</td>
+	</tr>
+</table>
+<div></div>
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+</body>
+</html>
