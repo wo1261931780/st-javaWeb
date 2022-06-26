@@ -1,0 +1,63 @@
+<!--
+ $ @Author: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @Date: 2022-06-26 22:40:00
+ $ @LastEditors: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @LastEditTime: 2022-06-26 22:40:05
+ $ @FilePath: \st-ssm.github.io\src\main\java\com\stssm\github\io\javaweb\aaa011JDBC2022年6月26日\aaa046BOM.html
+ $ @Description: 1111
+ $ @
+ $ @Copyright (c) 2022 by liujiajun 45444154+wo1261931780@users.noreply.github.com, All Rights Reserved.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>我是bom对象</div>
+		<!-- bom对象，简单来说就是浏览器中的对象 -->
+		<!-- bom，就是browser -->
+		<!-- o,就是object -->
+		<!-- m，就是module，模型 -->
+		<!-- 翻译过来就是，浏览器对象模型 -->
+
+		<script>
+			// 对象五个类型
+			// window就是浏览器窗口对象
+			// 每个新的标签页，就是一个window对象
+			// -------------------------------------------------------
+			// navigator就是浏览器对象
+			// 一整个浏览器就是一个对象
+			// -------------------------------------------------------
+			// screen，就是当前展示的屏幕对象
+			// history，就是历史记录里面的对象
+			// location，地址栏里面的对象
+			// -------------------------------------------------------
+			confirm("是否删除？"); // 这个是浏览器的自带组件
+			// 添加以后，会出现确认和取消的按钮
+			var demo = confirm("是否确定");
+			console.log("我是返回的结果：" + demo);
+			// 根据点击结果，会得到true和false两个布尔值
+			if (demo) {
+				console.log("确定");
+			} else {
+				console.log("取消");
+			}
+			// 这里就可以根据返回的结果，灵活处理需要执行的功能
+			// -------------------------------------------------------
+			// setTimeout(() => {
+			// 	console.log("我是定时器执行的结果");
+			// }, 1000);
+			setTimeout(function (params) {
+				console.log("我是没有箭头函数的定时器");
+			}, 1000);
+			// -------------------------------------------------------
+			setInterval(function () {
+				console.log("我是循环定时器");
+			}, 1000);
+		</script>
+	</body>
+</html>
