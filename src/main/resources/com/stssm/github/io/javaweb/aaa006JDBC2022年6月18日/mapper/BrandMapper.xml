@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--名称标签，先随便写一个-->
+<mapper namespace="com.stssm.github.io.javaweb.aaa006JDBC2022年6月18日.mapper.BrandMapper">
+	<sql id="demo">
+		id,
+		brand_name   as brandName,
+		company_name as companyName,
+		ordered,
+		description,
+		status
+	</sql>
+
+	<!--<select id="showRes" resultType="com.stssm.github.io.javaweb.aaa004JDBC2022年6月18日.pojo.TbBrand">-->
+	<!--select * from mybatis.tb_brand where id =#{id};-->
+	<!--		select * from mybatis.tb_brand ;-->
+	<!--这里有个问题，-->
+	<!--如果我表的字段是多个单词+下划线组成的，那么需要进行一次转换-->
+	<!--比如add_name,在SQL中需要将其转换为add_name as addName-->
+	<!--还有一种方法，就是定义一个SQL片段，然后在里面直接引用-->
+	<!--select-->
+	<!--<include refid="aaa022html">-->
+	<!--</include>-->
+	<!--from mybatis.tb_brand;-->
+	<!--通过定义一个SQL片段，可以解决问题-->
+	<!--但是不够灵活-->
+	<!--</select>-->
+	<resultMap id="demo" type="TbBrand">
+		<result column="brand_name" property="brandName"></result>
+		<!--column对应数据库的列名-->
+		<!--property对应实体类的属性名-->
+		<result column="company_name" property="companyName"></result>
+		<!--这里相当于执行了一次字段的映射-->
+		<!--后续有类似的字段，只要配置一次，都可以生效-->
+	</resultMap>
+
+	<select id="showRes" resultMap="demo">
+		<!--这里要注意，返回的结果也进行了修改，原来是resultType，现在是resultMap-->
+		select *
+		from tb_brand;
+	</select>
+
+	<select id="selectById" resultType="com.stssm.github.io.javaweb.aaa006JDBC2022年6月18日.pojo.TbBrand">
+		select
+		<include refid="demo">
+		</include>
+		from mybatis.tb_brand where id =#{id};
+	</select>
+</mapper>
