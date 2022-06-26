@@ -1,0 +1,81 @@
+<!--
+ $ @Author: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @Date: 2022-06-26 18:44:07
+ $ @LastEditors: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @LastEditTime: 2022-06-26 18:44:12
+ $ @FilePath: \st-ssm.github.io\src\main\java\com\stssm\github\io\javaweb\aaa011JDBC2022年6月26日\aaa041流程控制.html
+ $ @Description: 1111
+ $ @
+ $ @Copyright (c) 2022 by liujiajun 45444154+wo1261931780@users.noreply.github.com, All Rights Reserved.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>我是流程控制</div>
+		<script>
+			var demo1 = 11;
+			if (demo1 === 11) {
+				console.log("我是变量demo1，结果为：" + demo1);
+			}
+			// -------------------------------------------------------
+			var demo2 = 1;
+			switch (demo2) {
+				case 1:
+					console.log("我是周一");
+					break;
+				// 其他的地方和java几乎一样
+				case 2:
+					console.log("我是周二");
+					break;
+				// 如果没有添加break命令，也会出现case穿透的问题
+				case 3:
+					console.log("我是周三");
+					break;
+				case 4:
+					console.log("我是周四");
+					break;
+				case 5:
+					console.log("我是周五");
+					break;
+				case 6:
+					console.log("我是周六");
+					break;
+				default:
+					console.log("我是默认出现的结果");
+			}
+			// -------------------------------------------------------
+			var demo3 = 0;
+			for (let i = 0; i <= 100; i++) {
+				// 注意一下这里，使用的let命令，表示只能在当前域内访问
+				demo3 += i;
+			}
+			console.log("我是demo3遍历结果：" + demo3);
+			// -------------------------------------------------------
+			{
+				var demo4 = 0;
+				let i = 1;
+				while (i <= 100) {
+					demo4 += i;
+					i++;
+				}
+			}
+			console.log("我是demo4遍历结果：" + demo4);
+			// -------------------------------------------------------
+			{
+				var demo5 = 0;
+				let i = 0;
+				do {
+					i++;
+					demo5 += i;
+				} while (i <= 100);
+			}
+			console.log("我是demo5遍历结果：" + demo5);
+		</script>
+	</body>
+</html>
