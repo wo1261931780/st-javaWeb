@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stssm.github.io.javaweb.mapper.TasParamVipqueueMapper">
+  <resultMap id="BaseResultMap" type="com.stssm.github.io.javaweb.model.TasParamVipqueue">
+    <!--@mbg.generated-->
+    <!--@Table tfb6ibs_dev.tas_param_vipqueue-->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="principle_code" jdbcType="VARCHAR" property="principleCode" />
+    <result column="queue_code" jdbcType="VARCHAR" property="queueCode" />
+    <result column="costom_id" jdbcType="VARCHAR" property="costomId" />
+    <result column="custom_name" jdbcType="VARCHAR" property="customName" />
+    <result column="tran_type_code" jdbcType="VARCHAR" property="tranTypeCode" />
+    <result column="tran_type_name" jdbcType="VARCHAR" property="tranTypeName" />
+    <result column="tran_node_code" jdbcType="INTEGER" property="tranNodeCode" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_code" jdbcType="INTEGER" property="userCode" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="gb_flag" jdbcType="INTEGER" property="gbFlag" />
+    <result column="enable_flag" jdbcType="INTEGER" property="enableFlag" />
+    <result column="sys_enty_id" jdbcType="VARCHAR" property="sysEntyId" />
+    <result column="sys_del_flg" jdbcType="VARCHAR" property="sysDelFlg" />
+    <result column="sys_crt_user" jdbcType="VARCHAR" property="sysCrtUser" />
+    <result column="sys_crt_dt" jdbcType="TIMESTAMP" property="sysCrtDt" />
+    <result column="sys_modify_user" jdbcType="VARCHAR" property="sysModifyUser" />
+    <result column="sys_modify_dt" jdbcType="TIMESTAMP" property="sysModifyDt" />
+    <result column="queue_name" jdbcType="VARCHAR" property="queueName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, principle_code, queue_code, costom_id, custom_name, tran_type_code, tran_type_name, 
+    tran_node_code, user_id, user_code, user_name, gb_flag, enable_flag, sys_enty_id, 
+    sys_del_flg, sys_crt_user, sys_crt_dt, sys_modify_user, sys_modify_dt, queue_name
+  </sql>
+  <update id="updateBatch" parameterType="java.util.List">
+    <!--@mbg.generated-->
+    update tfb6ibs_dev.tas_param_vipqueue
+    <trim prefix="set" suffixOverrides=",">
+      <trim prefix="principle_code = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.principleCode,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="queue_code = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.queueCode,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="costom_id = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.costomId,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="custom_name = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.customName,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="tran_type_code = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.tranTypeCode,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="tran_type_name = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.tranTypeName,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="tran_node_code = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.tranNodeCode,jdbcType=INTEGER}
+        </foreach>
+      </trim>
+      <trim prefix="user_id = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.userId,jdbcType=INTEGER}
+        </foreach>
+      </trim>
+      <trim prefix="user_code = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.userCode,jdbcType=INTEGER}
+        </foreach>
+      </trim>
+      <trim prefix="user_name = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.userName,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="gb_flag = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.gbFlag,jdbcType=INTEGER}
+        </foreach>
+      </trim>
+      <trim prefix="enable_flag = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.enableFlag,jdbcType=INTEGER}
+        </foreach>
+      </trim>
+      <trim prefix="sys_enty_id = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.sysEntyId,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="sys_del_flg = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.sysDelFlg,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="sys_crt_user = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.sysCrtUser,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="sys_crt_dt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.sysCrtDt,jdbcType=TIMESTAMP}
+        </foreach>
+      </trim>
+      <trim prefix="sys_modify_user = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.sysModifyUser,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="sys_modify_dt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.sysModifyDt,jdbcType=TIMESTAMP}
+        </foreach>
+      </trim>
+      <trim prefix="queue_name = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=VARCHAR} then #{item.queueName,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+    </trim>
+    where id in
+    <foreach close=")" collection="list" item="item" open="(" separator=", ">
+      #{item.id,jdbcType=VARCHAR}
+    </foreach>
+  </update>
+  <update id="updateBatchSelective" parameterType="java.util.List">
+    <!--@mbg.generated-->
+    update tfb6ibs_dev.tas_param_vipqueue
+    <trim prefix="set" suffixOverrides=",">
+      <trim prefix="principle_code = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.principleCode != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.principleCode,jdbcType=VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="queue_code = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.queueCode != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.queueCode,jdbcType=VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="costom_id = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.costomId != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.costomId,jdbcType=VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="custom_name = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.customName != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.customName,jdbcType=VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="tran_type_code = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.tranTypeCode != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.tranTypeCode,jdbcType=VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="tran_type_name = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.tranTypeName != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.tranTypeName,jdbcType=VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="tran_node_code = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.tranNodeCode != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.tranNodeCode,jdbcType=INTEGER}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="user_id = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.userId != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.userId,jdbcType=INTEGER}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="user_code = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.userCode != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.userCode,jdbcType=INTEGER}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="user_name = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.userName != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.userName,jdbcType=VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="gb_flag = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.gbFlag != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.gbFlag,jdbcType=INTEGER}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="enable_flag = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.enableFlag != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.enableFlag,jdbcType=INTEGER}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="sys_enty_id = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.sysEntyId != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.sysEntyId,jdbcType=VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="sys_del_flg = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.sysDelFlg != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.sysDelFlg,jdbcType=VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="sys_crt_user = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.sysCrtUser != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.sysCrtUser,jdbcType=VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="sys_crt_dt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.sysCrtDt != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.sysCrtDt,jdbcType=TIMESTAMP}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="sys_modify_user = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.sysModifyUser != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.sysModifyUser,jdbcType=VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="sys_modify_dt = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.sysModifyDt != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.sysModifyDt,jdbcType=TIMESTAMP}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="queue_name = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.queueName != null">
+            when id = #{item.id,jdbcType=VARCHAR} then #{item.queueName,jdbcType=VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+    </trim>
+    where id in
+    <foreach close=")" collection="list" item="item" open="(" separator=", ">
+      #{item.id,jdbcType=VARCHAR}
+    </foreach>
+  </update>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into tfb6ibs_dev.tas_param_vipqueue
+    (id, principle_code, queue_code, costom_id, custom_name, tran_type_code, tran_type_name, 
+      tran_node_code, user_id, user_code, user_name, gb_flag, enable_flag, sys_enty_id, 
+      sys_del_flg, sys_crt_user, sys_crt_dt, sys_modify_user, sys_modify_dt, queue_name
+      )
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.id,jdbcType=VARCHAR}, #{item.principleCode,jdbcType=VARCHAR}, #{item.queueCode,jdbcType=VARCHAR}, 
+        #{item.costomId,jdbcType=VARCHAR}, #{item.customName,jdbcType=VARCHAR}, #{item.tranTypeCode,jdbcType=VARCHAR}, 
+        #{item.tranTypeName,jdbcType=VARCHAR}, #{item.tranNodeCode,jdbcType=INTEGER}, #{item.userId,jdbcType=INTEGER}, 
+        #{item.userCode,jdbcType=INTEGER}, #{item.userName,jdbcType=VARCHAR}, #{item.gbFlag,jdbcType=INTEGER}, 
+        #{item.enableFlag,jdbcType=INTEGER}, #{item.sysEntyId,jdbcType=VARCHAR}, #{item.sysDelFlg,jdbcType=VARCHAR}, 
+        #{item.sysCrtUser,jdbcType=VARCHAR}, #{item.sysCrtDt,jdbcType=TIMESTAMP}, #{item.sysModifyUser,jdbcType=VARCHAR}, 
+        #{item.sysModifyDt,jdbcType=TIMESTAMP}, #{item.queueName,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+  <insert id="insertOrUpdate" parameterType="com.stssm.github.io.javaweb.model.TasParamVipqueue">
+    <!--@mbg.generated-->
+    insert into tfb6ibs_dev.tas_param_vipqueue
+    (id, principle_code, queue_code, costom_id, custom_name, tran_type_code, tran_type_name, 
+      tran_node_code, user_id, user_code, user_name, gb_flag, enable_flag, sys_enty_id, 
+      sys_del_flg, sys_crt_user, sys_crt_dt, sys_modify_user, sys_modify_dt, queue_name
+      )
+    values
+    (#{id,jdbcType=VARCHAR}, #{principleCode,jdbcType=VARCHAR}, #{queueCode,jdbcType=VARCHAR}, 
+      #{costomId,jdbcType=VARCHAR}, #{customName,jdbcType=VARCHAR}, #{tranTypeCode,jdbcType=VARCHAR}, 
+      #{tranTypeName,jdbcType=VARCHAR}, #{tranNodeCode,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, 
+      #{userCode,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{gbFlag,jdbcType=INTEGER}, 
+      #{enableFlag,jdbcType=INTEGER}, #{sysEntyId,jdbcType=VARCHAR}, #{sysDelFlg,jdbcType=VARCHAR}, 
+      #{sysCrtUser,jdbcType=VARCHAR}, #{sysCrtDt,jdbcType=TIMESTAMP}, #{sysModifyUser,jdbcType=VARCHAR}, 
+      #{sysModifyDt,jdbcType=TIMESTAMP}, #{queueName,jdbcType=VARCHAR})
+    on duplicate key update 
+    id = #{id,jdbcType=VARCHAR}, 
+    principle_code = #{principleCode,jdbcType=VARCHAR}, 
+    queue_code = #{queueCode,jdbcType=VARCHAR}, 
+    costom_id = #{costomId,jdbcType=VARCHAR}, 
+    custom_name = #{customName,jdbcType=VARCHAR}, 
+    tran_type_code = #{tranTypeCode,jdbcType=VARCHAR}, 
+    tran_type_name = #{tranTypeName,jdbcType=VARCHAR}, 
+    tran_node_code = #{tranNodeCode,jdbcType=INTEGER}, 
+    user_id = #{userId,jdbcType=INTEGER}, 
+    user_code = #{userCode,jdbcType=INTEGER}, 
+    user_name = #{userName,jdbcType=VARCHAR}, 
+    gb_flag = #{gbFlag,jdbcType=INTEGER}, 
+    enable_flag = #{enableFlag,jdbcType=INTEGER}, 
+    sys_enty_id = #{sysEntyId,jdbcType=VARCHAR}, 
+    sys_del_flg = #{sysDelFlg,jdbcType=VARCHAR}, 
+    sys_crt_user = #{sysCrtUser,jdbcType=VARCHAR}, 
+    sys_crt_dt = #{sysCrtDt,jdbcType=TIMESTAMP}, 
+    sys_modify_user = #{sysModifyUser,jdbcType=VARCHAR}, 
+    sys_modify_dt = #{sysModifyDt,jdbcType=TIMESTAMP}, 
+    queue_name = #{queueName,jdbcType=VARCHAR}
+  </insert>
+  <insert id="insertOrUpdateSelective" parameterType="com.stssm.github.io.javaweb.model.TasParamVipqueue">
+    <!--@mbg.generated-->
+    insert into tfb6ibs_dev.tas_param_vipqueue
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null and id != ''">
+        id,
+      </if>
+      <if test="principleCode != null and principleCode != ''">
+        principle_code,
+      </if>
+      <if test="queueCode != null and queueCode != ''">
+        queue_code,
+      </if>
+      <if test="costomId != null and costomId != ''">
+        costom_id,
+      </if>
+      <if test="customName != null and customName != ''">
+        custom_name,
+      </if>
+      <if test="tranTypeCode != null and tranTypeCode != ''">
+        tran_type_code,
+      </if>
+      <if test="tranTypeName != null and tranTypeName != ''">
+        tran_type_name,
+      </if>
+      <if test="tranNodeCode != null">
+        tran_node_code,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="userCode != null">
+        user_code,
+      </if>
+      <if test="userName != null and userName != ''">
+        user_name,
+      </if>
+      <if test="gbFlag != null">
+        gb_flag,
+      </if>
+      <if test="enableFlag != null">
+        enable_flag,
+      </if>
+      <if test="sysEntyId != null and sysEntyId != ''">
+        sys_enty_id,
+      </if>
+      <if test="sysDelFlg != null and sysDelFlg != ''">
+        sys_del_flg,
+      </if>
+      <if test="sysCrtUser != null and sysCrtUser != ''">
+        sys_crt_user,
+      </if>
+      <if test="sysCrtDt != null">
+        sys_crt_dt,
+      </if>
+      <if test="sysModifyUser != null and sysModifyUser != ''">
+        sys_modify_user,
+      </if>
+      <if test="sysModifyDt != null">
+        sys_modify_dt,
+      </if>
+      <if test="queueName != null and queueName != ''">
+        queue_name,
+      </if>
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null and id != ''">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="principleCode != null and principleCode != ''">
+        #{principleCode,jdbcType=VARCHAR},
+      </if>
+      <if test="queueCode != null and queueCode != ''">
+        #{queueCode,jdbcType=VARCHAR},
+      </if>
+      <if test="costomId != null and costomId != ''">
+        #{costomId,jdbcType=VARCHAR},
+      </if>
+      <if test="customName != null and customName != ''">
+        #{customName,jdbcType=VARCHAR},
+      </if>
+      <if test="tranTypeCode != null and tranTypeCode != ''">
+        #{tranTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="tranTypeName != null and tranTypeName != ''">
+        #{tranTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="tranNodeCode != null">
+        #{tranNodeCode,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userCode != null">
+        #{userCode,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null and userName != ''">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="gbFlag != null">
+        #{gbFlag,jdbcType=INTEGER},
+      </if>
+      <if test="enableFlag != null">
+        #{enableFlag,jdbcType=INTEGER},
+      </if>
+      <if test="sysEntyId != null and sysEntyId != ''">
+        #{sysEntyId,jdbcType=VARCHAR},
+      </if>
+      <if test="sysDelFlg != null and sysDelFlg != ''">
+        #{sysDelFlg,jdbcType=VARCHAR},
+      </if>
+      <if test="sysCrtUser != null and sysCrtUser != ''">
+        #{sysCrtUser,jdbcType=VARCHAR},
+      </if>
+      <if test="sysCrtDt != null">
+        #{sysCrtDt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sysModifyUser != null and sysModifyUser != ''">
+        #{sysModifyUser,jdbcType=VARCHAR},
+      </if>
+      <if test="sysModifyDt != null">
+        #{sysModifyDt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="queueName != null and queueName != ''">
+        #{queueName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+    on duplicate key update 
+    <trim suffixOverrides=",">
+      <if test="id != null and id != ''">
+        id = #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="principleCode != null and principleCode != ''">
+        principle_code = #{principleCode,jdbcType=VARCHAR},
+      </if>
+      <if test="queueCode != null and queueCode != ''">
+        queue_code = #{queueCode,jdbcType=VARCHAR},
+      </if>
+      <if test="costomId != null and costomId != ''">
+        costom_id = #{costomId,jdbcType=VARCHAR},
+      </if>
+      <if test="customName != null and customName != ''">
+        custom_name = #{customName,jdbcType=VARCHAR},
+      </if>
+      <if test="tranTypeCode != null and tranTypeCode != ''">
+        tran_type_code = #{tranTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="tranTypeName != null and tranTypeName != ''">
+        tran_type_name = #{tranTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="tranNodeCode != null">
+        tran_node_code = #{tranNodeCode,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userCode != null">
+        user_code = #{userCode,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null and userName != ''">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="gbFlag != null">
+        gb_flag = #{gbFlag,jdbcType=INTEGER},
+      </if>
+      <if test="enableFlag != null">
+        enable_flag = #{enableFlag,jdbcType=INTEGER},
+      </if>
+      <if test="sysEntyId != null and sysEntyId != ''">
+        sys_enty_id = #{sysEntyId,jdbcType=VARCHAR},
+      </if>
+      <if test="sysDelFlg != null and sysDelFlg != ''">
+        sys_del_flg = #{sysDelFlg,jdbcType=VARCHAR},
+      </if>
+      <if test="sysCrtUser != null and sysCrtUser != ''">
+        sys_crt_user = #{sysCrtUser,jdbcType=VARCHAR},
+      </if>
+      <if test="sysCrtDt != null">
+        sys_crt_dt = #{sysCrtDt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sysModifyUser != null and sysModifyUser != ''">
+        sys_modify_user = #{sysModifyUser,jdbcType=VARCHAR},
+      </if>
+      <if test="sysModifyDt != null">
+        sys_modify_dt = #{sysModifyDt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="queueName != null and queueName != ''">
+        queue_name = #{queueName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
