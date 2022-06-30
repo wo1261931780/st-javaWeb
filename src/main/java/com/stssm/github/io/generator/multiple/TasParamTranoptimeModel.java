@@ -1,16 +1,37 @@
-// package com.stssm.github.io.generator;
+// package com.stssm.github.io.generator.multiple;
 //
 // // import io.swagger.annotations.ApiModel;
 // // import io.swagger.annotations.ApiModelProperty;
 //
-// import lombok.Data;
+// import lombok.*;
 //
 // import java.io.Serializable;
 // import java.time.LocalDateTime;
 //
+// /**
+//  * Created by Intellij IDEA.
+//  * Project:st-ssm.github.io
+//  * Package:com.stssm.github.io.generator
+//  *
+//  * @author liujiajun_junw
+//  * @Date 2022-06-20-58  星期三
+//  * @description
+//  * @param
+//  * @return
+//  * @exception
+//  */
 //
-// @Data
-// public class TasParamTranoptime implements Serializable {
+// /**
+//  * 交易节点操作时长参数信息表(宁波项目测试表-后续会主动删除)
+//  */
+// // @ApiModel(value = "交易节点操作时长参数信息表(宁波项目测试表-后续会主动删除)")
+// @Getter
+// @Setter
+// @ToString
+// @Builder
+// @AllArgsConstructor
+// @NoArgsConstructor
+// public class TasParamTranoptimeModel implements Serializable {
 // 	private static final long serialVersionUID = 1L;
 // 	/**
 // 	 * 主键

@@ -1,671 +1,672 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.stssm.github.io.generator.multiple.TasParamTranoptimeMapper">
-	<resultMap id="BaseResultMap" type="com.stssm.github.io.generator.multiple.TasParamTranoptime">
-		<!--@mbg.generated-->
-		<!--@Table mybatis.tas_param_tranoptime-->
-		<id column="ID" jdbcType="VARCHAR" property="id"/>
-		<result column="TRAN_NODE_CODE" jdbcType="VARCHAR" property="tranNodeCode"/>
-		<result column="TRAN_TYPE_CODE" jdbcType="VARCHAR" property="tranTypeCode"/>
-		<result column="OPTIME" jdbcType="VARCHAR" property="optime"/>
-		<result column="OPTIME_MEDIAN" jdbcType="VARCHAR" property="optimeMedian"/>
-		<result column="OPTIME_MEDIAN_EXT" jdbcType="VARCHAR" property="optimeMedianExt"/>
-		<result column="REST_TIME" jdbcType="VARCHAR" property="restTime"/>
-		<result column="RESTTIME_WARN" jdbcType="VARCHAR" property="resttimeWarn"/>
-		<result column="EXT1" jdbcType="VARCHAR" property="ext1"/>
-		<result column="EXT2" jdbcType="VARCHAR" property="ext2"/>
-		<result column="ENABLE_FLAG" jdbcType="CHAR" property="enableFlag"/>
-		<result column="SYS_ENTY_ID" jdbcType="VARCHAR" property="sysEntyId"/>
-		<result column="SYS_DEL_FLG" jdbcType="VARCHAR" property="sysDelFlg"/>
-		<result column="SYS_CRT_USER" jdbcType="VARCHAR" property="sysCrtUser"/>
-		<result column="SYS_CRT_DT" jdbcType="TIMESTAMP" property="sysCrtDt"/>
-		<result column="SYS_MODIFY_USER" jdbcType="VARCHAR" property="sysModifyUser"/>
-		<result column="SYS_MODIFY_DT" jdbcType="TIMESTAMP" property="sysModifyDt"/>
-	</resultMap>
-	<sql id="Base_Column_List">
-		<!--@mbg.generated-->
-		ID, TRAN_NODE_CODE, TRAN_TYPE_CODE, OPTIME, OPTIME_MEDIAN, OPTIME_MEDIAN_EXT, REST_TIME,
-		RESTTIME_WARN, EXT1, EXT2, ENABLE_FLAG, SYS_ENTY_ID, SYS_DEL_FLG, SYS_CRT_USER, SYS_CRT_DT,
-		SYS_MODIFY_USER, SYS_MODIFY_DT
-	</sql>
-	<select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-		<!--@mbg.generated-->
-		select
-		<include refid="Base_Column_List"/>
-		from mybatis.tas_param_tranoptime
-		where ID = #{id,jdbcType=VARCHAR}
-	</select>
-	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-		<!--@mbg.generated-->
-		delete from mybatis.tas_param_tranoptime
-		where ID = #{id,jdbcType=VARCHAR}
-	</delete>
-	<insert id="insert" parameterType="com.stssm.github.io.generator.multiple.TasParamTranoptime">
-		<!--@mbg.generated-->
-		insert into mybatis.tas_param_tranoptime (ID, TRAN_NODE_CODE, TRAN_TYPE_CODE,
-		OPTIME, OPTIME_MEDIAN, OPTIME_MEDIAN_EXT,
-		REST_TIME, RESTTIME_WARN, EXT1,
-		EXT2, ENABLE_FLAG, SYS_ENTY_ID,
-		SYS_DEL_FLG, SYS_CRT_USER, SYS_CRT_DT,
-		SYS_MODIFY_USER, SYS_MODIFY_DT)
-		values (#{id,jdbcType=VARCHAR}, #{tranNodeCode,jdbcType=VARCHAR}, #{tranTypeCode,jdbcType=VARCHAR},
-		#{optime,jdbcType=VARCHAR}, #{optimeMedian,jdbcType=VARCHAR}, #{optimeMedianExt,jdbcType=VARCHAR},
-		#{restTime,jdbcType=VARCHAR}, #{resttimeWarn,jdbcType=VARCHAR}, #{ext1,jdbcType=VARCHAR},
-		#{ext2,jdbcType=VARCHAR}, #{enableFlag,jdbcType=CHAR}, #{sysEntyId,jdbcType=VARCHAR},
-		#{sysDelFlg,jdbcType=VARCHAR}, #{sysCrtUser,jdbcType=VARCHAR}, #{sysCrtDt,jdbcType=TIMESTAMP},
-		#{sysModifyUser,jdbcType=VARCHAR}, #{sysModifyDt,jdbcType=TIMESTAMP})
-	</insert>
-	<insert id="insertSelective" parameterType="com.stssm.github.io.generator.multiple.TasParamTranoptime">
-		<!--@mbg.generated-->
-		insert into mybatis.tas_param_tranoptime
-		<trim prefix="(" suffix=")" suffixOverrides=",">
-			<if test="id != null and id != ''">
-				ID,
-			</if>
-			<if test="tranNodeCode != null and tranNodeCode != ''">
-				TRAN_NODE_CODE,
-			</if>
-			<if test="tranTypeCode != null and tranTypeCode != ''">
-				TRAN_TYPE_CODE,
-			</if>
-			<if test="optime != null and optime != ''">
-				OPTIME,
-			</if>
-			<if test="optimeMedian != null and optimeMedian != ''">
-				OPTIME_MEDIAN,
-			</if>
-			<if test="optimeMedianExt != null and optimeMedianExt != ''">
-				OPTIME_MEDIAN_EXT,
-			</if>
-			<if test="restTime != null and restTime != ''">
-				REST_TIME,
-			</if>
-			<if test="resttimeWarn != null and resttimeWarn != ''">
-				RESTTIME_WARN,
-			</if>
-			<if test="ext1 != null and ext1 != ''">
-				EXT1,
-			</if>
-			<if test="ext2 != null and ext2 != ''">
-				EXT2,
-			</if>
-			<if test="enableFlag != null and enableFlag != ''">
-				ENABLE_FLAG,
-			</if>
-			<if test="sysEntyId != null and sysEntyId != ''">
-				SYS_ENTY_ID,
-			</if>
-			<if test="sysDelFlg != null and sysDelFlg != ''">
-				SYS_DEL_FLG,
-			</if>
-			<if test="sysCrtUser != null and sysCrtUser != ''">
-				SYS_CRT_USER,
-			</if>
-			<if test="sysCrtDt != null">
-				SYS_CRT_DT,
-			</if>
-			<if test="sysModifyUser != null and sysModifyUser != ''">
-				SYS_MODIFY_USER,
-			</if>
-			<if test="sysModifyDt != null">
-				SYS_MODIFY_DT,
-			</if>
-		</trim>
-		<trim prefix="values (" suffix=")" suffixOverrides=",">
-			<if test="id != null and id != ''">
-				#{id,jdbcType=VARCHAR},
-			</if>
-			<if test="tranNodeCode != null and tranNodeCode != ''">
-				#{tranNodeCode,jdbcType=VARCHAR},
-			</if>
-			<if test="tranTypeCode != null and tranTypeCode != ''">
-				#{tranTypeCode,jdbcType=VARCHAR},
-			</if>
-			<if test="optime != null and optime != ''">
-				#{optime,jdbcType=VARCHAR},
-			</if>
-			<if test="optimeMedian != null and optimeMedian != ''">
-				#{optimeMedian,jdbcType=VARCHAR},
-			</if>
-			<if test="optimeMedianExt != null and optimeMedianExt != ''">
-				#{optimeMedianExt,jdbcType=VARCHAR},
-			</if>
-			<if test="restTime != null and restTime != ''">
-				#{restTime,jdbcType=VARCHAR},
-			</if>
-			<if test="resttimeWarn != null and resttimeWarn != ''">
-				#{resttimeWarn,jdbcType=VARCHAR},
-			</if>
-			<if test="ext1 != null and ext1 != ''">
-				#{ext1,jdbcType=VARCHAR},
-			</if>
-			<if test="ext2 != null and ext2 != ''">
-				#{ext2,jdbcType=VARCHAR},
-			</if>
-			<if test="enableFlag != null and enableFlag != ''">
-				#{enableFlag,jdbcType=CHAR},
-			</if>
-			<if test="sysEntyId != null and sysEntyId != ''">
-				#{sysEntyId,jdbcType=VARCHAR},
-			</if>
-			<if test="sysDelFlg != null and sysDelFlg != ''">
-				#{sysDelFlg,jdbcType=VARCHAR},
-			</if>
-			<if test="sysCrtUser != null and sysCrtUser != ''">
-				#{sysCrtUser,jdbcType=VARCHAR},
-			</if>
-			<if test="sysCrtDt != null">
-				#{sysCrtDt,jdbcType=TIMESTAMP},
-			</if>
-			<if test="sysModifyUser != null and sysModifyUser != ''">
-				#{sysModifyUser,jdbcType=VARCHAR},
-			</if>
-			<if test="sysModifyDt != null">
-				#{sysModifyDt,jdbcType=TIMESTAMP},
-			</if>
-		</trim>
-	</insert>
-	<update id="updateByPrimaryKeySelective" parameterType="com.stssm.github.io.generator.multiple.TasParamTranoptime">
-		<!--@mbg.generated-->
-		update mybatis.tas_param_tranoptime
-		<set>
-			<if test="tranNodeCode != null and tranNodeCode != ''">
-				TRAN_NODE_CODE = #{tranNodeCode,jdbcType=VARCHAR},
-			</if>
-			<if test="tranTypeCode != null and tranTypeCode != ''">
-				TRAN_TYPE_CODE = #{tranTypeCode,jdbcType=VARCHAR},
-			</if>
-			<if test="optime != null and optime != ''">
-				OPTIME = #{optime,jdbcType=VARCHAR},
-			</if>
-			<if test="optimeMedian != null and optimeMedian != ''">
-				OPTIME_MEDIAN = #{optimeMedian,jdbcType=VARCHAR},
-			</if>
-			<if test="optimeMedianExt != null and optimeMedianExt != ''">
-				OPTIME_MEDIAN_EXT = #{optimeMedianExt,jdbcType=VARCHAR},
-			</if>
-			<if test="restTime != null and restTime != ''">
-				REST_TIME = #{restTime,jdbcType=VARCHAR},
-			</if>
-			<if test="resttimeWarn != null and resttimeWarn != ''">
-				RESTTIME_WARN = #{resttimeWarn,jdbcType=VARCHAR},
-			</if>
-			<if test="ext1 != null and ext1 != ''">
-				EXT1 = #{ext1,jdbcType=VARCHAR},
-			</if>
-			<if test="ext2 != null and ext2 != ''">
-				EXT2 = #{ext2,jdbcType=VARCHAR},
-			</if>
-			<if test="enableFlag != null and enableFlag != ''">
-				ENABLE_FLAG = #{enableFlag,jdbcType=CHAR},
-			</if>
-			<if test="sysEntyId != null and sysEntyId != ''">
-				SYS_ENTY_ID = #{sysEntyId,jdbcType=VARCHAR},
-			</if>
-			<if test="sysDelFlg != null and sysDelFlg != ''">
-				SYS_DEL_FLG = #{sysDelFlg,jdbcType=VARCHAR},
-			</if>
-			<if test="sysCrtUser != null and sysCrtUser != ''">
-				SYS_CRT_USER = #{sysCrtUser,jdbcType=VARCHAR},
-			</if>
-			<if test="sysCrtDt != null">
-				SYS_CRT_DT = #{sysCrtDt,jdbcType=TIMESTAMP},
-			</if>
-			<if test="sysModifyUser != null and sysModifyUser != ''">
-				SYS_MODIFY_USER = #{sysModifyUser,jdbcType=VARCHAR},
-			</if>
-			<if test="sysModifyDt != null">
-				SYS_MODIFY_DT = #{sysModifyDt,jdbcType=TIMESTAMP},
-			</if>
-		</set>
-		where ID = #{id,jdbcType=VARCHAR}
-	</update>
-	<update id="updateByPrimaryKey" parameterType="com.stssm.github.io.generator.multiple.TasParamTranoptime">
-		<!--@mbg.generated-->
-		update mybatis.tas_param_tranoptime
-		set TRAN_NODE_CODE = #{tranNodeCode,jdbcType=VARCHAR},
-		TRAN_TYPE_CODE = #{tranTypeCode,jdbcType=VARCHAR},
-		OPTIME = #{optime,jdbcType=VARCHAR},
-		OPTIME_MEDIAN = #{optimeMedian,jdbcType=VARCHAR},
-		OPTIME_MEDIAN_EXT = #{optimeMedianExt,jdbcType=VARCHAR},
-		REST_TIME = #{restTime,jdbcType=VARCHAR},
-		RESTTIME_WARN = #{resttimeWarn,jdbcType=VARCHAR},
-		EXT1 = #{ext1,jdbcType=VARCHAR},
-		EXT2 = #{ext2,jdbcType=VARCHAR},
-		ENABLE_FLAG = #{enableFlag,jdbcType=CHAR},
-		SYS_ENTY_ID = #{sysEntyId,jdbcType=VARCHAR},
-		SYS_DEL_FLG = #{sysDelFlg,jdbcType=VARCHAR},
-		SYS_CRT_USER = #{sysCrtUser,jdbcType=VARCHAR},
-		SYS_CRT_DT = #{sysCrtDt,jdbcType=TIMESTAMP},
-		SYS_MODIFY_USER = #{sysModifyUser,jdbcType=VARCHAR},
-		SYS_MODIFY_DT = #{sysModifyDt,jdbcType=TIMESTAMP}
-		where ID = #{id,jdbcType=VARCHAR}
-	</update>
-	<update id="updateBatch" parameterType="java.util.List">
-		<!--@mbg.generated-->
-		update mybatis.tas_param_tranoptime
-		<trim prefix="set" suffixOverrides=",">
-			<trim prefix="TRAN_NODE_CODE = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					when ID = #{item.id,jdbcType=VARCHAR} then #{item.tranNodeCode,jdbcType=VARCHAR}
-				</foreach>
-			</trim>
-			<trim prefix="TRAN_TYPE_CODE = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					when ID = #{item.id,jdbcType=VARCHAR} then #{item.tranTypeCode,jdbcType=VARCHAR}
-				</foreach>
-			</trim>
-			<trim prefix="OPTIME = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					when ID = #{item.id,jdbcType=VARCHAR} then #{item.optime,jdbcType=VARCHAR}
-				</foreach>
-			</trim>
-			<trim prefix="OPTIME_MEDIAN = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					when ID = #{item.id,jdbcType=VARCHAR} then #{item.optimeMedian,jdbcType=VARCHAR}
-				</foreach>
-			</trim>
-			<trim prefix="OPTIME_MEDIAN_EXT = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					when ID = #{item.id,jdbcType=VARCHAR} then #{item.optimeMedianExt,jdbcType=VARCHAR}
-				</foreach>
-			</trim>
-			<trim prefix="REST_TIME = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					when ID = #{item.id,jdbcType=VARCHAR} then #{item.restTime,jdbcType=VARCHAR}
-				</foreach>
-			</trim>
-			<trim prefix="RESTTIME_WARN = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					when ID = #{item.id,jdbcType=VARCHAR} then #{item.resttimeWarn,jdbcType=VARCHAR}
-				</foreach>
-			</trim>
-			<trim prefix="EXT1 = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					when ID = #{item.id,jdbcType=VARCHAR} then #{item.ext1,jdbcType=VARCHAR}
-				</foreach>
-			</trim>
-			<trim prefix="EXT2 = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					when ID = #{item.id,jdbcType=VARCHAR} then #{item.ext2,jdbcType=VARCHAR}
-				</foreach>
-			</trim>
-			<trim prefix="ENABLE_FLAG = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					when ID = #{item.id,jdbcType=VARCHAR} then #{item.enableFlag,jdbcType=CHAR}
-				</foreach>
-			</trim>
-			<trim prefix="SYS_ENTY_ID = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysEntyId,jdbcType=VARCHAR}
-				</foreach>
-			</trim>
-			<trim prefix="SYS_DEL_FLG = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysDelFlg,jdbcType=VARCHAR}
-				</foreach>
-			</trim>
-			<trim prefix="SYS_CRT_USER = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysCrtUser,jdbcType=VARCHAR}
-				</foreach>
-			</trim>
-			<trim prefix="SYS_CRT_DT = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysCrtDt,jdbcType=TIMESTAMP}
-				</foreach>
-			</trim>
-			<trim prefix="SYS_MODIFY_USER = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysModifyUser,jdbcType=VARCHAR}
-				</foreach>
-			</trim>
-			<trim prefix="SYS_MODIFY_DT = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysModifyDt,jdbcType=TIMESTAMP}
-				</foreach>
-			</trim>
-		</trim>
-		where ID in
-		<foreach close=")" collection="list" item="item" open="(" separator=", ">
-			#{item.id,jdbcType=VARCHAR}
-		</foreach>
-	</update>
-	<update id="updateBatchSelective" parameterType="java.util.List">
-		<!--@mbg.generated-->
-		update mybatis.tas_param_tranoptime
-		<trim prefix="set" suffixOverrides=",">
-			<trim prefix="TRAN_NODE_CODE = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					<if test="item.tranNodeCode != null">
-						when ID = #{item.id,jdbcType=VARCHAR} then #{item.tranNodeCode,jdbcType=VARCHAR}
-					</if>
-				</foreach>
-			</trim>
-			<trim prefix="TRAN_TYPE_CODE = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					<if test="item.tranTypeCode != null">
-						when ID = #{item.id,jdbcType=VARCHAR} then #{item.tranTypeCode,jdbcType=VARCHAR}
-					</if>
-				</foreach>
-			</trim>
-			<trim prefix="OPTIME = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					<if test="item.optime != null">
-						when ID = #{item.id,jdbcType=VARCHAR} then #{item.optime,jdbcType=VARCHAR}
-					</if>
-				</foreach>
-			</trim>
-			<trim prefix="OPTIME_MEDIAN = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					<if test="item.optimeMedian != null">
-						when ID = #{item.id,jdbcType=VARCHAR} then #{item.optimeMedian,jdbcType=VARCHAR}
-					</if>
-				</foreach>
-			</trim>
-			<trim prefix="OPTIME_MEDIAN_EXT = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					<if test="item.optimeMedianExt != null">
-						when ID = #{item.id,jdbcType=VARCHAR} then #{item.optimeMedianExt,jdbcType=VARCHAR}
-					</if>
-				</foreach>
-			</trim>
-			<trim prefix="REST_TIME = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					<if test="item.restTime != null">
-						when ID = #{item.id,jdbcType=VARCHAR} then #{item.restTime,jdbcType=VARCHAR}
-					</if>
-				</foreach>
-			</trim>
-			<trim prefix="RESTTIME_WARN = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					<if test="item.resttimeWarn != null">
-						when ID = #{item.id,jdbcType=VARCHAR} then #{item.resttimeWarn,jdbcType=VARCHAR}
-					</if>
-				</foreach>
-			</trim>
-			<trim prefix="EXT1 = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					<if test="item.ext1 != null">
-						when ID = #{item.id,jdbcType=VARCHAR} then #{item.ext1,jdbcType=VARCHAR}
-					</if>
-				</foreach>
-			</trim>
-			<trim prefix="EXT2 = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					<if test="item.ext2 != null">
-						when ID = #{item.id,jdbcType=VARCHAR} then #{item.ext2,jdbcType=VARCHAR}
-					</if>
-				</foreach>
-			</trim>
-			<trim prefix="ENABLE_FLAG = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					<if test="item.enableFlag != null">
-						when ID = #{item.id,jdbcType=VARCHAR} then #{item.enableFlag,jdbcType=CHAR}
-					</if>
-				</foreach>
-			</trim>
-			<trim prefix="SYS_ENTY_ID = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					<if test="item.sysEntyId != null">
-						when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysEntyId,jdbcType=VARCHAR}
-					</if>
-				</foreach>
-			</trim>
-			<trim prefix="SYS_DEL_FLG = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					<if test="item.sysDelFlg != null">
-						when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysDelFlg,jdbcType=VARCHAR}
-					</if>
-				</foreach>
-			</trim>
-			<trim prefix="SYS_CRT_USER = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					<if test="item.sysCrtUser != null">
-						when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysCrtUser,jdbcType=VARCHAR}
-					</if>
-				</foreach>
-			</trim>
-			<trim prefix="SYS_CRT_DT = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					<if test="item.sysCrtDt != null">
-						when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysCrtDt,jdbcType=TIMESTAMP}
-					</if>
-				</foreach>
-			</trim>
-			<trim prefix="SYS_MODIFY_USER = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					<if test="item.sysModifyUser != null">
-						when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysModifyUser,jdbcType=VARCHAR}
-					</if>
-				</foreach>
-			</trim>
-			<trim prefix="SYS_MODIFY_DT = case" suffix="end,">
-				<foreach collection="list" index="index" item="item">
-					<if test="item.sysModifyDt != null">
-						when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysModifyDt,jdbcType=TIMESTAMP}
-					</if>
-				</foreach>
-			</trim>
-		</trim>
-		where ID in
-		<foreach close=")" collection="list" item="item" open="(" separator=", ">
-			#{item.id,jdbcType=VARCHAR}
-		</foreach>
-	</update>
-	<insert id="batchInsert" parameterType="map">
-		<!--@mbg.generated-->
-		insert into mybatis.tas_param_tranoptime
-		(ID, TRAN_NODE_CODE, TRAN_TYPE_CODE, OPTIME, OPTIME_MEDIAN, OPTIME_MEDIAN_EXT, REST_TIME,
-		RESTTIME_WARN, EXT1, EXT2, ENABLE_FLAG, SYS_ENTY_ID, SYS_DEL_FLG, SYS_CRT_USER,
-		SYS_CRT_DT, SYS_MODIFY_USER, SYS_MODIFY_DT)
-		values
-		<foreach collection="list" item="item" separator=",">
-			(#{item.id,jdbcType=VARCHAR}, #{item.tranNodeCode,jdbcType=VARCHAR}, #{item.tranTypeCode,jdbcType=VARCHAR},
-			#{item.optime,jdbcType=VARCHAR}, #{item.optimeMedian,jdbcType=VARCHAR},
-			#{item.optimeMedianExt,jdbcType=VARCHAR},
-			#{item.restTime,jdbcType=VARCHAR}, #{item.resttimeWarn,jdbcType=VARCHAR}, #{item.ext1,jdbcType=VARCHAR},
-			#{item.ext2,jdbcType=VARCHAR}, #{item.enableFlag,jdbcType=CHAR}, #{item.sysEntyId,jdbcType=VARCHAR},
-			#{item.sysDelFlg,jdbcType=VARCHAR}, #{item.sysCrtUser,jdbcType=VARCHAR},
-			#{item.sysCrtDt,jdbcType=TIMESTAMP},
-			#{item.sysModifyUser,jdbcType=VARCHAR}, #{item.sysModifyDt,jdbcType=TIMESTAMP})
-		</foreach>
-	</insert>
-	<insert id="insertOrUpdate" parameterType="com.stssm.github.io.generator.multiple.TasParamTranoptime">
-		<!--@mbg.generated-->
-		insert into mybatis.tas_param_tranoptime
-		(ID, TRAN_NODE_CODE, TRAN_TYPE_CODE, OPTIME, OPTIME_MEDIAN, OPTIME_MEDIAN_EXT, REST_TIME,
-		RESTTIME_WARN, EXT1, EXT2, ENABLE_FLAG, SYS_ENTY_ID, SYS_DEL_FLG, SYS_CRT_USER,
-		SYS_CRT_DT, SYS_MODIFY_USER, SYS_MODIFY_DT)
-		values
-		(#{id,jdbcType=VARCHAR}, #{tranNodeCode,jdbcType=VARCHAR}, #{tranTypeCode,jdbcType=VARCHAR},
-		#{optime,jdbcType=VARCHAR}, #{optimeMedian,jdbcType=VARCHAR}, #{optimeMedianExt,jdbcType=VARCHAR},
-		#{restTime,jdbcType=VARCHAR}, #{resttimeWarn,jdbcType=VARCHAR}, #{ext1,jdbcType=VARCHAR},
-		#{ext2,jdbcType=VARCHAR}, #{enableFlag,jdbcType=CHAR}, #{sysEntyId,jdbcType=VARCHAR},
-		#{sysDelFlg,jdbcType=VARCHAR}, #{sysCrtUser,jdbcType=VARCHAR}, #{sysCrtDt,jdbcType=TIMESTAMP},
-		#{sysModifyUser,jdbcType=VARCHAR}, #{sysModifyDt,jdbcType=TIMESTAMP})
-		on duplicate key update
-		ID = #{id,jdbcType=VARCHAR},
-		TRAN_NODE_CODE = #{tranNodeCode,jdbcType=VARCHAR},
-		TRAN_TYPE_CODE = #{tranTypeCode,jdbcType=VARCHAR},
-		OPTIME = #{optime,jdbcType=VARCHAR},
-		OPTIME_MEDIAN = #{optimeMedian,jdbcType=VARCHAR},
-		OPTIME_MEDIAN_EXT = #{optimeMedianExt,jdbcType=VARCHAR},
-		REST_TIME = #{restTime,jdbcType=VARCHAR},
-		RESTTIME_WARN = #{resttimeWarn,jdbcType=VARCHAR},
-		EXT1 = #{ext1,jdbcType=VARCHAR},
-		EXT2 = #{ext2,jdbcType=VARCHAR},
-		ENABLE_FLAG = #{enableFlag,jdbcType=CHAR},
-		SYS_ENTY_ID = #{sysEntyId,jdbcType=VARCHAR},
-		SYS_DEL_FLG = #{sysDelFlg,jdbcType=VARCHAR},
-		SYS_CRT_USER = #{sysCrtUser,jdbcType=VARCHAR},
-		SYS_CRT_DT = #{sysCrtDt,jdbcType=TIMESTAMP},
-		SYS_MODIFY_USER = #{sysModifyUser,jdbcType=VARCHAR},
-		SYS_MODIFY_DT = #{sysModifyDt,jdbcType=TIMESTAMP}
-	</insert>
-	<insert id="insertOrUpdateSelective" parameterType="com.stssm.github.io.generator.multiple.TasParamTranoptime">
-		<!--@mbg.generated-->
-		insert into mybatis.tas_param_tranoptime
-		<trim prefix="(" suffix=")" suffixOverrides=",">
-			<if test="id != null and id != ''">
-				ID,
-			</if>
-			<if test="tranNodeCode != null and tranNodeCode != ''">
-				TRAN_NODE_CODE,
-			</if>
-			<if test="tranTypeCode != null and tranTypeCode != ''">
-				TRAN_TYPE_CODE,
-			</if>
-			<if test="optime != null and optime != ''">
-				OPTIME,
-			</if>
-			<if test="optimeMedian != null and optimeMedian != ''">
-				OPTIME_MEDIAN,
-			</if>
-			<if test="optimeMedianExt != null and optimeMedianExt != ''">
-				OPTIME_MEDIAN_EXT,
-			</if>
-			<if test="restTime != null and restTime != ''">
-				REST_TIME,
-			</if>
-			<if test="resttimeWarn != null and resttimeWarn != ''">
-				RESTTIME_WARN,
-			</if>
-			<if test="ext1 != null and ext1 != ''">
-				EXT1,
-			</if>
-			<if test="ext2 != null and ext2 != ''">
-				EXT2,
-			</if>
-			<if test="enableFlag != null and enableFlag != ''">
-				ENABLE_FLAG,
-			</if>
-			<if test="sysEntyId != null and sysEntyId != ''">
-				SYS_ENTY_ID,
-			</if>
-			<if test="sysDelFlg != null and sysDelFlg != ''">
-				SYS_DEL_FLG,
-			</if>
-			<if test="sysCrtUser != null and sysCrtUser != ''">
-				SYS_CRT_USER,
-			</if>
-			<if test="sysCrtDt != null">
-				SYS_CRT_DT,
-			</if>
-			<if test="sysModifyUser != null and sysModifyUser != ''">
-				SYS_MODIFY_USER,
-			</if>
-			<if test="sysModifyDt != null">
-				SYS_MODIFY_DT,
-			</if>
-		</trim>
-		values
-		<trim prefix="(" suffix=")" suffixOverrides=",">
-			<if test="id != null and id != ''">
-				#{id,jdbcType=VARCHAR},
-			</if>
-			<if test="tranNodeCode != null and tranNodeCode != ''">
-				#{tranNodeCode,jdbcType=VARCHAR},
-			</if>
-			<if test="tranTypeCode != null and tranTypeCode != ''">
-				#{tranTypeCode,jdbcType=VARCHAR},
-			</if>
-			<if test="optime != null and optime != ''">
-				#{optime,jdbcType=VARCHAR},
-			</if>
-			<if test="optimeMedian != null and optimeMedian != ''">
-				#{optimeMedian,jdbcType=VARCHAR},
-			</if>
-			<if test="optimeMedianExt != null and optimeMedianExt != ''">
-				#{optimeMedianExt,jdbcType=VARCHAR},
-			</if>
-			<if test="restTime != null and restTime != ''">
-				#{restTime,jdbcType=VARCHAR},
-			</if>
-			<if test="resttimeWarn != null and resttimeWarn != ''">
-				#{resttimeWarn,jdbcType=VARCHAR},
-			</if>
-			<if test="ext1 != null and ext1 != ''">
-				#{ext1,jdbcType=VARCHAR},
-			</if>
-			<if test="ext2 != null and ext2 != ''">
-				#{ext2,jdbcType=VARCHAR},
-			</if>
-			<if test="enableFlag != null and enableFlag != ''">
-				#{enableFlag,jdbcType=CHAR},
-			</if>
-			<if test="sysEntyId != null and sysEntyId != ''">
-				#{sysEntyId,jdbcType=VARCHAR},
-			</if>
-			<if test="sysDelFlg != null and sysDelFlg != ''">
-				#{sysDelFlg,jdbcType=VARCHAR},
-			</if>
-			<if test="sysCrtUser != null and sysCrtUser != ''">
-				#{sysCrtUser,jdbcType=VARCHAR},
-			</if>
-			<if test="sysCrtDt != null">
-				#{sysCrtDt,jdbcType=TIMESTAMP},
-			</if>
-			<if test="sysModifyUser != null and sysModifyUser != ''">
-				#{sysModifyUser,jdbcType=VARCHAR},
-			</if>
-			<if test="sysModifyDt != null">
-				#{sysModifyDt,jdbcType=TIMESTAMP},
-			</if>
-		</trim>
-		on duplicate key update
-		<trim suffixOverrides=",">
-			<if test="id != null and id != ''">
-				ID = #{id,jdbcType=VARCHAR},
-			</if>
-			<if test="tranNodeCode != null and tranNodeCode != ''">
-				TRAN_NODE_CODE = #{tranNodeCode,jdbcType=VARCHAR},
-			</if>
-			<if test="tranTypeCode != null and tranTypeCode != ''">
-				TRAN_TYPE_CODE = #{tranTypeCode,jdbcType=VARCHAR},
-			</if>
-			<if test="optime != null and optime != ''">
-				OPTIME = #{optime,jdbcType=VARCHAR},
-			</if>
-			<if test="optimeMedian != null and optimeMedian != ''">
-				OPTIME_MEDIAN = #{optimeMedian,jdbcType=VARCHAR},
-			</if>
-			<if test="optimeMedianExt != null and optimeMedianExt != ''">
-				OPTIME_MEDIAN_EXT = #{optimeMedianExt,jdbcType=VARCHAR},
-			</if>
-			<if test="restTime != null and restTime != ''">
-				REST_TIME = #{restTime,jdbcType=VARCHAR},
-			</if>
-			<if test="resttimeWarn != null and resttimeWarn != ''">
-				RESTTIME_WARN = #{resttimeWarn,jdbcType=VARCHAR},
-			</if>
-			<if test="ext1 != null and ext1 != ''">
-				EXT1 = #{ext1,jdbcType=VARCHAR},
-			</if>
-			<if test="ext2 != null and ext2 != ''">
-				EXT2 = #{ext2,jdbcType=VARCHAR},
-			</if>
-			<if test="enableFlag != null and enableFlag != ''">
-				ENABLE_FLAG = #{enableFlag,jdbcType=CHAR},
-			</if>
-			<if test="sysEntyId != null and sysEntyId != ''">
-				SYS_ENTY_ID = #{sysEntyId,jdbcType=VARCHAR},
-			</if>
-			<if test="sysDelFlg != null and sysDelFlg != ''">
-				SYS_DEL_FLG = #{sysDelFlg,jdbcType=VARCHAR},
-			</if>
-			<if test="sysCrtUser != null and sysCrtUser != ''">
-				SYS_CRT_USER = #{sysCrtUser,jdbcType=VARCHAR},
-			</if>
-			<if test="sysCrtDt != null">
-				SYS_CRT_DT = #{sysCrtDt,jdbcType=TIMESTAMP},
-			</if>
-			<if test="sysModifyUser != null and sysModifyUser != ''">
-				SYS_MODIFY_USER = #{sysModifyUser,jdbcType=VARCHAR},
-			</if>
-			<if test="sysModifyDt != null">
-				SYS_MODIFY_DT = #{sysModifyDt,jdbcType=TIMESTAMP},
-			</if>
-		</trim>
-	</insert>
-</mapper>
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">-->
+<!--<mapper namespace="com.stssm.github.io.generator.multiple.TasParamTranoptimeMapper">-->
+<!--	<resultMap id="BaseResultMap" type="com.stssm.github.io.generator.multiple.TasParamTranoptimeModel">-->
+<!--		&lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--		&lt;!&ndash;@Table mybatis.tas_param_tranoptime&ndash;&gt;-->
+<!--		<id column="ID" jdbcType="VARCHAR" property="id"/>-->
+<!--		<result column="TRAN_NODE_CODE" jdbcType="VARCHAR" property="tranNodeCode"/>-->
+<!--		<result column="TRAN_TYPE_CODE" jdbcType="VARCHAR" property="tranTypeCode"/>-->
+<!--		<result column="OPTIME" jdbcType="VARCHAR" property="optime"/>-->
+<!--		<result column="OPTIME_MEDIAN" jdbcType="VARCHAR" property="optimeMedian"/>-->
+<!--		<result column="OPTIME_MEDIAN_EXT" jdbcType="VARCHAR" property="optimeMedianExt"/>-->
+<!--		<result column="REST_TIME" jdbcType="VARCHAR" property="restTime"/>-->
+<!--		<result column="RESTTIME_WARN" jdbcType="VARCHAR" property="resttimeWarn"/>-->
+<!--		<result column="EXT1" jdbcType="VARCHAR" property="ext1"/>-->
+<!--		<result column="EXT2" jdbcType="VARCHAR" property="ext2"/>-->
+<!--		<result column="ENABLE_FLAG" jdbcType="CHAR" property="enableFlag"/>-->
+<!--		<result column="SYS_ENTY_ID" jdbcType="VARCHAR" property="sysEntyId"/>-->
+<!--		<result column="SYS_DEL_FLG" jdbcType="VARCHAR" property="sysDelFlg"/>-->
+<!--		<result column="SYS_CRT_USER" jdbcType="VARCHAR" property="sysCrtUser"/>-->
+<!--		<result column="SYS_CRT_DT" jdbcType="TIMESTAMP" property="sysCrtDt"/>-->
+<!--		<result column="SYS_MODIFY_USER" jdbcType="VARCHAR" property="sysModifyUser"/>-->
+<!--		<result column="SYS_MODIFY_DT" jdbcType="TIMESTAMP" property="sysModifyDt"/>-->
+<!--	</resultMap>-->
+<!--	<sql id="Base_Column_List">-->
+<!--		&lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--		ID, TRAN_NODE_CODE, TRAN_TYPE_CODE, OPTIME, OPTIME_MEDIAN, OPTIME_MEDIAN_EXT, REST_TIME,-->
+<!--		RESTTIME_WARN, EXT1, EXT2, ENABLE_FLAG, SYS_ENTY_ID, SYS_DEL_FLG, SYS_CRT_USER, SYS_CRT_DT,-->
+<!--		SYS_MODIFY_USER, SYS_MODIFY_DT-->
+<!--	</sql>-->
+<!--	<select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">-->
+<!--		&lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--		select-->
+<!--		<include refid="Base_Column_List"/>-->
+<!--		from mybatis.tas_param_tranoptime-->
+<!--		where ID = #{id,jdbcType=VARCHAR}-->
+<!--	</select>-->
+<!--	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">-->
+<!--		&lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--		delete from mybatis.tas_param_tranoptime-->
+<!--		where ID = #{id,jdbcType=VARCHAR}-->
+<!--	</delete>-->
+<!--	<insert id="insert" parameterType="com.stssm.github.io.generator.multiple.TasParamTranoptimeModel">-->
+<!--		&lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--		insert into mybatis.tas_param_tranoptime (ID, TRAN_NODE_CODE, TRAN_TYPE_CODE,-->
+<!--		OPTIME, OPTIME_MEDIAN, OPTIME_MEDIAN_EXT,-->
+<!--		REST_TIME, RESTTIME_WARN, EXT1,-->
+<!--		EXT2, ENABLE_FLAG, SYS_ENTY_ID,-->
+<!--		SYS_DEL_FLG, SYS_CRT_USER, SYS_CRT_DT,-->
+<!--		SYS_MODIFY_USER, SYS_MODIFY_DT)-->
+<!--		values (#{id,jdbcType=VARCHAR}, #{tranNodeCode,jdbcType=VARCHAR}, #{tranTypeCode,jdbcType=VARCHAR},-->
+<!--		#{optime,jdbcType=VARCHAR}, #{optimeMedian,jdbcType=VARCHAR}, #{optimeMedianExt,jdbcType=VARCHAR},-->
+<!--		#{restTime,jdbcType=VARCHAR}, #{resttimeWarn,jdbcType=VARCHAR}, #{ext1,jdbcType=VARCHAR},-->
+<!--		#{ext2,jdbcType=VARCHAR}, #{enableFlag,jdbcType=CHAR}, #{sysEntyId,jdbcType=VARCHAR},-->
+<!--		#{sysDelFlg,jdbcType=VARCHAR}, #{sysCrtUser,jdbcType=VARCHAR}, #{sysCrtDt,jdbcType=TIMESTAMP},-->
+<!--		#{sysModifyUser,jdbcType=VARCHAR}, #{sysModifyDt,jdbcType=TIMESTAMP})-->
+<!--	</insert>-->
+<!--	<insert id="insertSelective" parameterType="com.stssm.github.io.generator.multiple.TasParamTranoptimeModel">-->
+<!--		&lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--		insert into mybatis.tas_param_tranoptime-->
+<!--		<trim prefix="(" suffix=")" suffixOverrides=",">-->
+<!--			<if test="id != null and id != ''">-->
+<!--				ID,-->
+<!--			</if>-->
+<!--			<if test="tranNodeCode != null and tranNodeCode != ''">-->
+<!--				TRAN_NODE_CODE,-->
+<!--			</if>-->
+<!--			<if test="tranTypeCode != null and tranTypeCode != ''">-->
+<!--				TRAN_TYPE_CODE,-->
+<!--			</if>-->
+<!--			<if test="optime != null and optime != ''">-->
+<!--				OPTIME,-->
+<!--			</if>-->
+<!--			<if test="optimeMedian != null and optimeMedian != ''">-->
+<!--				OPTIME_MEDIAN,-->
+<!--			</if>-->
+<!--			<if test="optimeMedianExt != null and optimeMedianExt != ''">-->
+<!--				OPTIME_MEDIAN_EXT,-->
+<!--			</if>-->
+<!--			<if test="restTime != null and restTime != ''">-->
+<!--				REST_TIME,-->
+<!--			</if>-->
+<!--			<if test="resttimeWarn != null and resttimeWarn != ''">-->
+<!--				RESTTIME_WARN,-->
+<!--			</if>-->
+<!--			<if test="ext1 != null and ext1 != ''">-->
+<!--				EXT1,-->
+<!--			</if>-->
+<!--			<if test="ext2 != null and ext2 != ''">-->
+<!--				EXT2,-->
+<!--			</if>-->
+<!--			<if test="enableFlag != null and enableFlag != ''">-->
+<!--				ENABLE_FLAG,-->
+<!--			</if>-->
+<!--			<if test="sysEntyId != null and sysEntyId != ''">-->
+<!--				SYS_ENTY_ID,-->
+<!--			</if>-->
+<!--			<if test="sysDelFlg != null and sysDelFlg != ''">-->
+<!--				SYS_DEL_FLG,-->
+<!--			</if>-->
+<!--			<if test="sysCrtUser != null and sysCrtUser != ''">-->
+<!--				SYS_CRT_USER,-->
+<!--			</if>-->
+<!--			<if test="sysCrtDt != null">-->
+<!--				SYS_CRT_DT,-->
+<!--			</if>-->
+<!--			<if test="sysModifyUser != null and sysModifyUser != ''">-->
+<!--				SYS_MODIFY_USER,-->
+<!--			</if>-->
+<!--			<if test="sysModifyDt != null">-->
+<!--				SYS_MODIFY_DT,-->
+<!--			</if>-->
+<!--		</trim>-->
+<!--		<trim prefix="values (" suffix=")" suffixOverrides=",">-->
+<!--			<if test="id != null and id != ''">-->
+<!--				#{id,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="tranNodeCode != null and tranNodeCode != ''">-->
+<!--				#{tranNodeCode,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="tranTypeCode != null and tranTypeCode != ''">-->
+<!--				#{tranTypeCode,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="optime != null and optime != ''">-->
+<!--				#{optime,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="optimeMedian != null and optimeMedian != ''">-->
+<!--				#{optimeMedian,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="optimeMedianExt != null and optimeMedianExt != ''">-->
+<!--				#{optimeMedianExt,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="restTime != null and restTime != ''">-->
+<!--				#{restTime,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="resttimeWarn != null and resttimeWarn != ''">-->
+<!--				#{resttimeWarn,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="ext1 != null and ext1 != ''">-->
+<!--				#{ext1,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="ext2 != null and ext2 != ''">-->
+<!--				#{ext2,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="enableFlag != null and enableFlag != ''">-->
+<!--				#{enableFlag,jdbcType=CHAR},-->
+<!--			</if>-->
+<!--			<if test="sysEntyId != null and sysEntyId != ''">-->
+<!--				#{sysEntyId,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="sysDelFlg != null and sysDelFlg != ''">-->
+<!--				#{sysDelFlg,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="sysCrtUser != null and sysCrtUser != ''">-->
+<!--				#{sysCrtUser,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="sysCrtDt != null">-->
+<!--				#{sysCrtDt,jdbcType=TIMESTAMP},-->
+<!--			</if>-->
+<!--			<if test="sysModifyUser != null and sysModifyUser != ''">-->
+<!--				#{sysModifyUser,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="sysModifyDt != null">-->
+<!--				#{sysModifyDt,jdbcType=TIMESTAMP},-->
+<!--			</if>-->
+<!--		</trim>-->
+<!--	</insert>-->
+<!--	<update id="updateByPrimaryKeySelective"-->
+<!--	        parameterType="com.stssm.github.io.generator.multiple.TasParamTranoptimeModel">-->
+<!--		&lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--		update mybatis.tas_param_tranoptime-->
+<!--		<set>-->
+<!--			<if test="tranNodeCode != null and tranNodeCode != ''">-->
+<!--				TRAN_NODE_CODE = #{tranNodeCode,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="tranTypeCode != null and tranTypeCode != ''">-->
+<!--				TRAN_TYPE_CODE = #{tranTypeCode,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="optime != null and optime != ''">-->
+<!--				OPTIME = #{optime,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="optimeMedian != null and optimeMedian != ''">-->
+<!--				OPTIME_MEDIAN = #{optimeMedian,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="optimeMedianExt != null and optimeMedianExt != ''">-->
+<!--				OPTIME_MEDIAN_EXT = #{optimeMedianExt,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="restTime != null and restTime != ''">-->
+<!--				REST_TIME = #{restTime,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="resttimeWarn != null and resttimeWarn != ''">-->
+<!--				RESTTIME_WARN = #{resttimeWarn,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="ext1 != null and ext1 != ''">-->
+<!--				EXT1 = #{ext1,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="ext2 != null and ext2 != ''">-->
+<!--				EXT2 = #{ext2,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="enableFlag != null and enableFlag != ''">-->
+<!--				ENABLE_FLAG = #{enableFlag,jdbcType=CHAR},-->
+<!--			</if>-->
+<!--			<if test="sysEntyId != null and sysEntyId != ''">-->
+<!--				SYS_ENTY_ID = #{sysEntyId,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="sysDelFlg != null and sysDelFlg != ''">-->
+<!--				SYS_DEL_FLG = #{sysDelFlg,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="sysCrtUser != null and sysCrtUser != ''">-->
+<!--				SYS_CRT_USER = #{sysCrtUser,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="sysCrtDt != null">-->
+<!--				SYS_CRT_DT = #{sysCrtDt,jdbcType=TIMESTAMP},-->
+<!--			</if>-->
+<!--			<if test="sysModifyUser != null and sysModifyUser != ''">-->
+<!--				SYS_MODIFY_USER = #{sysModifyUser,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="sysModifyDt != null">-->
+<!--				SYS_MODIFY_DT = #{sysModifyDt,jdbcType=TIMESTAMP},-->
+<!--			</if>-->
+<!--		</set>-->
+<!--		where ID = #{id,jdbcType=VARCHAR}-->
+<!--	</update>-->
+<!--	<update id="updateByPrimaryKey" parameterType="com.stssm.github.io.generator.multiple.TasParamTranoptimeModel">-->
+<!--		&lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--		update mybatis.tas_param_tranoptime-->
+<!--		set TRAN_NODE_CODE = #{tranNodeCode,jdbcType=VARCHAR},-->
+<!--		TRAN_TYPE_CODE = #{tranTypeCode,jdbcType=VARCHAR},-->
+<!--		OPTIME = #{optime,jdbcType=VARCHAR},-->
+<!--		OPTIME_MEDIAN = #{optimeMedian,jdbcType=VARCHAR},-->
+<!--		OPTIME_MEDIAN_EXT = #{optimeMedianExt,jdbcType=VARCHAR},-->
+<!--		REST_TIME = #{restTime,jdbcType=VARCHAR},-->
+<!--		RESTTIME_WARN = #{resttimeWarn,jdbcType=VARCHAR},-->
+<!--		EXT1 = #{ext1,jdbcType=VARCHAR},-->
+<!--		EXT2 = #{ext2,jdbcType=VARCHAR},-->
+<!--		ENABLE_FLAG = #{enableFlag,jdbcType=CHAR},-->
+<!--		SYS_ENTY_ID = #{sysEntyId,jdbcType=VARCHAR},-->
+<!--		SYS_DEL_FLG = #{sysDelFlg,jdbcType=VARCHAR},-->
+<!--		SYS_CRT_USER = #{sysCrtUser,jdbcType=VARCHAR},-->
+<!--		SYS_CRT_DT = #{sysCrtDt,jdbcType=TIMESTAMP},-->
+<!--		SYS_MODIFY_USER = #{sysModifyUser,jdbcType=VARCHAR},-->
+<!--		SYS_MODIFY_DT = #{sysModifyDt,jdbcType=TIMESTAMP}-->
+<!--		where ID = #{id,jdbcType=VARCHAR}-->
+<!--	</update>-->
+<!--	<update id="updateBatch" parameterType="java.util.List">-->
+<!--		&lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--		update mybatis.tas_param_tranoptime-->
+<!--		<trim prefix="set" suffixOverrides=",">-->
+<!--			<trim prefix="TRAN_NODE_CODE = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					when ID = #{item.id,jdbcType=VARCHAR} then #{item.tranNodeCode,jdbcType=VARCHAR}-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="TRAN_TYPE_CODE = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					when ID = #{item.id,jdbcType=VARCHAR} then #{item.tranTypeCode,jdbcType=VARCHAR}-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="OPTIME = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					when ID = #{item.id,jdbcType=VARCHAR} then #{item.optime,jdbcType=VARCHAR}-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="OPTIME_MEDIAN = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					when ID = #{item.id,jdbcType=VARCHAR} then #{item.optimeMedian,jdbcType=VARCHAR}-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="OPTIME_MEDIAN_EXT = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					when ID = #{item.id,jdbcType=VARCHAR} then #{item.optimeMedianExt,jdbcType=VARCHAR}-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="REST_TIME = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					when ID = #{item.id,jdbcType=VARCHAR} then #{item.restTime,jdbcType=VARCHAR}-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="RESTTIME_WARN = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					when ID = #{item.id,jdbcType=VARCHAR} then #{item.resttimeWarn,jdbcType=VARCHAR}-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="EXT1 = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					when ID = #{item.id,jdbcType=VARCHAR} then #{item.ext1,jdbcType=VARCHAR}-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="EXT2 = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					when ID = #{item.id,jdbcType=VARCHAR} then #{item.ext2,jdbcType=VARCHAR}-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="ENABLE_FLAG = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					when ID = #{item.id,jdbcType=VARCHAR} then #{item.enableFlag,jdbcType=CHAR}-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="SYS_ENTY_ID = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysEntyId,jdbcType=VARCHAR}-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="SYS_DEL_FLG = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysDelFlg,jdbcType=VARCHAR}-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="SYS_CRT_USER = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysCrtUser,jdbcType=VARCHAR}-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="SYS_CRT_DT = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysCrtDt,jdbcType=TIMESTAMP}-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="SYS_MODIFY_USER = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysModifyUser,jdbcType=VARCHAR}-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="SYS_MODIFY_DT = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysModifyDt,jdbcType=TIMESTAMP}-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--		</trim>-->
+<!--		where ID in-->
+<!--		<foreach close=")" collection="list" item="item" open="(" separator=", ">-->
+<!--			#{item.id,jdbcType=VARCHAR}-->
+<!--		</foreach>-->
+<!--	</update>-->
+<!--	<update id="updateBatchSelective" parameterType="java.util.List">-->
+<!--		&lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--		update mybatis.tas_param_tranoptime-->
+<!--		<trim prefix="set" suffixOverrides=",">-->
+<!--			<trim prefix="TRAN_NODE_CODE = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					<if test="item.tranNodeCode != null">-->
+<!--						when ID = #{item.id,jdbcType=VARCHAR} then #{item.tranNodeCode,jdbcType=VARCHAR}-->
+<!--					</if>-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="TRAN_TYPE_CODE = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					<if test="item.tranTypeCode != null">-->
+<!--						when ID = #{item.id,jdbcType=VARCHAR} then #{item.tranTypeCode,jdbcType=VARCHAR}-->
+<!--					</if>-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="OPTIME = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					<if test="item.optime != null">-->
+<!--						when ID = #{item.id,jdbcType=VARCHAR} then #{item.optime,jdbcType=VARCHAR}-->
+<!--					</if>-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="OPTIME_MEDIAN = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					<if test="item.optimeMedian != null">-->
+<!--						when ID = #{item.id,jdbcType=VARCHAR} then #{item.optimeMedian,jdbcType=VARCHAR}-->
+<!--					</if>-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="OPTIME_MEDIAN_EXT = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					<if test="item.optimeMedianExt != null">-->
+<!--						when ID = #{item.id,jdbcType=VARCHAR} then #{item.optimeMedianExt,jdbcType=VARCHAR}-->
+<!--					</if>-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="REST_TIME = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					<if test="item.restTime != null">-->
+<!--						when ID = #{item.id,jdbcType=VARCHAR} then #{item.restTime,jdbcType=VARCHAR}-->
+<!--					</if>-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="RESTTIME_WARN = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					<if test="item.resttimeWarn != null">-->
+<!--						when ID = #{item.id,jdbcType=VARCHAR} then #{item.resttimeWarn,jdbcType=VARCHAR}-->
+<!--					</if>-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="EXT1 = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					<if test="item.ext1 != null">-->
+<!--						when ID = #{item.id,jdbcType=VARCHAR} then #{item.ext1,jdbcType=VARCHAR}-->
+<!--					</if>-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="EXT2 = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					<if test="item.ext2 != null">-->
+<!--						when ID = #{item.id,jdbcType=VARCHAR} then #{item.ext2,jdbcType=VARCHAR}-->
+<!--					</if>-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="ENABLE_FLAG = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					<if test="item.enableFlag != null">-->
+<!--						when ID = #{item.id,jdbcType=VARCHAR} then #{item.enableFlag,jdbcType=CHAR}-->
+<!--					</if>-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="SYS_ENTY_ID = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					<if test="item.sysEntyId != null">-->
+<!--						when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysEntyId,jdbcType=VARCHAR}-->
+<!--					</if>-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="SYS_DEL_FLG = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					<if test="item.sysDelFlg != null">-->
+<!--						when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysDelFlg,jdbcType=VARCHAR}-->
+<!--					</if>-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="SYS_CRT_USER = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					<if test="item.sysCrtUser != null">-->
+<!--						when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysCrtUser,jdbcType=VARCHAR}-->
+<!--					</if>-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="SYS_CRT_DT = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					<if test="item.sysCrtDt != null">-->
+<!--						when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysCrtDt,jdbcType=TIMESTAMP}-->
+<!--					</if>-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="SYS_MODIFY_USER = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					<if test="item.sysModifyUser != null">-->
+<!--						when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysModifyUser,jdbcType=VARCHAR}-->
+<!--					</if>-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--			<trim prefix="SYS_MODIFY_DT = case" suffix="end,">-->
+<!--				<foreach collection="list" index="index" item="item">-->
+<!--					<if test="item.sysModifyDt != null">-->
+<!--						when ID = #{item.id,jdbcType=VARCHAR} then #{item.sysModifyDt,jdbcType=TIMESTAMP}-->
+<!--					</if>-->
+<!--				</foreach>-->
+<!--			</trim>-->
+<!--		</trim>-->
+<!--		where ID in-->
+<!--		<foreach close=")" collection="list" item="item" open="(" separator=", ">-->
+<!--			#{item.id,jdbcType=VARCHAR}-->
+<!--		</foreach>-->
+<!--	</update>-->
+<!--	<insert id="batchInsert" parameterType="map">-->
+<!--		&lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--		insert into mybatis.tas_param_tranoptime-->
+<!--		(ID, TRAN_NODE_CODE, TRAN_TYPE_CODE, OPTIME, OPTIME_MEDIAN, OPTIME_MEDIAN_EXT, REST_TIME,-->
+<!--		RESTTIME_WARN, EXT1, EXT2, ENABLE_FLAG, SYS_ENTY_ID, SYS_DEL_FLG, SYS_CRT_USER,-->
+<!--		SYS_CRT_DT, SYS_MODIFY_USER, SYS_MODIFY_DT)-->
+<!--		values-->
+<!--		<foreach collection="list" item="item" separator=",">-->
+<!--			(#{item.id,jdbcType=VARCHAR}, #{item.tranNodeCode,jdbcType=VARCHAR}, #{item.tranTypeCode,jdbcType=VARCHAR},-->
+<!--			#{item.optime,jdbcType=VARCHAR}, #{item.optimeMedian,jdbcType=VARCHAR},-->
+<!--			#{item.optimeMedianExt,jdbcType=VARCHAR},-->
+<!--			#{item.restTime,jdbcType=VARCHAR}, #{item.resttimeWarn,jdbcType=VARCHAR}, #{item.ext1,jdbcType=VARCHAR},-->
+<!--			#{item.ext2,jdbcType=VARCHAR}, #{item.enableFlag,jdbcType=CHAR}, #{item.sysEntyId,jdbcType=VARCHAR},-->
+<!--			#{item.sysDelFlg,jdbcType=VARCHAR}, #{item.sysCrtUser,jdbcType=VARCHAR},-->
+<!--			#{item.sysCrtDt,jdbcType=TIMESTAMP},-->
+<!--			#{item.sysModifyUser,jdbcType=VARCHAR}, #{item.sysModifyDt,jdbcType=TIMESTAMP})-->
+<!--		</foreach>-->
+<!--	</insert>-->
+<!--	<insert id="insertOrUpdate" parameterType="com.stssm.github.io.generator.multiple.TasParamTranoptimeModel">-->
+<!--		&lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--		insert into mybatis.tas_param_tranoptime-->
+<!--		(ID, TRAN_NODE_CODE, TRAN_TYPE_CODE, OPTIME, OPTIME_MEDIAN, OPTIME_MEDIAN_EXT, REST_TIME,-->
+<!--		RESTTIME_WARN, EXT1, EXT2, ENABLE_FLAG, SYS_ENTY_ID, SYS_DEL_FLG, SYS_CRT_USER,-->
+<!--		SYS_CRT_DT, SYS_MODIFY_USER, SYS_MODIFY_DT)-->
+<!--		values-->
+<!--		(#{id,jdbcType=VARCHAR}, #{tranNodeCode,jdbcType=VARCHAR}, #{tranTypeCode,jdbcType=VARCHAR},-->
+<!--		#{optime,jdbcType=VARCHAR}, #{optimeMedian,jdbcType=VARCHAR}, #{optimeMedianExt,jdbcType=VARCHAR},-->
+<!--		#{restTime,jdbcType=VARCHAR}, #{resttimeWarn,jdbcType=VARCHAR}, #{ext1,jdbcType=VARCHAR},-->
+<!--		#{ext2,jdbcType=VARCHAR}, #{enableFlag,jdbcType=CHAR}, #{sysEntyId,jdbcType=VARCHAR},-->
+<!--		#{sysDelFlg,jdbcType=VARCHAR}, #{sysCrtUser,jdbcType=VARCHAR}, #{sysCrtDt,jdbcType=TIMESTAMP},-->
+<!--		#{sysModifyUser,jdbcType=VARCHAR}, #{sysModifyDt,jdbcType=TIMESTAMP})-->
+<!--		on duplicate key update-->
+<!--		ID = #{id,jdbcType=VARCHAR},-->
+<!--		TRAN_NODE_CODE = #{tranNodeCode,jdbcType=VARCHAR},-->
+<!--		TRAN_TYPE_CODE = #{tranTypeCode,jdbcType=VARCHAR},-->
+<!--		OPTIME = #{optime,jdbcType=VARCHAR},-->
+<!--		OPTIME_MEDIAN = #{optimeMedian,jdbcType=VARCHAR},-->
+<!--		OPTIME_MEDIAN_EXT = #{optimeMedianExt,jdbcType=VARCHAR},-->
+<!--		REST_TIME = #{restTime,jdbcType=VARCHAR},-->
+<!--		RESTTIME_WARN = #{resttimeWarn,jdbcType=VARCHAR},-->
+<!--		EXT1 = #{ext1,jdbcType=VARCHAR},-->
+<!--		EXT2 = #{ext2,jdbcType=VARCHAR},-->
+<!--		ENABLE_FLAG = #{enableFlag,jdbcType=CHAR},-->
+<!--		SYS_ENTY_ID = #{sysEntyId,jdbcType=VARCHAR},-->
+<!--		SYS_DEL_FLG = #{sysDelFlg,jdbcType=VARCHAR},-->
+<!--		SYS_CRT_USER = #{sysCrtUser,jdbcType=VARCHAR},-->
+<!--		SYS_CRT_DT = #{sysCrtDt,jdbcType=TIMESTAMP},-->
+<!--		SYS_MODIFY_USER = #{sysModifyUser,jdbcType=VARCHAR},-->
+<!--		SYS_MODIFY_DT = #{sysModifyDt,jdbcType=TIMESTAMP}-->
+<!--	</insert>-->
+<!--	<insert id="insertOrUpdateSelective" parameterType="com.stssm.github.io.generator.multiple.TasParamTranoptimeModel">-->
+<!--		&lt;!&ndash;@mbg.generated&ndash;&gt;-->
+<!--		insert into mybatis.tas_param_tranoptime-->
+<!--		<trim prefix="(" suffix=")" suffixOverrides=",">-->
+<!--			<if test="id != null and id != ''">-->
+<!--				ID,-->
+<!--			</if>-->
+<!--			<if test="tranNodeCode != null and tranNodeCode != ''">-->
+<!--				TRAN_NODE_CODE,-->
+<!--			</if>-->
+<!--			<if test="tranTypeCode != null and tranTypeCode != ''">-->
+<!--				TRAN_TYPE_CODE,-->
+<!--			</if>-->
+<!--			<if test="optime != null and optime != ''">-->
+<!--				OPTIME,-->
+<!--			</if>-->
+<!--			<if test="optimeMedian != null and optimeMedian != ''">-->
+<!--				OPTIME_MEDIAN,-->
+<!--			</if>-->
+<!--			<if test="optimeMedianExt != null and optimeMedianExt != ''">-->
+<!--				OPTIME_MEDIAN_EXT,-->
+<!--			</if>-->
+<!--			<if test="restTime != null and restTime != ''">-->
+<!--				REST_TIME,-->
+<!--			</if>-->
+<!--			<if test="resttimeWarn != null and resttimeWarn != ''">-->
+<!--				RESTTIME_WARN,-->
+<!--			</if>-->
+<!--			<if test="ext1 != null and ext1 != ''">-->
+<!--				EXT1,-->
+<!--			</if>-->
+<!--			<if test="ext2 != null and ext2 != ''">-->
+<!--				EXT2,-->
+<!--			</if>-->
+<!--			<if test="enableFlag != null and enableFlag != ''">-->
+<!--				ENABLE_FLAG,-->
+<!--			</if>-->
+<!--			<if test="sysEntyId != null and sysEntyId != ''">-->
+<!--				SYS_ENTY_ID,-->
+<!--			</if>-->
+<!--			<if test="sysDelFlg != null and sysDelFlg != ''">-->
+<!--				SYS_DEL_FLG,-->
+<!--			</if>-->
+<!--			<if test="sysCrtUser != null and sysCrtUser != ''">-->
+<!--				SYS_CRT_USER,-->
+<!--			</if>-->
+<!--			<if test="sysCrtDt != null">-->
+<!--				SYS_CRT_DT,-->
+<!--			</if>-->
+<!--			<if test="sysModifyUser != null and sysModifyUser != ''">-->
+<!--				SYS_MODIFY_USER,-->
+<!--			</if>-->
+<!--			<if test="sysModifyDt != null">-->
+<!--				SYS_MODIFY_DT,-->
+<!--			</if>-->
+<!--		</trim>-->
+<!--		values-->
+<!--		<trim prefix="(" suffix=")" suffixOverrides=",">-->
+<!--			<if test="id != null and id != ''">-->
+<!--				#{id,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="tranNodeCode != null and tranNodeCode != ''">-->
+<!--				#{tranNodeCode,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="tranTypeCode != null and tranTypeCode != ''">-->
+<!--				#{tranTypeCode,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="optime != null and optime != ''">-->
+<!--				#{optime,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="optimeMedian != null and optimeMedian != ''">-->
+<!--				#{optimeMedian,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="optimeMedianExt != null and optimeMedianExt != ''">-->
+<!--				#{optimeMedianExt,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="restTime != null and restTime != ''">-->
+<!--				#{restTime,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="resttimeWarn != null and resttimeWarn != ''">-->
+<!--				#{resttimeWarn,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="ext1 != null and ext1 != ''">-->
+<!--				#{ext1,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="ext2 != null and ext2 != ''">-->
+<!--				#{ext2,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="enableFlag != null and enableFlag != ''">-->
+<!--				#{enableFlag,jdbcType=CHAR},-->
+<!--			</if>-->
+<!--			<if test="sysEntyId != null and sysEntyId != ''">-->
+<!--				#{sysEntyId,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="sysDelFlg != null and sysDelFlg != ''">-->
+<!--				#{sysDelFlg,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="sysCrtUser != null and sysCrtUser != ''">-->
+<!--				#{sysCrtUser,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="sysCrtDt != null">-->
+<!--				#{sysCrtDt,jdbcType=TIMESTAMP},-->
+<!--			</if>-->
+<!--			<if test="sysModifyUser != null and sysModifyUser != ''">-->
+<!--				#{sysModifyUser,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="sysModifyDt != null">-->
+<!--				#{sysModifyDt,jdbcType=TIMESTAMP},-->
+<!--			</if>-->
+<!--		</trim>-->
+<!--		on duplicate key update-->
+<!--		<trim suffixOverrides=",">-->
+<!--			<if test="id != null and id != ''">-->
+<!--				ID = #{id,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="tranNodeCode != null and tranNodeCode != ''">-->
+<!--				TRAN_NODE_CODE = #{tranNodeCode,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="tranTypeCode != null and tranTypeCode != ''">-->
+<!--				TRAN_TYPE_CODE = #{tranTypeCode,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="optime != null and optime != ''">-->
+<!--				OPTIME = #{optime,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="optimeMedian != null and optimeMedian != ''">-->
+<!--				OPTIME_MEDIAN = #{optimeMedian,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="optimeMedianExt != null and optimeMedianExt != ''">-->
+<!--				OPTIME_MEDIAN_EXT = #{optimeMedianExt,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="restTime != null and restTime != ''">-->
+<!--				REST_TIME = #{restTime,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="resttimeWarn != null and resttimeWarn != ''">-->
+<!--				RESTTIME_WARN = #{resttimeWarn,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="ext1 != null and ext1 != ''">-->
+<!--				EXT1 = #{ext1,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="ext2 != null and ext2 != ''">-->
+<!--				EXT2 = #{ext2,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="enableFlag != null and enableFlag != ''">-->
+<!--				ENABLE_FLAG = #{enableFlag,jdbcType=CHAR},-->
+<!--			</if>-->
+<!--			<if test="sysEntyId != null and sysEntyId != ''">-->
+<!--				SYS_ENTY_ID = #{sysEntyId,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="sysDelFlg != null and sysDelFlg != ''">-->
+<!--				SYS_DEL_FLG = #{sysDelFlg,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="sysCrtUser != null and sysCrtUser != ''">-->
+<!--				SYS_CRT_USER = #{sysCrtUser,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="sysCrtDt != null">-->
+<!--				SYS_CRT_DT = #{sysCrtDt,jdbcType=TIMESTAMP},-->
+<!--			</if>-->
+<!--			<if test="sysModifyUser != null and sysModifyUser != ''">-->
+<!--				SYS_MODIFY_USER = #{sysModifyUser,jdbcType=VARCHAR},-->
+<!--			</if>-->
+<!--			<if test="sysModifyDt != null">-->
+<!--				SYS_MODIFY_DT = #{sysModifyDt,jdbcType=TIMESTAMP},-->
+<!--			</if>-->
+<!--		</trim>-->
+<!--	</insert>-->
+<!--</mapper>-->
