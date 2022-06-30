@@ -1,0 +1,65 @@
+<!--
+ $ @Author: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @Date: 2022-06-30 21:38:21
+ $ @LastEditors: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @LastEditTime: 2022-06-30 21:38:26
+ $ @FilePath: \st-ssm.github.io\src\main\java\com\stssm\github\io\javaweb\aaa013JDBC2022年6月30日\aaa055表单案例.html
+ $ @Description: 1111
+ $ @
+ $ @Copyright (c) 2022 by liujiajun 45444154+wo1261931780@users.noreply.github.com, All Rights Reserved.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>我是表单案例</div>
+		<form action="#" id="demoform">
+			<label for="demo1">账号：</label>
+			<input type="text" id="demo1" />
+			<br />
+			<label style="display: none" name="tip" id="demo2"
+				>用户名不符合规则</label
+			>
+		</form>
+		<script>
+			// document.getElementById("demo1").onclick = function () {
+			// 	console.log("我自动对焦了");
+			// };
+			// document.getElementById("demo1").onblur = function () {
+			// 	console.log("我失去了焦点");
+			// };
+			// -------------------------------------------------------
+			// 上面这种方法都不太好,我的目的是操作这个变量,
+			// 那么我可以将这个变量直接提取出来
+			var demoinput = document.getElementById("demo1");
+			demoinput.onclick = function () {
+				console.log("我自动对焦了");
+			};
+			demoinput.onblur = function () {
+				console.log("我失去了焦点");
+				var paw = demoinput.value.trim();
+				console.log("我是密码：" + paw);
+				// 同时，我也可以直接通过js获取内部的值
+				console.log(paw.lenth); // 这里有问题
+				if (paw.lenth == 6) {
+					console.log("正常");
+					document.getElementById("demo2").style.display = "none";
+				} else {
+					// alert("异常");
+					// document.getElementById("demo2").style.display = "";
+				}
+			};
+			// -------------------------------------------------------
+			var demo = document.getElementById("demoform");
+			demo.onsubmit = function () {
+				console.log("我是提交事件");
+				return false;
+			};
+		</script>
+	</body>
+</html>

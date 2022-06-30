@@ -1,0 +1,35 @@
+<!--
+ $ @Author: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @Date: 2022-06-30 21:12:32
+ $ @LastEditors: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @LastEditTime: 2022-06-30 21:12:37
+ $ @FilePath: \st-ssm.github.io\src\main\java\com\stssm\github\io\javaweb\aaa013JDBC2022年6月30日\aaa053事件监听.html
+ $ @Description: 1111
+ $ @
+ $ @Copyright (c) 2022 by liujiajun 45444154+wo1261931780@users.noreply.github.com, All Rights Reserved.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>做按钮的事件绑定</div>
+		<button onclick="demo()">我是按钮</button>
+		<button name="demo" id="demo">我是js按钮</button>
+		<script>
+			function demo() {
+				alert("按钮被点击了");
+			}
+			// 使用这种方法有一个缺点
+			// 我的html和js代码耦合在一起，
+			// 不太符合职责单一的设计思想
+			document.getElementById("demo").onclick = function () {
+				alert("我是js中的按钮");
+			};
+		</script>
+	</body>
+</html>
