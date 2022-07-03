@@ -2,7 +2,7 @@
  $ @Author: liujiajun 45444154+wo1261931780@users.noreply.github.com
  $ @Date: 2022-06-30 21:38:21
  $ @LastEditors: liujiajun 45444154+wo1261931780@users.noreply.github.com
- $ @LastEditTime: 2022-06-30 21:38:26
+ $ @LastEditTime: 2022-06-30 22:54:00
  $ @FilePath: \st-ssm.github.io\src\main\java\com\stssm\github\io\javaweb\aaa013JDBC2022年6月30日\aaa055表单案例.html
  $ @Description: 1111
  $ @
@@ -22,7 +22,7 @@
 			<label for="demo1">账号：</label>
 			<input type="text" id="demo1" />
 			<br />
-			<label style="display: none" name="tip" id="demo2"
+			<label style="color: red; display: none" name="tip" id="demo2"
 				>用户名不符合规则</label
 			>
 		</form>
@@ -45,13 +45,13 @@
 				var paw = demoinput.value.trim();
 				console.log("我是密码：" + paw);
 				// 同时，我也可以直接通过js获取内部的值
-				console.log(paw.lenth); // 这里有问题
-				if (paw.lenth == 6) {
+				console.log(paw.length); // 这里有问题
+				if (paw.length == 6) {
 					console.log("正常");
 					document.getElementById("demo2").style.display = "none";
 				} else {
-					// alert("异常");
-					// document.getElementById("demo2").style.display = "";
+					alert("异常");
+					document.getElementById("demo2").style.display = "";
 				}
 			};
 			// -------------------------------------------------------
