@@ -1,0 +1,46 @@
+<!--
+ $ @Author: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @Date: 2022-07-03 16:21:13
+ $ @LastEditors: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @LastEditTime: 2022-07-05 20:11:50
+ $ @FilePath: \st-ssm.github.io\src\main\java\com\stssm\github\io\javaweb\aaa014JDBC2022年7月5日\aaa056js收尾.html
+ $ @Description: 1111
+ $ @
+ $ @Copyright (c) 2022 by liujiajun 45444154+wo1261931780@users.noreply.github.com, All Rights Reserved.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>我是正则表达式测试</div>
+
+		<label for="demoinput" value="我是输入测试"></label
+		><input type="text" id="demoinput" name="demoinput" onblur="showmeres()" />
+
+		<script>
+			var demo = 123222;
+			var regDemo = /^[GCDZTSPKXLY1-9]\d{1,4}$/;
+			var regDemo2 = new RegExp("/^[GCDZTSPKXLY1-9]\d{1,4}$/");
+			var regTest = /^\w{6,12}$/;
+			// 上面的含义是：
+			// ^作为开头，$作为结尾
+			// \w表示单词数字，{6，12}表示6-12位
+			// -------------------------------------------------------
+			// 我上面新建的一个正则表达式，实际上类似于新建了一个正则对象
+			// 这个正则对象，有test方法，可以直接测试另一个字符串是否符合我的表达式规范
+			function showmeres(params) {
+				let resText = document.getElementById("demoinput").value.trim();
+				var res = regTest.test(resText);
+				// vscode中，方块就是方法的意思
+				// test方法，返回的是一个布尔类型的结果
+				console.log("我是结果：" + res);
+			}
+			// -------------------------------------------------------
+		</script>
+	</body>
+</html>
