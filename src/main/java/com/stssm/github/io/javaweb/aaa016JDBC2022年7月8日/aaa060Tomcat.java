@@ -42,6 +42,7 @@ public class aaa060Tomcat {
 	// maven根据项目的类型，在打包的时候也会自动按照对应的格式进行打包
 	// 比如webapp，执行package操作，就会自动打包变成war包
 	// war包，顾名思义，就是web开头的项目包
+	// 8-11
 
 
 }
