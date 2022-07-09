@@ -1,4 +1,4 @@
-package aaa017JDBC2022年7月9日;
+package com.stssm.github.io.javaweb.aaa017JAVAWEB2022年7月9日;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,7 +19,7 @@ import java.io.IOException;
  * @return
  * @exception
  */
-@WebServlet("/demo")
+@WebServlet("/showdemo2")
 public class aaa063servlet2 extends HttpServlet {
 
 	/**
@@ -32,6 +32,8 @@ public class aaa063servlet2 extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// super.doGet(req, resp);
 		System.out.println("do...get");
+		// 我们通过浏览器直接修改后缀，就是在做get请求
+		// 打印这里的get语句
 	}
 
 	/**

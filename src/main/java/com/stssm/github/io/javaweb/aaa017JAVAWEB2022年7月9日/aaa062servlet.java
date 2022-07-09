@@ -1,4 +1,4 @@
-package aaa017JDBC2022年7月9日;
+package com.stssm.github.io.javaweb.aaa017JAVAWEB2022年7月9日;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
