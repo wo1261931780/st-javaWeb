@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>junw</artifactId>
+		<groupId>com.st-ssm.github.io</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<packaging>war</packaging>
+	<build>
+		<plugins>
+			<!--<plugin>-->
+			<!--	<groupId>org.apache.tomcat.maven</groupId>-->
+			<!--	<artifactId>tomcat6-maven-plugin</artifactId>-->
+			<!--	<version>2.2</version>-->
+			<!--</plugin>-->
+			<!--<plugin>-->
+			<!--	<groupId>org.apache.tomcat.maven</groupId>-->
+			<!--	<artifactId>tomcat7-maven-plugin</artifactId>-->
+			<!--	<version>2.2</version>-->
+			<!--	&lt;!&ndash;可以指定端口号和路径，但是要放在参数标签内&ndash;&gt;-->
+			<!--	&lt;!&ndash;不能直接添加&ndash;&gt;-->
+			<!--	&lt;!&ndash;版本太久,已经不支持&ndash;&gt;-->
+			<!--	<configuration>-->
+			<!--		<port>8088</port>-->
+			<!--		<path>demo</path>-->
+			<!--	</configuration>-->
+			<!--</plugin>-->
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<!--设置编译和测试环境生效，运行环境无效-->
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+
+	<artifactId>webappDemo</artifactId>
+
+	<properties>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+	</properties>
+
+
+</project>

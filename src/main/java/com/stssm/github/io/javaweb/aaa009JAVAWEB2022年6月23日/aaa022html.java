@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa009JDBC2022年6月23日;
+package com.stssm.github.io.javaweb.aaa009JAVAWEB2022年6月23日;
 
 /**
  * Created by Intellij IDEA.
