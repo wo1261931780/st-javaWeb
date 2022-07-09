@@ -35,6 +35,8 @@ public class aaa063servlet2 extends HttpServlet {
 		// 我们通过浏览器直接修改后缀，就是在做get请求
 		// 打印这里的get语句
 	}
+	// 对get和post进行分发，主要是因为二者的请求体所在位置不同
+	// 如果在servlet的实现类中，对应的service，对requisite和response的处理逻辑也不同
 
 	/**
 	 * @param req
