@@ -27,6 +27,12 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<!--<scope>test</scope>-->
 			<!--上面Descope表示作用范围-->
@@ -198,6 +204,14 @@
 					<!--		</execution>-->
 					<!--	</executions>-->
 					<!--</plugin>-->
+					<plugin>
+						<groupId>org.springframework.boot</groupId>
+						<artifactId>spring-boot-maven-plugin</artifactId>
+						<configuration>
+							<fork>true</fork>
+							<addResources>true</addResources>
+						</configuration>
+					</plugin>
 				</plugins>
 			</build>
 		</profile>

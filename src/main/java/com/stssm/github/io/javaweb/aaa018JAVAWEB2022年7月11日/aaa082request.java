@@ -1,11 +1,11 @@
 package com.stssm.github.io.javaweb.aaa018JAVAWEB2022年7月11日;
 
-import mapper.loginMapper;
+import com.stssm.github.io.javaweb.aaa018JAVAWEB2022年7月11日.mapper.loginMapper;
+import com.stssm.github.io.javaweb.aaa018JAVAWEB2022年7月11日.pojo.user;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import pojo.user;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
