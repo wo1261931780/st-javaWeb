@@ -1,6 +1,6 @@
-package com.stssm.github.io.javaweb.aaa018JAVAWEB2022年7月11日.mapper;
+package com.stssm.github.io.javaweb.aaa019JAVAWEB2022年7月11日.mapper;
 
-import com.stssm.github.io.javaweb.aaa018JAVAWEB2022年7月11日.pojo.user;
+import com.stssm.github.io.javaweb.aaa019JAVAWEB2022年7月11日.pojo.user;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 

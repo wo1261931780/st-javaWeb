@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa018JAVAWEB2022年7月11日.pojo;
+package com.stssm.github.io.javaweb.aaa019JAVAWEB2022年7月11日.pojo;
 
 /**
  * Created by Intellij IDEA.

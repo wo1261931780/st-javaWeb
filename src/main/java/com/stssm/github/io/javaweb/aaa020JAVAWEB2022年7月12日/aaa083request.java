@@ -1,11 +1,11 @@
-package com.stssm.github.io.javaweb.aaa018JAVAWEB2022年7月11日;
+package com.stssm.github.io.javaweb.aaa020JAVAWEB2022年7月12日;
 
-import com.stssm.github.io.javaweb.aaa018JAVAWEB2022年7月11日.mapper.loginMapper;
-import com.stssm.github.io.javaweb.aaa018JAVAWEB2022年7月11日.pojo.user;
+import mapper.loginMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import pojo.user;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,8 +29,8 @@ import java.io.PrintWriter;
  * @exception
  */
 
-@WebServlet("/aaa082request")
-public class aaa082request extends HttpServlet {
+@WebServlet("/aaa083request")
+public class aaa083request extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
