@@ -1,6 +1,6 @@
 package com.stssm.github.io.javaweb.aaa021JAVAWEB2022年7月13日.web;
 
-import com.itheima.pojo.Brand;
+import com.stssm.github.io.javaweb.aaa021JAVAWEB2022年7月13日.pojo.Brand;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
