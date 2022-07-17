@@ -1,11 +1,10 @@
-package ssm.github.io.controller;
-/**
+package ssm.github.io.controller; /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
  * Package:${PACKAGE_NAME}
  *
  * @author liujiajun_junw
- * @Date 2022-07-22-42  星期六
+ * @Date 2022-07-09-26  星期日
  * @description
  * @param
  * @return
@@ -22,22 +21,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "addServlet", value = "/addServlet")
-public class addServlet extends HttpServlet {
-	private final demoService newService = new demoService();
+@WebServlet(name = "selectByIdServlet", value = "/selectByIdServlet")
+public class selectByIdServlet extends HttpServlet {
+	private final demoService x = new demoService();
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
-		TbBrand tbBrand = new TbBrand();
-		tbBrand.setBrandName(request.getParameter("brandName"));
-		tbBrand.setCompanyName(request.getParameter("CompanyName"));
-		tbBrand.setOrdered(Integer.parseInt(request.getParameter("Ordered")));
-		tbBrand.setDescription(request.getParameter("Description"));
-		tbBrand.setStatus(Integer.parseInt(request.getParameter("Status")));
-		newService.insertNewRecorde(tbBrand);
-		
-		request.getRequestDispatcher("/selectServlet").forward(request, response);
+		request.setCharacterEncoding("UTF-8");
+		TbBrand brand = new TbBrand();
+		brand.setId(Integer.parseInt(request.getParameter("id")));
+		// request.setAttribute("brand", brand);
+		TbBrand resBrand = demoService.selectById(Integer.parseInt(request.getParameter("id")));
+		request.setAttribute("brand", resBrand);
+		request.getRequestDispatcher("/changMessage.jsp").forward(request, response);
+
 	}
 
 	@Override

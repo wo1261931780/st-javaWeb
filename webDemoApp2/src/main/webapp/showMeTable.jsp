@@ -17,25 +17,28 @@
 
 <table>
     <c:forEach items = "${brand}" var = "brand" varStatus = "i">
-        <td>
-            <tr>品牌名称</tr>
-            <tr>公司名称</tr>
-            <tr>订单顺序</tr>
-            <tr>描述</tr>
-            <tr>状态</tr>
-        </td>
-        <td>
-            <tr>${brand.brandName}</tr>
-            <tr>${brand.companyName}</tr>
-            <tr>${brand.ordered}</tr>
-            <tr>${brand.description}</tr>
+        <tr>
+            <td>品牌名称</td>
+            <td>公司名称</td>
+            <td>订单顺序</td>
+            <td>描述</td>
+            <td>状态</td>
+        </tr>
+        <tr>
+            <td>${brand.brandName}</td>
+            <td>${brand.companyName}</td>
+            <td>${brand.ordered}</td>
+            <td>${brand.description}</td>
             <c:if test = "${brand.status ==1}">
-                <tr>启用</tr>
+                <td>启用</td>
             </c:if>
             <c:if test = "${brand.status !=1}">
-                <tr>弃用</tr>
+                <td>弃用</td>
             </c:if>
-        </td>
+            <td>
+                <a href = "/demo-app2/selectByIdServlet?id=${brand.id}">修改</a>
+            </td>
+        </tr>
     </c:forEach>
 </table>
 <input type = "button" name = "123" id = "insert">

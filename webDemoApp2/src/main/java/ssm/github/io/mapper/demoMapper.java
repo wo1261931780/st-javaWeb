@@ -1,5 +1,6 @@
 package ssm.github.io.mapper;
 
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 import ssm.github.io.pojo.TbBrand;
@@ -30,4 +31,13 @@ public interface demoMapper {
 	List<TbBrand> selectAll();
 
 	List<TbBrand> addOne(TbBrand brand);
+
+	/**
+	 * 根据id进行查询
+	 *
+	 * @param paramId
+	 * @return
+	 */
+	@Select("select  * from tb_brand where id=#{paramId}")
+	TbBrand selectById(@Param("paramId") int paramId);
 }

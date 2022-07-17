@@ -21,7 +21,26 @@ import java.util.List;
  * @exception
  */
 public class demoService {
+	/**
+	 * 根据id进行查询
+	 *
+	 * @param id
+	 * @return
+	 */
+	public static TbBrand selectById(int id) {
+		SqlSessionFactory sqlSessionFactory = SQLsessionFactoryUtil.getSqlSessionFactory();
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		demoMapper mapper = sqlSession.getMapper(demoMapper.class);
+		TbBrand tbBrand = mapper.selectById(id);
+		sqlSession.close();
+		return tbBrand;
+	}
 
+	/**
+	 * 查询所有
+	 *
+	 * @return
+	 */
 	public List<TbBrand> selectAll() {
 		SqlSessionFactory sqlSessionFactory = SQLsessionFactoryUtil.getSqlSessionFactory();
 		SqlSession sqlSession = sqlSessionFactory.openSession();
@@ -31,6 +50,11 @@ public class demoService {
 		return tbBrands;
 	}
 
+	/**
+	 * 插入一条数据
+	 *
+	 * @param brand
+	 */
 	public void insertNewRecorde(TbBrand brand) {
 		SqlSessionFactory sqlSessionFactory = SQLsessionFactoryUtil.getSqlSessionFactory();
 		SqlSession sqlSession = sqlSessionFactory.openSession();

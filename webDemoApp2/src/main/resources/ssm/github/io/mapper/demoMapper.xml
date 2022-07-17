@@ -8,4 +8,7 @@
 		insert into study002jdbc.tb_brand
 		values (#{brandName}, #{companyName}, #{ordered}, #{description}, #{status});
 	</insert>
+
+	<select id="selectById" resultType="ssm.github.io.pojo.TbBrand">
+	</select>
 </mapper>
