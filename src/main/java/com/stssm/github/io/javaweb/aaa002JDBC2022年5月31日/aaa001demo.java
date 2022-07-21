@@ -21,8 +21,8 @@ public class aaa001demo {
 		//     System.err.println("Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.");
 		// }
 		// ...本来是要使用java8的，jdk17已经将注册驱动的方法抛弃了
-		// 在jdk5以后，已经将注册驱动抛弃，因为在驱动下面的service包中，已经对其进行了处理
-		// 甚至连这个forname都不太需要使用
+		// 在jdk5以后, 已经将注册驱动抛弃, 因为在驱动下面的service包中, 已经对其进行了处理
+		// 甚至连这个forname都不太需要使用.
 
 		final String url = "jdbc:mysql://127.0.0.1:3306/study001sql";// 固定格式的sql语法，协议
 		final String user = "root";// mysql数据库的账号
