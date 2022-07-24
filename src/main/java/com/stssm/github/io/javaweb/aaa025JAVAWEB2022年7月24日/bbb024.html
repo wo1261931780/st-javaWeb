@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Title</title>
+	</head>
+	<body>
+		<div>我是vue提交表单的测试页面</div>
+		<div id="showMeTable">
+			<form action="" method="post">
+				品牌名称：<input
+					id="brandName"
+					v-model="formData.brandName"
+					name="brandName"
+				/><br />
+				企业名称：<input
+					id="companyName"
+					v-model="formData.companyName"
+					name="companyName"
+				/><br />
+				排序：<input
+					id="ordered"
+					v-model="formData.ordered"
+					name="ordered"
+				/><br />
+				描述信息：<textarea
+					rows="5"
+					cols="20"
+					id="description"
+					v-model="brand.description"
+					name="description"
+				></textarea
+				><br />
+				状态：
+				<input
+					type="radio"
+					name="status"
+					v-model="formData.status"
+					value="0"
+				/>禁用
+				<input
+					type="radio"
+					name="status"
+					v-model="formData.status"
+					value="1"
+				/>启用<br />
+				<input type="button" id="btn" @click="submitForm" value="提交" />
+			</form>
+		</div>
+
+		<script src="js/axios-0.18.0.js"></script>
+		<script src="js/vue.js"></script>
+		<script>
+			new vue({
+				el: "#showMeTable",
+				data() {
+					return {
+						name: "123",
+						listData: [],
+						formData: {},
+						// 这里是我们定义出来的data对象
+						// 我们可以给这个对象赋值不同的属性值
+						// 如果一开始就给了所有的属性值，
+						// 相当于我发送数据的时候，数据如果没有赋值进来，那么就会传递一个只进行了初始化的数据体
+						// 而这里需要绑定到对应的表单里面去，所以需要什么内容，直接在表单里面设置就可以
+						// 具体的格式就是：formData.xxx
+						// 我的表单里有什么内容，就会给什么内容
+					};
+				},
+				mounted() {
+					this.show();
+				},
+				methods: {
+					submitForm() {
+						var _this = this;
+						axios({
+							method: "",
+							url: "",
+							data: _this.formData,
+						}).then(function (result) {
+							_this.listData = result.data;
+						});
+					},
+				},
+			});
+		</script>
+	</body>
+</html>

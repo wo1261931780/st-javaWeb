@@ -15,7 +15,7 @@ import java.io.InputStream;
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
  * Package:com.stssm.github.io.javaweb.aaa005JDBC2022年6月19日
- * User:  liujiajun_junw
+ * bbb010User:  liujiajun_junw
  * Time:  2022-06-16-03  星期日
  */
 public class aaa019MybatisInsert {

@@ -4,7 +4,7 @@ package com.stssm.github.io.javaweb.aaa005JDBC2022年6月16日;
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
  * Package:com.st-ssm.github.io.javaweb.aaa004JDBC2022年6月16日
- * User:liujiajun_junw
+ * bbb010User:liujiajun_junw
  * Time:2022-06-20-52  星期四
  */
 public class aaa012maven {

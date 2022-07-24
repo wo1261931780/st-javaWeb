@@ -4,7 +4,7 @@ package com.stssm.github.io.javaweb.aaa006JDBC2022年6月18日.pojo;
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
  * Package:com.domain
- * User:  liujiajun_junw
+ * bbb010User:  liujiajun_junw
  * Time:  2022-06-21-07  星期六
  */
 public class TbBrand {

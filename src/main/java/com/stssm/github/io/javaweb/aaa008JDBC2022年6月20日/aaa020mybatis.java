@@ -17,7 +17,7 @@ import java.util.Map;
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
  * Package:com.stssm.github.io.javaweb.aaa005JDBC2022年6月20日
- * User:  liujiajun_junw
+ * bbb010User:  liujiajun_junw
  * Time:  2022-06-20-24  星期一
  */
 public class aaa020mybatis {

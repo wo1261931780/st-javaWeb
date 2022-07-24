@@ -20,7 +20,7 @@ import java.io.IOException;
  * @exception
  */
 
-@WebServlet(name = "bbb004Servlet", value = "/bbb004Servlet")
+@WebServlet(name = "bbb014Servlet", value = "/bbb014Servlet")
 public class bbb004Servlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -29,7 +29,7 @@ import java.io.PrintWriter;
  * @exception
  */
 
-@WebServlet("/aaa082request")
+@WebServlet("/aaa085request")
 public class aaa082request extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

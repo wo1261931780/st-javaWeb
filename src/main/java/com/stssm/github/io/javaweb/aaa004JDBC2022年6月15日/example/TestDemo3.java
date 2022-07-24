@@ -13,7 +13,7 @@ import java.util.Properties;
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
  * Package:com.stssm.github.io.javaweb.aaa004JDBC2022年6月15日.example
- * User:  wo1261931780@gmail.com
+ * bbb010User:  wo1261931780@gmail.com
  * Time:  2022-06-21-59  星期三
  *
  * @author liujiajun_junw
