@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.mapper.brandMapper">
+
+    <resultMap id="brandResultMap" type="TbBrand">
+        <!--resultmap,用来做字段映射，解决不匹配的问题-->
+        <result property="brandName" column="brand_name" />
+        <result property="companyName" column="company_name" />
+    </resultMap>
+</mapper>
