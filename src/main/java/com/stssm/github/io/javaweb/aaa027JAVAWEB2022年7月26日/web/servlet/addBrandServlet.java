@@ -12,9 +12,9 @@
 package com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.web.servlet;
 
 import com.alibaba.fastjson.JSON;
-import com.itheima.pojo.TbBrand;
-import com.itheima.service.brandService;
-import com.itheima.service.impl.brandServiceImpl;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.pojo.TbBrand;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.service.brandService;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.service.impl.brandServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -1,6 +1,6 @@
 package com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.service;
 
-import com.itheima.pojo.TbBrand;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.pojo.TbBrand;
 
 import java.util.List;
 

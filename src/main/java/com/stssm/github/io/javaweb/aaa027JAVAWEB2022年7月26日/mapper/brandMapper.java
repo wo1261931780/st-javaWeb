@@ -1,6 +1,6 @@
 package com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.mapper;
 
-import com.itheima.pojo.TbBrand;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.pojo.TbBrand;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 

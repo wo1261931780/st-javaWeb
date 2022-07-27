@@ -10,10 +10,10 @@
  */
 package com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.service.impl;
 
-import com.itheima.mapper.brandMapper;
-import com.itheima.pojo.TbBrand;
-import com.itheima.service.brandService;
-import com.itheima.util.SqlSessionFactoryUtils;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.mapper.brandMapper;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.pojo.TbBrand;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.service.brandService;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.util.SqlSessionFactoryUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
