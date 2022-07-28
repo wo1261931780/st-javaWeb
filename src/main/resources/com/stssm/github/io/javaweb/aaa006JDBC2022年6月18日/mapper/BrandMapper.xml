@@ -13,7 +13,7 @@
 		status
 	</sql>
 
-	<!--<select id="showRes" resultType="com.stssm.github.io.javaweb.aaa004JDBC2022年6月18日.pojo.TbBrand">-->
+	<!--<select id="showRes" resultType="com.stssm.github.io.javaweb.aaa004JDBC2022年6月18日.pojo.bbb029TbBrand">-->
 	<!--select * from mybatis.tb_brand where id =#{id};-->
 	<!--		select * from mybatis.tb_brand ;-->
 	<!--这里有个问题，-->

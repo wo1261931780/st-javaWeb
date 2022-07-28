@@ -1,6 +1,6 @@
 package com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.service;
 
-import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.pojo.TbBrand;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.pojo.bbb029TbBrand;
 
 import java.util.List;
 
@@ -16,14 +16,14 @@ import java.util.List;
  * @return
  * @exception
  */
-public interface brandService {
+public interface bbb031brandService {
 
 	/**
 	 * 查询所有数据
 	 *
 	 * @return
 	 */
-	List<TbBrand> selectAll();
+	List<bbb029TbBrand> selectAll();
 
 	/**
 	 * 添加品牌
@@ -31,5 +31,5 @@ public interface brandService {
 	 * @param brand
 	 * @return
 	 */
-	TbBrand addBrand(TbBrand brand);
+	bbb029TbBrand addBrand(bbb029TbBrand brand);
 }

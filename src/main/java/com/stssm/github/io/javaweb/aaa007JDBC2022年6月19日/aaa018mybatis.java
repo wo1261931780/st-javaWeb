@@ -37,7 +37,7 @@ public class aaa018mybatis {
 			companyName = "%" + companyName + "%";
 			brandName = "%" + brandName + "%";
 			// 手动进行一次模糊查询
-			// TbBrand tbBrand = mapper.selectById(id);
+			// bbb029TbBrand tbBrand = mapper.selectById(id);
 			List<TbBrand> tbBrands = mapper.queryTotal(status, companyName, brandName);
 			System.out.println(tbBrands);
 			sqlSession.close();

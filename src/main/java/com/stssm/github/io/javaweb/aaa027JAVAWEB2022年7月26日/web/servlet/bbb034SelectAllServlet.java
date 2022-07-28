@@ -1,8 +1,9 @@
 package com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.web.servlet;
 
 import com.alibaba.fastjson.JSON;
-import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.pojo.TbBrand;
-import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.service.impl.brandServiceImpl;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.pojo.bbb029TbBrand;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.service.bbb031brandService;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.service.impl.bbb030BrandServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,14 +14,14 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet("/selectAllServlet")
-public class SelectAllServlet extends HttpServlet {
+public class bbb034SelectAllServlet extends HttpServlet {
 
-	private final com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.service.brandService brandService = new brandServiceImpl();
+	private final bbb031brandService bbb031brandService = new bbb030BrandServiceImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 1. 调用service查询
-		List<TbBrand> brands = brandService.selectAll();
+		List<bbb029TbBrand> brands = bbb031brandService.selectAll();
 
 		// 2. 转为JSON
 		String jsonString = JSON.toJSONString(brands);

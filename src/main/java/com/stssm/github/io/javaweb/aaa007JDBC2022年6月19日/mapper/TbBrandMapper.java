@@ -21,7 +21,7 @@ public interface TbBrandMapper {
 
 	TbBrand selectByDy(int id);
 
-	// List<TbBrand> queryTotal();
+	// List<bbb029TbBrand> queryTotal();
 	// 上面这些好像不能直接使用方法重载，如果使用了，会导致第一个被加载，后面的没有
 
 	/**

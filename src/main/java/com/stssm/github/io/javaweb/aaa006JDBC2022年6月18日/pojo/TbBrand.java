@@ -70,7 +70,7 @@ public class TbBrand {
 
 	@Override
 	public String toString() {
-		return "TbBrand{" +
+		return "bbb029TbBrand{" +
 				       "id=" + id +
 				       ", brandName='" + brandName + '\'' +
 				       ", companyName='" + companyName + '\'' +

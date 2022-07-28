@@ -3,16 +3,16 @@
  * Date: 2022-07-26 20:22:43
  * LastEditors: liujiajun 45444154+wo1261931780@users.noreply.github.com
  * LastEditTime: 2022-07-26 21:43:21
- * FilePath: \brand-case\src\main\java\com\itheima\service\impl\brandServiceImpl.java
+ * FilePath: \brand-case\src\main\java\com\itheima\service\impl\bbb030BrandServiceImpl.java
  * Description: 1111
  *
  * Copyright (c) 2022 by liujiajun 45444154+wo1261931780@users.noreply.github.com, All Rights Reserved.
  */
 package com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.service.impl;
 
-import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.mapper.brandMapper;
-import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.pojo.TbBrand;
-import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.service.brandService;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.mapper.bbb028brandMapper;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.pojo.bbb029TbBrand;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.service.bbb031brandService;
 import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.util.SqlSessionFactoryUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -31,7 +31,7 @@ import java.util.List;
  * @return
  * @exception
  */
-public class brandServiceImpl implements brandService {
+public class bbb030BrandServiceImpl implements bbb031brandService {
 
 	SqlSessionFactory x = SqlSessionFactoryUtils.getSqlSessionFactory();
 
@@ -41,17 +41,17 @@ public class brandServiceImpl implements brandService {
 	 * @return
 	 */
 	@Override
-	public List<TbBrand> selectAll() {
+	public List<bbb029TbBrand> selectAll() {
 		SqlSession sqlSession = x.openSession();
-		brandMapper mapper = sqlSession.getMapper(brandMapper.class);
-		List<TbBrand> tbBrands = mapper.selectAll();
+		bbb028brandMapper mapper = sqlSession.getMapper(bbb028brandMapper.class);
+		List<bbb029TbBrand> bbb029TbBrands = mapper.selectAll();
 		sqlSession.close();
 
-		return tbBrands;
+		return bbb029TbBrands;
 	}
 
 	@Override
-	public TbBrand addBrand(TbBrand brand) {
+	public bbb029TbBrand addBrand(bbb029TbBrand brand) {
 		// TODO Auto-generated method stub
 		// 测试结果
 

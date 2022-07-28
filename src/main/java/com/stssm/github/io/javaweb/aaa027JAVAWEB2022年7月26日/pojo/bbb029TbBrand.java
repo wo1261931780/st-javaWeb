@@ -3,12 +3,12 @@ package com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.pojo;
 import java.io.Serializable;
 
 /**
- * (TbBrand)实体类
+ * (bbb029TbBrand)实体类
  *
  * @author makejava
  * @since 2022-07-26 20:08:44
  */
-public class TbBrand implements Serializable {
+public class bbb029TbBrand implements Serializable {
 	private static final long serialVersionUID = -91601256641355210L;
 
 	private Integer id;

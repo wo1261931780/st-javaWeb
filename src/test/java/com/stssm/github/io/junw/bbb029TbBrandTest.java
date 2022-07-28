@@ -19,7 +19,7 @@ import java.util.List;
  * bbb010User:  liujiajun_junw
  * Time:  2022-06-21-09  星期六
  */
-public class TbBrandTest {
+public class bbb029TbBrandTest {
 	@Test
 	public void demoShow() throws IOException {
 		String resource = "mybatis-config.xml";

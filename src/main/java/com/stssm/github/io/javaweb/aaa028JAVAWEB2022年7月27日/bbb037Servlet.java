@@ -20,11 +20,11 @@ import java.lang.reflect.Method;
  * @return
  * @exception
  */
-// @WebServlet(name = "bbb002Servlet", value = "/bbb002Servlet")
+// @WebServlet(name = "bbb037Servlet", value = "/bbb037Servlet")
 // 因为我之前配置过一个分发的servlet
 // 所有的servlet都会从这个分发的路径走过去
 // 	所以这里才不需要配置
-public class bbb002Servlet extends HttpServlet {
+public class bbb037Servlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// super.service(req, resp);
@@ -34,9 +34,9 @@ public class bbb002Servlet extends HttpServlet {
 		int index = requestURI.lastIndexOf("/");
 		String substring = requestURI.substring(index + 1);
 		System.out.println("我是当前资源访问路径：" + substring);// 我是当前资源访问路径：/demo
-		System.out.println(this);// com.itheima.web.servlet.bbb001Servlet@1976025b
+		System.out.println(this);// com.itheima.web.servlet.bbb036Servlet@1976025b
 		// 谁在访问这个分发的文件，那么就是谁作为对象，参与下面的调用过程
-		Class<? extends bbb002Servlet> aClass = this.getClass();
+		Class<? extends bbb037Servlet> aClass = this.getClass();
 		try {
 			Method method = aClass.getMethod(substring, HttpServletRequest.class, HttpServletResponse.class);
 			// method.invoke(req, resp);

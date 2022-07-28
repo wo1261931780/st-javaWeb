@@ -1,6 +1,6 @@
 package com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.mapper;
 
-import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.pojo.TbBrand;
+import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.pojo.bbb029TbBrand;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 
@@ -18,11 +18,11 @@ import java.util.List;
  * @return
  * @exception
  */
-public interface brandMapper {
+public interface bbb028brandMapper {
 
 	@Select("select * from study002jdbc.tb_brand")
 	@ResultMap("brandResultMap")
-	List<TbBrand> selectAll();
+	List<bbb029TbBrand> selectAll();
 
 	// 为了解决字段映射的问题，这里使用注解来方便我们处理
 	// 注意注解的名称和xml中的名称需要对应
@@ -30,5 +30,5 @@ public interface brandMapper {
 	/**
 	 *
 	 */
-	TbBrand addBrand(TbBrand brand);
+	bbb029TbBrand addBrand(bbb029TbBrand brand);
 }
