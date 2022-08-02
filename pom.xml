@@ -54,7 +54,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.29</version>
+			<version>8.0.30</version>
 		</dependency>
 		<!--我真他妈是个土狗，这些都不知道，写代码太好玩了hh-->
 		<!-- 添加slf4j日志api -->
