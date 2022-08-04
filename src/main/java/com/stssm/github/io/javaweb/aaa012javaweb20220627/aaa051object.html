@@ -1,0 +1,68 @@
+<!--
+ $ @Author: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @Date: 2022-06-27 21:49:40
+ $ @LastEditors: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @LastEditTime: 2022-06-30 20:59:24
+ $ @FilePath: \st-ssm.github.io\src\main\java\com\stssm\github\io\javaweb\aaa012JDBC2022年6月27日\aaa051object.html
+ $ @Description: 1111
+ $ @
+ $ @Copyright (c) 2022 by liujiajun 45444154+wo1261931780@users.noreply.github.com, All Rights Reserved.
+ -->
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8"/>
+	<meta content = "IE=edge" http-equiv = "X-UA-Compatible"/>
+	<meta content = "width=device-width, initial-scale=1.0" name = "viewport"/>
+	<title>Document</title>
+</head>
+<body>
+<div>我是div对象</div>
+<!-- 在html中，属性可以分为标准属性和专有的 -->
+<!-- 标准属性，是所有的标签都具备的 -->
+<!-- 句柄，就是可以被监听到的特殊事件 -->
+<div id = "id" name = "name"></div>
+<div id = "id2" name = "name"></div>
+<div id = "id3" name = "name"></div>
+<div id = "id4" name = "name"></div>
+<div id = "id5" name = "name"></div>
+<img
+		alt = "我是图片"
+		id = "imgid"
+		src = "../aaa012javaweb20220627/img/img1.jpg"
+		width = "200px"
+/>
+<input id = "chId1" name = "chName" type = "checkbox"/>1
+<input id = "chId2" name = "chName" type = "checkbox"/>2
+<input id = "chId3" name = "chName" type = "checkbox"/>3
+<!-- ------------------------------------------------------- -->
+<script>
+	var demo1 = document.getElementById("imgid"); // 通过id获取到了一个确定的元素对象
+	demo1.src = "../aaa012JDBC2022年6月27日/img/img2.jpg";
+	// 通过src，将其src属性修改为另一个指定的文件
+	// -------------------------------------------------------
+	var list = document.getElementsByTagName("div");
+	// 解释一下这里的过程
+	// 首先获取所有的div，将其变成一个集合
+	for (let i = 0; i < list.length; i++) {
+		list[i].style.color = "red";
+		// 在遍历的过程中，给每一个div的属性设置为红色
+	}
+	// document.getElementById("id").style.color = "red";
+	// 实际上也可以这样链式编程
+	// -------------------------------------------------------
+	var tagList = document.getElementsByTagName("div");
+	for (let i = 0; i < tagList.length; i++) {
+		tagList[i].innerHTML = "inner修改了";
+	}
+	// -------------------------------------------------------
+	// var checkBoxList = document.getElementsByTagName("checkbox");
+	// 不能直接进行选中的操作
+	// 如果通过js绑定选中的功能，需要将其按照input的元素收集为集合
+	var checkBoxList = document.getElementsByTagName("input");
+	for (let i = 0; i < checkBoxList.length; i++) {
+		checkBoxList[i].checked = true;
+	}
+</script>
+</body>
+</html>
