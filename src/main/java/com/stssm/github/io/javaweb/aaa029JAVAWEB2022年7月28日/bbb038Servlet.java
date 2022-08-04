@@ -31,10 +31,12 @@ import java.io.IOException;
 public class bbb038Servlet extends bbb037Servlet {
 	private final BrandService x = new BrandServiceImpl();
 
-	// 首先我们要确定，
-	// 这里的bbb002是继承http的类，在里面写好代码以后，因此拥有了分发的功能
-	// 然后我们让001去继承分发的类
-	// 这样才拥有了访问具体方法的功能
+	/**
+	 * 首先我们要确定，
+	 * 这里的bbb002是继承http的类，在里面写好代码以后，因此拥有了分发的功能
+	 * 然后我们让001去继承分发的类
+	 * 这样才拥有了访问具体方法的功能
+	 */
 	public void selectAll(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("我是show1方法.................");
 	}

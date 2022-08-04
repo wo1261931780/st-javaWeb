@@ -4,9 +4,13 @@ package com.stssm.github.io.javaweb.aaa029JAVAWEB2022年7月28日;
  * @author liujiajun_junw
  */
 public class Brand {
-	// id 主键
+	/**
+	 * id 主键
+	 */
 	private Integer id;
-	// 品牌名称
+	/**
+	 * 品牌名称
+	 */
 	private String brandName;
 	// 企业名称
 	private String companyName;
