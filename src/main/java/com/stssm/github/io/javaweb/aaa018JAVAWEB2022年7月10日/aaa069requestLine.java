@@ -46,13 +46,13 @@ public class aaa069requestLine extends HttpServlet {
 		// 项目启动的完整路径是：http://localhost:8089/show_war/showMe
 		// 这里获取具体的内容路径，可以拿到我的包名/show_war
 		// ---------------------------------------------------------------------
-		StringBuffer requestURL = req.getRequestURL();
-		System.out.println("我是内容完整路径：" + requestURL);
+		StringBuffer requestUrl = req.getRequestURL();
+		System.out.println("我是内容完整路径：" + requestUrl);
 		// http://localhost:8089/show_war/showMe
 		// ---------------------------------------------------------------------
 		// 然后还有一个获取一部分路径的
-		String requestURI = req.getRequestURI();
-		System.out.println("我是获取内容路径：" + requestURI);
+		String requestUri = req.getRequestURI();
+		System.out.println("我是获取内容路径：" + requestUri);
 		// /show_war/showMe
 		// 这里的路径就是内容根路径，前缀相同的情况下，可以用来作为请求来源的判断依据
 		// ---------------------------------------------------------------------

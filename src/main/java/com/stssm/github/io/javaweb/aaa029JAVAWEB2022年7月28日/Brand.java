@@ -1,5 +1,8 @@
 package com.stssm.github.io.javaweb.aaa029JAVAWEB2022年7月28日;
 
+/**
+ * @author liujiajun_junw
+ */
 public class Brand {
 	// id 主键
 	private Integer id;

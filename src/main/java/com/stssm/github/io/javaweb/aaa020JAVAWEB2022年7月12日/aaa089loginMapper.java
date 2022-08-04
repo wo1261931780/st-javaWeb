@@ -28,9 +28,20 @@ public interface aaa089loginMapper {
 	@Select("select * from study002jdbc.account where id=#{id} and password=#{paw}")
 	user login(@Param("id") String id, @Param("paw") String paw);
 
+	/**
+	 * 账号登录
+	 *
+	 * @param account
+	 * @return
+	 */
 	@Select("select * from study002jdbc.account where id=#{account}")
 	user queryByUserName(@Param("account") String account);
 
+	/**
+	 * 注册账号
+	 *
+	 * @param user
+	 */
 	@Insert("insert into study002jdbc.account values (#{account},#{paw})")
 	void insert(user user);
 }

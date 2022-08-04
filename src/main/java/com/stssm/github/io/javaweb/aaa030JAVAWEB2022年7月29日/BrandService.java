@@ -1,9 +1,11 @@
 package com.stssm.github.io.javaweb.aaa030JAVAWEB2022年7月29日;
 
-import com.itheima.pojo.PageBean;
 
 import java.util.List;
 
+/**
+ * @author liujiajun_junw
+ */
 public interface BrandService {
 
 	/**

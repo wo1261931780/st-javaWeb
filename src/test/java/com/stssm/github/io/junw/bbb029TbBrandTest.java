@@ -1,7 +1,7 @@
 package com.stssm.github.io.junw;
 
-import com.stssm.github.io.javaweb.aaa006JDBC2022年6月18日.mapper.BrandMapper;
-import com.stssm.github.io.javaweb.aaa006JDBC2022年6月18日.pojo.TbBrand;
+import com.stssm.github.io.javaweb.aaa006jdbc20220618.mapper.BrandMapper;
+import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.TbBrand;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

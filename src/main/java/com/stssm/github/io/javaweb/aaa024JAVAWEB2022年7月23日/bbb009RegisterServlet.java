@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/**
+ * @author liujiajun_junw
+ */
+
 @WebServlet("/registerServlet")
 public class bbb009RegisterServlet extends HttpServlet {
 	private final bbb011UserService service = new bbb011UserService();

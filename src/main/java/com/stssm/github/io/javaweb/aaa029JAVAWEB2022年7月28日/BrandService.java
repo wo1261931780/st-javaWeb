@@ -4,6 +4,9 @@ import com.itheima.pojo.PageBean;
 
 import java.util.List;
 
+/**
+ * @author liujiajun_junw
+ */
 public interface BrandService {
 
 	/**

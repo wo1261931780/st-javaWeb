@@ -4,7 +4,7 @@
 		"http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<package name="com.stssm.github.io.javaweb.aaa006JDBC2022年6月18日.pojo"/>
+		<package name="com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo"/>
 		<!--设置了这里，就可以自动扫描所有的pojo-->
 		<!--以后我在mapper中，不需要配置对应的包名了，直接使用类名就可以-->
 	</typeAliases>
@@ -48,7 +48,7 @@
 		<!--<mapper resource="com/stssm/github/io/javaweb/aaa004JDBC2022年6月18日/mapper/OperateMybatisMapper.xml"/>-->
 		<!--因为之前修改了对应的mapper文件和xml文件，所以这里需要对应到-->
 		<!--*********************************************************************-->
-		<package name="com.stssm.github.io.javaweb.aaa006JDBC2022年6月18日.mapper"/>
+		<package name="com.stssm.github.io.javaweb.aaa006jdbc20220618.mapper"/>
 		<package name="com.stssm.github.io.javaweb.aaa007JDBC2022年6月19日.mapper"/>
 		<package name="com.stssm.github.io.javaweb.aaa008JDBC2022年6月20日.mapper"/>
 		<!--这里直接用包扫描的方式，就可以一次性加载所有的mapper进来-->

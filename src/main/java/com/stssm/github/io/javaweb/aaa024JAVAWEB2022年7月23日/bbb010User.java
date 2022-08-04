@@ -1,5 +1,8 @@
 package com.stssm.github.io.javaweb.aaa024JAVAWEB2022年7月23日;
 
+/**
+ * @author liujiajun_junw
+ */
 public class bbb010User {
 
 	private Integer id;

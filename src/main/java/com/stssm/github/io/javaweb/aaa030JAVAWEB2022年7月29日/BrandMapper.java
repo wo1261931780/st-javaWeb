@@ -7,6 +7,9 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
+/**
+ * @author liujiajun_junw
+ */
 public interface BrandMapper {
 
 	/**

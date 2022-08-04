@@ -13,8 +13,12 @@ import java.io.IOException;
 /**
  * Created by Intellij IDEA.
  * Project:brand-case
- * Package:${PACKAGE_NAME}
- *
+ * Package:$
+ * {
+ * PACKAGE_NAME
+ * }
+ * @WebServlet(name = "bbb001Servlet", value = "/bbb001Servlet")
+ * 作为一个基础的servlet，主要功能是进行分发，这里需要配置通配符路径
  * @param
  * @author liujiajun_junw
  * @Date 2022-07-20-01  星期三
@@ -23,8 +27,6 @@ import java.io.IOException;
  * @exception
  */
 
-// @WebServlet(name = "bbb001Servlet", value = "/bbb001Servlet")
-// 作为一个基础的servlet，主要功能是进行分发，这里需要配置通配符路径
 @WebServlet("/brand/*")
 public class bbb038Servlet extends bbb037Servlet {
 	private final BrandService x = new BrandServiceImpl();

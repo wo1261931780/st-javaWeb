@@ -14,6 +14,9 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet("/selectAllServlet")
+/**
+ * @author liujiajun_junw
+ */
 public class bbb034SelectAllServlet extends HttpServlet {
 
 	private final bbb031brandService bbb031brandService = new bbb030BrandServiceImpl();

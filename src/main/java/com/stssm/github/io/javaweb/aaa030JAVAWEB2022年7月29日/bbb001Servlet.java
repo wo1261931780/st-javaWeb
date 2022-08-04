@@ -1,7 +1,6 @@
 package com.stssm.github.io.javaweb.aaa030JAVAWEB2022年7月29日;
 
 import com.alibaba.fastjson.JSON;
-import com.itheima.pojo.PageBean;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,8 +12,12 @@ import java.io.IOException;
 /**
  * Created by Intellij IDEA.
  * Project:brand-case
- * Package:${PACKAGE_NAME}
- *
+ * Package:$
+ * {
+ * PACKAGE_NAME
+ * }
+ * @WebServlet(name = "bbb001Servlet", value = "/bbb001Servlet")
+ * 作为一个基础的servlet，主要功能是进行分发，这里需要配置通配符路径
  * @param
  * @author liujiajun_junw
  * @Date 2022-07-20-01  星期三
@@ -23,8 +26,6 @@ import java.io.IOException;
  * @exception
  */
 
-// @WebServlet(name = "bbb001Servlet", value = "/bbb001Servlet")
-// 作为一个基础的servlet，主要功能是进行分发，这里需要配置通配符路径
 @WebServlet("/brand/*")
 public class bbb001Servlet extends bbb002Servlet {
 	private final BrandService x = new BrandServiceImpl();
