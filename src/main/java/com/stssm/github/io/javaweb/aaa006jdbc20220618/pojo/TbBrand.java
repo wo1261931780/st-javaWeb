@@ -5,6 +5,8 @@ package com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo;
  * Project:st-ssm.github.io
  * Package:com.domain
  * bbb010User:  liujiajun_junw
+ *
+ * @author liujiajun_junw
  * Time:  2022-06-21-07  星期六
  */
 public class TbBrand {

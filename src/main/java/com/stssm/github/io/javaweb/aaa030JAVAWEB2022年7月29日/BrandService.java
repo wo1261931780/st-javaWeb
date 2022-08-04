@@ -11,7 +11,7 @@ public interface BrandService {
 	/**
 	 * 查询所有
 	 *
-	 * @return
+	 * @return 结果list
 	 */
 	List<Brand> selectAll();
 
@@ -63,6 +63,7 @@ public interface BrandService {
 	 *
 	 * @param page
 	 * @param size
+	 * @return brand类
 	 */
 	page<Brand> selectAllData(int page, int size);
 

@@ -1,6 +1,5 @@
 package com.stssm.github.io.javaweb.aaa029JAVAWEB2022年7月28日;
 
-import com.itheima.pojo.PageBean;
 import com.stssm.github.io.javaweb.aaa027JAVAWEB2022年7月26日.util.SqlSessionFactoryUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -12,7 +11,9 @@ import java.util.List;
  */
 
 public class BrandServiceImpl implements BrandService {
-	// 1. 创建SqlSessionFactory 工厂对象
+	/**
+	 * 1. 创建SqlSessionFactory 工厂对象
+	 */
 	SqlSessionFactory factory = SqlSessionFactoryUtils.getSqlSessionFactory();
 
 

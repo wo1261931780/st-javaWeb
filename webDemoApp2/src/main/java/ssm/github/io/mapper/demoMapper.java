@@ -30,13 +30,19 @@ public interface demoMapper {
 	@ResultMap("demoMapper")
 	List<TbBrand> selectAll();
 
+	/**
+	 * 新增一条数据
+	 *
+	 * @param brand
+	 * @return 返回TbBrand的集合
+	 */
 	List<TbBrand> addOne(TbBrand brand);
 
 	/**
 	 * 根据id进行查询
 	 *
 	 * @param paramId
-	 * @return
+	 * @return 布尔类型结果
 	 */
 	@Select("select  * from tb_brand where id=#{paramId}")
 	TbBrand selectById(@Param("paramId") int paramId);

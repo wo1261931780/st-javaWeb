@@ -62,14 +62,16 @@ public interface BrandMapper {
 	 *
 	 * @param begin
 	 * @param size
-	 * @return
+	 * @param brand
+	 * @return brand集合
 	 */
 	List<Brand> selectByPageAndCondition(@Param("begin") int begin, @Param("size") int size, @Param("brand") Brand brand);
 
 	/**
 	 * 根据条件查询总记录数
 	 *
-	 * @return
+	 * @param brand
+	 * @return 0/1
 	 */
 	int selectTotalCountByCondition(Brand brand);
 
@@ -80,7 +82,7 @@ public interface BrandMapper {
 	 * 批量删除命令
 	 *
 	 * @param ids
-	 * @return
+	 * @return 布尔
 	 */
 	boolean delByList(@Param("ids") int[] ids);
 
@@ -89,7 +91,7 @@ public interface BrandMapper {
 	 *
 	 * @param begin
 	 * @param size
-	 * @return
+	 * @return 布尔
 	 */
 	@Select("select * from tb_brand limit #{begin} ,#{size};")
 	List<Brand> selectAllData(@Param("begin") int begin, @Param("size") int size);

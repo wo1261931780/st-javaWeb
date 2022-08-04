@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa008JDBC2022年6月20日.mapper;
+package com.stssm.github.io.javaweb.aaa008jdbc20220620.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -11,10 +11,17 @@ import java.util.Map;
  * Project:st-ssm.github.io
  * Package:com.stssm.github.io.javaweb.mapper
  * bbb010User:  liujiajun_junw
+ *
+ * @author liujiajun_junw
  * Time:  2022-06-20-36  星期一
  */
 @Mapper
 public interface TbBrandMapper {
+	/**
+	 * 根据id删除一条数据
+	 *
+	 * @param id
+	 */
 	void deleteById(int id);
 
 	/**
@@ -22,7 +29,14 @@ public interface TbBrandMapper {
 	 * 上面是没有添加注解的，所以数组必须使用array来称呼
 	 * 下面这里加上了注解，所以可以直接使用ids代表整个数组
 	 */
+
+	/**
+	 * 批量删除数据
+	 *
+	 * @param ids
+	 */
 	void deleteByIds(@Param("ids") int[] ids);
+
 
 	/**
 	 * 这里解析一下mybatis的底层代码
@@ -38,11 +52,29 @@ public interface TbBrandMapper {
 	 * 如果我手动设置一个param注解，上面的arg0就会变成id
 	 * --------------------------------------------------------
 	 * 同理，如果我只有单个参数，比如单个对象就是我的参数，那么就不会被封装为map的形式
+	 *
+	 * @param id
+	 * @param brandName
+	 * @param companyName
+	 * @return
 	 */
+
 	int selectTotal(@Param("id2") int id, @Param("brandName2") String brandName, @Param("companyName2") String companyName);
 
+
+	/**
+	 * 测试map
+	 *
+	 * @param map
+	 * @return
+	 */
 	int mapCase(Map map);
 
+	/**
+	 * 测试接口
+	 *
+	 * @param id
+	 */
 	@Select("select * from mybatis.tb_brand where id=#{id};")
 	void selectAnnotate(int id);
 

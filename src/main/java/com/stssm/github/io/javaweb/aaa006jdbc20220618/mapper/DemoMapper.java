@@ -9,11 +9,18 @@ import java.util.List;
  * Project:st-ssm.github.io
  * Package:com.stssm.github.io.javaweb.aaa004JDBC2022年6月18日.mapper
  * bbb010User:  liujiajun_junw
+ *
+ * @author liujiajun_junw
  * Time:  2022-06-15-02  星期六
  */
 public interface DemoMapper {
 	// DemoPojo selectAll();
 
+	/**
+	 * 查询所有的记过
+	 *
+	 * @return 返回demoPojo集合
+	 */
 	List<DemoPojo> selectAll();// 这里可以根据需要自定义返回的类型
 	// 不过，设置了不同的返回类型，那么也就接收了不同的SQL对象
 

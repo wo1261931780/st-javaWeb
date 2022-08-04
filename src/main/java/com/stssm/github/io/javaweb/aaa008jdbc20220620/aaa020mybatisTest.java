@@ -1,7 +1,7 @@
-package com.stssm.github.io.javaweb.aaa008JDBC2022年6月20日;
+package com.stssm.github.io.javaweb.aaa008jdbc20220620;
 
-import com.stssm.github.io.javaweb.aaa008JDBC2022年6月20日.mapper.TbBrandMapper;
-import com.stssm.github.io.javaweb.aaa008JDBC2022年6月20日.pojo.TbBrand;
+import com.stssm.github.io.javaweb.aaa008jdbc20220620.mapper.TbBrandMapper;
+import com.stssm.github.io.javaweb.aaa008jdbc20220620.pojo.TbBrand;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

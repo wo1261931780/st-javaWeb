@@ -51,7 +51,9 @@ public class Brand {
 		this.status = status;
 	}
 
-	// getId  ${brand.id}   Id   getId
+	/**
+	 * getId  ${brand.id}   Id   getId
+	 */
 	public Integer getId() {
 		System.out.println("getId方法被调用了...");
 		return id;

@@ -64,6 +64,7 @@ public interface BrandService {
 	 *
 	 * @param page
 	 * @param size
+	 * @return 指定类
 	 */
 	page<Brand> selectAllData(int page, int size);
 

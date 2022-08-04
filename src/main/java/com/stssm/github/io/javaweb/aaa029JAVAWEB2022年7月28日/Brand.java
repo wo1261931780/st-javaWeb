@@ -12,13 +12,21 @@ public class Brand {
 	 * 品牌名称
 	 */
 	private String brandName;
-	// 企业名称
+	/**
+	 * 企业名称
+	 */
 	private String companyName;
-	// 排序字段
+	/**
+	 * 排序字段
+	 */
 	private Integer ordered;
-	// 描述信息
+	/**
+	 * 描述信息
+	 */
 	private String description;
-	// 状态：0：禁用  1：启用
+	/**
+	 * 状态：0：禁用  1：启用
+	 */
 	private Integer status;
 
 
@@ -70,7 +78,9 @@ public class Brand {
 		this.status = status;
 	}
 
-	// 逻辑视图
+	/**
+	 * 逻辑视图
+	 */
 	public String getStatusStr() {
 		if (status == null) {
 			return "未知";

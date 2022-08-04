@@ -1,5 +1,9 @@
 package ssm.github.io.pojo;
 
+/**
+ * @author liujiajun_junw
+ */
+
 public class TbBrand {
 	/**
 	 * 主键

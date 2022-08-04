@@ -62,14 +62,15 @@ public interface BrandMapper {
 	 *
 	 * @param begin
 	 * @param size
-	 * @return
+	 * @param brand
+	 * @return 品牌list
 	 */
 	List<Brand> selectByPageAndCondition(@Param("begin") int begin, @Param("size") int size, @Param("brand") Brand brand);
 
 	/**
 	 * 根据条件查询总记录数
-	 *
-	 * @return
+	 * @param brand
+	 * @return 0/1
 	 */
 	int selectTotalCountByCondition(Brand brand);
 

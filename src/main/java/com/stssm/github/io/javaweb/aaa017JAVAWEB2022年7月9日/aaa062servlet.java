@@ -4,19 +4,17 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 
+
+@WebServlet(urlPatterns = "/demoss", loadOnStartup = 1)// 这里，urlPattern表示访问的路径，loadOnStartUp表示优先级
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
  * Package:PACKAGE_NAME
  *
- * @param
  * @author liujiajun_junw
  * @Date 2022-07-10-11  星期六
  * @description 要访问资源，就必须要设置访问的路径，我们在注解上，添加对应的路径即可
- * @return
- * @exception
  */
-@WebServlet(urlPatterns = "/demoss", loadOnStartup = 1)// 这里，urlPattern表示访问的路径，loadOnStartUp表示优先级
 public class aaa062servlet implements Servlet {
 	private ServletConfig configDemo;
 

@@ -20,15 +20,25 @@ import java.util.List;
  */
 public interface bbb028brandMapper {
 
+	/**
+	 * 选择所有
+	 *
+	 * @return 测试
+	 */
 	@Select("select * from study002jdbc.tb_brand")
 	@ResultMap("brandResultMap")
 	List<bbb029TbBrand> selectAll();
 
-	// 为了解决字段映射的问题，这里使用注解来方便我们处理
-	// 注意注解的名称和xml中的名称需要对应
 
 	/**
+	 * 为了解决字段映射的问题，这里使用注解来方便我们处理
+	 * 注意注解的名称和xml中的名称需要对应
+	 */
+	/**
+	 * 新增品牌
 	 *
+	 * @param brand
+	 * @return 返回布尔
 	 */
 	bbb029TbBrand addBrand(bbb029TbBrand brand);
 }

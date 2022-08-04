@@ -1,10 +1,12 @@
-package com.stssm.github.io.javaweb.aaa007JDBC2022年6月19日.pojo;
+package com.stssm.github.io.javaweb.aaa007jdbc20220619.pojo;
 
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
  * Package:com.domain
  * bbb010User:  liujiajun_junw
+ *
+ * @author liujiajun_junw
  * Time:  2022-06-09-27  星期日
  */
 public class TbBrand {

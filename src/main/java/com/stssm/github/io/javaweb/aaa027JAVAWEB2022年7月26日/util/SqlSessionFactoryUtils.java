@@ -7,6 +7,10 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * @author liujiajun_junw
+ */
+
 public class SqlSessionFactoryUtils {
 
 	private static SqlSessionFactory sqlSessionFactory;

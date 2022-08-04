@@ -17,12 +17,12 @@ import org.apache.ibatis.annotations.Select;
  * @exception
  */
 public interface loginMapper {
-	/*
+	/**
 	 * 生成查询结果
 	 * @param id
 	 * @param paw
-	 * @return
-	 * */
+	 * @return 结果
+	 */
 	@Select("select *from study002jdbc.account where id=#{id} and password=#{paw}")
 	user login(@Param("id") String id, @Param("paw") String paw);
 }

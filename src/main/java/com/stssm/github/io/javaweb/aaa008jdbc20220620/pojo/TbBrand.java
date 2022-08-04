@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa008JDBC2022年6月20日.pojo;
+package com.stssm.github.io.javaweb.aaa008jdbc20220620.pojo;
 
 import java.io.Serializable;
 
@@ -7,6 +7,8 @@ import java.io.Serializable;
  * Project:st-ssm.github.io
  * Package:com.stssm.github.io.javaweb.model
  * bbb010User:  liujiajun_junw
+ *
+ * @author liujiajun_junw
  * Time:  2022-06-20-36  星期一
  */
 

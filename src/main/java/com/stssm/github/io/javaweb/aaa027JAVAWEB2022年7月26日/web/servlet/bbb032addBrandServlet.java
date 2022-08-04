@@ -24,6 +24,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 
+/**
+ * @author liujiajun_junw
+ */
 @WebServlet(name = "bbb032brandServlet", value = "/bbb032brandServlet")
 public class bbb032addBrandServlet extends HttpServlet {
 	private final bbb031brandService demoService = new bbb030BrandServiceImpl();

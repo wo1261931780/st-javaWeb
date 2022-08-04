@@ -14,8 +14,19 @@ import java.util.List;
  * @author liujiajun_junw
  */
 public interface BrandMapper {
+	/**
+	 * 展示结果
+	 *
+	 * @return
+	 */
 	List<TbBrand> showRes();
 
+	/**
+	 * 登录功能
+	 *
+	 * @param id
+	 * @return
+	 */
 	TbBrand selectById(int id);
 
 
