@@ -1,7 +1,7 @@
 package com.stssm.github.io.javaweb.aaa004jdbc20220615.example;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
-import com.stssm.github.io.javaweb.aaa004jdbc20220615.pojo.aaa012CaseBrand;
+import com.stssm.github.io.javaweb.aaa004jdbc20220615.pojo.Aaa012CaseBrand;
 import org.junit.jupiter.api.Test;
 
 import javax.sql.DataSource;
@@ -17,7 +17,7 @@ import java.util.Properties;
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
  * Package:com.stssm.github.io.javaweb.aaa004jdbc20220615.example
- * bbb010User:  wo1261931780@gmail.com
+ * Bbb010User:  wo1261931780@gmail.com
  * Time:  2022-06-21-59  星期三
  *
  * @author liujiajun_junw
@@ -42,11 +42,11 @@ public class TestDemoTest {
 		PreparedStatement preparedStatement = connection.prepareStatement(demoSql);
 
 		ResultSet resultSet = preparedStatement.executeQuery();
-		List<aaa012CaseBrand> x = new ArrayList<>();
-		aaa012CaseBrand x1 = null;// 创建一个初始对象就可以，不需要在遍历中重复创建
+		List<Aaa012CaseBrand> x = new ArrayList<>();
+		Aaa012CaseBrand x1 = null;// 创建一个初始对象就可以，不需要在遍历中重复创建
 		while (resultSet.next()) {
-			// aaa012CaseBrand x1 = new aaa012CaseBrand();
-			x1 = new aaa012CaseBrand();
+			// Aaa012CaseBrand x1 = new Aaa012CaseBrand();
+			x1 = new Aaa012CaseBrand();
 			System.out.println(resultSet.getString("brand_name"));
 			x1.setId(resultSet.getInt("id"));
 			x1.setStatus(resultSet.getInt("status"));

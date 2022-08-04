@@ -162,7 +162,7 @@ public class BrandServiceImpl implements BrandService {
 	 * @return
 	 */
 	@Override
-	public page<Brand> selectAllData(int page, int size) {
+	public Page<Brand> selectAllData(int page, int size) {
 		SqlSession sqlSession = factory.openSession();
 		BrandMapper mapper = sqlSession.getMapper(BrandMapper.class);
 		List<Brand> brands = mapper.selectAllData(1, 10);

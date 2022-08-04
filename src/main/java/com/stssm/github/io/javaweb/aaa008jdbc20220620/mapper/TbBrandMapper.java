@@ -10,7 +10,7 @@ import java.util.Map;
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
  * Package:com.stssm.github.io.javaweb.mapper
- * bbb010User:  liujiajun_junw
+ * Bbb010User:  liujiajun_junw
  *
  * @author liujiajun_junw
  * Time:  2022-06-20-36  星期一

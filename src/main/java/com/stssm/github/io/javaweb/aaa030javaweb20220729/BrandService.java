@@ -65,7 +65,7 @@ public interface BrandService {
 	 * @param size
 	 * @return brand类
 	 */
-	page<Brand> selectAllData(int page, int size);
+	Page<Brand> selectAllData(int page, int size);
 
 
 }

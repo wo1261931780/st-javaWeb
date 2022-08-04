@@ -4,7 +4,7 @@ package com.stssm.github.io.javaweb.aaa007jdbc20220619.pojo;
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
  * Package:com.domain
- * bbb010User:  liujiajun_junw
+ * Bbb010User:  liujiajun_junw
  *
  * @author liujiajun_junw
  * Time:  2022-06-09-27  星期日
@@ -72,7 +72,7 @@ public class TbBrand {
 
 	@Override
 	public String toString() {
-		return "bbb029TbBrand{" +
+		return "Bbb029TbBrand{" +
 				       "id=" + id +
 				       ", brandName='" + brandName + '\'' +
 				       ", companyName='" + companyName + '\'' +

@@ -13,7 +13,7 @@
 		status
 	</sql>
 
-	<!--<select id="showRes" resultType="com.stssm.github.io.javaweb.aaa004JDBC2022年6月18日.pojo.bbb029TbBrand">-->
+	<!--<select id="showRes" resultType="com.stssm.github.io.javaweb.aaa004JDBC2022年6月18日.pojo.Bbb029TbBrand">-->
 	<!--select * from mybatis.tb_brand where id =#{id};-->
 	<!--		select * from mybatis.tb_brand ;-->
 	<!--这里有个问题，-->
@@ -21,7 +21,7 @@
 	<!--比如add_name,在SQL中需要将其转换为add_name as addName-->
 	<!--还有一种方法，就是定义一个SQL片段，然后在里面直接引用-->
 	<!--select-->
-	<!--<include refid="aaa022html">-->
+	<!--<include refid="Aaa022Html">-->
 	<!--</include>-->
 	<!--from mybatis.tb_brand;-->
 	<!--通过定义一个SQL片段，可以解决问题-->

@@ -10,7 +10,7 @@ import java.util.Map;
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
  * Package:com.mapper
- * bbb010User:  liujiajun_junw
+ * Bbb010User:  liujiajun_junw
  * Time:  2022-06-09-27  星期日
  *
  * @author liujiajun_junw
@@ -33,7 +33,7 @@ public interface TbBrandMapper {
 	 */
 	TbBrand selectByDy(int id);
 
-	// List<bbb029TbBrand> queryTotal();
+	// List<Bbb029TbBrand> queryTotal();
 	// 上面这些好像不能直接使用方法重载，如果使用了，会导致第一个被加载，后面的没有
 
 

@@ -8,7 +8,7 @@ import java.util.List;
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
  * Package:com.stssm.github.io.javaweb.aaa004JDBC2022年6月18日.mapper
- * bbb010User:  liujiajun_junw
+ * Bbb010User:  liujiajun_junw
  *
  * @author liujiajun_junw
  * Time:  2022-06-15-02  星期六

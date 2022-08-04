@@ -7,7 +7,7 @@
 	<servlet>
 		<servlet-name>show1</servlet-name>
 		<!--这里是servlet注解中的路径名-->
-		<servlet-class>demo.showMe</servlet-class>
+		<servlet-class>demo.ShowMe</servlet-class>
 		<!--这里要写文件的名称-->
 	</servlet>
 	<servlet-mapping>

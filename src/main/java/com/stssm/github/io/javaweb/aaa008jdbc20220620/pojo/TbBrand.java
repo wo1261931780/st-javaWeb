@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
  * Package:com.stssm.github.io.javaweb.model
- * bbb010User:  liujiajun_junw
+ * Bbb010User:  liujiajun_junw
  *
  * @author liujiajun_junw
  * Time:  2022-06-20-36  星期一
@@ -30,7 +30,7 @@ public class TbBrand implements Serializable {
 
 	@Override
 	public String toString() {
-		return "bbb029TbBrand{" +
+		return "Bbb029TbBrand{" +
 				       "id=" + id +
 				       ", brandName='" + brandName + '\'' +
 				       ", companyName='" + companyName + '\'' +
