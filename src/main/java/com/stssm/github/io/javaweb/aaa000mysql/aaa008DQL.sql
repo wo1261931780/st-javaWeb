@@ -1,27 +1,5 @@
-desc demo1; -- 解释表结构，包括字段和字段的注释
-
-create table demo
-(
-	demo  varchar(20),
-	sex   char(1),
-	demo2 double
-);
 
 
-
--- DROP TABLE st_table;
--- 创建表格数据
-CREATE table demo1
-(
-	id        int,-- 主键
-	name      VARCHAR(20),
-	age       int,
-	sex       CHAR(1),
-	address   VARCHAR(50),
-	math      DOUBLE(5, 2),
-	english   DOUBLE(5, 2),
-	hire_date DATE
-);
 -- 插入数据语句
 -- 如果没有主键，可以插入重复数据
 INSERT INTO demo1(id, name, age, sex, address, math, english, hire_date)
