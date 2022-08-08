@@ -1,4 +1,4 @@
-SELECT * FROM `demo1`;
+SELECT * FROM demo1;
 
 
 
@@ -61,9 +61,3 @@ INSERT INTO demo4dept(id,dept_id,addttr) VALUES(NULL,'1','1');
 ALTER TABLE	demo3emp DROP FOREIGN KEY fkkey;
 -- 在表格3中，添加外键demokey，关联的字段是edp_id和demo4dept中的id
 ALTER TABLE demo3emp ADD CONSTRAINT demokey FOREIGN KEY(edp_id) REFERENCES demo4dept(id);
-
-
-
-
-
-

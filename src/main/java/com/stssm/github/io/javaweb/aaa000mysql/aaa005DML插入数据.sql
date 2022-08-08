@@ -42,7 +42,15 @@ INSERT into st_table(id, name, price)
 VALUES (21, '123', '322'),
        (31, '123', '322'),
        (41, '123', '322');
-
+-- 插入数据语句
+-- 如果没有主键，可以插入重复数据
+INSERT INTO demo1(id, name, age, sex, address, math, english, hire_date)
+VALUES (1, 'demo1', 55, '男', '深圳', 66, 78, '2010-01-01'),
+       (2, 'demo1', 55, '男', '深圳', 66, 78, '2010-01-01'),
+       (3, 'demo1', 55, '男', '深圳', 66, 78, '2010-01-01'),
+       (4, 'demo1', 55, '男', '深圳', 66, 78, '2010-01-01'),
+       (5, 'demo1', 55, '男', '深圳', 66, 78, '2010-01-01'),
+       (6, 'demo1', 55, '男', '深圳', 66, 78, '2010-01-01');
 
 -- 添加数据
 insert into tb_brand (brand_name, company_name, ordered, description, status)
