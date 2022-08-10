@@ -22,7 +22,9 @@ CREATE TABLE DEMO_3_EMP
 	id     int PRIMARY key auto_increment,
 	E_NAME VARCHAR(5),
 	age    INT,
+	salary int,
 	edp_id INT,
+
 -- 外键关联
 -- 从表的dep_id是根据主表demo4dept中的id进行关联的
 -- FK_KEY是外键的名称，可以任意取
