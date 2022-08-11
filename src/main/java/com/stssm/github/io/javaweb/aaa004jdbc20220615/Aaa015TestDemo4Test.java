@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa004jdbc20220615.example;
+package com.stssm.github.io.javaweb.aaa004jdbc20220615;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 import org.junit.jupiter.api.Test;
@@ -18,7 +18,7 @@ import java.util.Properties;
  *
  * @author liujiajun_junw
  */
-public class TestDemo3Test {
+public class Aaa015TestDemo4Test {
 	@Test
 	public void test() throws Exception {
 		Properties prop = new Properties();
@@ -26,21 +26,11 @@ public class TestDemo3Test {
 		DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
 		Connection connection = dataSource.getConnection();
 		// ******************************************************************************
-		String brandName = "测试3";
-		String companyName = "测试3";
-		int ordered = 333;
-		String description = "444";
-		int status = 555;
 		int id = 4;
 
-		String demoSql = "update study002jdbc.tb_brand set brand_name=? , company_name=? , ordered=? , description=? , status=? where id=?";
+		String demoSql = "delete  from tb_brand where id=?";
 		PreparedStatement preparedStatement = connection.prepareStatement(demoSql);
-		preparedStatement.setString(1, brandName);
-		preparedStatement.setString(2, companyName);
-		preparedStatement.setInt(3, ordered);
-		preparedStatement.setString(4, description);
-		preparedStatement.setInt(5, status);
-		preparedStatement.setInt(6, id);
+		preparedStatement.setInt(1, id);
 
 		int clomn = preparedStatement.executeUpdate();
 

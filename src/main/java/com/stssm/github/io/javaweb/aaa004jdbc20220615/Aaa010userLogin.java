@@ -15,7 +15,6 @@ import java.sql.SQLException;
  */
 public class Aaa010userLogin {
 	public static void main(String[] args) throws Exception {
-
 		String paw = "LIU18959297292";
 		// String url = "jdbc:mysql:///study002jdbc?useSSL=false";
 		String url = "jdbc:mysql:///study002jdbc?useSSL=false&useServerPrepStmts=true";
@@ -27,7 +26,7 @@ public class Aaa010userLogin {
 			String password = "123";
 			connection = DriverManager.getConnection(url, login, paw);
 			// 相当于，我设置好了连接以后，直接使用了prepare方法
-			String demoSql = "select * from study002jdbc.account where id=? and password=?";
+			String demoSql = "select * from demo_14_bank_account where id=? and balance=?";
 			PreparedStatement prs = connection.prepareStatement(demoSql);// 其实这一步，已经将SQL命令发送给了服务器，只不过还没有设置变量
 			// 然后方法得到了一个prs对象
 			prs.setString(1, name);
@@ -44,8 +43,6 @@ public class Aaa010userLogin {
 			e.printStackTrace();
 		} finally {
 			connection.close();
-
 		}
-
 	}
 }

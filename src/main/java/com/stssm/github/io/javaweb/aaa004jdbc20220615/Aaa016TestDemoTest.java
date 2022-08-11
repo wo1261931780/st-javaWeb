@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa004jdbc20220615.example;
+package com.stssm.github.io.javaweb.aaa004jdbc20220615;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 import com.stssm.github.io.javaweb.aaa004jdbc20220615.pojo.Aaa012CaseBrand;
@@ -22,7 +22,7 @@ import java.util.Properties;
  *
  * @author liujiajun_junw
  */
-public class TestDemoTest {
+public class Aaa016TestDemoTest {
 	@Test
 	public void test() throws Exception {
 		Properties prop = new Properties();
@@ -37,7 +37,7 @@ public class TestDemoTest {
 		// preparedStatement.setString(1, brName);
 		// 上面是我设置错误的，因为SQL没有查出数据，所以打印没有结果
 		// ******************************************************************************
-		String demoSql = "select  * from study002jdbc.tb_brand ;";
+		String demoSql = "select  * from tb_brand ;";
 		// 注意这里的SQL还必须带上分号收尾
 		PreparedStatement preparedStatement = connection.prepareStatement(demoSql);
 

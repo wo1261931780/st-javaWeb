@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * Package:com.stssm.github.io.javaweb.aaa003jdbc20220602
  * Bbb010User:  wo1261931780@gmail.com
  * Time:  2022-06-22-14  星期二
+ *
  * @author liujiajun_junw
  */
 public class Aaa008Case {
@@ -23,8 +24,8 @@ public class Aaa008Case {
 		try (
 				Connection connection = DriverManager.getConnection(url, acc, paw)
 		) {
-			String demosql = "select *from demo1 where name is not null";
-			ResultSet resultSet = connection.createStatement().executeQuery(demosql);
+			String demoSql = "select * from demo1 where E_NAME is not null";
+			ResultSet resultSet = connection.createStatement().executeQuery(demoSql);
 			while (resultSet.next()) {
 				int id = resultSet.getInt("id");
 				String name = resultSet.getString("name");
@@ -35,9 +36,6 @@ public class Aaa008Case {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
 		System.out.println(objects);
-
-
 	}
 }

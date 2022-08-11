@@ -37,7 +37,6 @@ public class Aaa006resulTset {
 			int price = resultSet.getInt("price");
 			// 修改以后，就会变成数据栏的名称
 			System.out.println(id + "--" + name + "--" + price);
-
 		}
 		// ============================================================================
 		// 上面两个东西的用法，在于取数据的方法不同
