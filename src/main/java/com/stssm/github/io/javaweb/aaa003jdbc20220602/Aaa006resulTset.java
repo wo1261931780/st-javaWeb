@@ -18,7 +18,7 @@ public class Aaa006resulTset {
 		String login = "root";
 		String url = "jdbc:mysql:///study002jdbc?useSSL=false";
 		Connection connection = DriverManager.getConnection(url, login, paw);
-		String demoSql = "select * from study002jdbc.demo1 ";
+		String demoSql = "select * from demo1 ";
 		// ResultSet resultSet = connection.createStatement().executeQuery(demoSql);
 		ResultSet resultSet = connection.createStatement().executeQuery(demoSql);
 		// while (resultSet.next()) {
@@ -29,6 +29,7 @@ public class Aaa006resulTset {
 		// 	// 注意了，这里是按照顺序依次增加的，不是同一个index=1
 		// 	System.out.println(id + "--" + name + "--" + price);
 		// }
+		// ============================================================================
 		while (resultSet.next()) {
 			// System.out.println("我是result：" + resultSet);
 			int id = resultSet.getInt("id");
@@ -38,6 +39,7 @@ public class Aaa006resulTset {
 			System.out.println(id + "--" + name + "--" + price);
 
 		}
+		// ============================================================================
 		// 上面两个东西的用法，在于取数据的方法不同
 		// 如果是索引，可以直接拿到对应栏目的数据，前提是你知道栏目的位置
 		// 我觉得这个方法用的比较少

@@ -23,7 +23,7 @@ public class Aaa008Case {
 		try (
 				Connection connection = DriverManager.getConnection(url, acc, paw)
 		) {
-			String demosql = "select *from study002jdbc.demo1 where name is not null";
+			String demosql = "select *from demo1 where name is not null";
 			ResultSet resultSet = connection.createStatement().executeQuery(demosql);
 			while (resultSet.next()) {
 				int id = resultSet.getInt("id");

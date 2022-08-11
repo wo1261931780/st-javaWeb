@@ -30,7 +30,7 @@ public class Aaa009proparedStatement {
 			// String password = "' or '1' = '1";// 这里就是SQL注入
 			// select * from study002jdbc.account where id='1' and password='' or '1' = '1'
 			// 将一条完整的登录语句变成上面的样子，永远返回true，从而实现登录
-			String demoSql = "select * from study002jdbc.account where id='" + id + "' and password='" + password + "'";
+			String demoSql = "select * from account where id='" + id + "' and password='" + password + "'";
 			ResultSet resultSet = statement.executeQuery(demoSql);
 			System.out.println(demoSql);
 			System.out.println(resultSet.next() ? "登陆成功" : "登陆失败");

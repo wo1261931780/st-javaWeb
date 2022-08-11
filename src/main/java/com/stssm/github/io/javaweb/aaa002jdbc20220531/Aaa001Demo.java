@@ -22,7 +22,7 @@ public class Aaa001Demo {
 		// }
 		// ...本来是要使用java8的，jdk17已经将注册驱动的方法抛弃了
 		// 在jdk5以后, 已经将注册驱动抛弃, 因为在驱动下面的service包中, 已经对其进行了处理
-		// 甚至连这个forname都不太需要使用.
+		// 甚至连这个for name都不太需要使用.
 
 		final String url = "jdbc:mysql://127.0.0.1:3306/study001sql";// 固定格式的sql语法，协议
 		final String user = "root";// mysql数据库的账号
@@ -30,12 +30,12 @@ public class Aaa001Demo {
 		// 首先登录账号，获取连接
 		try (
 				final Connection connect = DriverManager.getConnection(url, user, paw)
-				// getconnection，就相当于我用上面的参数来连接数据库
+				// getConnection，就相当于我用上面的参数来连接数据库
 		) {
 			final Statement statement = connect.createStatement();// 获取一个statement对象
-			// String demosql = "select * from demo13emp where emp_name is not null";
-			final String demosql = "update demo13emp set salary='5000' where emp_name='任嘉伦'";
-			final int affectRow = statement.executeUpdate(demosql);// 数据库对象，执行对应的SQL语句
+			// String demoSql = "select * from demo13emp where emp_name is not null";
+			final String demoSql = "update DEMO_13_EMP set salary='5000' where emp_name='任嘉伦'";
+			final int affectRow = statement.executeUpdate(demoSql);// 数据库对象，执行对应的SQL语句
 			System.out.println("受影响的行数为：" + affectRow);
 
 			statement.close();

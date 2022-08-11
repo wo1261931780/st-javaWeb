@@ -15,7 +15,7 @@ import java.sql.Statement;
  *
  * @author 1
  */
-public class Aaa014004StatementTest {
+public class Aaa004StatementTest {
 
 
 	@Test
@@ -25,7 +25,7 @@ public class Aaa014004StatementTest {
 		final String loginPassword = "LIU18959297292";
 
 		final Connection connection = DriverManager.getConnection(url, loginName, loginPassword);
-		final String sql1 = "update study002jdbc.demo1 set price='3000' where id=1";
+		final String sql1 = "update demo1 set age='3000' where id=1";
 
 		try {
 			connection.setAutoCommit(false);// 开启事物

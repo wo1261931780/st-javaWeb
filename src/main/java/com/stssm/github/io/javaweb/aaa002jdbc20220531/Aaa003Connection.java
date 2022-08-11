@@ -17,11 +17,12 @@ public class Aaa003Connection {
 
 	public static void main(final String[] args) throws Exception {
 		final String url = "jdbc:mysql:///study001sql?useSSL=false";
+		// 上面已经写了，但是重新提示一下，这里省略了localhost，简化写法
 		final String loginName = "root";
 		final String loginPassword = "LIU18959297292";
 
 		final Connection connection = DriverManager.getConnection(url, loginName, loginPassword);
-		final String sql1 = "update study002jdbc.demo1 set name =2000 where id=1";
+		final String sql1 = "update demo1 set E_NAME =2000 where id=1";
 
 		try {
 			connection.setAutoCommit(false);// 开启事物
@@ -35,7 +36,5 @@ public class Aaa003Connection {
 			// 在异常中进行事物的回滚操作
 			connection.rollback();// 回滚事物
 		}
-
-
 	}
 }

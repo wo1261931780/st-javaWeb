@@ -20,26 +20,24 @@ public class Aaa005Statement {
 		String paw = "LIU18959297292";
 		String url = "jdbc:mysql:///study002jdbc?useSSL=false";
 		Connection connection = DriverManager.getConnection(url, user, paw);
-		String demoSql = "update study002jdbc.demo1 set name='测试' where id='123'";
+		String demoSql = "update demo1 set E_NAME='测试' where id='123'";
 		try {
-			Statement demostatement = connection.createStatement();
-			int i = demostatement.executeUpdate(demoSql);// 这里返回的就是受影响的行数
+			Statement demoStatement = connection.createStatement();
+			int i = demoStatement.executeUpdate(demoSql);// 这里返回的就是受影响的行数
 			System.out.println(i == 0);// 如果影响超过一行，就是成功，否则失败
 			// 不过，如果我执行的是删除语句，这里也会返回0
+
 			// ***********************************************************************************
 			// boolean execute = connection.createStatement().execute(demoSql);
 			// 这里可以通过给出的数据来判断SQL是否执行成功
-			// 我们有的时候会直接使用excuteupdate来执行
+			// 我们有的时候会直接使用excute来执行update命令
 			// System.out.println("测试结果" + execute);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			System.out.println("测试结果");
-
 		} finally {
 			connection.close();
 		}
-
-
 	}
 
 }
