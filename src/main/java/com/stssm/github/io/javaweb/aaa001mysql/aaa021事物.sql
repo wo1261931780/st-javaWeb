@@ -15,14 +15,17 @@ SELECT * FROM DEMO_14_BANK_ACCOUNT;
 
 -- 开始事物
 BEGIN;
+
 -- 事物开始以后，当前窗口可以看到数据变化，但是其他窗口看不到
 UPDATE DEMO_14_BANK_ACCOUNT
 SET balance=balance - 500
 WHERE account_name = '张三';
--- deshi
+
 UPDATE DEMO_14_BANK_ACCOUNT
 SET balance=balance + 500
 WHERE account_name = '李四';
+
+-- 提交事物
 COMMIT;
 -- 执行回滚以后，数据变成以前的状态
 ROLLBACK;
