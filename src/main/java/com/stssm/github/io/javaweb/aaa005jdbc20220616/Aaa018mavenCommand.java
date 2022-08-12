@@ -8,7 +8,7 @@ package com.stssm.github.io.javaweb.aaa005jdbc20220616;
  * Time:  2022-06-20-07  星期五
  * @author liujiajun_junw
  */
-public class Aaa013mavenCommand {
+public class Aaa018mavenCommand {
 	public static void main(String[] args) {
 		// 我们配置阿里云的私服，实际上就是让maven从私服优先下载
 		// maven下载文件，首先是本地，如果私服存在，就会去私服
@@ -36,6 +36,5 @@ public class Aaa013mavenCommand {
 		// 如果写完了,就是一个realise版
 		// *********************************************************************
 		// 一般来说,添加maven项目,需要手动添加pom文件,这样才能导入
-
 	}
 }

@@ -18,7 +18,7 @@ import java.util.Properties;
  *
  * @author liujiajun_junw
  */
-public class Aaa014TestDemo3Test {
+public class Aaa019javaEeTestDemo3Test {
 	@Test
 	public void test() throws Exception {
 		Properties prop = new Properties();

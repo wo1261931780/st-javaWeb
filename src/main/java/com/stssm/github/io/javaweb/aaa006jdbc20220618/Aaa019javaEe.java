@@ -18,7 +18,7 @@ import java.util.List;
  * @author liujiajun_junw
  * Time:  2022-06-22-07  星期五
  */
-public class Aaa014 {
+public class Aaa019javaEe {
 	public static void main(String[] args) throws IOException {
 		// javaee的三层架构
 		// 表现层是来做页面展示的，业务层负责逻辑处理，持久层负责数据库交互

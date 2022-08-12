@@ -18,7 +18,7 @@ import java.util.List;
  * Time:  2022-06-22-07  星期五
  * @author liujiajun_junw
  */
-public class Aaa015 {
+public class Aaa020javaEe {
 	public static void main(String[] args) throws IOException {
 		// *********************************************************************
 		String resource = "mybatis-config.xml";

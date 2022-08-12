@@ -19,7 +19,7 @@ import java.util.List;
  * Time:  2022-06-22-07  星期五
  * @author liujiajun_junw
  */
-public class Aaa016ProxyMapper {
+public class Aaa021ProxyMapper {
 	public static void main(String[] args) throws IOException {
 		String resource = "mybatis-config.xml";
 		InputStream inputStream = Resources.getResourceAsStream(resource);

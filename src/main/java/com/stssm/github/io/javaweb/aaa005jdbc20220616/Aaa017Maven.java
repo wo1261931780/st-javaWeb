@@ -8,7 +8,7 @@ package com.stssm.github.io.javaweb.aaa005jdbc20220616;
  * Time:2022-06-20-52  星期四
  * @author liujiajun_junw
  */
-public class Aaa012Maven {
+public class Aaa017Maven {
 	public static void main(String[] args) {
 		// maven创造的目的，在于统一所有不同ide的项目结构
 		// 通过maven管理的项目，项目结构和层次都相同
@@ -38,7 +38,5 @@ public class Aaa012Maven {
 		// 这个一般在c盘里面
 		// 我们要配置本地的仓库，直接在setting.xml中修改对应的位置就可以
 		// *********************************************************************
-
-
 	}
 }

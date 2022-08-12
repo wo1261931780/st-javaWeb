@@ -8,6 +8,6 @@ package com.stssm.github.io.javaweb.aaa006jdbc20220618;
  * Time:  2022-06-21-11  星期六
  * @author liujiajun_junw
  */
-public class Aaa017MybatisX {
+public class Aaa022MybatisX {
 	// 我们一般把mapper对应的xml成为statement
 }
