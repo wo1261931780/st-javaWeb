@@ -1,6 +1,6 @@
 package com.stssm.github.io.javaweb.aaa007jdbc20220619.mapper;
 
-import com.stssm.github.io.javaweb.aaa007jdbc20220619.pojo.TbBrand;
+import com.stssm.github.io.javaweb.aaa007jdbc20220619.pojo.TbBrand0619;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Map;
  *
  * @author liujiajun_junw
  */
-public interface TbBrandMapper {
+public interface TbBrandMapper0619 {
 
 	/**
 	 * 根据id定位具体结果
@@ -23,7 +23,7 @@ public interface TbBrandMapper {
 	 * @param id
 	 * @return TbBrand类
 	 */
-	TbBrand selectById(int id);
+	TbBrand0619 selectById(int id);
 
 	/**
 	 * 根据id进行查询
@@ -31,7 +31,7 @@ public interface TbBrandMapper {
 	 * @param id
 	 * @return TbBrand0618
 	 */
-	TbBrand selectByDy(int id);
+	TbBrand0619 selectByDy(int id);
 
 	// List<Bbb029TbBrand> queryTotal();
 	// 上面这些好像不能直接使用方法重载，如果使用了，会导致第一个被加载，后面的没有
@@ -47,15 +47,15 @@ public interface TbBrandMapper {
 	 * @param brandName
 	 * @return 返回结果
 	 */
-	List<TbBrand> queryTotal(@Param("status") int status, @Param("companyName") String companyName, @Param("brandName") String brandName);
+	List<TbBrand0619> queryTotal(@Param("status") int status, @Param("companyName") String companyName, @Param("brandName") String brandName);
 
 	/**
 	 * 根据条件，查询所有数据
 	 *
-	 * @param tbBrand
+	 * @param tbBrand0619
 	 * @return 返回TbBrand的集合
 	 */
-	List<TbBrand> queryTotal2(TbBrand tbBrand);
+	List<TbBrand0619> queryTotal2(TbBrand0619 tbBrand0619);
 
 	/**
 	 * 根据map查询所有数据
@@ -63,7 +63,7 @@ public interface TbBrandMapper {
 	 * @param map
 	 * @return 返回TbBrand集合
 	 */
-	List<TbBrand> queryTotal3(Map map);
+	List<TbBrand0619> queryTotal3(Map map);
 
 	/**
 	 * 根据map查询所有数据
@@ -71,7 +71,7 @@ public interface TbBrandMapper {
 	 * @param map
 	 * @return 返回TbBrand集合
 	 */
-	List<TbBrand> queryTotal4(Map map);
+	List<TbBrand0619> queryTotal4(Map map);
 
 	/**
 	 * 根据map查询所有数据
@@ -79,7 +79,7 @@ public interface TbBrandMapper {
 	 * @param map
 	 * @return 返回TbBrand集合
 	 */
-	List<TbBrand> queryTotal5(Map map);
+	List<TbBrand0619> queryTotal5(Map map);
 
 	/**
 	 * 根据map查询所有数据
@@ -87,47 +87,47 @@ public interface TbBrandMapper {
 	 * @param map
 	 * @return 返回TbBrand集合
 	 */
-	List<TbBrand> queryTotal6(Map map);
+	List<TbBrand0619> queryTotal6(Map map);
 
 	/**
 	 * 根据条件查询所有数据
 	 *
-	 * @param tbBrand
+	 * @param tbBrand0619
 	 * @return 返回TbBrand集合
 	 */
-	List<TbBrand> querySingleCondition(TbBrand tbBrand);
+	List<TbBrand0619> querySingleCondition(TbBrand0619 tbBrand0619);
 
 	/**
 	 * 根据条件新增一条数据
 	 *
-	 * @param tbBrand
+	 * @param tbBrand0619
 	 * @return 返回TbBrand集合
 	 */
-	void mybatisInsert(TbBrand tbBrand);
+	void mybatisInsert(TbBrand0619 tbBrand0619);
 
 	/**
 	 * 根据条件新增一条数据
 	 *
-	 * @param tbBrand
+	 * @param tbBrand0619
 	 * @return 返回TbBrand集合
 	 */
-	void mybatisInsert2(TbBrand tbBrand);
+	void mybatisInsert2(TbBrand0619 tbBrand0619);
 
 	/**
 	 * 根据条件新增一条数据
 	 *
-	 * @param tbBrand
+	 * @param tbBrand0619
 	 * @return 返回TbBrand集合
 	 */
-	int mybatisChange(TbBrand tbBrand);
+	int mybatisChange(TbBrand0619 tbBrand0619);
 
 	/**
 	 * 根据条件新增一条数据
 	 *
-	 * @param tbBrand
+	 * @param tbBrand0619
 	 * @return 返回TbBrand集合
 	 */
-	int mybatisChange2(TbBrand tbBrand);
+	int mybatisChange2(TbBrand0619 tbBrand0619);
 
 	/**
 	 * 查询数据（未完成）

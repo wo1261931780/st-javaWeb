@@ -9,7 +9,7 @@ package com.stssm.github.io.javaweb.aaa007jdbc20220619.pojo;
  * @author liujiajun_junw
  * Time:  2022-06-09-27  星期日
  */
-public class TbBrand {
+public class TbBrand0619 {
 	private Integer id;
 
 	private String brandName;

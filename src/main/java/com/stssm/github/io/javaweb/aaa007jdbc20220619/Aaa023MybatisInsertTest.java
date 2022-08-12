@@ -1,7 +1,7 @@
 package com.stssm.github.io.javaweb.aaa007jdbc20220619;
 
-import com.stssm.github.io.javaweb.aaa007jdbc20220619.mapper.TbBrandMapper;
-import com.stssm.github.io.javaweb.aaa007jdbc20220619.pojo.TbBrand;
+import com.stssm.github.io.javaweb.aaa007jdbc20220619.mapper.TbBrandMapper0619;
+import com.stssm.github.io.javaweb.aaa007jdbc20220619.pojo.TbBrand0619;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -28,7 +28,7 @@ public class Aaa023MybatisInsertTest {
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			// SqlSession sqlSession = build.openSession();// 这里可以设置事物是自动提交还是手动提交
 			SqlSession sqlSession = build.openSession(true);// 默认是手动提交，设置为true就是自动提交
-			TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);
+			TbBrandMapper0619 mapper = sqlSession.getMapper(TbBrandMapper0619.class);
 			// *********************************************************************
 			int status2 = 1;
 			String companyName2 = "华为";
@@ -36,13 +36,13 @@ public class Aaa023MybatisInsertTest {
 			String desciption = "华为";
 			int ordered = 123;
 			// *********************************************************************
-			TbBrand tbBrand = new TbBrand();
-			tbBrand.setStatus(status2);
-			tbBrand.setCompanyName(companyName2);
-			tbBrand.setBrandName(brandName2);
-			tbBrand.setDescription(desciption);
-			tbBrand.setOrdered(ordered);
-			mapper.mybatisInsert(tbBrand);
+			TbBrand0619 tbBrand0619 = new TbBrand0619();
+			tbBrand0619.setStatus(status2);
+			tbBrand0619.setCompanyName(companyName2);
+			tbBrand0619.setBrandName(brandName2);
+			tbBrand0619.setDescription(desciption);
+			tbBrand0619.setOrdered(ordered);
+			mapper.mybatisInsert(tbBrand0619);
 			sqlSession.commit();// 提交事物
 			// 主键不用手动添加，因为是自动递增的
 
@@ -58,7 +58,7 @@ public class Aaa023MybatisInsertTest {
 			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			SqlSession sqlSession = build.openSession(true);
-			TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);
+			TbBrandMapper0619 mapper = sqlSession.getMapper(TbBrandMapper0619.class);
 			// *********************************************************************
 			int status2 = 1;
 			String companyName2 = "华为";
@@ -66,14 +66,14 @@ public class Aaa023MybatisInsertTest {
 			String desciption = "华为";
 			int ordered = 123;
 			// *********************************************************************
-			TbBrand tbBrand = new TbBrand();
-			tbBrand.setStatus(status2);
-			tbBrand.setCompanyName(companyName2);
-			tbBrand.setBrandName(brandName2);
-			tbBrand.setDescription(desciption);
-			tbBrand.setOrdered(ordered);
-			mapper.mybatisInsert(tbBrand);
-			Integer id = tbBrand.getId();
+			TbBrand0619 tbBrand0619 = new TbBrand0619();
+			tbBrand0619.setStatus(status2);
+			tbBrand0619.setCompanyName(companyName2);
+			tbBrand0619.setBrandName(brandName2);
+			tbBrand0619.setDescription(desciption);
+			tbBrand0619.setOrdered(ordered);
+			mapper.mybatisInsert(tbBrand0619);
+			Integer id = tbBrand0619.getId();
 			System.out.println(id);
 
 		} catch (IOException e) {
@@ -88,7 +88,7 @@ public class Aaa023MybatisInsertTest {
 			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			SqlSession sqlSession = build.openSession(true);
-			TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);
+			TbBrandMapper0619 mapper = sqlSession.getMapper(TbBrandMapper0619.class);
 			// *********************************************************************
 			int id2 = 1;
 			int status2 = 1;
@@ -97,14 +97,14 @@ public class Aaa023MybatisInsertTest {
 			String desciption = "华为";
 			int ordered = 123;
 			// *********************************************************************
-			TbBrand tbBrand = new TbBrand();
-			tbBrand.setStatus(status2);
-			tbBrand.setCompanyName(companyName2);
-			tbBrand.setBrandName(brandName2);
-			tbBrand.setDescription(desciption);
-			tbBrand.setOrdered(ordered);
-			tbBrand.setId(id2);
-			int i = mapper.mybatisChange(tbBrand);
+			TbBrand0619 tbBrand0619 = new TbBrand0619();
+			tbBrand0619.setStatus(status2);
+			tbBrand0619.setCompanyName(companyName2);
+			tbBrand0619.setBrandName(brandName2);
+			tbBrand0619.setDescription(desciption);
+			tbBrand0619.setOrdered(ordered);
+			tbBrand0619.setId(id2);
+			int i = mapper.mybatisChange(tbBrand0619);
 			System.out.println("被影响的行数为：" + i);
 
 		} catch (IOException e) {
@@ -119,7 +119,7 @@ public class Aaa023MybatisInsertTest {
 			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			SqlSession sqlSession = build.openSession(true);
-			TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);
+			TbBrandMapper0619 mapper = sqlSession.getMapper(TbBrandMapper0619.class);
 			// *********************************************************************
 			int id2 = 3;
 			int status2 = 1;
@@ -128,14 +128,14 @@ public class Aaa023MybatisInsertTest {
 			String desciption = "华为";
 			int ordered = 123;
 			// *********************************************************************
-			TbBrand tbBrand = new TbBrand();
-			tbBrand.setStatus(status2);
-			tbBrand.setCompanyName(companyName2);
-			tbBrand.setBrandName(brandName2);
-			tbBrand.setDescription(desciption);
-			tbBrand.setOrdered(ordered);
-			tbBrand.setId(id2);
-			int i = mapper.mybatisChange2(tbBrand);
+			TbBrand0619 tbBrand0619 = new TbBrand0619();
+			tbBrand0619.setStatus(status2);
+			tbBrand0619.setCompanyName(companyName2);
+			tbBrand0619.setBrandName(brandName2);
+			tbBrand0619.setDescription(desciption);
+			tbBrand0619.setOrdered(ordered);
+			tbBrand0619.setId(id2);
+			int i = mapper.mybatisChange2(tbBrand0619);
 			System.out.println("被影响的行数为：" + i);
 
 		} catch (IOException e) {
