@@ -9,7 +9,7 @@ package com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo;
  *
  * @author 1
  */
-public class DemoPojo {
+public class DemoPojo0618 {
 	private Integer id;
 
 	private String username;
@@ -62,7 +62,7 @@ public class DemoPojo {
 
 	@Override
 	public String toString() {
-		return "DemoPojo{" +
+		return "DemoPojo0618{" +
 				       "id=" + id +
 				       ", username='" + username + '\'' +
 				       ", password='" + password + '\'' +

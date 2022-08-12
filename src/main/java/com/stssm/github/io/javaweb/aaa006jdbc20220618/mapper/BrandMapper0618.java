@@ -1,6 +1,6 @@
 package com.stssm.github.io.javaweb.aaa006jdbc20220618.mapper;
 
-import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.TbBrand;
+import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.TbBrand0618;
 
 import java.util.List;
 
@@ -13,13 +13,13 @@ import java.util.List;
  *
  * @author liujiajun_junw
  */
-public interface BrandMapper {
+public interface BrandMapper0618 {
 	/**
 	 * 展示结果
 	 *
 	 * @return
 	 */
-	List<TbBrand> showRes();
+	List<TbBrand0618> showRes();
 
 	/**
 	 * 登录功能
@@ -27,7 +27,7 @@ public interface BrandMapper {
 	 * @param id
 	 * @return
 	 */
-	TbBrand selectById(int id);
+	TbBrand0618 selectById(int id);
 
 
 }

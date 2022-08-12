@@ -19,7 +19,7 @@ import java.io.InputStream;
  * @author liujiajun_junw
  * Time:  2022-06-16-03  星期日
  */
-public class Aaa019MybatisInsertTest {
+public class Aaa023MybatisInsertTest {
 	@Test
 	public void mybatisInsert() {
 		String resource = "mybatis-config.xml";

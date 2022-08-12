@@ -1,7 +1,7 @@
 package com.stssm.github.io.junw;
 
-import com.stssm.github.io.javaweb.aaa006jdbc20220618.mapper.BrandMapper;
-import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.TbBrand;
+import com.stssm.github.io.javaweb.aaa006jdbc20220618.mapper.BrandMapper0618;
+import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.TbBrand0618;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -19,16 +19,16 @@ import java.util.List;
  * Bbb010User:  liujiajun_junw
  * Time:  2022-06-21-09  星期六
  */
-public class bbb029TbBrandTest {
+public class bbb029TbBrandTest0618 {
 	@Test
 	public void demoShow() throws IOException {
 		String resource = "mybatis-config.xml";
 		InputStream resourceAsStream = Resources.getResourceAsStream(resource);
 		SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 		SqlSession sqlSession = build.openSession();
-		BrandMapper mapper = sqlSession.getMapper(BrandMapper.class);
-		List<TbBrand> tbBrands = mapper.showRes();
-		System.out.println(tbBrands);
+		BrandMapper0618 mapper = sqlSession.getMapper(BrandMapper0618.class);
+		List<TbBrand0618> tbBrand0618s = mapper.showRes();
+		System.out.println(tbBrand0618s);
 		sqlSession.close();
 	}
 
@@ -39,9 +39,9 @@ public class bbb029TbBrandTest {
 		InputStream resourceAsStream = Resources.getResourceAsStream(resource);
 		SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 		SqlSession sqlSession = build.openSession();
-		BrandMapper mapper = sqlSession.getMapper(BrandMapper.class);
-		TbBrand tbBrand = mapper.selectById(Integer.parseInt(id));
-		System.out.println(tbBrand);
+		BrandMapper0618 mapper = sqlSession.getMapper(BrandMapper0618.class);
+		TbBrand0618 tbBrand0618 = mapper.selectById(Integer.parseInt(id));
+		System.out.println(tbBrand0618);
 		sqlSession.close();
 	}
 }

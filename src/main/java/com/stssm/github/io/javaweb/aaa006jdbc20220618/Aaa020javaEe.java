@@ -1,6 +1,6 @@
 package com.stssm.github.io.javaweb.aaa006jdbc20220618;
 
-import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.DemoPojo;
+import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.DemoPojo0618;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -25,7 +25,7 @@ public class Aaa020javaEe {
 		InputStream inputStream = Resources.getResourceAsStream(resource);
 		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		SqlSession sqlSession = sqlSessionFactory.openSession();
-		List<DemoPojo> resList = sqlSession.selectList("DemoMapper.selectAll");// 获得一个list类型的结果
+		List<DemoPojo0618> resList = sqlSession.selectList("DemoMapper0618.selectAll");// 获得一个list类型的结果
 		// 这里有一个很大的问题：我要手动获取对应的方法，写方法名是可能出错的
 		// 为了解决这个问题，就需要使用代理模式
 		// 通过代理模式，来获得对应类中的方法
@@ -33,8 +33,5 @@ public class Aaa020javaEe {
 		// 但是在开发过程中，要求类和resource分开放
 		System.out.println(resList);
 		sqlSession.close();
-
 	}
-
-
 }

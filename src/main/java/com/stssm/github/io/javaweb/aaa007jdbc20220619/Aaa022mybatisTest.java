@@ -22,7 +22,7 @@ import java.util.Map;
  * @author liujiajun_junw
  * Time:  2022-06-09-18  星期日
  */
-public class Aaa018mybatisTest {
+public class Aaa022mybatisTest {
 
 	@Test
 	public void show() {

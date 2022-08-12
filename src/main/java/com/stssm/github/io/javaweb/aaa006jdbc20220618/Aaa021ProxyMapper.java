@@ -1,7 +1,7 @@
 package com.stssm.github.io.javaweb.aaa006jdbc20220618;
 
-import com.stssm.github.io.javaweb.aaa006jdbc20220618.mapper.DemoMapper;
-import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.DemoPojo;
+import com.stssm.github.io.javaweb.aaa006jdbc20220618.mapper.DemoMapper0618;
+import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.DemoPojo0618;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -26,7 +26,7 @@ public class Aaa021ProxyMapper {
 		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		// *********************************************************************
-		DemoMapper resMapper = sqlSession.getMapper(DemoMapper.class);// 相当于这里获取了一个mapper对象
+		DemoMapper0618 resMapper = sqlSession.getMapper(DemoMapper0618.class);// 相当于这里获取了一个mapper对象
 		// 对象有几个东西需要修改
 		// 一个是xml文件，内部的空间名namespace必须指定到mapper的java文件存在的位置
 		// 然后是resource目录下，必须有一个相同目录的xml文件，
@@ -36,12 +36,9 @@ public class Aaa021ProxyMapper {
 		// 然后在xml文件中，resultType返回的是pojo的对象类型
 		// 在mybatis参数文件中，修改mapper标签的resource目录，为执行SQL的xml文件所在目录
 		// *********************************************************************
-		List<DemoPojo> demoPojos = resMapper.selectAll();// 让我刚刚拿到的mapper，去执行内部的方法
-		System.out.println(demoPojos);// 展示结果
-
+		List<DemoPojo0618> demoPojo0618s = resMapper.selectAll();// 让我刚刚拿到的mapper，去执行内部的方法
+		System.out.println(demoPojo0618s);// 展示结果
 		sqlSession.close();
-
+		// 我们一般把mapper对应的xml成为statement
 	}
-
-
 }

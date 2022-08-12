@@ -1,6 +1,6 @@
 package com.stssm.github.io.javaweb.aaa006jdbc20220618;
 
-import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.DemoPojo;
+import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.DemoPojo0618;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -38,12 +38,12 @@ public class Aaa019javaEe {
 		// 获得一个工厂
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		// 让工厂获得sql执行对象
-		List<DemoPojo> resList = sqlSession.selectList("DemoMapper.selectAll");// 获得一个list类型的结果
+		List<DemoPojo0618> resList = sqlSession.selectList("DemoMapper0618.selectAll");// 获得一个list类型的结果
 		// 指定我要执行的mapper以后，就可以根据mapper中的SQL，获得一个demopojo类型的list对象
 		System.out.println(resList);
 		sqlSession.close();// 不需要释放工厂，只需要释放这个执行方法的session就可以
 		// *********************************************************************
-		// List<DemoPojo> resList = sqlSession.selectList("DemoMapper.selectAll");
+		// List<DemoPojo0618> resList = sqlSession.selectList("DemoMapper0618.selectAll");
 		// 这里有一个很大的问题：我要手动获取对应的方法，写方法名是可能出错的
 	}
 

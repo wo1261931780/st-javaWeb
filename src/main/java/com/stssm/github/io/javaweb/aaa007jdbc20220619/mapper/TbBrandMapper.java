@@ -29,7 +29,7 @@ public interface TbBrandMapper {
 	 * 根据id进行查询
 	 *
 	 * @param id
-	 * @return TbBrand
+	 * @return TbBrand0618
 	 */
 	TbBrand selectByDy(int id);
 

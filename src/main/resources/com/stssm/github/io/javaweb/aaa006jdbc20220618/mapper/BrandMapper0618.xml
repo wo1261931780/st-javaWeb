@@ -3,7 +3,7 @@
 		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--名称标签，先随便写一个-->
-<mapper namespace="com.stssm.github.io.javaweb.aaa006jdbc20220618.mapper.BrandMapper">
+<mapper namespace="com.stssm.github.io.javaweb.aaa006jdbc20220618.mapper.BrandMapper0618">
 	<sql id="demo">
 		id,
 		brand_name   as brandName,
@@ -27,7 +27,7 @@
 	<!--通过定义一个SQL片段，可以解决问题-->
 	<!--但是不够灵活-->
 	<!--</select>-->
-	<resultMap id="demo" type="TbBrand">
+	<resultMap id="demo" type="TbBrand0618">
 		<result column="brand_name" property="brandName"></result>
 		<!--column对应数据库的列名-->
 		<!--property对应实体类的属性名-->
@@ -42,7 +42,7 @@
 		from tb_brand;
 	</select>
 
-	<select id="selectById" resultType="com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.TbBrand">
+	<select id="selectById" resultType="com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.TbBrand0618">
 		select
 		<include refid="demo">
 		</include>
