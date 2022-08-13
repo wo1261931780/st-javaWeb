@@ -200,6 +200,6 @@
 		where id = #{id};
 	</update>
 
-	<select id="selectAnnotate" resultType="void">
+	<select id="selectAnnotate" >
 	</select>
 </mapper>
