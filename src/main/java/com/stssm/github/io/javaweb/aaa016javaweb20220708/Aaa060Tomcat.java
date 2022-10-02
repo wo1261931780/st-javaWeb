@@ -1,5 +1,7 @@
 package com.stssm.github.io.javaweb.aaa016javaweb20220708;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -44,5 +46,7 @@ public class Aaa060Tomcat {
 	// war包，顾名思义，就是web开头的项目包
 	// 8-11
 
-
+	public static void main(String[] args) {
+		LOG_SHOW.debug("123");
+	}
 }

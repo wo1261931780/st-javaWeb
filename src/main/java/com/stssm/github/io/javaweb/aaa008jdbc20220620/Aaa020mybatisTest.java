@@ -27,11 +27,11 @@ public class Aaa020mybatisTest {
 	@Test
 	public void deleteById() {
 		int id = 13;
-		String brandName = "123";
-		String companyName = "123";
-		Integer ordered = 11;
-		String description = "123";
-		Integer status = 1;
+		// String brandName = "123";
+		// String companyName = "123";
+		// Integer ordered = 11;
+		// String description = "123";
+		// Integer status = 1;
 		TbBrand tbBrand = new TbBrand();
 		tbBrand.setId(id);
 		String resource = "mybatis-config.xml";

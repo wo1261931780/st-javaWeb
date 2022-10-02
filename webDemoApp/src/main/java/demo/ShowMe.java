@@ -1,6 +1,7 @@
 package demo;
 
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,6 +24,8 @@ import java.io.IOException;
  */
 @WebServlet("/show1")
 public class ShowMe extends HttpServlet {
+	public static final Logger LOG_SHOW = LoggerFactory.getLogger("Aaa001Demo.class");
+
 
 
 	// private static final Logger LOG_SHOW = "";

@@ -1,5 +1,7 @@
 package com.stssm.github.io.javaweb.aaa017javaweb20220709;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -22,5 +24,8 @@ public class Aaa061Servlet {
 	// -----------------------------------------------------
 	// 之前老版本是使用xml来配置servlet,
 	// 新版本就使用URLpattern来配置
+	public static void main(String[] args) {
+		LOG_SHOW.debug("123");
+	}
 
 }

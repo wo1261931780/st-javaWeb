@@ -11,6 +11,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.SPLICE;
 
 /**
  * Created by Intellij IDEA.
@@ -48,16 +49,16 @@ public class Aaa071Simplification extends HttpServlet {
 				LOG_SHOW.debug("我是get");
 				String queryString = req.getQueryString();
 				LOG_SHOW.debug(queryString);// account=123456&password=123465&hobbies=2&hobbies=3
-				LOG_SHOW.debug("-----------------------------------------");
+				LOG_SHOW.debug(SPLICE);
 				Map<String, String[]> parameterMap = req.getParameterMap();
 				LOG_SHOW.debug("我是完整数组：" + parameterMap);// 在没有输入任何数据的情况下，只能得到一个空字符串，不是null
-				LOG_SHOW.debug("-----------------------------------------");
+				LOG_SHOW.debug(SPLICE);
 				for (String s : parameterMap.keySet()) {
 					LOG_SHOW.debug("我是key：" + s);
 					String[] strings = parameterMap.get(s);
 					LOG_SHOW.debug("我是value的数组：" + Arrays.toString(strings));
 				}
-				LOG_SHOW.debug("-----------------------------------------");
+				LOG_SHOW.debug(SPLICE);
 				String[] hobbies = req.getParameterValues("hobbies");
 				LOG_SHOW.debug("我是直接获取value的数组：" + hobbies);// [Ljava.lang.String;@298bd38e
 				LOG_SHOW.debug("我是直接获取value的数组：" + Arrays.toString(hobbies));// [Ljava.lang.String;@298bd38e
@@ -66,7 +67,7 @@ public class Aaa071Simplification extends HttpServlet {
 				LOG_SHOW.debug("我是post");
 				BufferedReader reader = req.getReader();
 				LOG_SHOW.debug(reader.readLine());
-				LOG_SHOW.debug("-----------------------------------------");
+				LOG_SHOW.debug(SPLICE);
 				// 获取详细参数的方法是通用的，所以直接拿到结果就可以
 
 				break;

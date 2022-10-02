@@ -1,5 +1,7 @@
 package com.stssm.github.io.javaweb.aaa009javaweb20220623;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -14,6 +16,6 @@ package com.stssm.github.io.javaweb.aaa009javaweb20220623;
  */
 public class Aaa022Html {
 	public static void main(String[] args) {
-
+		LOG_SHOW.debug("123");
 	}
 }

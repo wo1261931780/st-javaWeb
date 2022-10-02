@@ -1,5 +1,7 @@
 package com.stssm.github.io.javaweb.aaa015javaweb20220707;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -29,6 +31,10 @@ public class Aaa059Http {
 	// 403，没有权限访问资源
 	// 404，请求内容错误，或者是不存在相关资源
 	// 428/429/431都是新版的http协议对应的响应结果
+
+	public static void main(String[] args) {
+		LOG_SHOW.debug("123");
+	}
 
 
 }

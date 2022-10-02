@@ -17,7 +17,7 @@ import java.sql.Statement;
  * @author liujiajun_junw
  */
 public class Aaa001Demo {
-	final String SPLICE = "****************************************************";
+	public static final String SPLICE = "****************************************************";
 	public static final Logger LOG_SHOW = LoggerFactory.getLogger("Aaa001Demo.class");
 
 	public static void main(final String[] args) throws Exception {

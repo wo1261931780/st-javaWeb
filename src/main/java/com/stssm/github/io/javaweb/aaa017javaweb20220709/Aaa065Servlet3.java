@@ -1,8 +1,11 @@
 package com.stssm.github.io.javaweb.aaa017javaweb20220709;
 
-import javax.servlet.*;
+import javax.servlet.Servlet;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
@@ -47,7 +50,7 @@ public class Aaa065Servlet3 implements Servlet {
 	public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
 		LOG_SHOW.debug("二者的请求方式不同");
 		HttpServletRequest httpRequest = (HttpServletRequest) servletRequest;
-		HttpServletResponse httpResponse = (HttpServletResponse) servletResponse;
+		// HttpServletResponse httpResponse = (HttpServletResponse) servletResponse;
 		String requestMethod = httpRequest.getMethod();// 根据请求体的方法类型，来判断后面使用什么方法
 		switch (requestMethod) {
 			case "get":

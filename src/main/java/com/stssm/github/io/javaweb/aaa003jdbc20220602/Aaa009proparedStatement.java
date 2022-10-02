@@ -1,7 +1,10 @@
 package com.stssm.github.io.javaweb.aaa003jdbc20220602;
 
-import java.sql.*;
-import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
@@ -22,7 +25,7 @@ public class Aaa009proparedStatement {
 		String paw = "LIU18959297292";
 		String url = "jdbc:mysql:///study002jdbc?useSSL=false";
 		String acc = "root";
-		ArrayList<Aaa007Object> objects = new ArrayList<>();
+		// ArrayList<Aaa007Object> objects = new ArrayList<>();
 		try (
 				Connection connection = DriverManager.getConnection(url, acc, paw);
 				Statement statement = connection.createStatement()
