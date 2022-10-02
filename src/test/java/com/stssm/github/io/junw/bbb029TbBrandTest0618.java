@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -28,7 +30,7 @@ public class bbb029TbBrandTest0618 {
 		SqlSession sqlSession = build.openSession();
 		BrandMapper0618 mapper = sqlSession.getMapper(BrandMapper0618.class);
 		List<TbBrand0618> tbBrand0618s = mapper.showRes();
-		System.out.println(tbBrand0618s);
+		LOG_SHOW.debug(tbBrand0618s);
 		sqlSession.close();
 	}
 
@@ -41,7 +43,7 @@ public class bbb029TbBrandTest0618 {
 		SqlSession sqlSession = build.openSession();
 		BrandMapper0618 mapper = sqlSession.getMapper(BrandMapper0618.class);
 		TbBrand0618 tbBrand0618 = mapper.selectById(Integer.parseInt(id));
-		System.out.println(tbBrand0618);
+		LOG_SHOW.debug(tbBrand0618);
 		sqlSession.close();
 	}
 }

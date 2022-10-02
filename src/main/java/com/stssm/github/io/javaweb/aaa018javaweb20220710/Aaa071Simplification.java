@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Map;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:show
@@ -37,34 +39,34 @@ public class Aaa071Simplification extends HttpServlet {
 		// 为了简化开发，代码的请求过程，会将其作为键值对存储
 		// 但是考虑到key和value存在覆盖问题
 		// 所以map集合，最终的格式是string和string[]
-		System.out.println("我是get方法");
+		LOG_SHOW.debug("我是get方法");
 		String method = req.getMethod();
-		System.out.println(method);// 这里也有一个坑
+		LOG_SHOW.debug(method);// 这里也有一个坑
 		// 里面的全部都是大写，小写会导致不识别
 		switch (method) {
 			case "GET":
-				System.out.println("我是get");
+				LOG_SHOW.debug("我是get");
 				String queryString = req.getQueryString();
-				System.out.println(queryString);// account=123456&password=123465&hobbies=2&hobbies=3
-				System.out.println("-----------------------------------------");
+				LOG_SHOW.debug(queryString);// account=123456&password=123465&hobbies=2&hobbies=3
+				LOG_SHOW.debug("-----------------------------------------");
 				Map<String, String[]> parameterMap = req.getParameterMap();
-				System.out.println("我是完整数组：" + parameterMap);// 在没有输入任何数据的情况下，只能得到一个空字符串，不是null
-				System.out.println("-----------------------------------------");
+				LOG_SHOW.debug("我是完整数组：" + parameterMap);// 在没有输入任何数据的情况下，只能得到一个空字符串，不是null
+				LOG_SHOW.debug("-----------------------------------------");
 				for (String s : parameterMap.keySet()) {
-					System.out.println("我是key：" + s);
+					LOG_SHOW.debug("我是key：" + s);
 					String[] strings = parameterMap.get(s);
-					System.out.println("我是value的数组：" + Arrays.toString(strings));
+					LOG_SHOW.debug("我是value的数组：" + Arrays.toString(strings));
 				}
-				System.out.println("-----------------------------------------");
+				LOG_SHOW.debug("-----------------------------------------");
 				String[] hobbies = req.getParameterValues("hobbies");
-				System.out.println("我是直接获取value的数组：" + hobbies);// [Ljava.lang.String;@298bd38e
-				System.out.println("我是直接获取value的数组：" + Arrays.toString(hobbies));// [Ljava.lang.String;@298bd38e
+				LOG_SHOW.debug("我是直接获取value的数组：" + hobbies);// [Ljava.lang.String;@298bd38e
+				LOG_SHOW.debug("我是直接获取value的数组：" + Arrays.toString(hobbies));// [Ljava.lang.String;@298bd38e
 				break;
 			case "POST":
-				System.out.println("我是post");
+				LOG_SHOW.debug("我是post");
 				BufferedReader reader = req.getReader();
-				System.out.println(reader.readLine());
-				System.out.println("-----------------------------------------");
+				LOG_SHOW.debug(reader.readLine());
+				LOG_SHOW.debug("-----------------------------------------");
 				// 获取详细参数的方法是通用的，所以直接拿到结果就可以
 
 				break;
@@ -84,7 +86,7 @@ public class Aaa071Simplification extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// super.doPost(req, resp);
-		System.out.println("我是post方法");
+		LOG_SHOW.debug("我是post方法");
 		this.doGet(req, resp);// 通过循环调用，简化代码
 	}
 }

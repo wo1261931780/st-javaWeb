@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:show
@@ -36,7 +38,7 @@ public class Aaa070requestHead extends HttpServlet {
 		// ---------------------------------------------------------------------
 
 		String header = req.getHeader("User-agent");
-		System.out.println("我是请求头：" + header);
+		LOG_SHOW.debug("我是请求头：" + header);
 		// Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36
 		// 这里是查看浏览器版本和内核信息
 	}
@@ -54,11 +56,11 @@ public class Aaa070requestHead extends HttpServlet {
 		// ---------------------------------------------------------------------
 		// post需要通过输入流来获取
 
-		System.out.println("我是提交信息");
+		LOG_SHOW.debug("我是提交信息");
 		BufferedReader reader = req.getReader();// 不需要手动关闭
-		System.out.println("我是总行：" + reader);
+		LOG_SHOW.debug("我是总行：" + reader);
 		String s = reader.readLine();
-		System.out.println(s);// userName=12456&userPaw=56465
+		LOG_SHOW.debug(s);// userName=12456&userPaw=56465
 		// 请求完成以后，自动关闭
 		// ---------------------------------------------------------------------
 

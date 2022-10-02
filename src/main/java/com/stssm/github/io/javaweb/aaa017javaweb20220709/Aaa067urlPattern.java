@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 
 @WebServlet(urlPatterns = {"/show1", "/show2"})// 目录可以是一个数组
 /**
@@ -32,6 +34,6 @@ public class Aaa067urlPattern extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// super.doGet(req, resp);
-		System.out.println("我是get方法");
+		LOG_SHOW.debug("我是get方法");
 	}
 }

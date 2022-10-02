@@ -19,6 +19,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 @WebServlet(name = "Aaa102Servlet", value = "/Aaa102Servlet")
 public class Aaa102Servlet extends HttpServlet {
 	@Override
@@ -27,8 +29,8 @@ public class Aaa102Servlet extends HttpServlet {
 		// 这里和91不一样，这里是获取的过程，没有添加之前的cookie
 		Cookie[] cookies = request.getCookies();
 		for (Cookie cookie : cookies) {
-			System.out.println(cookie.getName());
-			System.out.println(cookie.getValue());
+			LOG_SHOW.debug(cookie.getName());
+			LOG_SHOW.debug(cookie.getValue());
 		}
 		// 我们的cookie实际上都是保存在浏览器的内存中
 		// 但是会带来问题

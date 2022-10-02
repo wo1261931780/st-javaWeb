@@ -19,6 +19,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 @WebServlet(name = "Aaa101Servlet", value = "/Aaa101Servlet")
 public class Aaa101Servlet extends HttpServlet {
 	// 一次请求的过程中，如果没有断开，多次请求资源的过程，还算是一次会话
@@ -54,8 +56,8 @@ public class Aaa101Servlet extends HttpServlet {
 
 		Cookie[] cookies = request.getCookies();
 		for (Cookie cookie : cookies) {
-			System.out.println(cookie.getName());
-			System.out.println(cookie.getValue());
+			LOG_SHOW.debug(cookie.getName());
+			LOG_SHOW.debug(cookie.getValue());
 			// demoName
 			// demoPaw
 			// Idea-d5c8856d

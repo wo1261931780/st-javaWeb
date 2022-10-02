@@ -4,6 +4,8 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:filter-demo
@@ -43,12 +45,12 @@ public class Aaa111Filter implements Filter {
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 		// 这三个方法对应生命周期的三个阶段
 		// 我们默认使用的是这里的筛选器
-		System.out.println("1.我是测试，我进行了一次拦截");
+		LOG_SHOW.debug("1.我是测试，我进行了一次拦截");
 		// Code.Chain.doFilter(servletRequest,servletResponse);// 如果不放行，会报错
 		filterChain.doFilter(servletRequest, servletResponse);// 这里和课程的代码不一样
 		// 在放行过程中，有一个放行前处理，和放行后处理
 		// 放行前，处理一次，在返回的时候，只会执行放行后的代码，不会重复执行
-		System.out.println("4.已经放行的内容，进行了返回，执行放行后的代码");
+		LOG_SHOW.debug("4.已经放行的内容，进行了返回，执行放行后的代码");
 	}
 
 	/**

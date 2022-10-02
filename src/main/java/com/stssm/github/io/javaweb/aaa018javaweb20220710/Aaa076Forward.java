@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:show
@@ -25,7 +27,7 @@ public class Aaa076Forward extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// request.setCharacterEncoding("UTF-8");
-		System.out.println("开始转发");
+		LOG_SHOW.debug("开始转发");
 		// request.getRequestDispatcher("/Aaa077Forward").forward(request, response);
 		// 直接设置要转发的目的地就可以
 		// 一般是在第一个资源中处理一部分的数据，然后将其转发给第二个资源，继续完成处理的过程

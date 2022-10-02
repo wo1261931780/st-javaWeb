@@ -1,5 +1,7 @@
 package demo;
 
+import org.apache.logging.log4j.Logger;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,6 +25,8 @@ import java.io.IOException;
 public class ShowMe extends HttpServlet {
 
 
+	// private static final Logger LOG_SHOW = "";
+
 	/**
 	 * @param req
 	 * @param resp
@@ -31,6 +35,6 @@ public class ShowMe extends HttpServlet {
 	 */
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("我是get方法");
+		LOG_SHOW.debug("我是get方法");
 	}
 }

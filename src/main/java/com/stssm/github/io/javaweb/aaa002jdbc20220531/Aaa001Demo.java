@@ -1,5 +1,8 @@
 package com.stssm.github.io.javaweb.aaa002jdbc20220531;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
@@ -14,6 +17,9 @@ import java.sql.Statement;
  * @author liujiajun_junw
  */
 public class Aaa001Demo {
+	final String SPLICE = "****************************************************";
+	public static final Logger LOG_SHOW = LoggerFactory.getLogger("Aaa001Demo.class");
+
 	public static void main(final String[] args) throws Exception {
 
 		// Class.forName("com.mysql.jdbc.Driver");
@@ -36,7 +42,7 @@ public class Aaa001Demo {
 			// String demoSql = "select * from demo13emp where emp_name is not null";
 			final String demoSql = "update DEMO_13_EMP set salary='5000' where emp_name='任嘉伦'";
 			final int affectRow = statement.executeUpdate(demoSql);// 数据库对象，执行对应的SQL语句
-			System.out.println("受影响的行数为：" + affectRow);
+			LOG_SHOW.debug("受影响的行数为：" + affectRow);
 
 			statement.close();
 		}

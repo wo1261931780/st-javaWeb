@@ -18,15 +18,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 @WebServlet(name = "Bbb005Servlet", value = "/Bbb005Servlet")
 public class Bbb005Servlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 
-		System.out.println("测试页面");
+		LOG_SHOW.debug("测试页面");
 		String name = request.getParameter("name");
-		System.out.println(name);
+		LOG_SHOW.debug(name);
 		response.getWriter().write("我是axios");
 
 

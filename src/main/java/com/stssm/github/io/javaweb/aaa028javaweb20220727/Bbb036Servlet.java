@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:brand-case
@@ -32,12 +34,12 @@ public class Bbb036Servlet extends Bbb037Servlet {
 	 * 这样才拥有了访问具体方法的功能
 	 */
 	public void selectAll(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("我是show1方法.................");
+		LOG_SHOW.debug("我是show1方法.................");
 	}
 
 
 	public void addAccount(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("我是添加方法.................");
+		LOG_SHOW.debug("我是添加方法.................");
 	}
 
 }

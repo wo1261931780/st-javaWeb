@@ -4,6 +4,8 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:filter-demo
@@ -36,9 +38,9 @@ public class Aaa112Filter implements Filter {
 	 */
 	@Override
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-		System.out.println("2.我是放行前处理");
+		LOG_SHOW.debug("2.我是放行前处理");
 		filterChain.doFilter(servletRequest, servletResponse);// 放行代码
-		System.out.println("3.我是放行后处理");
+		LOG_SHOW.debug("3.我是放行后处理");
 	}
 
 	/**

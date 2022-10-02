@@ -4,6 +4,8 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 
 @WebServlet(urlPatterns = "/demoss", loadOnStartup = 1)// 这里，urlPattern表示访问的路径，loadOnStartUp表示优先级
 /**
@@ -28,9 +30,9 @@ public class Aaa062Servlet implements Servlet {
 	 */
 	@Override
 	public void init(ServletConfig servletConfig) throws ServletException {
-		System.out.println("我是初始化方法");// 只有在第一次访问的时候才会调用
+		LOG_SHOW.debug("我是初始化方法");// 只有在第一次访问的时候才会调用
 		// 也因为是初始化，所以只会调用一次
-		System.out.println(servletConfig);
+		LOG_SHOW.debug(servletConfig);
 		this.configDemo = servletConfig;
 	}
 // 我们看一下这里
@@ -57,7 +59,7 @@ public class Aaa062Servlet implements Servlet {
 	@Override
 	public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
 		// 每次启动，这个方法都会被执行一次
-		System.out.println("我执行了");
+		LOG_SHOW.debug("我执行了");
 		// servlet对象，由Tomcat服务器来创建
 		// 同样的，也由Tomcat服务器来调用
 	}
@@ -76,7 +78,7 @@ public class Aaa062Servlet implements Servlet {
 	 */
 	@Override
 	public void destroy() {
-		System.out.println("我是退出的方法");// 强制退出是不会展示的
+		LOG_SHOW.debug("我是退出的方法");// 强制退出是不会展示的
 		// 必须要按照指定的方法执行退出命令，才能打印结果
 	}
 }

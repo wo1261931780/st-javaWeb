@@ -14,6 +14,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -40,7 +42,7 @@ public class Aaa022mybatisTest {
 			// 手动进行一次模糊查询
 			// Bbb029TbBrand tbBrand = mapper.selectById(id);
 			List<TbBrand0619> tbBrand0619s = mapper.queryTotal(status, companyName, brandName);
-			System.out.println(tbBrand0619s);
+			LOG_SHOW.debug(tbBrand0619s);
 			sqlSession.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -67,7 +69,7 @@ public class Aaa022mybatisTest {
 			x.setCompanyName(companyName);
 			x.setBrandName(brandName);
 			List<TbBrand0619> tbBrand0619s = mapper.queryTotal2(x);// 这里以一个对象为单位进行查询
-			System.out.println(tbBrand0619s);
+			LOG_SHOW.debug(tbBrand0619s);
 			sqlSession.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -97,7 +99,7 @@ public class Aaa022mybatisTest {
 			x.put("companyName", companyName2);
 			x.put("brandName", brandName2);
 			List<TbBrand0619> tbBrand0619s = mapper.queryTotal3(x);// 这里以一个对象为单位进行查询
-			System.out.println(tbBrand0619s);
+			LOG_SHOW.debug(tbBrand0619s);
 			sqlSession.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -125,7 +127,7 @@ public class Aaa022mybatisTest {
 			tbBrand0619.setBrandName(brandName2);
 			// *********************************************************************
 			List<TbBrand0619> tbBrand0619s = mapper.querySingleCondition(tbBrand0619);
-			System.out.println(tbBrand0619s);
+			LOG_SHOW.debug(tbBrand0619s);
 			sqlSession.close();
 		} catch (IOException e) {
 			e.printStackTrace();

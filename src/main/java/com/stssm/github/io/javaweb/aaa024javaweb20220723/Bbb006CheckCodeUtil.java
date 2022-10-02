@@ -11,6 +11,8 @@ import java.io.OutputStream;
 import java.util.Arrays;
 import java.util.Random;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * 生成验证码工具类
  * @author liujiajun_junw
@@ -25,7 +27,7 @@ public class Bbb006CheckCodeUtil {
 		OutputStream fos = new FileOutputStream("d://a.jpg");
 		String checkCode = Bbb006CheckCodeUtil.outputVerifyImage(100, 50, fos, 4);
 
-		System.out.println(checkCode);
+		LOG_SHOW.debug(checkCode);
 	}
 
 

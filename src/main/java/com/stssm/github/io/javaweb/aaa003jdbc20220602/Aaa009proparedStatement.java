@@ -3,6 +3,8 @@ package com.stssm.github.io.javaweb.aaa003jdbc20220602;
 import java.sql.*;
 import java.util.ArrayList;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -32,8 +34,8 @@ public class Aaa009proparedStatement {
 			// 将一条完整的登录语句变成上面的样子，永远返回true，从而实现登录
 			String demoSql = "select * from demo_14_bank_account where id='" + id + "' and balance='" + password + "'";
 			ResultSet resultSet = statement.executeQuery(demoSql);
-			System.out.println(demoSql);
-			System.out.println(resultSet.next() ? "登陆成功" : "登陆失败");
+			LOG_SHOW.debug(demoSql);
+			LOG_SHOW.debug(resultSet.next() ? "登陆成功" : "登陆失败");
 
 		} catch (SQLException e) {
 			e.printStackTrace();

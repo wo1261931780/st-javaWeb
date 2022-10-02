@@ -5,6 +5,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -43,7 +45,7 @@ public class Aaa065Servlet3 implements Servlet {
 	 */
 	@Override
 	public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-		System.out.println("二者的请求方式不同");
+		LOG_SHOW.debug("二者的请求方式不同");
 		HttpServletRequest httpRequest = (HttpServletRequest) servletRequest;
 		HttpServletResponse httpResponse = (HttpServletResponse) servletResponse;
 		String requestMethod = httpRequest.getMethod();// 根据请求体的方法类型，来判断后面使用什么方法

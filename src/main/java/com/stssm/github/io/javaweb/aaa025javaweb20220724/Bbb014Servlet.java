@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:ajax-demo
@@ -36,7 +38,7 @@ public class Bbb014Servlet extends HttpServlet {
 		// 将java对象转化为json字符串，成为序列化
 		// 将字符串转换为java对象，反序列化
 		String s = JSON.toJSONString(bbb015BrandPojos);
-		System.out.println("我是结果：" + s);
+		LOG_SHOW.debug("我是结果：" + s);
 		response.setContentType("text/json;charset=utf-8");
 		response.getWriter().write(s);
 		request.getParameter("name");// 这里是不能直接拿到json数据的

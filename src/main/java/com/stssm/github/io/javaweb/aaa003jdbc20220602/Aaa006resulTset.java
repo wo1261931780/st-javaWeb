@@ -22,21 +22,21 @@ public class Aaa006resulTset {
 		// ResultSet resultSet = connection.createStatement().executeQuery(demoSql);
 		ResultSet resultSet = connection.createStatement().executeQuery(demoSql);
 		// while (resultSet.next()) {
-		// 	// System.out.println("我是result：" + resultSet);
+		// 	// LOG_SHOW.debug("我是result：" + resultSet);
 		// 	int id = resultSet.getInt(1);
 		// 	String name = resultSet.getString(2);
 		// 	int price = resultSet.getInt(3);
 		// 	// 注意了，这里是按照顺序依次增加的，不是同一个index=1
-		// 	System.out.println(id + "--" + name + "--" + price);
+		// 	LOG_SHOW.debug(id + "--" + name + "--" + price);
 		// }
 		// ============================================================================
 		while (resultSet.next()) {
-			// System.out.println("我是result：" + resultSet);
+			// LOG_SHOW.debug("我是result：" + resultSet);
 			int id = resultSet.getInt("id");
 			String name = resultSet.getString("name");
 			int price = resultSet.getInt("price");
 			// 修改以后，就会变成数据栏的名称
-			System.out.println(id + "--" + name + "--" + price);
+			LOG_SHOW.debug(id + "--" + name + "--" + price);
 		}
 		// ============================================================================
 		// 上面两个东西的用法，在于取数据的方法不同

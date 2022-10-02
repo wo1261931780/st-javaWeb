@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:show
@@ -35,7 +37,7 @@ public class Aaa072Template extends HttpServlet {
 		// 我们在使用get请求的时候，也是发送url编码后的数据
 
 		String userName = request.getParameter("account");
-		System.out.println(userName);
+		LOG_SHOW.debug(userName);
 	}
 
 	@Override

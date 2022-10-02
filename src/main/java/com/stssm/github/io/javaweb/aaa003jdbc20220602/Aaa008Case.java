@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -31,11 +33,11 @@ public class Aaa008Case {
 				String name = resultSet.getString("name");
 				String price = resultSet.getString("price");
 				Aaa007Object x = new Aaa007Object(String.valueOf(id), name, price);
-				System.out.println(objects.add(x));
+				LOG_SHOW.debug(objects.add(x));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		System.out.println(objects);
+		LOG_SHOW.debug(objects);
 	}
 }

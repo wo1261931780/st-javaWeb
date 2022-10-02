@@ -8,6 +8,8 @@ import java.io.FileInputStream;
 import java.sql.Connection;
 import java.util.Properties;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -31,9 +33,9 @@ public class Aaa011connectPool {
 		prop.load(new FileInputStream("src/druid.properties"));
 		// 需要添加来自内容根的路径
 		DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
-		// System.out.println(System.getProperty("User.dir"));
+		// LOG_SHOW.debug(System.getProperty("User.dir"));
 
-		System.out.println(dataSource);        // 一开始这里下错了jar包，导致加载不生效
+		LOG_SHOW.debug(dataSource);        // 一开始这里下错了jar包，导致加载不生效
 		// {
 		// 	CreateTime:"2022-06-15 21:33:49",
 		// 	ActiveCount:0,
@@ -46,7 +48,7 @@ public class Aaa011connectPool {
 		// 	]
 		// }
 		Connection connection = dataSource.getConnection();
-		System.out.println("我是连接池的一个连接：" + connection);
+		LOG_SHOW.debug("我是连接池的一个连接：" + connection);
 		// 结果是：
 		// 21:35:24.850 [main] INFO com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
 		// 我是连接池的一个连接：com.mysql.cj.jdbc.ConnectionImpl@6a57ae10

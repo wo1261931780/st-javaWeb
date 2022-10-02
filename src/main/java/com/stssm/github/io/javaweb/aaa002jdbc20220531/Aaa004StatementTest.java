@@ -6,6 +6,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -31,7 +33,7 @@ public class Aaa004StatementTest {
 			connection.setAutoCommit(false);// 开启事物
 			final Statement stat = connection.createStatement();// 创建SQL
 			final int res = stat.executeUpdate(sql1);// 执行SQL语句，返回受影响的行数
-			System.out.println("受影响的行数为：" + res);
+			LOG_SHOW.debug("受影响的行数为：" + res);
 			connection.commit();// 提交事物
 		} catch (final Exception e) {
 			e.printStackTrace();
@@ -54,7 +56,7 @@ public class Aaa004StatementTest {
 		final Statement stat = conn.createStatement();
 		// int res = stat.executeUpdate(sql1);
 		final int res = stat.executeUpdate(sql2);
-		System.out.println(res);// 新增数据库和删除数据库，返回的结果都是0
+		LOG_SHOW.debug(res);// 新增数据库和删除数据库，返回的结果都是0
 		conn.commit();
 		conn.close();
 	}

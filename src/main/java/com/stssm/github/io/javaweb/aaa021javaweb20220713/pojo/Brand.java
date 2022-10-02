@@ -1,5 +1,7 @@
 package com.stssm.github.io.javaweb.aaa021javaweb20220713.pojo;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * 品牌实体类
  * @author liujiajun_junw
@@ -55,7 +57,7 @@ public class Brand {
 	 * getId  ${brand.id}   Id   getId
 	 */
 	public Integer getId() {
-		System.out.println("getId方法被调用了...");
+		LOG_SHOW.debug("getId方法被调用了...");
 		return id;
 	}
 

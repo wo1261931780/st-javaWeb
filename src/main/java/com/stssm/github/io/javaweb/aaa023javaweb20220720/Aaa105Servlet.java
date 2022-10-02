@@ -19,6 +19,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 @WebServlet(name = "Aaa105Servlet", value = "/Aaa105Servlet")
 public class Aaa105Servlet extends HttpServlet {
 	@Override
@@ -26,10 +28,10 @@ public class Aaa105Servlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		HttpSession session = request.getSession();
 		Object result = session.getAttribute("name");
-		System.out.println("我是session：" + session);
-		System.out.println("我是result：" + result);
+		LOG_SHOW.debug("我是session：" + session);
+		LOG_SHOW.debug("我是result：" + result);
 		// 不需要强转，但是要session中先存好数据，否则拿不到
-		// System.out.println("我是result：" + result.toString());
+		// LOG_SHOW.debug("我是result：" + result.toString());
 
 
 	}

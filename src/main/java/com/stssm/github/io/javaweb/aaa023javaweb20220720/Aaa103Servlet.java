@@ -22,6 +22,8 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 @WebServlet(name = "Aaa103Servlet", value = "/Aaa103Servlet")
 public class Aaa103Servlet extends HttpServlet {
 	@Override
@@ -34,10 +36,10 @@ public class Aaa103Servlet extends HttpServlet {
 		response.addCookie(x);
 		Cookie[] cookies = request.getCookies();
 		for (Cookie cookie : cookies) {
-			System.out.println("我是key：" + cookie.getName());
+			LOG_SHOW.debug("我是key：" + cookie.getName());
 			String decode = URLDecoder.decode(cookie.getValue(), StandardCharsets.UTF_8);
 			if (decode != null) {
-				System.out.println("我是value：" + decode);
+				LOG_SHOW.debug("我是value：" + decode);
 			}
 		}
 

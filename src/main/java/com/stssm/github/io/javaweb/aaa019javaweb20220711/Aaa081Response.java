@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:show
@@ -51,7 +53,7 @@ public class Aaa081Response extends HttpServlet {
 		// 我们可以直接使用Apache提供的插件
 		// --------------------------------------------------------------------
 		int copy = IOUtils.copy(fileInputStream, outputStream);
-		System.out.println("我是文件的大小，按照字节数量展示：" + copy);
+		LOG_SHOW.debug("我是文件的大小，按照字节数量展示：" + copy);
 		fileInputStream.close();
 
 

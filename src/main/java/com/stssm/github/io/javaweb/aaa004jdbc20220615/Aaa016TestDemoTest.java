@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -47,7 +49,7 @@ public class Aaa016TestDemoTest {
 		while (resultSet.next()) {
 			// Aaa012CaseBrand x1 = new Aaa012CaseBrand();
 			x1 = new Aaa012CaseBrand();
-			System.out.println(resultSet.getString("brand_name"));
+			LOG_SHOW.debug(resultSet.getString("brand_name"));
 			x1.setId(resultSet.getInt("id"));
 			x1.setStatus(resultSet.getInt("status"));
 			x1.setOrdered(resultSet.getInt("ordered"));
@@ -59,6 +61,6 @@ public class Aaa016TestDemoTest {
 		resultSet.close();
 		preparedStatement.close();
 		connection.close();
-		System.out.println(x);
+		LOG_SHOW.debug(x);
 	}
 }

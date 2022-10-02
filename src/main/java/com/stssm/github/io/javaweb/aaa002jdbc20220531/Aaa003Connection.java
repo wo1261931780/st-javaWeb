@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -28,7 +30,7 @@ public class Aaa003Connection {
 			connection.setAutoCommit(false);// 开启事物
 			final Statement stat = connection.createStatement();
 			final int res = stat.executeUpdate(sql1);
-			System.out.println("res的结果为：" + res);
+			LOG_SHOW.debug("res的结果为：" + res);
 
 			connection.commit();// 提交事物
 		} catch (final Exception e) {

@@ -9,6 +9,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.Properties;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -46,6 +48,6 @@ public class Aaa019javaEeTestDemo3Test {
 
 		preparedStatement.close();
 		connection.close();
-		System.out.println("插入数据结果：" + (clomn == 1));
+		LOG_SHOW.debug("插入数据结果：" + (clomn == 1));
 	}
 }

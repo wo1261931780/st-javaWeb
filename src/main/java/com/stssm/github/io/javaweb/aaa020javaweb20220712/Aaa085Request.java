@@ -15,6 +15,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:show
@@ -46,10 +48,10 @@ public class Aaa085Request extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 
 		if (login != null) {
-			System.out.println("登录成功");
+			LOG_SHOW.debug("登录成功");
 			writer.write("登录成功");
 		} else {
-			System.out.println("登录失败");
+			LOG_SHOW.debug("登录失败");
 			writer.write("登录失败");
 		}
 

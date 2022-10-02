@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:show
@@ -42,7 +44,7 @@ public class Aaa078Response extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// super.doGet(req, resp);
-		System.out.println("我是get");
+		LOG_SHOW.debug("我是get");
 		// resp.setStatus(302);// 不需要字符串，直接设置状态码
 		// 浏览器就会根据状态码进行解析，然后做重定向的操作
 		// resp.setHeader("Location", "/show/Aaa079Response");// 这里是项目的启动名，直接写路径名会导致定向失败
@@ -75,7 +77,7 @@ public class Aaa078Response extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// super.doPost(req, resp);
-		System.out.println("我是post");
+		LOG_SHOW.debug("我是post");
 		this.doGet(req, resp);
 	}
 }

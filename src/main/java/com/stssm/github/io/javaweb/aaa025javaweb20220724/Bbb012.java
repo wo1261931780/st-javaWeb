@@ -2,6 +2,8 @@ package com.stssm.github.io.javaweb.aaa025javaweb20220724;
 
 import com.alibaba.fastjson.JSON;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:ajax-demo
@@ -27,11 +29,11 @@ public class Bbb012 {
 		brandTest.setAddress("1111111");
 		brandTest.setName("22222222222");
 		String s = JSON.toJSONString(brandTest);
-		System.out.println(s);// {"address":"1111111","age":11,"name":"22222222222"}
+		LOG_SHOW.debug(s);// {"address":"1111111","age":11,"name":"22222222222"}
 		Bbb015brandPojo bbb015brandPojo = JSON.parseObject("{\"address\":\"1111111\",\"age\":11,\"name\":\"22222222222\"}",
 				Bbb015brandPojo.class);
-		System.out.println(bbb015brandPojo);// Bbb015brandPojo{name='22222222222', age=11, address='1111111'}
-		System.out.println("我是对象内部的属性：" + bbb015brandPojo.getName());// 我是对象内部的属性：22222222222
+		LOG_SHOW.debug(bbb015brandPojo);// Bbb015brandPojo{name='22222222222', age=11, address='1111111'}
+		LOG_SHOW.debug("我是对象内部的属性：" + bbb015brandPojo.getName());// 我是对象内部的属性：22222222222
 
 	}
 }

@@ -4,6 +4,8 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:filter-demo
@@ -27,7 +29,7 @@ public class Aaa114Listener implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent servletContextEvent) {
 		// 自动会执行，而且是在请求发起和结束之前
 		// 有点类似我们之前的代码块
-		System.out.println("我是监听器……");
+		LOG_SHOW.debug("我是监听器……");
 
 	}
 

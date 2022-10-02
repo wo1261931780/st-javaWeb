@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -37,7 +39,7 @@ public class Aaa021ProxyMapper {
 		// 在mybatis参数文件中，修改mapper标签的resource目录，为执行SQL的xml文件所在目录
 		// *********************************************************************
 		List<DemoPojo0618> demoPojo0618s = resMapper.selectAll();// 让我刚刚拿到的mapper，去执行内部的方法
-		System.out.println(demoPojo0618s);// 展示结果
+		LOG_SHOW.debug(demoPojo0618s);// 展示结果
 		sqlSession.close();
 		// 我们一般把mapper对应的xml成为statement
 	}

@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:brand-case
@@ -31,12 +33,13 @@ public class Bbb002Servlet extends HttpServlet {
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// super.service(req, resp);
 		String requestUri = req.getRequestURI();
-		System.out.println("我是全部路径：" + requestUri);// 我是全部路径：/brand-case/brand/demo
+		LOG_SHOW.debug("我是全部路径：" + requestUri);// 我是全部路径：/brand-case/brand/demo
 		// 这里的路径就是对应的方法名称
 		int index = requestUri.lastIndexOf("/");
 		String substring = requestUri.substring(index + 1);
-		System.out.println("我是当前资源访问路径：" + substring);// 我是当前资源访问路径：/demo
-		System.out.println(this);// com.itheima.web.servlet.Bbb001Servlet@1976025b
+
+		LOG_SHOW.debug("我是当前资源访问路径：" + substring);// 我是当前资源访问路径：/demo
+		LOG_SHOW.debug(this);// com.itheima.web.servlet.Bbb001Servlet@1976025b
 		// 谁在访问这个分发的文件，那么就是谁作为对象，参与下面的调用过程
 		Class<? extends Bbb002Servlet> aClass = this.getClass();
 		try {

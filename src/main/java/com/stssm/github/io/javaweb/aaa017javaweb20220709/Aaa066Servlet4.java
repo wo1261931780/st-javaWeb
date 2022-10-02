@@ -4,6 +4,8 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -31,7 +33,7 @@ public class Aaa066Servlet4 extends Aaa065Servlet3 {
 	@Override
 	protected void doGet(ServletRequest servletRequest, ServletResponse servletResponse) {
 		// super.doGet(servletRequest, servletResponse);
-		System.out.println("我是get");
+		LOG_SHOW.debug("我是get");
 	}
 
 	/**
@@ -41,6 +43,6 @@ public class Aaa066Servlet4 extends Aaa065Servlet3 {
 	@Override
 	protected void doPost(ServletRequest servletRequest, ServletResponse servletResponse) {
 		// super.doPost(servletRequest, servletResponse);
-		System.out.println("我是post");
+		LOG_SHOW.debug("我是post");
 	}
 }

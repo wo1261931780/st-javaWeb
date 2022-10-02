@@ -1,5 +1,7 @@
 package com.stssm.github.io.javaweb.aaa015javaweb20220707;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -14,7 +16,7 @@ package com.stssm.github.io.javaweb.aaa015javaweb20220707;
  */
 public class Aaa058Http {
 	public static void main(String[] args) {
-		System.out.println("我是http协议");
+		LOG_SHOW.debug("我是http协议");
 		// 在我们网页端，可以直接切换http的请求，看到具体的请求体和请求头
 		// 请求头就是key和value的格式
 		// 比如host:www.baidu.com
