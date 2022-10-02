@@ -27,11 +27,11 @@ public class Aaa075Encoding {
 		// ---------------------------------------------------------------------
 
 		// String decode = URLDecoder.decode(encode, "utf-8");
-		String decode = URLDecoder.decode(encode, "ISO-8859-1");// tomcat按照写死的格式进行解析
+		String decode = URLDecoder.decode(encode, StandardCharsets.ISO_8859_1);// tomcat按照写死的格式进行解析
 		LOG_SHOW.debug("我是解码以后的：" + decode);// 得到的数据产生了乱码
 		// ---------------------------------------------------------------------
 
-		byte[] bytes = decode.getBytes("ISO-8859-1");
+		byte[] bytes = decode.getBytes(StandardCharsets.ISO_8859_1);
 		// 因为底层的字节是不变的，我们按照相同的格式，解析得到具体的字节数据
 		// String s = new String(bytes, "UTF-8");
 		String s = new String(bytes, StandardCharsets.UTF_8);// 比较规范的写法

@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.io.InputStream;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -23,10 +25,10 @@ public class Aaa021mybatisTest {
 
 	@Test
 	public void test() {
-		String resource = "mybatis-config.xml";
+		// String resource = "mybatis-config.xml";
 		Integer id2 = 15;
 		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			SqlSession sqlSession = build.openSession(true);
 			TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);

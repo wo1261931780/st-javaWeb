@@ -38,6 +38,7 @@ public class Aaa114Listener implements ServletContextListener {
 	 */
 	@Override
 	public void contextDestroyed(ServletContextEvent servletContextEvent) {
+		LOG_SHOW.debug("123");
 
 	}
 

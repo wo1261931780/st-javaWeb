@@ -29,6 +29,7 @@ public class Aaa065Servlet3 implements Servlet {
 	 */
 	@Override
 	public void init(ServletConfig servletConfig) throws ServletException {
+		LOG_SHOW.debug("123");
 
 	}
 
@@ -69,9 +70,11 @@ public class Aaa065Servlet3 implements Servlet {
 	 * 使用protected修饰符，子类可以看到方法
 	 */
 	protected void doGet(ServletRequest servletRequest, ServletResponse servletResponse) {
+		LOG_SHOW.debug("123");
 	}
 
 	protected void doPost(ServletRequest servletRequest, ServletResponse servletResponse) {
+		LOG_SHOW.debug("123");
 	}
 
 	/**
@@ -87,6 +90,8 @@ public class Aaa065Servlet3 implements Servlet {
 	 */
 	@Override
 	public void destroy() {
+		LOG_SHOW.debug("123");
+
 
 	}
 }

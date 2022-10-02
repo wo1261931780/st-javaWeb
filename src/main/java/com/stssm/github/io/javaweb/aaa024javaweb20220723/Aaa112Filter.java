@@ -26,6 +26,7 @@ public class Aaa112Filter implements Filter {
 	 */
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
+		LOG_SHOW.debug("123");
 
 	}
 
@@ -48,6 +49,7 @@ public class Aaa112Filter implements Filter {
 	 */
 	@Override
 	public void destroy() {
+		LOG_SHOW.debug("123");
 
 	}
 }

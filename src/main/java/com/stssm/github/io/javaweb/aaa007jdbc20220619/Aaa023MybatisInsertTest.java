@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 
 /**
  * Created by Intellij IDEA.
@@ -24,9 +25,9 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW
 public class Aaa023MybatisInsertTest {
 	@Test
 	public void mybatisInsert() {
-		String resource = "mybatis-config.xml";
+		// String resource = "mybatis-config.xml";
 		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			// SqlSession sqlSession = build.openSession();// 这里可以设置事物是自动提交还是手动提交
 			SqlSession sqlSession = build.openSession(true);// 默认是手动提交，设置为true就是自动提交
@@ -55,9 +56,9 @@ public class Aaa023MybatisInsertTest {
 
 	@Test
 	public void mybatisInsert2() {
-		String resource = "mybatis-config.xml";
+		// String resource = "mybatis-config.xml";
 		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			SqlSession sqlSession = build.openSession(true);
 			TbBrandMapper0619 mapper = sqlSession.getMapper(TbBrandMapper0619.class);
@@ -85,9 +86,9 @@ public class Aaa023MybatisInsertTest {
 
 	@Test
 	public void mybatisUpdate() {
-		String resource = "mybatis-config.xml";
+		// String resource = "mybatis-config.xml";
 		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			SqlSession sqlSession = build.openSession(true);
 			TbBrandMapper0619 mapper = sqlSession.getMapper(TbBrandMapper0619.class);
@@ -116,9 +117,9 @@ public class Aaa023MybatisInsertTest {
 
 	@Test
 	public void mybatisUpdate2() {
-		String resource = "mybatis-config.xml";
+		// String resource = "mybatis-config.xml";
 		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			SqlSession sqlSession = build.openSession(true);
 			TbBrandMapper0619 mapper = sqlSession.getMapper(TbBrandMapper0619.class);

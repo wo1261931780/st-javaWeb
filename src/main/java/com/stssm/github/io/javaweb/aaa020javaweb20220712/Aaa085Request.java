@@ -16,6 +16,7 @@ import java.io.InputStream;
 import java.io.PrintWriter;
 
 import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 
 /**
  * Created by Intellij IDEA.
@@ -37,8 +38,8 @@ public class Aaa085Request extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String account = request.getParameter("account");
 		String password = request.getParameter("password");
-		String resource = "mybatis-config.xml";
-		InputStream inputStream = Resources.getResourceAsStream(resource);
+		// String resource = "mybatis-config.xml";
+		InputStream inputStream = Resources.getResourceAsStream(RESOURCE);
 		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		Aaa089loginMapper mapper = sqlSession.getMapper(Aaa089loginMapper.class);

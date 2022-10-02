@@ -24,6 +24,11 @@ public class Aaa061Servlet {
 	// -----------------------------------------------------
 	// 之前老版本是使用xml来配置servlet,
 	// 新版本就使用URLpattern来配置
+
+	/**
+	 * 测试
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		LOG_SHOW.debug("123");
 	}

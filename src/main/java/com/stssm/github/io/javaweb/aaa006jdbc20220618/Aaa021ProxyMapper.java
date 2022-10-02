@@ -12,6 +12,7 @@ import java.io.InputStream;
 import java.util.List;
 
 import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 
 /**
  * Created by Intellij IDEA.
@@ -23,8 +24,8 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW
  */
 public class Aaa021ProxyMapper {
 	public static void main(String[] args) throws IOException {
-		String resource = "mybatis-config.xml";
-		InputStream inputStream = Resources.getResourceAsStream(resource);
+		// String resource = "mybatis-config.xml";
+		InputStream inputStream = Resources.getResourceAsStream(RESOURCE);
 		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		// *********************************************************************

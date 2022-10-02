@@ -14,13 +14,13 @@ import java.io.IOException;
 
 @WebServlet("/registerServlet")
 public class Bbb009RegisterServlet extends HttpServlet {
-	private final Bbb011UserService service = new Bbb011UserService();
+	// private final Bbb011UserService service = new Bbb011UserService();
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 1. 获取用户名和密码数据
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
+		// String username = request.getParameter("username");
+		// String password = request.getParameter("password");
 
 		// Bbb010User User = new Bbb010User();
 		// User.setUsername(username);

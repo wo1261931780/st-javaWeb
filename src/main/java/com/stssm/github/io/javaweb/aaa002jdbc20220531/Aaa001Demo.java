@@ -19,6 +19,7 @@ import java.sql.Statement;
 public class Aaa001Demo {
 	public static final String SPLICE = "****************************************************";
 	public static final Logger LOG_SHOW = LoggerFactory.getLogger("Aaa001Demo.class");
+	public static final String RESOURCE = "mybatis-config.xml";
 
 	public static void main(final String[] args) throws Exception {
 
@@ -42,7 +43,8 @@ public class Aaa001Demo {
 			// String demoSql = "select * from demo13emp where emp_name is not null";
 			final String demoSql = "update DEMO_13_EMP set salary='5000' where emp_name='任嘉伦'";
 			final int affectRow = statement.executeUpdate(demoSql);// 数据库对象，执行对应的SQL语句
-			LOG_SHOW.debug("受影响的行数为：" + affectRow);
+			String format = String.format("受影响的行数为：%s", affectRow);
+			LOG_SHOW.debug(format);
 
 			statement.close();
 		}

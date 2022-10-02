@@ -50,13 +50,13 @@ public class Aaa004StatementTest {
 		final String loginName = "root";
 		final String loginPassword = "LIU18959297292";
 		final Connection conn = DriverManager.getConnection(url, loginName, loginPassword);
-		final String sql1 = "update demo14bankaccount set balance='123' where id=1 ";
+		// final String sql1 = "update demo14bankaccount set balance='123' where id=1 ";
 		// String sql2 = "create database  dbdemo2";
 		final String sql2 = "drop database if exists dbdemo2";
 		final Statement stat = conn.createStatement();
 		// int res = stat.executeUpdate(sql1);
 		final int res = stat.executeUpdate(sql2);
-		LOG_SHOW.debug(res);// 新增数据库和删除数据库，返回的结果都是0
+		LOG_SHOW.debug(String.valueOf(res));// 新增数据库和删除数据库，返回的结果都是0
 		conn.commit();
 		conn.close();
 	}

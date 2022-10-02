@@ -63,7 +63,7 @@ public interface TbBrandMapper0619 {
 	 * @param map
 	 * @return 返回TbBrand集合
 	 */
-	List<TbBrand0619> queryTotal3(Map map);
+	List<TbBrand0619> queryTotal3(@Param("map") Map map);
 
 	/**
 	 * 根据map查询所有数据
@@ -71,7 +71,7 @@ public interface TbBrandMapper0619 {
 	 * @param map
 	 * @return 返回TbBrand集合
 	 */
-	List<TbBrand0619> queryTotal4(Map map);
+	List<TbBrand0619> queryTotal4(@Param("map")Map map);
 
 	/**
 	 * 根据map查询所有数据
@@ -79,7 +79,7 @@ public interface TbBrandMapper0619 {
 	 * @param map
 	 * @return 返回TbBrand集合
 	 */
-	List<TbBrand0619> queryTotal5(Map map);
+	List<TbBrand0619> queryTotal5(@Param("map")Map map);
 
 	/**
 	 * 根据map查询所有数据
@@ -87,7 +87,7 @@ public interface TbBrandMapper0619 {
 	 * @param map
 	 * @return 返回TbBrand集合
 	 */
-	List<TbBrand0619> queryTotal6(Map map);
+	List<TbBrand0619> queryTotal6(@Param("map")Map map);
 
 	/**
 	 * 根据条件查询所有数据

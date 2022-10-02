@@ -13,6 +13,8 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
+
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -34,9 +36,9 @@ public class Aaa020mybatisTest {
 		// Integer status = 1;
 		TbBrand tbBrand = new TbBrand();
 		tbBrand.setId(id);
-		String resource = "mybatis-config.xml";
+		// String resource = "mybatis-config.xml";
 		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			SqlSession sqlSession = build.openSession(true);
 			TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);
@@ -50,9 +52,9 @@ public class Aaa020mybatisTest {
 	@Test
 	public void deleteByIds() {
 		int[] id = {123, 1, 12};
-		String resource = "mybatis-config.xml";
+		// String resource = "mybatis-config.xml";
 		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			SqlSession sqlSession = build.openSession(true);
 			TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);
@@ -69,12 +71,12 @@ public class Aaa020mybatisTest {
 		// String brandName = "华为";
 		String brandName = "";
 		String companyName = "";
-		Integer ordered = 11;
-		String description = "123";
-		Integer status = 1;
-		String resource = "mybatis-config.xml";
+		// Integer ordered = 11;
+		// String description = "123";
+		// Integer status = 1;
+		// String resource = "mybatis-config.xml";
 		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			SqlSession sqlSession = build.openSession(true);
 			TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);
@@ -88,7 +90,7 @@ public class Aaa020mybatisTest {
 	@Test
 	public void testCase() {
 		int id = 3;
-		String brandName = "华为";
+		// String brandName = "华为";
 		String companyName = "华为";
 		Integer ordered = 11;
 		TbBrand tbBrand = new TbBrand();
@@ -96,9 +98,9 @@ public class Aaa020mybatisTest {
 		tbBrand.setOrdered(ordered);
 		Map map = new HashMap(5);
 		map.put(id, tbBrand);
-		String resource = "mybatis-config.xml";
+		// String resource = "mybatis-config.xml";
 		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			SqlSession sqlSession = build.openSession(true);
 			TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);

@@ -11,6 +11,7 @@ import java.io.InputStream;
 import java.util.List;
 
 import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 
 /**
  * Created by Intellij IDEA.
@@ -31,8 +32,8 @@ public class Aaa019javaEe {
 		// pojo类，对应的是一个实体的表
 		// *********************************************************************
 
-		String resource = "mybatis-config.xml";// 直接加载对应的配置文件
-		InputStream inputStream = Resources.getResourceAsStream(resource);// 获取resource中的对象
+		// String resource = "mybatis-config.xml";// 直接加载对应的配置文件
+		InputStream inputStream = Resources.getResourceAsStream(RESOURCE);// 获取resource中的对象
 		// 实际上，这一步就是拿到mapper
 		// 而mapper中有对应SQL的执行命令
 		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);

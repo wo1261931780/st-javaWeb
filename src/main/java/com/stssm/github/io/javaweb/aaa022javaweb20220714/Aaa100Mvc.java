@@ -1,5 +1,7 @@
 package com.stssm.github.io.javaweb.aaa022javaweb20220714;
 
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 /**
  * Created by Intellij IDEA.
  * Project:jsp-demo
@@ -37,5 +39,13 @@ public class Aaa100Mvc {
 	// springMVC，就是spring整个大框架下面的一个小项目
 	// SSM就是，springMVC，对应表现层+spring，对应业务逻辑层+mybatis，对应数据访问层
 
+	/**
+	 * 测试
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		LOG_SHOW.debug("123");
+
+	}
 
 }

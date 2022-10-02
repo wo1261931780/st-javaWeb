@@ -20,6 +20,11 @@ import java.io.InputStream;
  * @exception
  */
 public class SqLsessionFactoryUtil {
+	public SqLsessionFactoryUtil() {
+
+
+	}
+
 	private static SqlSessionFactory sqlSessionFactory;// 提升作用域
 	// 新建一个成员变量
 

@@ -68,7 +68,7 @@ public interface TbBrandMapper {
 	 * @param map
 	 * @return
 	 */
-	int mapCase(Map map);
+	int mapCase(@Param("map") Map map);
 
 	/**
 	 * 测试接口

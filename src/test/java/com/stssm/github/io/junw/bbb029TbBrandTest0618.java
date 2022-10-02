@@ -13,6 +13,7 @@ import java.io.InputStream;
 import java.util.List;
 
 import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 
 /**
  * Created by Intellij IDEA.
@@ -24,8 +25,8 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW
 public class bbb029TbBrandTest0618 {
 	@Test
 	public void demoShow() throws IOException {
-		String resource = "mybatis-config.xml";
-		InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+		// String resource = "mybatis-config.xml";
+		InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
 		SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 		SqlSession sqlSession = build.openSession();
 		BrandMapper0618 mapper = sqlSession.getMapper(BrandMapper0618.class);
@@ -36,9 +37,9 @@ public class bbb029TbBrandTest0618 {
 
 	@Test
 	public void demoShowById() throws IOException {
-		String resource = "mybatis-config.xml";
+		// String resource = "mybatis-config.xml";
 		String id = "1";
-		InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+		InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
 		SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 		SqlSession sqlSession = build.openSession();
 		BrandMapper0618 mapper = sqlSession.getMapper(BrandMapper0618.class);

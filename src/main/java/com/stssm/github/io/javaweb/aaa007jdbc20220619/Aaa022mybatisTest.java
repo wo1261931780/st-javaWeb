@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 
 /**
  * Created by Intellij IDEA.
@@ -28,9 +29,9 @@ public class Aaa022mybatisTest {
 
 	@Test
 	public void show() {
-		String resource = "mybatis-config.xml";
+		// String resource = "mybatis-config.xml";
 		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			SqlSession sqlSession = build.openSession();
 			TbBrandMapper0619 mapper = sqlSession.getMapper(TbBrandMapper0619.class);
@@ -51,9 +52,9 @@ public class Aaa022mybatisTest {
 
 	@Test
 	public void showObject() {
-		String resource = "mybatis-config.xml";
+		// String resource = "mybatis-config.xml";
 		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			SqlSession sqlSession = build.openSession();
 			TbBrandMapper0619 mapper = sqlSession.getMapper(TbBrandMapper0619.class);
@@ -78,9 +79,9 @@ public class Aaa022mybatisTest {
 
 	@Test
 	public void showMap() {
-		String resource = "mybatis-config.xml";
+		// String resource = "mybatis-config.xml";
 		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			SqlSession sqlSession = build.openSession();
 			TbBrandMapper0619 mapper = sqlSession.getMapper(TbBrandMapper0619.class);
@@ -108,9 +109,9 @@ public class Aaa022mybatisTest {
 
 	@Test
 	public void showQueryByCondition() {
-		String resource = "mybatis-config.xml";
+		// String resource = "mybatis-config.xml";
 		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
 			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
 			SqlSession sqlSession = build.openSession();
 			TbBrandMapper0619 mapper = sqlSession.getMapper(TbBrandMapper0619.class);

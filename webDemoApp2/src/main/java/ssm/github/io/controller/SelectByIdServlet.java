@@ -23,7 +23,7 @@ import java.io.IOException;
 
 @WebServlet(name = "SelectByIdServlet", value = "/SelectByIdServlet")
 public class SelectByIdServlet extends HttpServlet {
-	private final DemoService x = new DemoService();
+	// private final DemoService x = new DemoService();
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
