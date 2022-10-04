@@ -37,12 +37,14 @@ public class Aaa069requestLine extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// super.doGet(req, resp);
-		LOG_SHOW.debug("我是请求对象：" + req);// org.apache.catalina.connector.RequestFacade@30cfbefb
+		String format = String.format("我是请求对象：%s", req);
+		LOG_SHOW.debug(format);// org.apache.catalina.connector.RequestFacade@30cfbefb
 		// 组织的链接对象
 		// 耦合性降低，可维护性增强
 		String method = req.getMethod();
 		// ---------------------------------------------------------------------
-		LOG_SHOW.debug("我是请求类型：" + method);// get或者post
+		String format1 = "我是请求类型：" + method;
+		LOG_SHOW.debug(format1);// get或者post
 		String contextPath = req.getContextPath();
 		LOG_SHOW.debug("我是内容路径名称：" + contextPath);
 		// 项目启动的完整路径是：http://localhost:8089/show_war/showMe

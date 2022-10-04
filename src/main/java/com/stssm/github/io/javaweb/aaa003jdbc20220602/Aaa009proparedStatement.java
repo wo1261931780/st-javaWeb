@@ -37,7 +37,7 @@ public class Aaa009proparedStatement {
 			// 将一条完整的登录语句变成上面的样子，永远返回true，从而实现登录
 			String demoSql = "select * from demo_14_bank_account where id='" + id + "' and balance='" + password + "'";
 			ResultSet resultSet = statement.executeQuery(demoSql);
-			LOG_SHOW.debug(demoSql);
+			LOG_SHOW.debug(String.valueOf(demoSql));
 			LOG_SHOW.debug(resultSet.next() ? "登陆成功" : "登陆失败");
 
 		} catch (SQLException e) {

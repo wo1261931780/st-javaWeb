@@ -30,8 +30,8 @@ public class Aaa003Connection {
 			connection.setAutoCommit(false);// 开启事物
 			final Statement stat = connection.createStatement();
 			final int res = stat.executeUpdate(sql1);
-			LOG_SHOW.debug("res的结果为：" + res);
-
+			String format = String.format("res的结果为：%s", res);
+			LOG_SHOW.debug(format);
 			connection.commit();// 提交事物
 		} catch (final Exception e) {
 			e.printStackTrace();

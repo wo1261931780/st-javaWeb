@@ -32,7 +32,7 @@ public class Aaa062Servlet implements Servlet {
 	public void init(ServletConfig servletConfig) throws ServletException {
 		LOG_SHOW.debug("我是初始化方法");// 只有在第一次访问的时候才会调用
 		// 也因为是初始化，所以只会调用一次
-		LOG_SHOW.debug(servletConfig);
+		LOG_SHOW.debug(String.valueOf(servletConfig));
 		this.configDemo = servletConfig;
 	}
 // 我们看一下这里

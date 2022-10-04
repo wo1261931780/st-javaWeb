@@ -33,11 +33,11 @@ public class Aaa008Case {
 				String name = resultSet.getString("name");
 				String price = resultSet.getString("price");
 				Aaa007Object x = new Aaa007Object(String.valueOf(id), name, price);
-				LOG_SHOW.debug(objects.add(x));
+				LOG_SHOW.debug(String.valueOf(objects.add(x)));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		LOG_SHOW.debug(objects);
+		LOG_SHOW.debug(String.valueOf(objects));
 	}
 }
