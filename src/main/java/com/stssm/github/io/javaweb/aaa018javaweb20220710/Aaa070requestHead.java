@@ -38,7 +38,8 @@ public class Aaa070requestHead extends HttpServlet {
 		// ---------------------------------------------------------------------
 
 		String header = req.getHeader("User-agent");
-		LOG_SHOW.debug("我是请求头：" + header);
+		String format = String.format("我是请求头：%s", header);
+		LOG_SHOW.debug(format);
 		// Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36
 		// 这里是查看浏览器版本和内核信息
 	}
@@ -58,7 +59,8 @@ public class Aaa070requestHead extends HttpServlet {
 
 		LOG_SHOW.debug("我是提交信息");
 		BufferedReader reader = req.getReader();// 不需要手动关闭
-		LOG_SHOW.debug("我是总行：" + reader);
+		String format = String.format("我是总行：%s", reader);
+		LOG_SHOW.debug(format);
 		String s = reader.readLine();
 		LOG_SHOW.debug(s);// userName=12456&userPaw=56465
 		// 请求完成以后，自动关闭

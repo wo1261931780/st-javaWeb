@@ -46,22 +46,26 @@ public class Aaa069requestLine extends HttpServlet {
 		String format1 = "我是请求类型：" + method;
 		LOG_SHOW.debug(format1);// get或者post
 		String contextPath = req.getContextPath();
-		LOG_SHOW.debug("我是内容路径名称：" + contextPath);
+		String format2 = String.format("我是内容路径名称：%s", contextPath);
+		LOG_SHOW.debug(format2);
 		// 项目启动的完整路径是：http://localhost:8089/show_war/showMe
 		// 这里获取具体的内容路径，可以拿到我的包名/show_war
 		// ---------------------------------------------------------------------
 		StringBuffer requestUrl = req.getRequestURL();
-		LOG_SHOW.debug("我是内容完整路径：" + requestUrl);
+		String format3 = String.format("我是内容完整路径：%s", requestUrl);
+		LOG_SHOW.debug(format3);
 		// http://localhost:8089/show_war/showMe
 		// ---------------------------------------------------------------------
 		// 然后还有一个获取一部分路径的
 		String requestUri = req.getRequestURI();
-		LOG_SHOW.debug("我是获取内容路径：" + requestUri);
+		String format4 = String.format("我是获取内容路径：%s", requestUri);
+		LOG_SHOW.debug(format4);
 		// /show_war/showMe
 		// 这里的路径就是内容根路径，前缀相同的情况下，可以用来作为请求来源的判断依据
 		// ---------------------------------------------------------------------
 		String queryString = req.getQueryString();
-		LOG_SHOW.debug("我是请求内容：" + queryString);
+		String format5 = String.format("我是请求内容：%s", queryString);
+		LOG_SHOW.debug(format5);
 		// 以上都是请求行的数据
 		// 具体到请求体和请求头，需要用另一种方法
 

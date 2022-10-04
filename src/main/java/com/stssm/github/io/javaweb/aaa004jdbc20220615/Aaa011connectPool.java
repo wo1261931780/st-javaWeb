@@ -35,7 +35,8 @@ public class Aaa011connectPool {
 		DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
 		// LOG_SHOW.debug(System.getProperty("User.dir"));
 
-		LOG_SHOW.debug(dataSource);        // 一开始这里下错了jar包，导致加载不生效
+		LOG_SHOW.debug(dataSource.toString());
+		// 一开始这里下错了jar包，导致加载不生效
 		// {
 		// 	CreateTime:"2022-06-15 21:33:49",
 		// 	ActiveCount:0,
@@ -48,7 +49,8 @@ public class Aaa011connectPool {
 		// 	]
 		// }
 		Connection connection = dataSource.getConnection();
-		LOG_SHOW.debug("我是连接池的一个连接：" + connection);
+		String format = String.format("我是连接池的一个连接：%s", connection);
+		LOG_SHOW.debug(format);
 		// 结果是：
 		// 21:35:24.850 [main] INFO com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
 		// 我是连接池的一个连接：com.mysql.cj.jdbc.ConnectionImpl@6a57ae10

@@ -33,7 +33,8 @@ public class Aaa004StatementTest {
 			connection.setAutoCommit(false);// 开启事物
 			final Statement stat = connection.createStatement();// 创建SQL
 			final int res = stat.executeUpdate(sql1);// 执行SQL语句，返回受影响的行数
-			LOG_SHOW.debug("受影响的行数为：" + res);
+			String format = String.format("受影响的行数为：%s", res);
+			LOG_SHOW.debug(format);
 			connection.commit();// 提交事物
 		} catch (final Exception e) {
 			e.printStackTrace();
