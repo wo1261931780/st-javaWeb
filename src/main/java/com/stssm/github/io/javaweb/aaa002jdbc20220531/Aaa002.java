@@ -35,7 +35,7 @@ public class Aaa002 {
 			final String sql = "update DEMO_13_EMP set salary='20222' where emp_name='任嘉伦' ";
 			final int affectRow = statement.executeUpdate(sql);// statment是用来执行SQL的对象
 			// 定义出来的所有SQL语句，都需要放到statement中执行出来
-			LOG_SHOW.debug(affectRow);
+			LOG_SHOW.debug(String.valueOf(affectRow));
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}

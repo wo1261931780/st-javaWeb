@@ -26,7 +26,7 @@ public class Aaa005Statement {
 		try {
 			Statement demoStatement = connection.createStatement();
 			int i = demoStatement.executeUpdate(demoSql);// 这里返回的就是受影响的行数
-			LOG_SHOW.debug(i == 0);// 如果影响超过一行，就是成功，否则失败
+			LOG_SHOW.debug(String.valueOf(i == 0));// 如果影响超过一行，就是成功，否则失败
 			// 不过，如果我执行的是删除语句，这里也会返回0
 
 			// ***********************************************************************************
