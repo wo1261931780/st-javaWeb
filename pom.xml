@@ -190,6 +190,10 @@
 				<repackage.classifier>exec</repackage.classifier>
 				<native-buildtools.version>0.9.11</native-buildtools.version>
 			</properties>
+			<properties>
+				<sonar.organization>wo1261931780</sonar.organization>
+				<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+			</properties>
 			<dependencies>
 				<dependency>
 					<groupId>org.junit.platform</groupId>
