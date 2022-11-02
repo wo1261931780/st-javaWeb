@@ -75,7 +75,7 @@
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-core</artifactId>
-			<version>1.4.2</version>
+			<version>1.4.4</version>
 		</dependency>
 		<!--logback一共有三个依赖，同时还有一个需要放到resource下面的配置文件-->
 
