@@ -33,8 +33,6 @@ public class Aaa098Servlet extends HttpServlet {
 		x.add(new Brand(3, "小米", "小米科技有限公司", 1000, "为发烧而生", 1));
 		request.setAttribute("brand", x);
 		request.getRequestDispatcher("/aaa095.jsp").forward(request, response);
-
-
 	}
 
 	@Override
