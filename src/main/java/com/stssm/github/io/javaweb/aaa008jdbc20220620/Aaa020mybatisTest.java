@@ -25,7 +25,6 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE
  */
 public class Aaa020mybatisTest {
 
-
 	@Test
 	public void deleteById() {
 		int id = 13;

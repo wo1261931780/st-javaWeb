@@ -79,7 +79,6 @@ public class Aaa023MybatisInsertTest {
 			mapper.mybatisInsert(tbBrand0619);
 			Integer id = tbBrand0619.getId();
 			LOG_SHOW.debug(String.valueOf(id));
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
