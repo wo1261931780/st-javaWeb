@@ -30,7 +30,7 @@ public class Aaa059Http {
 	// 我们常见的状态码就是200，请求成功
 	// 403，没有权限访问资源
 	// 404，请求内容错误，或者是不存在相关资源
-	// 428/429/431都是新版的http协议对应的响应结果
+	// 428/429/431，都是新版的http协议对应的响应结果
 
 	public static void main(String[] args) {
 		LOG_SHOW.debug("123");

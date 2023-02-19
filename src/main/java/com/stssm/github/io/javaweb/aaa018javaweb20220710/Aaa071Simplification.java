@@ -43,7 +43,7 @@ public class Aaa071Simplification extends HttpServlet {
 		LOG_SHOW.debug("我是get方法");
 		String method = req.getMethod();
 		LOG_SHOW.debug(method);// 这里也有一个坑
-		// 里面的全部都是大写，小写会导致不识别
+		// 里面的GET/POST全部都是大写，小写会导致不识别
 		switch (method) {
 			case "GET":
 				LOG_SHOW.debug("我是get");
@@ -61,6 +61,7 @@ public class Aaa071Simplification extends HttpServlet {
 				LOG_SHOW.debug(SPLICE);
 				String[] hobbies = req.getParameterValues("hobbies");
 				LOG_SHOW.debug("我是直接获取value的数组：" + hobbies);// [Ljava.lang.String;@298bd38e
+				// 上下两个方法，不管是不是包装，都是直接打印地址
 				LOG_SHOW.debug("我是直接获取value的数组：" + Arrays.toString(hobbies));// [Ljava.lang.String;@298bd38e
 				break;
 			case "POST":
@@ -69,13 +70,10 @@ public class Aaa071Simplification extends HttpServlet {
 				LOG_SHOW.debug(reader.readLine());
 				LOG_SHOW.debug(SPLICE);
 				// 获取详细参数的方法是通用的，所以直接拿到结果就可以
-
 				break;
 			default:
 				break;
 		}
-
-
 	}
 
 	/**

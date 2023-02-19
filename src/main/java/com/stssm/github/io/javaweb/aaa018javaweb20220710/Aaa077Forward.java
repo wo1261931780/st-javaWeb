@@ -32,9 +32,6 @@ public class Aaa077Forward extends HttpServlet {
 		// 这里就相当于在请求体中，执行数据获取的操作
 		// 每次访问资源，都会执行一次转发的操作
 		// 这里可以理解为流水线，类似工厂的工作方法
-
-
-
 	}
 
 	@Override

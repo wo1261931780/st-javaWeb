@@ -64,8 +64,6 @@ public class Aaa078Response extends HttpServlet {
 		// 类似上面这种，存在一个写死的资源路径，从而导致后续维护出现问题
 		String contextPath = req.getContextPath();// 动态获取，解决问题
 		resp.sendRedirect(contextPath+"/Aaa079Response");
-
-
 	}
 
 	/**

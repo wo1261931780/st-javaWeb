@@ -65,7 +65,5 @@ public class Aaa070requestHead extends HttpServlet {
 		LOG_SHOW.debug(s);// userName=12456&userPaw=56465
 		// 请求完成以后，自动关闭
 		// ---------------------------------------------------------------------
-
-
 	}
 }

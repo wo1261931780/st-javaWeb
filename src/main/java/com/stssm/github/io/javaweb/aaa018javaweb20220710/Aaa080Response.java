@@ -38,7 +38,6 @@ public class Aaa080Response extends HttpServlet {
 		resp.setHeader("content-type", "text/html");// 如果不在里面设置一个头信息，就会按照默认格式解析
 		// 这里和我想的一样，不是按照文本解析，而是按照response响应对象去解析
 		// 所以设置头文件的位置，对最终结果没有影响
-
 	}
 
 	/**

@@ -30,7 +30,6 @@ public class Aaa065Servlet3 implements Servlet {
 	@Override
 	public void init(ServletConfig servletConfig) throws ServletException {
 		LOG_SHOW.debug("123");
-
 	}
 
 	/**
@@ -91,7 +90,5 @@ public class Aaa065Servlet3 implements Servlet {
 	@Override
 	public void destroy() {
 		LOG_SHOW.debug("123");
-
-
 	}
 }

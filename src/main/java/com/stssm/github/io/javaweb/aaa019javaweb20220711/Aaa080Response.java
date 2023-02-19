@@ -37,6 +37,7 @@ public class Aaa080Response extends HttpServlet {
 		writer.write("aaa");
 		writer.write("<h1>123</h1>");// 直接写数据，浏览器只会当成文本去解析
 		resp.setHeader("content-type", "text/html");// 如果不在里面设置一个头信息，就会按照默认格式解析
+		// 2023年2月19日22:06:56
 		// 这里和我想的一样，不是按照文本解析，而是按照response响应对象去解析
 		// 所以设置头文件的位置，对最终结果没有影响
 		// 这里的writer是随着response对象获取出来的
@@ -44,7 +45,6 @@ public class Aaa080Response extends HttpServlet {
 		// 因此，这里的writer也会跟着response一起被关闭
 		// --------------------------------------------------------------------
 		// 这里的输出格式不是UTF-8，因此直接展示中文会乱码
-
 	}
 
 	/**

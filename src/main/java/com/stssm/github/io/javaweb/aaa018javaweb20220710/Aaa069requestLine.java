@@ -27,7 +27,6 @@ public class Aaa069requestLine extends HttpServlet {
 	// 在http过程中
 	// request和response对象，都是由tomcat创建的
 
-
 	/**
 	 * @param req
 	 * @param resp
@@ -68,7 +67,6 @@ public class Aaa069requestLine extends HttpServlet {
 		LOG_SHOW.debug(format5);
 		// 以上都是请求行的数据
 		// 具体到请求体和请求头，需要用另一种方法
-
 	}
 
 	/**

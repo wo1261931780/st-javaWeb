@@ -15,9 +15,9 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW
  * @exception
  */
 public class Aaa068xmlAndServlet {
-// 在3.0之前，都只能使用xml来配置访问路径
-// 之后就可以使用servlet的注解进行路径配置
-// 我们对servlet的配置，都是在web.xml中进行的
+	// 在3.0之前，都只能使用xml来配置访问路径
+	// 之后就可以使用servlet的注解进行路径配置
+	// 我们对servlet的配置，都是在web.xml中进行的
 
 	public static void main(String[] args) {
 		LOG_SHOW.debug("123");

@@ -20,9 +20,9 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW
 public class Aaa062Servlet implements Servlet {
 	private ServletConfig configDemo;
 
-// 说明一下，数字越小，优先级越高
-// 1表示第一次访问的时候创建
-// 0和负数表示服务器启动的时候创建
+	// 说明一下，数字越小，优先级越高
+	// 1表示第一次访问的时候创建
+	// 0和负数表示服务器启动的时候创建
 
 	/**
 	 * @param servletConfig
@@ -35,9 +35,9 @@ public class Aaa062Servlet implements Servlet {
 		LOG_SHOW.debug(String.valueOf(servletConfig));
 		this.configDemo = servletConfig;
 	}
-// 我们看一下这里
-// 不同的方法也代表了不同的生命周期
-// init是最早的，service就是执行过程中的，destroy表示需要回收内存/结束的时候
+	// 我们看一下这里
+	// 不同的方法也代表了不同的生命周期
+	// init是最早的，service就是执行过程中的，destroy表示需要回收内存/结束的时候
 
 	/**
 	 * @return
