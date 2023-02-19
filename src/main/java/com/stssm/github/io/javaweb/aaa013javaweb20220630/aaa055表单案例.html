@@ -99,7 +99,7 @@
 			function checkTel() {
 				console.log("手机号失去了焦点");
 				var restel = demotel.value.trim();
-				var res = restel.length == 11;
+				var res = restel.length === 11;
 				if (res) {
 					console.log("正常");
 					document.getElementById("tip3").style.display = "none";
