@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+
+<script>
+	var ajaxXml;
+	if (window.XMLHttpRequest) {
+		ajaxXml = new XMLHttpRequest();
+	} else {
+		ajaxXml = new ActiveXObject("demo");
+		ajaxXml.open("GET", "http://localhost:8080/ajax-demo/bbb003Servlet")
+		// 这里要写项目启动后，servlet的全部路径
+		ajaxXml.send();
+		// xhr就是XMLHttpRequest
+		// 我们在浏览器可以看到请求的type
+	}
+	xhttp.onreadystatechange = function () {
+		if (this.readyState == 4 && this.status == 200) {
+			alert(this.responseText);
+		}
+	};
+
+
+</script>
+</body>
+</html>

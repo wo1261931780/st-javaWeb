@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--名称标签，先随便写一个-->
+<mapper namespace="demo">
+	<!--这里的标签，用来执行什么SQL命令，就使用什么类型-->
+	<!--id，是一条SQL的具体标识-->
+	<!--resultType，就是一个SQL要返回的类型，有点类似我们之前做的那些pojo之类的-->
+	<!--这里一般要直接定位到我们使用的类-->
+	<!--<select id="selectAll" resultType="com.stssm.github.io.javaweb.aaa004JDBC2022年6月18日.pojo.DemoPojo0618">-->
+	<!--我之前写过了对应的typeAliases，这里就不需要加那么多前缀，直接加上类名就可以-->
+	<select id="selectAll" resultType="DemoPojo0618">
+		<!--select * from Blog where id = #{id}-->
+		<!--		select * from mybatis.tb_user;-->
+		select * from mybatis.tb_user where password='123';
+	</select>
+</mapper>

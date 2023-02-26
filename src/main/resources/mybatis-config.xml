@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+		PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<package name="com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo"/>
+		<!--设置了这里，就可以自动扫描所有的pojo-->
+		<!--以后我在mapper中，不需要配置对应的包名了，直接使用类名就可以-->
+	</typeAliases>
+	<!--注意一下，我配置标签需要遵循前后顺序，不能瞎写-->
+	<!--在default里面，可以直接切换不同的环境信息-->
+	<!--比如我现在使用的是development，后面想要test，直接修改对应的就可以-->
+	<environments default="development">
+		<!--看后缀，这里是复数，说明可以配置多个环境，-->
+		<!--不同的environment对应的不同开发环境-->
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<!--下面${xxx}都是要修改的内容-->
+				<!--这里是配置我的驱动，是mysql还是oracle-->
+				<property name="driver" value="com.mysql.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql:///mybatis?useSSL=false"/>
+				<property name="username" value="root"/>
+				<property name="password" value="LIU18959297292"/>
+			</dataSource>
+		</environment>
+		<environment id="test">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<!--下面${xxx}都是要修改的内容-->
+				<!--这里是配置我的驱动，是mysql还是oracle-->
+				<property name="driver" value="com.mysql.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql:///study002JDBC?useSSL=false"/>
+				<property name="username" value="root"/>
+				<property name="password" value="LIU18959297292"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<!--这里就放置我们所说的mapper-->
+		<!--mapper就是用来操作数据库的SQL语句-->
+		<!--*********************************************************************-->
+		<!--<mapper resource="org/mybatis/example/BlogMapper.xml"/>-->
+		<!--<mapper resource="OperateMybatisMapper.xml"/>-->
+		<!--*********************************************************************-->
+		<!--这里要写相对路径，从而定位到mapper-->
+		<!--<mapper resource="com/stssm/github/io/javaweb/aaa004JDBC2022年6月18日/mapper/OperateMybatisMapper.xml"/>-->
+		<!--因为之前修改了对应的mapper文件和xml文件，所以这里需要对应到-->
+		<!--*********************************************************************-->
+		<package name="com.stssm.github.io.javaweb.aaa006jdbc20220618.mapper"/>
+		<package name="com.stssm.github.io.javaweb.aaa007jdbc20220619.mapper"/>
+		<package name="com.stssm.github.io.javaweb.aaa008jdbc20220620.mapper"/>
+		<!--这里直接用包扫描的方式，就可以一次性加载所有的mapper进来-->
+
+
+	</mappers>
+</configuration>

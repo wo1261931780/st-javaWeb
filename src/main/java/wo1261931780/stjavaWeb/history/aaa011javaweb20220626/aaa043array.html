@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>我是array</div>
+		<script>
+			var demoArray = [1, 2, 3];
+			console.log("我是数组demoArray：" + demoArray);
+			// 这里和java也不太一样，直接打印数组，就可以看到里面的所有数据
+			// 相当于一开始就执行了一遍重写的操作
+			// 这里的数组，就相当于java中存在的集合
+			// 首先长度可以变化，然后是元素的类型可以发生变化
+			demoArray[5] = 5;
+			console.log("我是数组demoArray：" + demoArray[5]);
+			console.log("我是数组demoArray的长度：" + demoArray.length); //长度为6
+			console.log("我是已经变化的数组：" + demoArray); // 完整的数组为：1,2,3,,,5
+			// 如果在后面直接填充，中间跨过的内容就会变成空字符
+			// -------------------------------------------------------
+			console.log(demoArray[4]); // 直接访问还没有赋值的元素，会返回undefined
+			demoArray[2] = "二号";
+			console.log(demoArray); // [1, 2, "二号"]
+			// 这里的集合也是一个不要求类型设置的集合
+			// 我可以是字符串元素，也可以是数字元素
+			// -------------------------------------------------------
+			var demoArray2 = [1, 2, 3];
+			demoArray2.push(11, 22); // 直接在最后添加元素
+			for (var i = 0; i < demoArray2.length; i++) {
+				console.log(demoArray2[i]); // 简单的遍历数组操作
+			}
+			console.log(demoArray2); // (5) [1, 2, 3, 11, 22]
+			// 每一次push，就相当于在数组中添加元素
+			// 每个元素都会被添加到末尾
+			// -------------------------------------------------------
+			demoArray2.splice(1, 2); // 从1号index开始删除，删除元素2,3一共两个
+			console.log(demoArray2); // (3) [1, 11, 22]
+		</script>
+	</body>
+</html>

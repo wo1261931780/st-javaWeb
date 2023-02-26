@@ -1,0 +1,45 @@
+<!--
+ $ @Author: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @Date: 2022-07-24 15:06:50
+ $ @LastEditors: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @LastEditTime: 2022-07-24 15:07:20
+ $ @FilePath: \vue-demo\src\main\webapp\bbb019.html
+ $ @Description: 1111
+ $ @
+ $ @Copyright (c) 2022 by liujiajun 45444154+wo1261931780@users.noreply.github.com, All Rights Reserved.
+ -->
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8"/>
+	<meta content = "IE=edge" http-equiv = "X-UA-Compatible"/>
+	<meta content = "width=device-width, initial-scale=1.0" name = "viewport"/>
+	<title>Document</title>
+</head>
+<body>
+<div id = "demoApp">
+	<input type = "button" v-on:click = "show()" value = "单击事件"/>
+	<input @click = "show()" type = "button" value = "单击事件2"/>
+	<!-- 上面是简化写法 -->
+</div>
+
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+	new Vue({
+		el: "#demoApp",
+		data() {
+			return {
+				account: "",
+				url: "http://www.baidu.com",
+			};
+		},
+		methods: {
+			show() {
+				alert("我是点击事件");
+			},
+		},
+	});
+</script>
+</body>
+</html>

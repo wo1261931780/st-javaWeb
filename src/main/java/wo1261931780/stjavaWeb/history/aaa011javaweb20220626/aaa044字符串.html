@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>我是字符串</div>
+		<script>
+			var demo1 = "123";
+			console.log(demo1);
+			console.log("我是字符串demo1的长度" + demo1.length);
+			// -------------------------------------------------------
+			var demo2 = "       1111       ";
+			console.log(0 + demo2 + 0); // 0       1111       0
+			console.log(0 + demo2.trim() + 0); // 011110
+			// trim的作用是删除多余的元素
+			// 这个方法主要是用来校验表单
+			// 比如登录的时候，需要输入账号和密码信息，就可以使用这个方法来校验
+		</script>
+	</body>
+</html>

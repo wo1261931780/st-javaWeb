@@ -1,0 +1,78 @@
+<!--
+ $ @Author: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @Date: 2022-07-24 16:00:33
+ $ @LastEditors: liujiajun 45444154+wo1261931780@users.noreply.github.com
+ $ @LastEditTime: 2022-07-24 19:01:19
+ $ @FilePath: \brand-demo\brand-demo\src\main\webapp\bbb018.html
+ $ @Description: 1111
+ $ @
+ $ @Copyright (c) 2022 by liujiajun 45444154+wo1261931780@users.noreply.github.com, All Rights Reserved.
+ -->
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8"/>
+	<title>Title</title>
+</head>
+<body>
+<div>我是vue的测试页面</div>
+<div id = "showMeTable">
+	<!--其实这里也能看出来-->
+	<!--我们使用vue，只是将我们的html页面，进行了一个绑定-->
+	<!--将整个div表示的html页面，作为一个vue app，然后进行后续的操作-->
+	<table>
+		<tr>
+			<th>序号</th>
+			<th>品牌名称</th>
+			<th>企业名称</th>
+			<th>排序</th>
+			<th>品牌介绍</th>
+			<th>状态</th>
+			<th>操作</th>
+		</tr>
+		<tr v-for = "(brand,i) in listData">
+			<th>{{i + 1}}</th>
+			<th>{{brand.brandName}}</th>
+			<th>{{brand.companyName}}</th>
+			<th>{{brand.ordered}}</th>
+			<th>{{brand.description}}</th>
+			<th>{{brand.status}}</th>
+		</tr>
+	</table>
+</div>
+
+<script src = "js/axios-0.18.0.js"></script>
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+	new vue({
+		el: "#showMeTable",
+		// 这里的井号，对应的刚好是id选择器
+		data() {
+			return {
+				name: "123",
+				listData: [],
+			};
+		},
+		mounted() {
+			this.show();
+		},
+		methods: {
+			show() {
+				var _this = this;
+				// 需要手动添加一个，解决跨域问题
+				// 主要是提取一下this的对象
+				axios({
+					method: "",
+					url: "",
+				}).then(function (result) {
+					// this.listData = result.data
+					// 这里如果直接this访问，是拿不到外面的listdata的
+					_this.listData = result.data;
+				});
+			},
+		},
+	});
+</script>
+</body>
+</html>

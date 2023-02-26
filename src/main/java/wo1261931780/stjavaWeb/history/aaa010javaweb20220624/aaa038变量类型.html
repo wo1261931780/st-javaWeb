@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>我是变量类型</div>
+		<script>
+			var demo1 = 111;
+			console.log(demo1 + "变量的类型是：" + typeof demo1); // number
+			// 数字类型的变量，整数和小数都一样
+			// -------------------------------------------------------
+			var demo2 = "111";
+			console.log(demo2 + "变量的类型是：" + typeof demo2); // string
+			// 在js中，是不区分字符串的单双引号的
+			// -------------------------------------------------------
+			// 不过js中，变量类型也就那么几种
+			// js变量类型:
+			// number：数字类型，不区分整数和小数
+			// 比较特殊的数字类型：NaN（not a number）， Infinity、-Infinity（无穷大）
+			// 布尔类型true、false
+			// 空类型null、
+			// 特殊类型undefined
+			// 基本数据类型就只有上面的五种，但是具体多少种类，要学习前端才知道
+			// -------------------------------------------------------
+			// function、object、array、date、regexp、string、error、symbol、map、set、weakmap、weakset、promise、typedarray、blob、file、xmlhttprequest、xhr、formdata、websocket、eventtarget、event、node、document、navigator、location、history、screen、console、crypto、fetch、browser、window、self、this、arguments、new、delete、void、return、throw、eval、arguments、arguments.callee、arguments.caller、arguments.length、arguments.callee.caller、arguments.callee.arguments、arguments.callee.arguments.callee、arguments.callee.arguments.caller、arguments.callee.arguments.length、arguments.callee.arguments.callee.caller、arguments.callee.arguments.callee.arguments、arguments.callee.arguments.callee.arguments.callee、arguments.callee.arguments.callee.arguments.caller、arguments.callee.arguments.callee.arguments.callee.arguments、arguments.callee.arguments.callee.arguments.c
+			// -------------------------------------------------------
+			var demo3 = null;
+			console.log(demo3 + "变量的类型是：" + typeof demo3); // object
+			// 这里其实是一个错误，应该返回的结果为null
+			// 但是返回了object
+			// 实际上是js将null作为一个空对象去构造，就算里面没有内容，也被认定为一个对象类型
+			// -------------------------------------------------------
+			var demo4;
+			console.log(demo4 + "变量的类型是：" + typeof demo4); // undefined
+			// 在只定义了变量，但是没有赋值的情况下，对象就是undefined
+			// -------------------------------------------------------
+		</script>
+	</body>
+</html>

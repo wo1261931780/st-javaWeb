@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>我是变量类型测试</div>
+		<!-- ------------------------------------------------------- -->
+		<script>
+			// -------------------------------------------------------
+			var demo1 = 11;
+			console.log("我是demo1变量" + demo1 + "，我的类型为：" + typeof demo1);
+			var demo2 = "22";
+			console.log("我是demo2变量" + demo2 + "，我的类型为：" + typeof demo2);
+			// -------------------------------------------------------
+			var demo3 = +false;
+			// js中，默认true为1，false为0
+			console.log("我是demo3变量" + demo3 + "，我的类型为：" + typeof demo3);
+			// -------------------------------------------------------
+			var demo4 = 0;
+			if (demo4) {
+				console.log("我是demo4变量" + demo4 + "，我被认为是true");
+			} else {
+				console.log("我是demo4变量" + demo4 + "，我被认为是false");
+				// 在js中，0和NaN可以被转换为false，其他的正整数都是true
+			}
+			// -------------------------------------------------------
+			var demo5 = "";
+			if (demo5) {
+				// 对于字符串类型的
+				// 不管是空字符串还是空格，都是false
+				// 但是只要有任意长度的字符，就可以判断为true
+				console.log("我是demo5变量" + demo5 + "，我被认为是true");
+			} else {
+				// 在js中，字符串转换布尔值，只会判断是否存在内容
+				console.log("我是demo5变量" + demo5 + "，我被认为是false");
+			}
+			// -------------------------------------------------------
+			var demo6 = null;
+			if (demo6) {
+				// 在js中，null和undefined默认都是false
+				// 其实也可以发现，在代码中，一般都会把较少出现的/被认定为异常的变量
+				// 设置为false
+				// 应该说是一种思想
+				console.log("我是demo6变量" + demo6 + "，我被认为是true");
+			} else {
+				console.log("我是demo6变量" + demo6 + "，我被认为是false");
+			}
+			// -------------------------------------------------------
+			var demo7 = "";
+			// 在代码中，可能会进行一些健壮性的判断
+			// 比如在java中判断字符串不为空，并且长度>0
+			// if (demo7 != "" && demo7.length > 0) {
+			// 实际上，在js中，只需要按照下面的写法进行就可以
+			if (demo7) {
+				console.log("我是demo7变量" + demo7 + "，我被认为是true");
+			} else {
+				console.log("我是demo7变量" + demo7 + "，我被认为是false");
+			}
+		</script>
+	</body>
+</html>

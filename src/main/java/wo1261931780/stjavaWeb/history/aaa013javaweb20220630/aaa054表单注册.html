@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>我是表单注册的测试页面</div>
+		<form id="register" action="#">
+			<input
+				id="demo1"
+				type="text"
+				placeholder="aaa054表单注册"
+				name="inputdemo"
+			/>
+			<input id="demo2" type="submit" value="按钮" />
+		</form>
+		<script>
+			document.getElementById("register").onsubmit = function () {
+				alert("我是表单提交");
+				return false;
+				
+				// 如果表单的校验不通过，就不允许出现提交
+				// onsubmit这个事件，如果返回的结果为true，就提交
+				// 否则不提交
+				// 自己测试得到一个结果：
+				// 如果我上面有提交成功的信息，但是最后返回false
+				// 最终也是不会出现提交的
+			};
+			document.getElementById("demo1").onclick = function () {
+				alert("我是点击事件");
+			};
+			document.getElementById("demo1").onblur = function () {
+				console.log("1111");
+			};
+		</script>
+	</body>
+</html>

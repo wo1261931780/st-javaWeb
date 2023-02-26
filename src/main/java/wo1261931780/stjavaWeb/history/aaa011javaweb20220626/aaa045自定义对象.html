@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>我是自定义对象</div>
+		<script>
+			var object1 = {
+				name: "demo",
+				age: 11,
+				price: 100,
+				eat: function (price) {
+					console.log(name + "吃饭花了" + price);
+				},
+			};
+			console.log(object1);
+			console.log("对象的名称是：" + object1.name);
+			// 和java一样，直接对象+属性调用就可以
+			object1.eat(object1.price); // 吃饭花了100
+			// 上面这种调用方法，如果没有传入具体的参数，就不会得到name值
+		</script>
+	</body>
+</html>
