@@ -11,44 +11,594 @@
 	<groupId>wo1261931780</groupId>
 	<artifactId>st-javaWeb</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<!--<packaging>pom</packaging>-->
 	<name>st-javaWeb</name>
 	<description>Demo project for Spring Boot</description>
+	<!--<modules>-->
+	<!--	<module>webDemoApp</module>-->
+	<!--	<module>webDemoApp2</module>-->
+	<!--</modules>-->
 	<properties>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+		<!--=============================================================================================-->
+		<!--下面两个配置基本地启动，后面的按需修改-->
+		<!--=============================================================================================-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
+		<!--spring网络WEB-->
+		<!--使用Spring MVC构建Web，包括RESTful，应用程序。使用Apache Tomcat作为默认的嵌入式容器。-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<!--<scope>test</scope>-->
+			<!--上面的scope表示作用范围-->
+			<!--在没有说明的情况下，scope默认就是compile-->
+			<!--如果我把mysql这些数据库驱动jar包设置为runtime-->
+			<!--那么我在日常使用的过程中，是无法访问这些类的-->
+		</dependency>
 
+		<!--=============================================================================================-->
+		<!--spring-->
+		<!--=============================================================================================-->
+
+		<!--Spring Aspects将Spring与AspectJ整合在一起。-->
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework</groupId>-->
+		<!--	<artifactId>spring-aspects</artifactId>-->
+		<!--</dependency>-->
+		<!--一开始是在spring boot context里面-->
+		<!--现在是在cache里面-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+		</dependency>
+		<!--Spring Boot DevTools 开发人员工具-->
+		<!--提供快速的应用重启、LiveReload和配置，以增强开发体验。-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<!--Spring配置处理器 开发者工具-->
+		<!--为开发人员生成元数据，以便在使用自定义配置键（ex.application.properties/.yml文件）时提供上下文帮助和 "代码完成"。-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+			<!--添加以后，可以避免自动装配报错-->
+		</dependency>
+		<!--使用Spring Boot的Actuator的入门课程，它提供了生产准备的功能，帮助你监控和管理你的应用程序。-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!--=============================================================================================-->
+		<!--DEVELOPER_TOOLS-->
+		<!--=============================================================================================-->
+		<!--Lombok 开发者工具-->
+		<!--帮助减少模板代码的Java注释库。-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
+			<scope>provided</scope>
+			<!--因为只是源代码中提供了对应的功能-->
+			<!--所以其实不需要参与源代码的打包-->
 		</dependency>
+
+
+		<!--=============================================================================================-->
+		<!--WEB-->
+		<!--=============================================================================================-->
+		<!--Spring Web Services WEB-->
+		<!--为契约优先的SOAP开发提供了便利。允许使用许多操作XML有效载荷的方法之一来创建灵活的Web服务。-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web-services</artifactId>
+		</dependency>
+		<!--相比来说，jetty更加轻量，而且拓展性更强-->
+		<!--tomcat是apache的，而jetty是eclipse的-->
+		<!--以后可能jetty是开发的主流-->
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework.boot</groupId>-->
+		<!--	<artifactId>spring-boot-starter-jetty</artifactId>-->
+		<!--因为starter-web中是没有jetty存在的，所以这里暂时不修改启动服务器-->
+		<!--</dependency>-->
+
+		<!--Java Servlet是Java企业平台中的基础网络规范。开发人员可以使用Servlet API构建Web应用程序，与请求/响应工作流进行交互。-->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+			<!--必须把scope变成provide，否则会和tomcat发生冲突-->
+		</dependency>
+		<!--spring的反应性网络WEB-->
+		<!--使用Spring WebFlux和Netty构建反应式Web应用。-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
+		<!--Spring Session WEB-->
+		<!--为管理用户会话信息提供API和实现。-->
+		<dependency>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session-jdbc</artifactId>
+		</dependency>
+
+
+		<!--=============================================================================================-->
+		<!--MESSAGING-->
+		<!--=============================================================================================-->
+
+
+		<!--=============================================================================================-->
+		<!--日志系统-->
+		<!--=============================================================================================-->
+
+
+		<!--=============================================================================================-->
+		<!--数据库-->
+		<!--=============================================================================================-->
+		<!--JDBC API SQL-->
+		<!--数据库连接API，定义了客户端如何连接和查询数据库。-->
+		<!--没有配置，项目报错，启动失败-->
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework.boot</groupId>-->
+		<!--	&lt;!&ndash;spring操作数据库的包&ndash;&gt;-->
+		<!--	<artifactId>spring-boot-starter-data-jdbc</artifactId>-->
+		<!--</dependency>-->
+
+		<!--Spring Data JDBC SQL-->
+		<!--使用Spring Data，用普通的JDBC在SQL存储中保存数据。-->
+		<!--没有配置，项目报错，启动失败-->
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework.boot</groupId>-->
+		<!--	<artifactId>spring-boot-starter-jdbc</artifactId>-->
+		<!--</dependency>-->
+		<!--MySQL JDBC driver.驱动-->
+		<!--mysql的驱动-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.32</version>
+			<scope>runtime</scope>
+		</dependency>
+
+
+		<!--=============================================================================================-->
+		<!--Mybatis-->
+		<!--=============================================================================================-->
+		<!--mybatis的分页助手插件-->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>5.3.2</version>
+		</dependency>
+		<!--MyBatis框架SQL-->
+		<!--持久性框架，支持自定义SQL，存储过程和高级映射。MyBatis使用XML描述符或注解将对象与存储程序或SQL语句结合起来。-->
+		<!--这里是mybatis按照spring的标准，开发出来的整合包-->
+		<!--没有配置，项目报错，启动失败-->
+		<!--<dependency>-->
+		<!--	<groupId>org.mybatis.spring.boot</groupId>-->
+		<!--	<artifactId>mybatis-spring-boot-starter</artifactId>-->
+		<!--	<version>3.0.1</version>-->
+		<!--</dependency>-->
+
+		<!--使用mybatis-plus以后，这些东西就不需要了-->
+		<!--没有配置，项目报错，启动失败-->
+		<!--<dependency>-->
+		<!--	<groupId>com.baomidou</groupId>-->
+		<!--	<artifactId>mybatis-plus-boot-starter</artifactId>-->
+		<!--	<version>3.5.3.1</version>-->
+		<!--	&lt;!&ndash;依赖中一共两个jar包&ndash;&gt;-->
+		<!--	&lt;!&ndash;一个是mybatis和spring整合包&ndash;&gt;-->
+		<!--	&lt;!&ndash;一个是mybatis包&ndash;&gt;-->
+		<!--</dependency>-->
+
+		<!--mybatis-plus的代码生成器-->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-generator</artifactId>
+			<version>3.5.3.1</version>
+		</dependency>
+
+		<!--生成器对应的模板技术-->
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity-engine-core</artifactId>
+			<version>2.3</version>
+		</dependency>
+
+
+		<!--=============================================================================================-->
+		<!--数据库连接池-->
+		<!--=============================================================================================-->
+		<!--c3p0相关包-->
+		<!--没有配置，项目报错，启动失败-->
+		<!--<dependency>-->
+		<!--	&lt;!&ndash;c3p0是一个连接池对象&ndash;&gt;-->
+		<!--	<groupId>c3p0</groupId>-->
+		<!--	<artifactId>c3p0</artifactId>-->
+		<!--	<version>0.9.1.2</version>-->
+		<!--</dependency>-->
+
+		<!--阿里巴巴德鲁伊连接池-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.23</version>
+		</dependency>
+
+
+		<!--=============================================================================================-->
+		<!--redis的包-->
+		<!--=============================================================================================-->
+		<!--spring boot对redis做了整合-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<!--用来连接，操作redis-->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.8.0</version>
+		</dependency>
+
+
+		<!--=============================================================================================-->
+		<!--TEST-->
+		<!--=============================================================================================-->
+		<!--使用包括JUnit Jupiter、Hamcrest和Mockito在内的库测试Spring Boot应用程序的入门者-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!--Spring Test支持用JUnit或TestNG对Spring组件进行单元测试和集成测试。-->
+		<!--它提供了一致的Spring ApplicationContexts的加载和缓存，并提供了模拟对象，你可以用它来孤立地测试你的代码。-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+
+
+		<!--=============================================================================================-->
+		<!--安全框架-->
+		<!--=============================================================================================-->
+		<!--spring安全 SECURITY-->
+		<!--为Spring应用程序提供高度可定制的认证和访问控制框架。-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!--设置权限-->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+		</dependency>
+		<!--特殊依赖，但是保留会报错，有安全问题，暂时注掉-->
+		<!--<dependency>-->
+		<!--	<groupId>com.github.penggle</groupId>-->
+		<!--	<artifactId>kaptcha</artifactId>-->
+		<!--	<version>2.3.2</version>-->
+		<!--	<exclusions>-->
+		<!--		<exclusion>-->
+		<!--			<groupId>javax.servlet</groupId>-->
+		<!--			<artifactId>javax.servlet-api</artifactId>-->
+		<!--		</exclusion>-->
+		<!--	</exclusions>-->
+		<!--</dependency>-->
+		<!--特殊依赖，但是保留会报错，有安全问题，暂时注掉-->
+
+
+		<!--=============================================================================================-->
+		<!--dubbo相关-->
+		<!--=============================================================================================-->
+
+		<!--=============================================================================================-->
+		<!--文件IO-->
+		<!--=============================================================================================-->
+		<!-- 文件上传组件 -->
+		<dependency>
+			<!--注掉，和Commons-io有冲突-->
+			<!--但是比Commons-io范围大-->
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.5</version>
+		</dependency>
+		<!--Quartz是一个工作调度库，可以嵌入到java应用程序中，支持事务、持久性、集群和插件。-->
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz-jobs</artifactId>
+		</dependency>
+		<!--存储服务-->
+		<dependency>
+			<groupId>com.qiniu</groupId>
+			<artifactId>qiniu-java-sdk</artifactId>
+			<version>7.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>1.18.1</version>
+		</dependency>
+
+
+		<!--=============================================================================================-->
+		<!--项目特殊依赖-->
+		<!--=============================================================================================-->
+
+		<!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
+		<!--用于Java的灵活的XML框架-->
+		<dependency>
+			<groupId>org.dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>2.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.12.2</version>
+		</dependency>
+
+		<!--阿里云短信服务-->
+		<dependency>
+			<groupId>com.aliyun</groupId>
+			<artifactId>aliyun-java-sdk-core</artifactId>
+			<version>4.5.16</version>
+		</dependency>
+		<dependency>
+			<groupId>com.aliyun</groupId>
+			<artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<!--这里需要使用swagger技术，实际上是为了生成接口文档-->
+		<!--Guava是一套核心库和扩展库，包括实用类、Google的集合、I/O类等等。-->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>31.1-jre</version>
+		</dependency>
 	</dependencies>
 
 	<build>
+		<!--<resources>-->
+		<!--	<resource>-->
+		<!--		<directory>src/main/java</directory>-->
+		<!--		<includes>-->
+		<!--			<include>**/*.*</include>-->
+		<!--		</includes>-->
+		<!--		<excludes>-->
+		<!--			<exclude>**/*.java</exclude>-->
+		<!--		</excludes>-->
+		<!--	</resource>-->
+		<!--</resources>-->
+		<!--这里有个神奇的bug，csdn说是没有扫描到对应的文件-->
+		<!--所以需要添加上面的配置-->
+		<!--但是我用idea自带的创建工具，就在路径下创建了一个完全相同的路径，然后在里面自动创建了一个配置文件-->
+		<!--但是上面两个都是无效的-->
+		<!--我使用idea自带的配置文件创建工具，直接创建对应名称对象，就解决了该问题-->
 		<plugins>
+			<!--=============================================================================================-->
+			<!--DEVELOPER_TOOLS-->
+			<!--=============================================================================================-->
+			<!--GraalVM本地支持 开发者工具-->
+			<!--支持使用GraalVM本地图像编译器将Spring应用程序编译为本地可执行文件。-->
+			<plugin>
+				<groupId>org.graalvm.buildtools</groupId>
+				<artifactId>native-maven-plugin</artifactId>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<!--<fork>true</fork>-->
+					<addResources>true</addResources>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+					<!--<classifier>${repackage.classifier}</classifier>-->
+					<image>
+						<builder>paketobuildpacks/builder:tiny</builder>
+						<env>
+							<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
+						</env>
+					</image>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.3.0</version>
+				<!--添加这个插件以后，我们就可以直接使用pom中的配置文件-->
+				<!--接着，其它地方就可以解析这里的配置参数-->
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<useDefaultDelimiters>true</useDefaultDelimiters>
+				</configuration>
+			</plugin>
+			<!-- java编译插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<!--<configuration>-->
+				<!--	<source>1.8</source>-->
+				<!--	<target>1.8</target>-->
+				<!--	<encoding>UTF-8</encoding>-->
+				<!--</configuration>-->
+			</plugin>
+			<!--注掉下面的配置，否则maven：install报错-->
+			<!--<plugin>-->
+			<!--	<groupId>org.springframework.experimental</groupId>-->
+			<!--	<artifactId>spring-aot-maven-plugin</artifactId>-->
+			<!--	<executions>-->
+			<!--		<execution>-->
+			<!--			<id>test-generate</id>-->
+			<!--			<goals>-->
+			<!--				<goal>test-generate</goal>-->
+			<!--			</goals>-->
+			<!--		</execution>-->
+			<!--		<execution>-->
+			<!--			<id>generate</id>-->
+			<!--			<goals>-->
+			<!--				<goal>generate</goal>-->
+			<!--			</goals>-->
+			<!--		</execution>-->
+			<!--	</executions>-->
+			<!--</plugin>-->
 		</plugins>
 	</build>
+	<repositories>
+		<repository>
+			<id>spring-releases</id>
+			<name>Spring Releases</name>
+			<url>https://repo.spring.io/release</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-snapshots</id>
+			<name>Spring Snapshots</name>
+			<url>https://repo.spring.io/snapshot</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-releases</id>
+			<name>Spring Releases</name>
+			<url>https://repo.spring.io/release</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>spring-snapshots</id>
+			<name>Spring Snapshots</name>
+			<url>https://repo.spring.io/snapshot</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories>
+	<profiles>
+		<!--下面实际上就是配置多环境运行的配置-->
+		<profile>
+			<id>native</id>
+			<properties>
+				<repackage.classifier>exec</repackage.classifier>
+			</properties>
+			<dependencies>
+				<dependency>
+					<groupId>org.junit.platform</groupId>
+					<artifactId>junit-platform-launcher</artifactId>
+					<scope>test</scope>
+				</dependency>
+			</dependencies>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.graalvm.buildtools</groupId>
+						<artifactId>native-maven-plugin</artifactId>
+						<!--<version>${native-buildtools.version}</version>-->
+						<!--<version>0.9.13</version>-->
+						<extensions>true</extensions>
+						<executions>
+							<execution>
+								<id>test-native</id>
+								<phase>test</phase>
+								<goals>
+									<goal>test</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>build-native</id>
+								<phase>package</phase>
+								<goals>
+									<goal>build</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>native2</id>
+			<properties>
+				<!--配置sonarqube-->
+				<sonar.organization>wo1261931780</sonar.organization>
+				<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+			</properties>
+		</profile>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<spring.profiles.active>dev</spring.profiles.active>
+				<!--我们上面配置的文件，实际上也只能在pom文件中使用-->
+			</properties>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<spring.profiles.active>prod</spring.profiles.active>
+			</properties>
+		</profile>
+		<profile>
+			<id>test</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<spring.profiles.active>test</spring.profiles.active>
+			</properties>
+		</profile>
+	</profiles>
 
 </project>

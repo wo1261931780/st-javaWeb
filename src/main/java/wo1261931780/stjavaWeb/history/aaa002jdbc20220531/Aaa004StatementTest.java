@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa002jdbc20220531;
+package wo1261931780.stjavaWeb.history.aaa002jdbc20220531;
 
 import org.junit.jupiter.api.Test;
 
