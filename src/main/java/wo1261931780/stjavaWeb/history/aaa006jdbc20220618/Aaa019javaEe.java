@@ -1,23 +1,24 @@
 package wo1261931780.stjavaWeb.history.aaa006jdbc20220618;
 
-import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.DemoPojo0618;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import wo1261931780.stjavaWeb.history.aaa006jdbc20220618.pojo.DemoPojo0618;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
  * Package:com.stssm.github.io.javaweb.aaa004JDBC2022年6月17日
  * Bbb010User:  liujiajun_junw
+ *
  * @author liujiajun_junw
  * Time:  2022-06-22-07  星期五
  */
@@ -43,7 +44,7 @@ public class Aaa019javaEe {
 		// 让工厂获得sql执行对象
 		List<DemoPojo0618> resList = sqlSession.selectList("DemoMapper0618.selectAll");// 获得一个list类型的结果
 		// 指定我要执行的mapper以后，就可以根据mapper中的SQL，获得一个demopojo类型的list对象
-		LOG_SHOW.debug(resList);
+		LOG_SHOW.debug(resList.toString());
 		sqlSession.close();// 不需要释放工厂，只需要释放这个执行方法的session就可以
 		// *********************************************************************
 		// List<DemoPojo0618> resList = sqlSession.selectList("DemoMapper0618.selectAll");

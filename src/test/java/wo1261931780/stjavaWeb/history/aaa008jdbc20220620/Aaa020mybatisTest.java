@@ -1,7 +1,13 @@
 package wo1261931780.stjavaWeb.history.aaa008jdbc20220620;
 
-import com.stssm.github.io.javaweb.aaa008jdbc20220620.mapper.TbBrandMapper;
-import com.stssm.github.io.javaweb.aaa008jdbc20220620.pojo.TbBrand;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.jupiter.api.Test;
+import wo1261931780.stjavaWeb.history.aaa008jdbc20220620.mapper.TbBrandMapper;
+import wo1261931780.stjavaWeb.history.aaa008jdbc20220620.pojo.TbBrand;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,7 +27,7 @@ import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.RESOU
  */
 public class Aaa020mybatisTest {
 
-	// @Test
+	@Test
 	public void deleteById() {
 		int id = 13;
 		// String brandName = "123";

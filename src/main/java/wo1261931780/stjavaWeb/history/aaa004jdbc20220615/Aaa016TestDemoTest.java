@@ -1,8 +1,7 @@
 package wo1261931780.stjavaWeb.history.aaa004jdbc20220615;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
-import com.stssm.github.io.javaweb.aaa004jdbc20220615.pojo.Aaa012CaseBrand;
-import org.junit.jupiter.api.Test;
+import wo1261931780.stjavaWeb.history.aaa004jdbc20220615.pojo.Aaa012CaseBrand;
 
 import javax.sql.DataSource;
 import java.io.FileInputStream;
@@ -13,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
 /**
  * Created by Intellij IDEA.
@@ -25,7 +24,7 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW
  * @author liujiajun_junw
  */
 public class Aaa016TestDemoTest {
-	@Test
+	// @Test
 	public void test() throws Exception {
 		Properties prop = new Properties();
 		prop.load(new FileInputStream("src/druid.properties"));
@@ -61,6 +60,6 @@ public class Aaa016TestDemoTest {
 		resultSet.close();
 		preparedStatement.close();
 		connection.close();
-		LOG_SHOW.debug(x);
+		LOG_SHOW.debug(x.toString());
 	}
 }

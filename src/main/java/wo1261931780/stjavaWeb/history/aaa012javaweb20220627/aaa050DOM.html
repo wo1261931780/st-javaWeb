@@ -1,47 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		<!-- 一开始我以为dom是数据对象 -->
-		<!-- 实际上dom是文档对象 -->
-		<!-- 我们的页面可以理解为一个文档，而js就是在执行对文档的操作 -->
-		<!-- html和xml其实都属于标记性语言 -->
-		<!-- 从这个角度出发，两个都属于核心dom的一部分（子集） -->
-		<div>我是js操作dom的测试</div>
-		<input type="button" value="测试1" name="demo1" id="id1" />
-		<input type="button" value="测试2" name="demo2" id="id2" />
-		<input type="button" value="测试3" name="demo3" id="id3" />
-		<div class="ceshi">我是div</div>
-		<div class="ceshi">我是div2</div>
-		<script>
-			var ele1 = document.getElementById("id1");
-			console.log("我是元素：" + ele1); // input#id1
-			// 如果直接打印，只会得到上面的结果
-			// 但是加上了字符说明，就会的得到“我是元素：[object HTMLInputElement]”
-			// 说明，首先是一个对象
-			// -------------------------------------------------------
-			var ele2 = document.getElementsByName("demo1");
-			console.log("我是元素：" + ele2); // 我是元素：[object NodeList]
-			// 这里得到的是一个节点性质的数组
-			// 里面可以有多个元素
-			// -------------------------------------------------------
-			var list = document.getElementsByTagName("input");
-			console.log("我是list：" + list);
-			for (let i = 0; i < list.length; i++) {
-				console.log(list[i]); // input#id2
-				// 每次得到的结果是元素+元素的id（因为id是独一无二的）
-			}
-			// -------------------------------------------------------
-			var classList = document.getElementsByClassName("ceshi");
-			for (let i = 0; i < classList.length; i++) {
-				console.log(classList[i]); // div.ceshi
-				// 直接展示对象的类型+类的名称
-			}
-		</script>
-	</body>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8"/>
+	<meta content = "IE=edge" http-equiv = "X-UA-Compatible"/>
+	<meta content = "width=device-width, initial-scale=1.0" name = "viewport"/>
+	<title>Document</title>
+</head>
+<body>
+<!-- 一开始我以为dom是数据对象 -->
+<!-- 实际上dom是文档对象 -->
+<!-- 我们的页面可以理解为一个文档，而js就是在执行对文档的操作 -->
+<!-- html和xml其实都属于标记性语言 -->
+<!-- 从这个角度出发，两个都属于核心dom的一部分（子集） -->
+<div>我是js操作dom的测试</div>
+<input id = "id1" name = "demo1" type = "button" value = "测试1"/>
+<input id = "id2" name = "demo2" type = "button" value = "测试2"/>
+<input id = "id3" name = "demo3" type = "button" value = "测试3"/>
+<div class = "ceshi">我是div</div>
+<div class = "ceshi">我是div2</div>
+<script>
+	var ele1 = document.getElementById("id1");
+	console.log("我是元素：" + ele1); // input#id1
+	// 如果直接打印，只会得到上面的结果
+	// 但是加上了字符说明，就会的得到“我是元素：[object HTMLInputElement]”
+	// 说明，首先是一个对象
+	// -------------------------------------------------------
+	var ele2 = document.getElementsByName("demo1");
+	console.log("我是元素：" + ele2); // 我是元素：[object NodeList]
+	// 这里得到的是一个节点性质的数组
+	// 里面可以有多个元素
+	// -------------------------------------------------------
+	var list = document.getElementsByTagName("input");
+	console.log("我是list：" + list);
+	for (const element of list) {
+		console.log(element); // input#id2
+		// 每次得到的结果是元素+元素的id（因为id是独一无二的）
+	}
+	// 下面的遍历方式，可以直接用上面的来完成替代
+	// -------------------------------------------------------
+	var classList = document.getElementsByClassName("ceshi");
+	for (let i = 0; i < classList.length; i++) {
+		console.log(classList[i]); // div.ceshi
+		// 直接展示对象的类型+类的名称
+	}
+</script>
+</body>
 </html>
