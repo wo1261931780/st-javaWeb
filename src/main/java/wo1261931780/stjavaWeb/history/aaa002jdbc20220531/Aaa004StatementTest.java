@@ -24,7 +24,7 @@ public class Aaa004StatementTest {
 	public void show1() throws Exception {
 		final String url = "jdbc:mysql:///study001sql?useSSL=false";
 		final String loginName = "root";
-		final String loginPassword = "LIU18959297292";
+		final String loginPassword = "root";
 
 		final Connection connection = DriverManager.getConnection(url, loginName, loginPassword);
 		final String sql1 = "update demo1 set age='3000' where id=1";
@@ -49,7 +49,7 @@ public class Aaa004StatementTest {
 	public void show2() throws Exception {
 		final String url = "jdbc:mysql:///study001?useSSL=false";
 		final String loginName = "root";
-		final String loginPassword = "LIU18959297292";
+		final String loginPassword = "root";
 		final Connection conn = DriverManager.getConnection(url, loginName, loginPassword);
 		// final String sql1 = "update demo14bankaccount set balance='123' where id=1 ";
 		// String sql2 = "create database  dbdemo2";

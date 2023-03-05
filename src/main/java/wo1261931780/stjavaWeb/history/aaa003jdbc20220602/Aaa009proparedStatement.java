@@ -22,7 +22,7 @@ public class Aaa009proparedStatement {
 		// 这个类的作用是，预防SQL注入
 		// SQL注入，简单来说，就是把SQL语句修改掉，然后登陆的时候输入任意代码都可以成功
 		// 这个时候就会出现安全问题
-		String paw = "LIU18959297292";
+		String paw = "root";
 		String url = "jdbc:mysql:///study002jdbc?useSSL=false";
 		String acc = "root";
 		// ArrayList<Aaa007Object> objects = new ArrayList<>();

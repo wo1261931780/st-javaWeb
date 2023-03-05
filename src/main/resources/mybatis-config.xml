@@ -22,7 +22,7 @@
 				<property name="driver" value="com.mysql.jdbc.Driver"/>
 				<property name="url" value="jdbc:mysql:///mybatis?useSSL=false"/>
 				<property name="username" value="root"/>
-				<property name="password" value="LIU18959297292"/>
+				<property name="password" value="root"/>
 			</dataSource>
 		</environment>
 		<environment id="test">
@@ -33,7 +33,7 @@
 				<property name="driver" value="com.mysql.jdbc.Driver"/>
 				<property name="url" value="jdbc:mysql:///study002JDBC?useSSL=false"/>
 				<property name="username" value="root"/>
-				<property name="password" value="LIU18959297292"/>
+				<property name="password" value="root"/>
 			</dataSource>
 		</environment>
 	</environments>

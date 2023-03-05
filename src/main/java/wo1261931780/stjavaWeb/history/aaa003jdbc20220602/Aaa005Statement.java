@@ -19,7 +19,7 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW
 public class Aaa005Statement {
 	public static void main(final String[] args) throws Exception {
 		String user = "root";
-		String paw = "LIU18959297292";
+		String paw = "root";
 		String url = "jdbc:mysql:///study002jdbc?useSSL=false";
 		Connection connection = DriverManager.getConnection(url, user, paw);
 		String demoSql = "update demo1 set E_NAME='测试' where id='123'";

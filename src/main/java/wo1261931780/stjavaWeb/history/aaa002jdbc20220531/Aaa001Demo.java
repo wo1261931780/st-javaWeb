@@ -33,7 +33,7 @@ public class Aaa001Demo {
 
 		final String url = "jdbc:mysql://127.0.0.1:3306/study001sql";// 固定格式的sql语法，协议
 		final String user = "root";// mysql数据库的账号
-		final String paw = "LIU18959297292";// 数据库的密码
+		final String paw = "root";// 数据库的密码
 		// 首先登录账号，获取连接
 		try (
 				final Connection connect = DriverManager.getConnection(url, user, paw)

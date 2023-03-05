@@ -19,7 +19,7 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW
  */
 public class Aaa008Case {
 	public static void main(String[] args) {
-		String paw = "LIU18959297292";
+		String paw = "root";
 		String url = "jdbc:mysql:///study002jdbc?useSSL=false";
 		String acc = "root";
 		ArrayList<Aaa007Object> objects = new ArrayList<>();

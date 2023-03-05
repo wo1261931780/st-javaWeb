@@ -15,7 +15,7 @@ import java.sql.SQLException;
  */
 public class Aaa010userLogin {
 	public static void main(String[] args) throws Exception {
-		String paw = "LIU18959297292";
+		String paw = "root";
 		// String url = "jdbc:mysql:///study002jdbc?useSSL=false";
 		String url = "jdbc:mysql:///study002jdbc?useSSL=false&useServerPrepStmts=true";
 		// 加一个后缀，就是添加一个预编译功能

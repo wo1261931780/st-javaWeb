@@ -26,7 +26,7 @@ public class Aaa002 {
 		// 重新配置ssl需要经过复杂的操作，同时性能会下降20%左右
 		final String mysqlUrl = "jdbc:mysql:///study001sql?useSSL=false";
 		final String accName = "root";
-		final String accPaw = "LIU18959297292";
+		final String accPaw = "root";
 
 		try (
 				final Connection connection = DriverManager.getConnection(mysqlUrl, accName, accPaw);

@@ -9,7 +9,7 @@ mysql -u用户名 -p密码 -h要连接的mysql服务器地址 -p端口号
 # 登录参数：
 #mysq1-u用户名 -p密码 -h要连接的mysq1服务器的ip地址(默认127.0.0.1) -P端口号(默认3306)
 # 比如我本地的数据库地址：localhost
-mysql -u root -p LIU18959297292 -H 127.0.0.1 -p 3306
+mysql -u root -p root -H 127.0.0.1 -p 3306
 
 net stop mysql #卸载MySQL服务
 
