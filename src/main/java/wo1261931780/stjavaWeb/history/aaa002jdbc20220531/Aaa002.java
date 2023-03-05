@@ -1,11 +1,12 @@
-package com.stssm.github.io.javaweb.aaa002jdbc20220531;
+package wo1261931780.stjavaWeb.history.aaa002jdbc20220531;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 
 /**
  * Created by Intellij IDEA.

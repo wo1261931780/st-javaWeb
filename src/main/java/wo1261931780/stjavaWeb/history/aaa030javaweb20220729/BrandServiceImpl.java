@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa030javaweb20220729;
+package wo1261931780.stjavaWeb.history.aaa030javaweb20220729;
 
 import com.itheima.pojo.PageBean;
 import com.stssm.github.io.javaweb.aaa027javaweb20220726.util.SqlSessionFactoryUtils;

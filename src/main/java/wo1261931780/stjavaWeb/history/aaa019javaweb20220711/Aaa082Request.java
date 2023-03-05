@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa019javaweb20220711;
+package wo1261931780.stjavaWeb.history.aaa019javaweb20220711;
 
 import com.stssm.github.io.javaweb.aaa019javaweb20220711.mapper.LoginMapper;
 import com.stssm.github.io.javaweb.aaa019javaweb20220711.pojo.User;

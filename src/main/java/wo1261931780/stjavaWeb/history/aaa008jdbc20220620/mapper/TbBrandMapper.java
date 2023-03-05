@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa008jdbc20220620.mapper;
+package wo1261931780.stjavaWeb.history.aaa008jdbc20220620.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

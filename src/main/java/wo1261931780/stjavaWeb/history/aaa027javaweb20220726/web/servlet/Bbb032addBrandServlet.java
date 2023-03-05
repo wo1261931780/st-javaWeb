@@ -9,7 +9,7 @@
  * Copyright (c 022 by liujiaju 454414+wo1261931780@u
 
  */
-package com.stssm.github.io.javaweb.aaa027javaweb20220726.web.servlet;
+package wo1261931780.stjavaWeb.history.aaa027javaweb20220726.web.servlet;
 
 import com.alibaba.fastjson.JSON;
 import com.stssm.github.io.javaweb.aaa027javaweb20220726.pojo.Bbb029TbBrand;

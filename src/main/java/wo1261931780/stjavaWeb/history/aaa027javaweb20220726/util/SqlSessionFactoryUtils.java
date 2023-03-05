@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa027javaweb20220726.util;
+package wo1261931780.stjavaWeb.history.aaa027javaweb20220726.util;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;

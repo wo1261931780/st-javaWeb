@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa007jdbc20220619;
+package wo1261931780.stjavaWeb.history.aaa007jdbc20220619;
 
 import com.stssm.github.io.javaweb.aaa007jdbc20220619.mapper.TbBrandMapper0619;
 import com.stssm.github.io.javaweb.aaa007jdbc20220619.pojo.TbBrand0619;
@@ -7,7 +7,6 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.jupiter.api.Test;
-
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,6 +19,7 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE
  * Project:st-ssm.github.io
  * Package:com.stssm.github.io.javaweb.aaa005JDBC2022年6月19日
  * Bbb010User:  liujiajun_junw
+ *
  * @author liujiajun_junw
  * Time:  2022-06-16-03  星期日
  */

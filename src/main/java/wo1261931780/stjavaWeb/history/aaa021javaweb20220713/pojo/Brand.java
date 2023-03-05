@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa021javaweb20220713.pojo;
+package wo1261931780.stjavaWeb.history.aaa021javaweb20220713.pojo;
 
 import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 

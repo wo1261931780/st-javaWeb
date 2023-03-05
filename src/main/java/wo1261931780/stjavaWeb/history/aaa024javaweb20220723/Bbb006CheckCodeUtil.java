@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa024javaweb20220723;
+package wo1261931780.stjavaWeb.history.aaa024javaweb20220723;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

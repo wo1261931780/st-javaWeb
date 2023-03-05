@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa021javaweb20220713.web;
+package wo1261931780.stjavaWeb.history.aaa021javaweb20220713.web;
 
 import com.stssm.github.io.javaweb.aaa021javaweb20220713.pojo.Brand;
 

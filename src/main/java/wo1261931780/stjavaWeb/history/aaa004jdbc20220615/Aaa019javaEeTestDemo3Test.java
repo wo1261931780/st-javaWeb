@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa004jdbc20220615;
+package wo1261931780.stjavaWeb.history.aaa004jdbc20220615;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 import org.junit.jupiter.api.Test;

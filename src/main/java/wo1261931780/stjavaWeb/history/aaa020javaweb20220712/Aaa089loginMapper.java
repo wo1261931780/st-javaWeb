@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa020javaweb20220712;
+package wo1261931780.stjavaWeb.history.aaa020javaweb20220712;
 
 import com.stssm.github.io.javaweb.aaa019javaweb20220711.pojo.User;
 import org.apache.ibatis.annotations.Insert;

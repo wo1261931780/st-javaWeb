@@ -1,7 +1,6 @@
-package com.stssm.github.io.javaweb.aaa004jdbc20220615;
+package wo1261931780.stjavaWeb.history.aaa004jdbc20220615;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
-import org.junit.jupiter.api.Test;
 
 import javax.sql.DataSource;
 import java.io.FileInputStream;
@@ -9,7 +8,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.Properties;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 
 /**
  * Created by Intellij IDEA.
@@ -21,7 +21,7 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW
  * @author liujiajun_junw
  */
 public class Aaa013TestDemo2Test {
-	@Test
+	// @Test
 	public void test() throws Exception {
 		Properties prop = new Properties();
 		prop.load(new FileInputStream("src/druid.properties"));// 首先获取德鲁伊的配置

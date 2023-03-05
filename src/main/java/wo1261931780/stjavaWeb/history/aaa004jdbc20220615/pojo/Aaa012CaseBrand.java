@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa004jdbc20220615.pojo;
+package wo1261931780.stjavaWeb.history.aaa004jdbc20220615.pojo;
 
 /**
  * Created by Intellij IDEA.

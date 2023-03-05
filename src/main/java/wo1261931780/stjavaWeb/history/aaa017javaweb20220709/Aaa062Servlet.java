@@ -1,6 +1,10 @@
-package com.stssm.github.io.javaweb.aaa017javaweb20220709;
+package wo1261931780.stjavaWeb.history.aaa017javaweb20220709;
 
-import javax.servlet.*;
+import javax.servlet.Servlet;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 

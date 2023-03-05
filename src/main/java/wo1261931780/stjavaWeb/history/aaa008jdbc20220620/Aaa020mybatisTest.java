@@ -1,31 +1,27 @@
-package com.stssm.github.io.javaweb.aaa008jdbc20220620;
+package wo1261931780.stjavaWeb.history.aaa008jdbc20220620;
 
 import com.stssm.github.io.javaweb.aaa008jdbc20220620.mapper.TbBrandMapper;
 import com.stssm.github.io.javaweb.aaa008jdbc20220620.pojo.TbBrand;
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
  * Package:com.stssm.github.io.javaweb.aaa005JDBC2022年6月20日
  * Bbb010User:  liujiajun_junw
+ *
  * @author liujiajun_junw
  * Time:  2022-06-20-24  星期一
  */
 public class Aaa020mybatisTest {
 
-	@Test
+	// @Test
 	public void deleteById() {
 		int id = 13;
 		// String brandName = "123";

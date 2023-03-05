@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa003jdbc20220602;
+package wo1261931780.stjavaWeb.history.aaa003jdbc20220602;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

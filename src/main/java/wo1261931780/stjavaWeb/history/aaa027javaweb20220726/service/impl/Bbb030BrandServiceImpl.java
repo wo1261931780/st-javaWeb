@@ -8,7 +8,7 @@
  *
  * Copyright (c) 2022 by liujiajun 45444154+wo1261931780@users.noreply.github.com, All Rights Reserved.
  */
-package com.stssm.github.io.javaweb.aaa027javaweb20220726.service.impl;
+package wo1261931780.stjavaWeb.history.aaa027javaweb20220726.service.impl;
 
 import com.stssm.github.io.javaweb.aaa027javaweb20220726.mapper.Bbb028brandMapper;
 import com.stssm.github.io.javaweb.aaa027javaweb20220726.pojo.Bbb029TbBrand;

@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa029javaweb20220728;
+package wo1261931780.stjavaWeb.history.aaa029javaweb20220728;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;

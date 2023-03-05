@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa008jdbc20220620;
+package wo1261931780.stjavaWeb.history.aaa008jdbc20220620;
 
 import com.stssm.github.io.javaweb.aaa008jdbc20220620.mapper.TbBrandMapper;
 import org.apache.ibatis.io.Resources;

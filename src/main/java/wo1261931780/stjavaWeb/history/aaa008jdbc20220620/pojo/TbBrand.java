@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa008jdbc20220620.pojo;
+package wo1261931780.stjavaWeb.history.aaa008jdbc20220620.pojo;
 
 import java.io.Serializable;
 

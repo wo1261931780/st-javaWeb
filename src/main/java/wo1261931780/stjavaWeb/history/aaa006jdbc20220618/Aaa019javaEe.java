@@ -1,4 +1,4 @@
-package com.stssm.github.io.javaweb.aaa006jdbc20220618;
+package wo1261931780.stjavaWeb.history.aaa006jdbc20220618;
 
 import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.DemoPojo0618;
 import org.apache.ibatis.io.Resources;

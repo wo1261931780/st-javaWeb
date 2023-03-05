@@ -1,4 +1,4 @@
-<%@ page import = "org.apache.logging.log4j.Logger" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: 1
   Date: 2022-07-13
@@ -14,8 +14,8 @@
 <div>我是jsp页面</div>
 <%
     LOG_SHOW.debug("我是java代码");
-	int demo=3;
-	// 在百分号括号中，最后都会被放到jspService方法体内
+    int demo = 3;
+    // 在百分号括号中，最后都会被放到jspService方法体内
 %>
 <%--jsp本质上就是一个servlet类型的java文件--%>
 <%--jsp容器（tomcat）将其转换后，变成java文件，经过编译变成class--%>
@@ -24,8 +24,10 @@
 <%!
     // private static final Logger LOG_SHOW = ;
 
-    void show(){}
-    String name="123";
+    void show() {
+    }
+
+    String name = "123";
 %>
 <%= name %>
 <%--其实这些都是java代码，只不过不同的标签类型，将其放到了不同的位置--%>
