@@ -25,10 +25,8 @@ import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_S
  * @return
  * @exception
  */
-@WebServlet("/Aaa081Response")
-public class Aaa081Response extends HttpServlet {
-
-
+@WebServlet("/Aaa081Response响应字节数据")
+public class Aaa081Response响应字节数据 extends HttpServlet {
 	/**
 	 * @param req
 	 * @param resp
@@ -55,8 +53,6 @@ public class Aaa081Response extends HttpServlet {
 		int copy = IOUtils.copy(fileInputStream, outputStream);
 		LOG_SHOW.debug("我是文件的大小，按照字节数量展示：" + copy);
 		fileInputStream.close();
-
-
 	}
 
 	/**

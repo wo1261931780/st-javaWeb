@@ -30,7 +30,7 @@ import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.RESOU
  * @exception
  */
 
-@WebServlet("/Aaa085Request")
+@WebServlet("/Aaa082Request")
 public class Aaa082Request extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -54,8 +54,6 @@ public class Aaa082Request extends HttpServlet {
 		// 	LOG_SHOW.debug("登录失败");
 		// 	writer.write("登录失败");
 		// }
-
-
 	}
 
 	@Override

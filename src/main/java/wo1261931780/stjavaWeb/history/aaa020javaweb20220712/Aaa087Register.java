@@ -1,9 +1,9 @@
 package wo1261931780.stjavaWeb.history.aaa020javaweb20220712;
 
-import com.stssm.github.io.javaweb.aaa019javaweb20220711.pojo.User;
-import com.stssm.github.io.javaweb.aaa020javaweb20220712.util.SqLsessionFactoryUtil;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import wo1261931780.stjavaWeb.history.aaa019javaweb20220711.pojo.User;
+import wo1261931780.stjavaWeb.history.aaa020javaweb20220712.util.SqLsessionFactoryUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -43,20 +43,19 @@ public class Aaa087Register extends HttpServlet {
 		SqlSessionFactory sqlFactory = SqLsessionFactoryUtil.getSqlSessionFactory();
 		SqlSession sqlSession = sqlFactory.openSession();// 需要独立出来，避免不同的事务之间互相影响
 		Aaa089loginMapper mapper = sqlSession.getMapper(Aaa089loginMapper.class);
-		User user = mapper.queryByUserName(account);
+		// User user = mapper.queryByUserName(account);
 
 
 		PrintWriter writer = resp.getWriter();
-		if (user != null) {
-			resp.setContentType("text/html;charset=utf-8");
-			writer.write("当前账号已存在");
-		} else {
-			mapper.insert(user1);
-			sqlSession.commit();
-			writer.write("欢迎新用户");
-		}
+		// if (user != null) {
+		// 	resp.setContentType("text/html;charset=utf-8");
+		// 	writer.write("当前账号已存在");
+		// } else {
+		// 	// mapper.insert(user1);
+		// 	sqlSession.commit();
+		// 	writer.write("欢迎新用户");
+		// }
 		sqlSession.close();
-
 	}
 
 	/**

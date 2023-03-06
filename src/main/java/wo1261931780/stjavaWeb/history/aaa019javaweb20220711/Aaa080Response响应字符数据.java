@@ -20,8 +20,8 @@ import java.io.PrintWriter;
  * @return
  * @exception
  */
-@WebServlet("/Aaa080Response")
-public class Aaa080Response extends HttpServlet {
+@WebServlet("/Aaa080Response响应字符数据")
+public class Aaa080Response响应字符数据 extends HttpServlet {
 
 	/**
 	 * @param req
@@ -32,7 +32,7 @@ public class Aaa080Response extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// super.doGet(req, resp);
-		resp.setContentType("text/hytml;charset=utf-8");// 设置响应格式和字符集
+		resp.setContentType("text/html;charset=utf-8");// 设置响应格式和字符集
 		PrintWriter writer = resp.getWriter();// 这里应该是获取了一个对象，因为对象才能执行方法
 		writer.write("aaa");
 		writer.write("<h1>123</h1>");// 直接写数据，浏览器只会当成文本去解析

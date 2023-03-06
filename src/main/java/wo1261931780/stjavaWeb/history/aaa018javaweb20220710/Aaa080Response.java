@@ -20,7 +20,7 @@ import java.io.PrintWriter;
  * @return
  * @exception
  */
-@WebServlet("/Aaa080Response")
+@WebServlet("/Aaa080Response响应字符数据")
 public class Aaa080Response extends HttpServlet {
 
 	/**
