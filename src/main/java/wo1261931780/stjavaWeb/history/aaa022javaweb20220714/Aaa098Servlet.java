@@ -11,7 +11,8 @@ package wo1261931780.stjavaWeb.history.aaa022javaweb20220714; /**
  * @exception
  */
 
-import com.stssm.github.io.javaweb.aaa021javaweb20220713.pojo.Brand;
+
+import wo1261931780.stjavaWeb.history.aaa021javaweb20220713.pojo.Brand;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

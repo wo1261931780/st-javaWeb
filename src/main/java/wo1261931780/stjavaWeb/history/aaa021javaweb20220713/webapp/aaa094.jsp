@@ -1,4 +1,4 @@
-<%@ page import = "com.itheima.pojo.Brand" %>
+<%@ page import = "wo1261931780.stjavaWeb.history.aaa021javaweb20220713.pojo.Brand" %>
 <%@ page import = "java.util.ArrayList" %>
 <%@ page import = "java.util.List" %><%--
   Created by IntelliJ IDEA.
@@ -60,9 +60,6 @@
     <%--在servlet和jsp共存的时期--%>
     <%--    servlet负责数据的处理，jsp负责数据的展示，二者是协同使用的--%>
     <%--    再后来，使用的就是servlet+html+jsp一起使用--%>
-
 </table>
-
-
 </body>
 </html>

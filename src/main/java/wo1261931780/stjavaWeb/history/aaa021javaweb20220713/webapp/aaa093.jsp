@@ -1,4 +1,4 @@
-<%--
+<%@ page import = "static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW" %><%--
   Created by IntelliJ IDEA.
   User: 1
   Date: 2022-07-13
@@ -31,6 +31,5 @@
 %>
 <%= name %>
 <%--其实这些都是java代码，只不过不同的标签类型，将其放到了不同的位置--%>
-
 </body>
 </html>
