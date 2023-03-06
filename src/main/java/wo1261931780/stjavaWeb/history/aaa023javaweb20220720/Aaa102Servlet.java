@@ -36,8 +36,6 @@ public class Aaa102Servlet extends HttpServlet {
 		// 但是会带来问题
 		// 用户每次关闭浏览器的时候，cookie都会被销毁，从而导致每次都需要重新登陆
 		// 这个时候，我们就需要让cookie的存在时间更长，专业的名词：cookie的持久化
-
-
 	}
 
 	@Override

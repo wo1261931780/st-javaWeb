@@ -43,8 +43,6 @@ public class Bbb014Servlet extends HttpServlet {
 		response.setContentType("text/json;charset=utf-8");
 		response.getWriter().write(s);
 		request.getParameter("name");// 这里是不能直接拿到json数据的
-
-
 	}
 
 	@Override

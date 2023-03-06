@@ -30,8 +30,6 @@ public class Bbb005Servlet extends HttpServlet {
 		String name = request.getParameter("name");
 		LOG_SHOW.debug(name);
 		response.getWriter().write("我是axios");
-
-
 	}
 
 	@Override

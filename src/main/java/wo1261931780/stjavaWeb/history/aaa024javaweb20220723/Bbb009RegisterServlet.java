@@ -43,7 +43,6 @@ public class Bbb009RegisterServlet extends HttpServlet {
 			return;
 		}
 
-
 		// 2. 调用service 注册
 		// boolean flag = service.register(User);
 		boolean flag = true;
@@ -59,8 +58,6 @@ public class Bbb009RegisterServlet extends HttpServlet {
 			request.setAttribute("register_msg", "用户名已存在");
 			request.getRequestDispatcher("/bbb008register.jsp").forward(request, response);
 		}
-
-
 	}
 
 	@Override

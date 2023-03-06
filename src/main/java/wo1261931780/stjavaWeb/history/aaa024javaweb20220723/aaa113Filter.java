@@ -1,4 +1,5 @@
-package wo1261931780.stjavaWeb.history.aaa024javaweb20220723; /**
+package wo1261931780.stjavaWeb.history.aaa024javaweb20220723;
+/**
  * Created by Intellij IDEA.
  * Project:filter-demo
  * Package:${PACKAGE_NAME}
@@ -37,9 +38,7 @@ public class aaa113Filter implements Filter {
 			if (resource.contains(url)) {
 				return;
 			}
-
 		}
-
 
 		HttpSession session = x.getSession();
 		Object user = session.getAttribute("user");
@@ -52,8 +51,6 @@ public class aaa113Filter implements Filter {
 			// 这里有个问题，我们的静态资源，类似css和js，也是资源的一种
 			// 如果这里一次性全部拦截了，会导致重新登陆的时候，看不到网页的布局效果
 		}
-
-
 	}
 
 	public void destroy() {

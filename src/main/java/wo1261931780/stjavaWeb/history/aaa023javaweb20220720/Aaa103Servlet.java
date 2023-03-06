@@ -42,8 +42,6 @@ public class Aaa103Servlet extends HttpServlet {
 				LOG_SHOW.debug("我是value：" + decode);
 			}
 		}
-
-
 	}
 
 	@Override

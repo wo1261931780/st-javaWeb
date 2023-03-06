@@ -25,6 +25,7 @@ public class Bbb012 {
 		// 在服务端，需要对json进行解析，然后将其变成一个java对象进行后续的数据操作
 		// 同理，服务器对数据的响应，需要将java对象封为一个json格式的字符数据
 		// 这里直接使用开源的json格式化工具
+
 		Bbb015brandPojo brandTest = new Bbb015brandPojo();
 		brandTest.setAge(11);
 		brandTest.setAddress("1111111");
@@ -35,6 +36,5 @@ public class Bbb012 {
 				Bbb015brandPojo.class);
 		LOG_SHOW.debug(String.valueOf(bbb015brandPojo));// Bbb015brandPojo{name='22222222222', age=11, address='1111111'}
 		LOG_SHOW.debug("我是对象内部的属性：" + bbb015brandPojo.getName());// 我是对象内部的属性：22222222222
-
 	}
 }

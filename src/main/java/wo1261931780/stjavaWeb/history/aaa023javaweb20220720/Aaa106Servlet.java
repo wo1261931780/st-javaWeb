@@ -41,8 +41,6 @@ public class Aaa106Servlet extends HttpServlet {
 		// 因为session对应的id是用cookie的形式保存的，关闭浏览器会导致cookie消失，从而导致session无法被识别
 		// 验证码使用session保存
 		// cookie是保证用户在没有登录的情况下，做身份识别
-
-
 	}
 
 	@Override

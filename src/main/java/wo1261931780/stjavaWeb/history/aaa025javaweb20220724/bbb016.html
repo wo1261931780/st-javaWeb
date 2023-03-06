@@ -21,14 +21,12 @@
 		let data = demo.data()
 		console(data)
 		let tableData = "";
-		for (let i = 0; i < data.length; i++) {
-			let datum = data[i]
+		for (const element of data) {
+			let datum = element
 			tableData += datum.name
 		}
 		document.getElementById("123").innerHTML = tableData
-		
 	})
-
 </script>
 </body>
 </html>

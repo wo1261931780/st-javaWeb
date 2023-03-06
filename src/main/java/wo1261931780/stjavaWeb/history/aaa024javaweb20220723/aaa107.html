@@ -20,7 +20,7 @@
 		// 我们在浏览器可以看到请求的type
 	}
 	xhttp.onreadystatechange = function () {
-		if (this.readyState == 4 && this.status == 200) {
+		if (this.readyState === 4 && this.status === 200) {
 			alert(this.responseText);
 		}
 	};

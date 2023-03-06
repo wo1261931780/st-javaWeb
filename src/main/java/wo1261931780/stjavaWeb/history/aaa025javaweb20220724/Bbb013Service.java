@@ -30,6 +30,4 @@ public class Bbb013Service {
 		demo.add(bbb015BrandPojo2);
 		return demo;
 	}
-
-
 }

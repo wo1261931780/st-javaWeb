@@ -32,8 +32,6 @@ public class Aaa105Servlet extends HttpServlet {
 		LOG_SHOW.debug("我是result：" + result);
 		// 不需要强转，但是要session中先存好数据，否则拿不到
 		// LOG_SHOW.debug("我是result：" + result.toString());
-
-
 	}
 
 	@Override

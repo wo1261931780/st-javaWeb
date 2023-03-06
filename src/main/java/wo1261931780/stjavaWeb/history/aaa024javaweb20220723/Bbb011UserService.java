@@ -1,10 +1,13 @@
 package wo1261931780.stjavaWeb.history.aaa024javaweb20220723;
 
+import org.apache.ibatis.session.SqlSessionFactory;
+import wo1261931780.stjavaWeb.history.aaa027javaweb20220726.util.SqlSessionFactoryUtils;
+
 /**
  * @author liujiajun_junw
  */
 public class Bbb011UserService {
-	// SqlSessionFactory factory = SqlSessionFactoryUtils.getSqlSessionFactory();
+	SqlSessionFactory factory = SqlSessionFactoryUtils.getSqlSessionFactory();
 
 	/**
 	 * 登录方法
@@ -15,16 +18,16 @@ public class Bbb011UserService {
 	 */
 
 	// public Bbb010User login(String username, String password) {
-	// 2. 获取SqlSession
+	// // 2. 获取SqlSession
 	// SqlSession sqlSession = factory.openSession();
-	// 3. 获取UserMapper
+	// // 3. 获取UserMapper
 	// UserMapper mapper = sqlSession.getMapper(UserMapper.class);
 	// // 4. 调用方法
 	// Bbb010User User = mapper.select(username, password);
-
-	// 释放资源
+	//
+	// // 释放资源
 	// sqlSession.close();
-
+	//
 	// return User;
 	// }
 

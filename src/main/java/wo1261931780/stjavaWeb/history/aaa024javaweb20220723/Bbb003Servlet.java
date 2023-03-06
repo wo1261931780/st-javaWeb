@@ -24,19 +24,6 @@ public class Bbb003Servlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.getWriter().write("我是ajax，我被执行了");
-
-
-
-
-
-
-
-
-
-
-
-
-
 	}
 
 	@Override

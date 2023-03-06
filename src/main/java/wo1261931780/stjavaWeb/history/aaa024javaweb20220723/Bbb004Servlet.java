@@ -26,9 +26,9 @@ public class Bbb004Servlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		// String name = request.getParameter("name");
+
 		boolean result = true;
 		response.getWriter().write("我是结果：" + result);
-
 	}
 
 	@Override

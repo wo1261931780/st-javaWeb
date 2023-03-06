@@ -30,7 +30,6 @@ public class Aaa114Listener implements ServletContextListener {
 		// 自动会执行，而且是在请求发起和结束之前
 		// 有点类似我们之前的代码块
 		LOG_SHOW.debug("我是监听器……");
-
 	}
 
 	/**
@@ -39,8 +38,5 @@ public class Aaa114Listener implements ServletContextListener {
 	@Override
 	public void contextDestroyed(ServletContextEvent servletContextEvent) {
 		LOG_SHOW.debug("123");
-
 	}
-
-
 }
