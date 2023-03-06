@@ -45,7 +45,7 @@ public class Aaa023MybatisInsertTest {
 			tbBrand0619.setBrandName(brandName2);
 			tbBrand0619.setDescription(desciption);
 			tbBrand0619.setOrdered(ordered);
-			mapper.mybatisInsert(tbBrand0619);
+			// mapper.mybatisInsert(tbBrand0619);
 			sqlSession.commit();// 提交事物
 			// 主键不用手动添加，因为是自动递增的
 
@@ -75,7 +75,7 @@ public class Aaa023MybatisInsertTest {
 			tbBrand0619.setBrandName(brandName2);
 			tbBrand0619.setDescription(desciption);
 			tbBrand0619.setOrdered(ordered);
-			mapper.mybatisInsert(tbBrand0619);
+			// mapper.mybatisInsert(tbBrand0619);
 			Integer id = tbBrand0619.getId();
 			LOG_SHOW.debug(String.valueOf(id));
 		} catch (IOException e) {
@@ -106,9 +106,9 @@ public class Aaa023MybatisInsertTest {
 			tbBrand0619.setDescription(desciption);
 			tbBrand0619.setOrdered(ordered);
 			tbBrand0619.setId(id2);
-			int i = mapper.mybatisChange(tbBrand0619);
-			String format = String.format("被影响的行数为：%s", i);
-			LOG_SHOW.debug(format);
+			// int i = mapper.mybatisChange(tbBrand0619);
+			// String format = String.format("被影响的行数为：%s", i);
+			// LOG_SHOW.debug(format);
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -138,9 +138,9 @@ public class Aaa023MybatisInsertTest {
 			tbBrand0619.setDescription(desciption);
 			tbBrand0619.setOrdered(ordered);
 			tbBrand0619.setId(id2);
-			int i = mapper.mybatisChange2(tbBrand0619);
-			String format = String.format("被影响的行数为：%s", i);
-			LOG_SHOW.debug(format);
+			// int i = mapper.mybatisChange2(tbBrand0619);
+			// String format = String.format("被影响的行数为：%s", i);
+			// LOG_SHOW.debug(format);
 
 		} catch (IOException e) {
 			e.printStackTrace();

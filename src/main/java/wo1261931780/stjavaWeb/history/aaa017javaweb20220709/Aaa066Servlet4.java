@@ -18,7 +18,7 @@ import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_S
  * @return
  * @exception
  */
-@WebServlet("/webServlet")
+@WebServlet("/Aaa066Servlet4")
 public class Aaa066Servlet4 extends Aaa065Servlet3 {
 	// 上面的webservlet有点类似于网络访问资源路径
 	// 上面a65，就类似于之前的httpServlet

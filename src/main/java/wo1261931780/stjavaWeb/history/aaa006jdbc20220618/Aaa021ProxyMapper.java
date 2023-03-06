@@ -5,13 +5,10 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import wo1261931780.stjavaWeb.history.aaa006jdbc20220618.mapper.DemoMapper0618;
-import wo1261931780.stjavaWeb.history.aaa006jdbc20220618.pojo.DemoPojo0618;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
 
-import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 
 /**
@@ -40,8 +37,8 @@ public class Aaa021ProxyMapper {
 		// 然后在xml文件中，resultType返回的是pojo的对象类型
 		// 在mybatis参数文件中，修改mapper标签的resource目录，为执行SQL的xml文件所在目录
 		// *********************************************************************
-		List<DemoPojo0618> demoPojo0618s = resMapper.selectAll();// 让我刚刚拿到的mapper，去执行内部的方法
-		LOG_SHOW.debug(demoPojo0618s.toString());// 展示结果
+		// List<DemoPojo0618> demoPojo0618s = resMapper.selectAll();// 让我刚刚拿到的mapper，去执行内部的方法
+		// LOG_SHOW.debug(demoPojo0618s.toString());// 展示结果
 		sqlSession.close();
 		// 我们一般把mapper对应的xml成为statement
 	}

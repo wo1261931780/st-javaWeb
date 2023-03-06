@@ -10,10 +10,8 @@ import wo1261931780.stjavaWeb.history.aaa007jdbc20220619.pojo.TbBrand0619;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 
 /**
@@ -42,8 +40,8 @@ public class Aaa022mybatisTest {
 			brandName = "%" + brandName + "%";
 			// 手动进行一次模糊查询
 			// Bbb029TbBrand tbBrand = mapper.selectById(id);
-			List<TbBrand0619> tbBrand0619s = mapper.queryTotal(status, companyName, brandName);
-			LOG_SHOW.debug(tbBrand0619s.toString());
+			// List<TbBrand0619> tbBrand0619s = mapper.queryTotal(status, companyName, brandName);
+			// LOG_SHOW.debug(tbBrand0619s.toString());
 			sqlSession.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -69,8 +67,8 @@ public class Aaa022mybatisTest {
 			x.setStatus(status);
 			x.setCompanyName(companyName);
 			x.setBrandName(brandName);
-			List<TbBrand0619> tbBrand0619s = mapper.queryTotal2(x);// 这里以一个对象为单位进行查询
-			LOG_SHOW.debug(tbBrand0619s.toString());
+			// List<TbBrand0619> tbBrand0619s = mapper.queryTotal2(x);// 这里以一个对象为单位进行查询
+			// LOG_SHOW.debug(tbBrand0619s.toString());
 			sqlSession.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -99,8 +97,8 @@ public class Aaa022mybatisTest {
 			// status就是mapper中的变量
 			x.put("companyName", companyName2);
 			x.put("brandName", brandName2);
-			List<TbBrand0619> tbBrand0619s = mapper.queryTotal3(x);// 这里以一个对象为单位进行查询
-			LOG_SHOW.debug(tbBrand0619s.toString());
+			// List<TbBrand0619> tbBrand0619s = mapper.queryTotal3(x);// 这里以一个对象为单位进行查询
+			// LOG_SHOW.debug(tbBrand0619s.toString());
 			sqlSession.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -127,8 +125,8 @@ public class Aaa022mybatisTest {
 			tbBrand0619.setCompanyName(companyName2);
 			tbBrand0619.setBrandName(brandName2);
 			// *********************************************************************
-			List<TbBrand0619> tbBrand0619s = mapper.querySingleCondition(tbBrand0619);
-			LOG_SHOW.debug(tbBrand0619s.toString());
+			// List<TbBrand0619> tbBrand0619s = mapper.querySingleCondition(tbBrand0619);
+			// LOG_SHOW.debug(tbBrand0619s.toString());
 			sqlSession.close();
 		} catch (IOException e) {
 			e.printStackTrace();

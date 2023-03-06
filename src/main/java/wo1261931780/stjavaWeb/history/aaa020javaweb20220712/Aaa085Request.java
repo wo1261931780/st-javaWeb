@@ -1,6 +1,5 @@
 package wo1261931780.stjavaWeb.history.aaa020javaweb20220712;
 
-import com.stssm.github.io.javaweb.aaa019javaweb20220711.pojo.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -15,7 +14,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 
-import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 
 /**
@@ -43,20 +41,18 @@ public class Aaa085Request extends HttpServlet {
 		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		Aaa089loginMapper mapper = sqlSession.getMapper(Aaa089loginMapper.class);
-		User login = mapper.login(account, password);
+		// User login = mapper.login(account, password);
 		sqlSession.close();
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter writer = response.getWriter();
 
-		if (login != null) {
-			LOG_SHOW.debug("登录成功");
-			writer.write("登录成功");
-		} else {
-			LOG_SHOW.debug("登录失败");
-			writer.write("登录失败");
-		}
-
-
+		// if (login != null) {
+		// 	LOG_SHOW.debug("登录成功");
+		// 	writer.write("登录成功");
+		// } else {
+		// 	LOG_SHOW.debug("登录失败");
+		// 	writer.write("登录失败");
+		// }
 	}
 
 	@Override

@@ -5,7 +5,6 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import wo1261931780.stjavaWeb.history.aaa019javaweb20220711.mapper.LoginMapper;
-import wo1261931780.stjavaWeb.history.aaa019javaweb20220711.pojo.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,7 +15,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 
-import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 
 /**
@@ -44,18 +42,18 @@ public class Aaa082Request extends HttpServlet {
 		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		LoginMapper mapper = sqlSession.getMapper(LoginMapper.class);
-		User login = mapper.login(account, password);
+		// User login = mapper.login(account, password);
 		sqlSession.close();
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter writer = response.getWriter();
 
-		if (login != null) {
-			LOG_SHOW.debug("登录成功");
-			writer.write("登录成功");
-		} else {
-			LOG_SHOW.debug("登录失败");
-			writer.write("登录失败");
-		}
+		// if (login != null) {
+		// 	LOG_SHOW.debug("登录成功");
+		// 	writer.write("登录成功");
+		// } else {
+		// 	LOG_SHOW.debug("登录失败");
+		// 	writer.write("登录失败");
+		// }
 
 
 	}

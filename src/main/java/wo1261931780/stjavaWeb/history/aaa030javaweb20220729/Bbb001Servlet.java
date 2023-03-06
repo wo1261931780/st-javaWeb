@@ -62,9 +62,9 @@ public class Bbb001Servlet extends Bbb002Servlet {
 		String size = req.getParameter("size");
 		int finalBegin = Integer.parseInt(begin);
 		int finalSize = Integer.parseInt(size);
-		PageBean<Brand> brandPageBean = x.selectByPage(finalBegin, finalSize);
-		String s = JSON.toJSONString(brandPageBean);
+		// PageBean<Brand> brandPageBean = x.selectByPage(finalBegin, finalSize);
+		// String s = JSON.toJSONString(brandPageBean);
 		resp.setContentType("text/html;charset=utf-8");
-		resp.getWriter().write(s);
+		// resp.getWriter().write(s);
 	}
 }
