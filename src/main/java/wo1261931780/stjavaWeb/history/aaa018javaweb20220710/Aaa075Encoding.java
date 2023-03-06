@@ -4,7 +4,7 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
 /**
  * Created by Intellij IDEA.
@@ -21,7 +21,7 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW
 public class Aaa075Encoding {
 	public static void main(String[] args) throws Exception {
 		String x = "张三";
-		String encode = URLEncoder.encode(x, "utf-8");
+		String encode = URLEncoder.encode(x, StandardCharsets.UTF_8);
 		LOG_SHOW.debug("我是编码以后的：" + encode);// 首先浏览器按照指定的格式进行解析
 		// 然后将其传递给tomcat服务器
 		// ---------------------------------------------------------------------

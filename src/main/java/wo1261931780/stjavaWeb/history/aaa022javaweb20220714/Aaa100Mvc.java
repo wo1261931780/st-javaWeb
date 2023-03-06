@@ -1,6 +1,6 @@
 package wo1261931780.stjavaWeb.history.aaa022javaweb20220714;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
 /**
  * Created by Intellij IDEA.
@@ -41,6 +41,7 @@ public class Aaa100Mvc {
 
 	/**
 	 * 测试
+	 *
 	 * @param args
 	 */
 	public static void main(String[] args) {

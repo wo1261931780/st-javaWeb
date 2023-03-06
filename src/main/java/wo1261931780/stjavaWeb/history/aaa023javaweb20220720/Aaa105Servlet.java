@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
 @WebServlet(name = "Aaa105Servlet", value = "/Aaa105Servlet")
 public class Aaa105Servlet extends HttpServlet {

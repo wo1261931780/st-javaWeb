@@ -1,6 +1,7 @@
 package wo1261931780.stjavaWeb.history.aaa017javaweb20220709;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
 /**
  * Created by Intellij IDEA.
@@ -23,10 +24,11 @@ public class Aaa061Servlet {
 	// 我们指定了依赖范围，也是在做排除依赖包
 	// -----------------------------------------------------
 	// 之前老版本是使用xml来配置servlet,
-	// 新版本就使用URLpattern来配置
+	// 新版本就使用URL pattern来配置
 
 	/**
 	 * 测试
+	 *
 	 * @param args
 	 */
 	public static void main(String[] args) {

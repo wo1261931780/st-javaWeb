@@ -7,7 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+
 
 /**
  * Created by Intellij IDEA.
@@ -21,7 +22,7 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW
  * @return
  * @exception
  */
-@WebServlet("/showdemo2")
+@WebServlet("/Aaa063Servlet2")
 public class Aaa063Servlet2 extends HttpServlet {
 
 	/**
@@ -33,6 +34,7 @@ public class Aaa063Servlet2 extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// super.doGet(req, resp);
+
 		LOG_SHOW.debug("do...get");
 		// 我们通过浏览器直接修改后缀，就是在做get请求
 		// 打印这里的get语句
@@ -49,6 +51,7 @@ public class Aaa063Servlet2 extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// super.doPost(req, resp);
+		
 		LOG_SHOW.debug("do...post");
 	}
 }

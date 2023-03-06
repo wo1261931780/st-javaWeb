@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
 /**
  * Created by Intellij IDEA.
@@ -17,12 +17,13 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW
  * {
  * PACKAGE_NAME
  * }
+ *
+ * @param
+ * @author liujiajun_junw
  * @WebServlet(name = "Bbb037Servlet", value = "/Bbb037Servlet")
  * 因为我之前配置过一个分发的servlet
  * 所有的servlet都会从这个分发的路径走过去
  * 所以这里才不需要配置
- * @param
- * @author liujiajun_junw
  * @Date 2022-07-20-14  星期三
  * @description
  * @return

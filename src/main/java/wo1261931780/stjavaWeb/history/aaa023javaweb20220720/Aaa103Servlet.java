@@ -22,7 +22,7 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
 @WebServlet(name = "Aaa103Servlet", value = "/Aaa103Servlet")
 public class Aaa103Servlet extends HttpServlet {

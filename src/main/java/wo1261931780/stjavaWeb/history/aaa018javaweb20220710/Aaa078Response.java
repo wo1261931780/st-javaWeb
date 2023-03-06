@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
 /**
  * Created by Intellij IDEA.
@@ -63,7 +63,7 @@ public class Aaa078Response extends HttpServlet {
 		// 理论上来说，所有写死的地方，都存在耦合性的问题
 		// 类似上面这种，存在一个写死的资源路径，从而导致后续维护出现问题
 		String contextPath = req.getContextPath();// 动态获取，解决问题
-		resp.sendRedirect(contextPath+"/Aaa079Response");
+		resp.sendRedirect(contextPath + "/Aaa079Response");
 	}
 
 	/**

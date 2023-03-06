@@ -7,18 +7,14 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import java.io.IOException;
 import java.io.InputStream;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
 /**
  * @author liujiajun_junw
  */
 
 public class SqlSessionFactoryUtils {
-	public SqlSessionFactoryUtils() {
-		LOG_SHOW.debug("123");
-	}
-
 	private static SqlSessionFactory sqlSessionFactory;
 
 	static {
@@ -32,6 +28,9 @@ public class SqlSessionFactoryUtils {
 		}
 	}
 
+	public SqlSessionFactoryUtils() {
+		LOG_SHOW.debug("123");
+	}
 
 	public static SqlSessionFactory getSqlSessionFactory() {
 		return sqlSessionFactory;

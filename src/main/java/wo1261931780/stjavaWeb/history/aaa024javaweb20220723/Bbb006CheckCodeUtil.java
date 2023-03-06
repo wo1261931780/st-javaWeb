@@ -11,10 +11,11 @@ import java.io.OutputStream;
 import java.util.Arrays;
 import java.util.Random;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
 /**
  * 生成验证码工具类
+ *
  * @author liujiajun_junw
  */
 public class Bbb006CheckCodeUtil {
@@ -97,7 +98,7 @@ public class Bbb006CheckCodeUtil {
 		Random random = new Random();
 		// 设置线条的颜色
 		g2.setColor(getRandColor(160, 200));
-		int demo=20;
+		int demo = 20;
 		for (int i = 0; i < demo; i++) {
 			int x = random.nextInt(w - 1);
 			int y = random.nextInt(h - 1);
@@ -165,7 +166,7 @@ public class Bbb006CheckCodeUtil {
 	 * @return
 	 */
 	private static Color getRandColor(int fc, int bc) {
-		int demo=255;
+		int demo = 255;
 		if (fc > demo) {
 			fc = demo;
 		}
@@ -194,7 +195,7 @@ public class Bbb006CheckCodeUtil {
 	}
 
 	private static int[] getRandomRgb() {
-		int demo=3;
+		int demo = 3;
 		int[] rgb = new int[3];
 		for (int i = 0; i < demo; i++) {
 			rgb[i] = RANDOM.nextInt(255);
@@ -213,8 +214,8 @@ public class Bbb006CheckCodeUtil {
 		for (int i = 0; i < h1; i++) {
 			double d = (period >> 1)
 					           * Math.sin((double) i / (double) period
-							                      + (6.2831853071795862D *  phase)
-									                        /  frames);
+							                      + (6.2831853071795862D * phase)
+									                        / frames);
 			g.copyArea(0, i, w1, 1, (int) d, 0);
 			if (borderGap) {
 				g.setColor(color);
@@ -233,10 +234,10 @@ public class Bbb006CheckCodeUtil {
 		int frames = 20;
 		int phase = 7;
 		for (int i = 0; i < w1; i++) {
-			double d =  (period >> 1)
-					           * Math.sin( i /  period
-							                      + (6.2831853071795862D *  phase)
-									                        /  frames);
+			double d = (period >> 1)
+					           * Math.sin(i / period
+							                      + (6.2831853071795862D * phase)
+									                        / frames);
 			g.copyArea(i, 0, 1, h1, 0, (int) d);
 			if (borderGap) {
 				g.setColor(color);

@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
 @WebServlet(name = "Bbb005Servlet", value = "/Bbb005Servlet")
 public class Bbb005Servlet extends HttpServlet {
@@ -30,8 +30,6 @@ public class Bbb005Servlet extends HttpServlet {
 		String name = request.getParameter("name");
 		LOG_SHOW.debug(name);
 		response.getWriter().write("我是axios");
-
-
 
 
 	}

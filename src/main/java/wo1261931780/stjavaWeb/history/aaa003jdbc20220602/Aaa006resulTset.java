@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
 /**
  * Created by Intellij IDEA.
@@ -12,6 +12,7 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW
  * Package:com.stssm.github.io.javaweb.aaa003jdbc20220602
  * Bbb010User:  wo1261931780@gmail.com
  * Time:  2022-06-21-26  星期二
+ *
  * @author liujiajun_junw
  */
 public class Aaa006resulTset {

@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
 /**
  * Created by Intellij IDEA.
@@ -42,7 +42,7 @@ public class Aaa072Template extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");//网页的编码默认是UTF-8
+		request.setCharacterEncoding("UTF-8");// 网页的编码默认是UTF-8
 		// 这里我们将请求体的解析格式也设置为UTF-8就可以避免乱码
 		// 但是这种方法在post中不会生效
 		this.doGet(request, response);

@@ -7,8 +7,8 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import java.io.IOException;
 import java.io.InputStream;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
 /**
  * Created by Intellij IDEA.
@@ -23,13 +23,7 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE
  * @exception
  */
 public class SqLsessionFactoryUtil {
-	public SqLsessionFactoryUtil() {
-		LOG_SHOW.debug("123");
-	}
-
 	private static SqlSessionFactory sqlSessionFactory;// 提升作用域
-	// 新建一个成员变量
-
 
 	static {
 		try {
@@ -39,6 +33,12 @@ public class SqLsessionFactoryUtil {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	// 新建一个成员变量
+
+
+	public SqLsessionFactoryUtil() {
+		LOG_SHOW.debug("123");
 	}
 
 	public static SqlSessionFactory getSqlSessionFactory() {

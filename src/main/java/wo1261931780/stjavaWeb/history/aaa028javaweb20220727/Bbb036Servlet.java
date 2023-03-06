@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
 /**
  * Created by Intellij IDEA.
@@ -15,10 +15,11 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW
  * {
  * PACKAGE_NAME
  * }
- * @WebServlet(name = "Bbb036Servlet", value = "/Bbb036Servlet")
- * 作为一个基础的servlet，主要功能是进行分发，这里需要配置通配符路径
+ *
  * @param
  * @author liujiajun_junw
+ * @WebServlet(name = "Bbb036Servlet", value = "/Bbb036Servlet")
+ * 作为一个基础的servlet，主要功能是进行分发，这里需要配置通配符路径
  * @Date 2022-07-20-01  星期三
  * @description
  * @return

@@ -8,10 +8,9 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
 
-@WebServlet(urlPatterns = "/demoss", loadOnStartup = 1)// 这里，urlPattern表示访问的路径，loadOnStartUp表示优先级
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
@@ -21,6 +20,7 @@ import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW
  * @Date 2022-07-10-11  星期六
  * @description 要访问资源，就必须要设置访问的路径，我们在注解上，添加对应的路径即可
  */
+@WebServlet(urlPatterns = "/Aaa062Servlet", loadOnStartup = 1)// 这里，urlPattern表示访问的路径，loadOnStartUp表示优先级
 public class Aaa062Servlet implements Servlet {
 	private ServletConfig configDemo;
 
