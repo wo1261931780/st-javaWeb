@@ -40,7 +40,7 @@ public class Bbb002Servlet extends HttpServlet {
 		String substring = requestUri.substring(index + 1);
 
 		LOG_SHOW.debug("我是当前资源访问路径：" + substring);// 我是当前资源访问路径：/demo
-		LOG_SHOW.debug(this);// com.itheima.web.servlet.Bbb001Servlet@1976025b
+		LOG_SHOW.debug(String.valueOf(this));// com.itheima.web.servlet.Bbb001Servlet@1976025b
 		// 谁在访问这个分发的文件，那么就是谁作为对象，参与下面的调用过程
 		Class<? extends Bbb002Servlet> aClass = this.getClass();
 		try {

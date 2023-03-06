@@ -1,18 +1,17 @@
 package wo1261931780.stjavaWeb.history.aaa007jdbc20220619;
 
-import com.stssm.github.io.javaweb.aaa007jdbc20220619.mapper.TbBrandMapper0619;
-import com.stssm.github.io.javaweb.aaa007jdbc20220619.pojo.TbBrand0619;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.junit.jupiter.api.Test;
+import wo1261931780.stjavaWeb.history.aaa007jdbc20220619.mapper.TbBrandMapper0619;
+import wo1261931780.stjavaWeb.history.aaa007jdbc20220619.pojo.TbBrand0619;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 
 /**
  * Created by Intellij IDEA.
@@ -24,7 +23,7 @@ import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_S
  * Time:  2022-06-16-03  星期日
  */
 public class Aaa023MybatisInsertTest {
-	@Test
+	// @Test
 	public void mybatisInsert() {
 		// String resource = "mybatis-config.xml";
 		try {
@@ -55,7 +54,7 @@ public class Aaa023MybatisInsertTest {
 		}
 	}
 
-	@Test
+	// @Test
 	public void mybatisInsert2() {
 		// String resource = "mybatis-config.xml";
 		try {
@@ -84,7 +83,7 @@ public class Aaa023MybatisInsertTest {
 		}
 	}
 
-	@Test
+	// @Test
 	public void mybatisUpdate() {
 		// String resource = "mybatis-config.xml";
 		try {
@@ -116,7 +115,7 @@ public class Aaa023MybatisInsertTest {
 		}
 	}
 
-	@Test
+	// @Test
 	public void mybatisUpdate2() {
 		// String resource = "mybatis-config.xml";
 		try {

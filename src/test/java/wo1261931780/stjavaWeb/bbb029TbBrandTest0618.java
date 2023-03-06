@@ -1,19 +1,19 @@
 package wo1261931780.stjavaWeb;
 
-import com.stssm.github.io.javaweb.aaa006jdbc20220618.mapper.BrandMapper0618;
-import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.TbBrand0618;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.jupiter.api.Test;
+import wo1261931780.stjavaWeb.history.aaa006jdbc20220618.mapper.BrandMapper0618;
+import wo1261931780.stjavaWeb.history.aaa006jdbc20220618.pojo.TbBrand0618;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 
 /**
  * Created by Intellij IDEA.
@@ -31,7 +31,7 @@ public class bbb029TbBrandTest0618 {
 		SqlSession sqlSession = build.openSession();
 		BrandMapper0618 mapper = sqlSession.getMapper(BrandMapper0618.class);
 		List<TbBrand0618> tbBrand0618s = mapper.showRes();
-		LOG_SHOW.debug(tbBrand0618s);
+		LOG_SHOW.debug(tbBrand0618s.toString());
 		sqlSession.close();
 	}
 
@@ -44,7 +44,7 @@ public class bbb029TbBrandTest0618 {
 		SqlSession sqlSession = build.openSession();
 		BrandMapper0618 mapper = sqlSession.getMapper(BrandMapper0618.class);
 		TbBrand0618 tbBrand0618 = mapper.selectById(Integer.parseInt(id));
-		LOG_SHOW.debug(tbBrand0618);
+		LOG_SHOW.debug(String.valueOf(tbBrand0618));
 		sqlSession.close();
 	}
 }

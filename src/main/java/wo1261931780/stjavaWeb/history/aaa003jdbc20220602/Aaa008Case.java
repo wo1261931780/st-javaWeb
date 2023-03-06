@@ -22,7 +22,7 @@ public class Aaa008Case {
 		String paw = "root";
 		String url = "jdbc:mysql:///study002jdbc?useSSL=false";
 		String acc = "root";
-		ArrayList<com.stssm.github.io.javaweb.aaa003jdbc20220602.Aaa007Object> objects = new ArrayList<>();
+		ArrayList<Aaa007Object> objects = new ArrayList<>();
 		try (
 				Connection connection = DriverManager.getConnection(url, acc, paw)
 		) {
@@ -32,7 +32,7 @@ public class Aaa008Case {
 				int id = resultSet.getInt("id");
 				String name = resultSet.getString("name");
 				String price = resultSet.getString("price");
-				com.stssm.github.io.javaweb.aaa003jdbc20220602.Aaa007Object x = new com.stssm.github.io.javaweb.aaa003jdbc20220602.Aaa007Object(String.valueOf(id), name, price);
+				Aaa007Object x = new Aaa007Object(String.valueOf(id), name, price);
 				LOG_SHOW.debug(String.valueOf(objects.add(x)));
 			}
 		} catch (SQLException e) {

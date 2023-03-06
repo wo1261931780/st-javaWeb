@@ -1,6 +1,7 @@
 package wo1261931780.stjavaWeb.history.aaa025javaweb20220724;
 
-import com.alibaba.fastjson.JSON;
+
+import com.alibaba.fastjson2.JSON;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -1,17 +1,17 @@
 package wo1261931780.stjavaWeb.history.aaa006jdbc20220618;
 
-import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.DemoPojo0618;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import wo1261931780.stjavaWeb.history.aaa006jdbc20220618.pojo.DemoPojo0618;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 
 /**
  * Created by Intellij IDEA.
@@ -35,7 +35,7 @@ public class Aaa020javaEe {
 		// 通过代理模式，来获得对应类中的方法
 		// 之前要求xml和类名在同一个目录下面，因为编译完成后，也会将其放到一起
 		// 但是在开发过程中，要求类和resource分开放
-		LOG_SHOW.debug(resList);
+		LOG_SHOW.debug(resList.toString());
 		sqlSession.close();
 	}
 }

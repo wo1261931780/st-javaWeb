@@ -1,7 +1,6 @@
 package wo1261931780.stjavaWeb.history.aaa004jdbc20220615;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
-import org.junit.jupiter.api.Test;
 
 import javax.sql.DataSource;
 import java.io.FileInputStream;
@@ -21,7 +20,7 @@ import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_S
  * @author liujiajun_junw
  */
 public class Aaa020javaEeTestDemo4Test {
-	@Test
+	// @Test
 	public void test() throws Exception {
 		Properties prop = new Properties();
 		prop.load(new FileInputStream("src/druid.properties"));

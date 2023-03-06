@@ -1,6 +1,7 @@
 package wo1261931780.stjavaWeb.history.aaa025javaweb20220724;
 
-import com.alibaba.fastjson.JSON;
+
+import com.alibaba.fastjson2.JSON;
 
 import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
 
@@ -32,7 +33,7 @@ public class Bbb012 {
 		LOG_SHOW.debug(s);// {"address":"1111111","age":11,"name":"22222222222"}
 		Bbb015brandPojo bbb015brandPojo = JSON.parseObject("{\"address\":\"1111111\",\"age\":11,\"name\":\"22222222222\"}",
 				Bbb015brandPojo.class);
-		LOG_SHOW.debug(bbb015brandPojo);// Bbb015brandPojo{name='22222222222', age=11, address='1111111'}
+		LOG_SHOW.debug(String.valueOf(bbb015brandPojo));// Bbb015brandPojo{name='22222222222', age=11, address='1111111'}
 		LOG_SHOW.debug("我是对象内部的属性：" + bbb015brandPojo.getName());// 我是对象内部的属性：22222222222
 
 	}

@@ -1,6 +1,7 @@
 package wo1261931780.stjavaWeb.history.aaa030javaweb20220729;
 
-import com.alibaba.fastjson.JSON;
+
+import com.alibaba.fastjson2.JSON;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -65,7 +66,5 @@ public class Bbb001Servlet extends Bbb002Servlet {
 		String s = JSON.toJSONString(brandPageBean);
 		resp.setContentType("text/html;charset=utf-8");
 		resp.getWriter().write(s);
-
-
 	}
 }

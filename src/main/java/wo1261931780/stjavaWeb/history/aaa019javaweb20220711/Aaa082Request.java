@@ -1,11 +1,11 @@
 package wo1261931780.stjavaWeb.history.aaa019javaweb20220711;
 
-import com.stssm.github.io.javaweb.aaa019javaweb20220711.mapper.LoginMapper;
-import com.stssm.github.io.javaweb.aaa019javaweb20220711.pojo.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import wo1261931780.stjavaWeb.history.aaa019javaweb20220711.mapper.LoginMapper;
+import wo1261931780.stjavaWeb.history.aaa019javaweb20220711.pojo.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,8 +16,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 
-import static com.stssm.github.io.javaweb.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_SHOW;
+import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.RESOURCE;
 
 /**
  * Created by Intellij IDEA.
