@@ -21,8 +21,8 @@ import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_S
  * @return
  * @exception
  */
-@WebServlet(name = "Aaa077Forward", value = "/Aaa077Forward")
-public class Aaa077Forward extends HttpServlet {
+@WebServlet(name = "Aaa075Forward", value = "/Aaa075Forward")
+public class Aaa075Forward extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// request.setCharacterEncoding("UTF-8");

@@ -22,8 +22,8 @@ import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_S
  * @return
  * @exception
  */
-@WebServlet("/header")
-public class Aaa070requestHead extends HttpServlet {
+@WebServlet("/Aaa077requestHead")
+public class Aaa077requestHead extends HttpServlet {
 	/**
 	 * @param req
 	 * @param resp

@@ -25,8 +25,8 @@ import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.SPLIC
  * @return
  * @exception
  */
-@WebServlet("/reqTest2")
-public class Aaa071Simplification extends HttpServlet {
+@WebServlet("/Aaa068Simplification")
+public class Aaa068Simplification extends HttpServlet {
 	/**
 	 * @param req
 	 * @param resp
@@ -40,6 +40,7 @@ public class Aaa071Simplification extends HttpServlet {
 		// 为了简化开发，代码的请求过程，会将其作为键值对存储
 		// 但是考虑到key和value存在覆盖问题
 		// 所以map集合，最终的格式是string和string[]
+
 		LOG_SHOW.debug("我是get方法");
 		String method = req.getMethod();
 		LOG_SHOW.debug(method);// 这里也有一个坑
@@ -85,6 +86,7 @@ public class Aaa071Simplification extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// super.doPost(req, resp);
+
 		LOG_SHOW.debug("我是post方法");
 		this.doGet(req, resp);// 通过循环调用，简化代码
 	}

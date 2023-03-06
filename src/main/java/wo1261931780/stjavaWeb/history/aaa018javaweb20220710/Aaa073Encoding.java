@@ -18,7 +18,7 @@ import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_S
  * @return
  * @exception
  */
-public class Aaa075Encoding {
+public class Aaa073Encoding {
 	public static void main(String[] args) throws Exception {
 		String x = "张三";
 		String encode = URLEncoder.encode(x, StandardCharsets.UTF_8);

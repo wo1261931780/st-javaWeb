@@ -21,8 +21,8 @@ import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_S
  * @return
  * @exception
  */
-@WebServlet(urlPatterns = "/Aaa069requestLine", loadOnStartup = 1)
-public class Aaa069requestLine extends HttpServlet {
+@WebServlet(urlPatterns = "/Aaa076requestLine", loadOnStartup = 1)
+public class Aaa076requestLine extends HttpServlet {
 	// 请求转发，实际上就是根据请求，来完成不同服务之间的跳转
 	// 在http过程中
 	// request和response对象，都是由tomcat创建的
@@ -36,6 +36,7 @@ public class Aaa069requestLine extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// super.doGet(req, resp);
+
 		String format = String.format("我是请求对象：%s", req);
 		LOG_SHOW.debug(format);// org.apache.catalina.connector.RequestFacade@30cfbefb
 		// 组织的链接对象
