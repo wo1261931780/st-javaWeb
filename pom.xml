@@ -13,13 +13,20 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<!--<packaging>pom</packaging>-->
 	<name>st-javaWeb</name>
-	<description>Demo project for Spring Boot</description>
+	<description>java web项目</description>
 	<!--<modules>-->
 	<!--	<module>webDemoApp</module>-->
 	<!--	<module>webDemoApp2</module>-->
 	<!--</modules>-->
 	<properties>
 		<java.version>17</java.version>
+		<!--<spring-native.version>0.12.1</spring-native.version>-->
+		<!--maven的打包配置-->
+		<!--<maven.compiler.source>8</maven.compiler.source>-->
+		<!--<maven.compiler.target>8</maven.compiler.target>-->
+		<!--编码格式-->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 	<dependencies>
 		<!--=============================================================================================-->
@@ -28,12 +35,14 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+			<version>3.0.4</version>
 		</dependency>
 		<!--spring网络WEB-->
 		<!--使用Spring MVC构建Web，包括RESTful，应用程序。使用Apache Tomcat作为默认的嵌入式容器。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<version>3.0.4</version>
 			<!--<scope>test</scope>-->
 			<!--上面的scope表示作用范围-->
 			<!--在没有说明的情况下，scope默认就是compile-->
@@ -55,12 +64,14 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
+			<version>3.0.4</version>
 		</dependency>
 		<!--Spring Boot DevTools 开发人员工具-->
 		<!--提供快速的应用重启、LiveReload和配置，以增强开发体验。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
+			<version>3.0.4</version>
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
@@ -69,6 +80,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
+			<version>3.0.4</version>
 			<optional>true</optional>
 			<!--添加以后，可以避免自动装配报错-->
 		</dependency>
@@ -76,6 +88,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+			<version>3.0.4</version>
 		</dependency>
 		<!--=============================================================================================-->
 		<!--DEVELOPER_TOOLS-->
@@ -100,6 +113,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
+			<version>3.0.4</version>
 		</dependency>
 		<!--相比来说，jetty更加轻量，而且拓展性更强-->
 		<!--tomcat是apache的，而jetty是eclipse的-->
@@ -123,6 +137,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
+			<version>3.0.4</version>
 		</dependency>
 		<!--Spring Session WEB-->
 		<!--为管理用户会话信息提供API和实现。-->
@@ -134,7 +149,7 @@
 		<dependency>
 			<groupId>com.alibaba.fastjson2</groupId>
 			<artifactId>fastjson2</artifactId>
-			<version>2.0.24</version>
+			<version>2.0.25</version>
 		</dependency>
 
 
@@ -154,19 +169,21 @@
 		<!--JDBC API SQL-->
 		<!--数据库连接API，定义了客户端如何连接和查询数据库。-->
 		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	<groupId>org.springframework.boot</groupId>-->
-		<!--	&lt;!&ndash;spring操作数据库的包&ndash;&gt;-->
-		<!--	<artifactId>spring-boot-starter-data-jdbc</artifactId>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<!--spring操作数据库的包-->
+			<artifactId>spring-boot-starter-data-jdbc</artifactId>
+			<version>3.0.4</version>
+		</dependency>
 
 		<!--Spring Data JDBC SQL-->
 		<!--使用Spring Data，用普通的JDBC在SQL存储中保存数据。-->
 		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	<groupId>org.springframework.boot</groupId>-->
-		<!--	<artifactId>spring-boot-starter-jdbc</artifactId>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<version>3.0.4</version>
+		</dependency>
 		<!--MySQL JDBC driver.驱动-->
 		<!--mysql的驱动-->
 		<dependency>
@@ -245,17 +262,7 @@
 		<!--=============================================================================================-->
 		<!--redis的包-->
 		<!--=============================================================================================-->
-		<!--spring boot对redis做了整合-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-redis</artifactId>
-		</dependency>
-		<!--用来连接，操作redis-->
-		<dependency>
-			<groupId>redis.clients</groupId>
-			<artifactId>jedis</artifactId>
-			<version>2.10.2</version>
-		</dependency>
+
 
 
 		<!--=============================================================================================-->
@@ -265,6 +272,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<version>3.0.4</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -284,6 +292,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
+			<version>3.0.4</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
@@ -449,8 +458,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.2</version>
 				<configuration>
-					<source>8</source>
-					<target>8</target>
+					<source>10</source>
+					<target>10</target>
 				</configuration>
 				<!--<configuration>-->
 				<!--	<source>1.8</source>-->

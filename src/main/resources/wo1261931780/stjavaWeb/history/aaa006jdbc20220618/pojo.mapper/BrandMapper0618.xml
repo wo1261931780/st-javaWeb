@@ -3,7 +3,7 @@
 		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--名称标签，先随便写一个-->
-<mapper namespace="com.stssm.github.io.javaweb.aaa006jdbc20220618.mapper.BrandMapper0618">
+<mapper namespace="wo1261931780.stjavaWeb.history.aaa006jdbc20220618.mapper.BrandMapper0618">
 	<sql id="demo">
 		id,
 		brand_name   as brandName,
@@ -13,7 +13,7 @@
 		status
 	</sql>
 
-	<!--<select id="showRes" resultType="com.stssm.github.io.javaweb.aaa004JDBC2022年6月18日.pojo.Bbb029TbBrand">-->
+	<!--<select id="showRes" resultType="wo1261931780.stjavaWeb.history.aaa004JDBC2022年6月18日.pojo.Bbb029TbBrand">-->
 	<!--select * from mybatis.tb_brand where id =#{id};-->
 	<!--		select * from mybatis.tb_brand ;-->
 	<!--这里有个问题，-->
@@ -42,7 +42,7 @@
 		from tb_brand;
 	</select>
 
-	<select id="selectById" resultType="com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.TbBrand0618">
+	<select id="selectById" resultType="wo1261931780.stjavaWeb.history.aaa006jdbc20220618.pojo.TbBrand0618">
 		select
 		<include refid="demo">
 		</include>

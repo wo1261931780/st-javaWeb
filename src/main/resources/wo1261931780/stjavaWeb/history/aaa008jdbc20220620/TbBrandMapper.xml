@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.stssm.github.io.javaweb.aaa008jdbc20220620.mapper.TbBrandMapper">
-	<resultMap id="BaseResultMap" type="com.stssm.github.io.javaweb.aaa008jdbc20220620.pojo.TbBrand">
+<mapper namespace="wo1261931780.stjavaWeb.history.aaa008jdbc20220620.mapper.TbBrandMapper">
+	<resultMap id="BaseResultMap" type="wo1261931780.stjavaWeb.history.aaa008jdbc20220620.pojo.TbBrand">
 		<!--@mbg.generated-->
 		<!--@Table mybatis.tb_brand-->
 		<id column="id" jdbcType="INTEGER" property="id"/>

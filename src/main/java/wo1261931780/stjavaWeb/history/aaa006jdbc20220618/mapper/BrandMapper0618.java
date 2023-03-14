@@ -1,6 +1,7 @@
 package wo1261931780.stjavaWeb.history.aaa006jdbc20220618.mapper;
 
-import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.TbBrand0618;
+
+import wo1261931780.stjavaWeb.history.aaa006jdbc20220618.pojo.TbBrand0618;
 
 import java.util.List;
 

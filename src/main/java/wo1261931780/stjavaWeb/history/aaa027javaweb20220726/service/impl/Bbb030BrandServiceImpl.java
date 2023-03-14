@@ -10,10 +10,10 @@
  */
 package wo1261931780.stjavaWeb.history.aaa027javaweb20220726.service.impl;
 
-import com.stssm.github.io.javaweb.aaa027javaweb20220726.mapper.Bbb028brandMapper;
-import com.stssm.github.io.javaweb.aaa027javaweb20220726.pojo.Bbb029TbBrand;
-import com.stssm.github.io.javaweb.aaa027javaweb20220726.service.Bbb031brandService;
-import com.stssm.github.io.javaweb.aaa027javaweb20220726.util.SqlSessionFactoryUtils;
+import wo1261931780.stjavaWeb.history.aaa027javaweb20220726.mapper.Bbb028brandMapper;
+import wo1261931780.stjavaWeb.history.aaa027javaweb20220726.pojo.Bbb029TbBrand;
+import wo1261931780.stjavaWeb.history.aaa027javaweb20220726.service.Bbb031brandService;
+import wo1261931780.stjavaWeb.history.aaa027javaweb20220726.util.SqlSessionFactoryUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 

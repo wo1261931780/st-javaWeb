@@ -11,10 +11,10 @@ package wo1261931780.stjavaWeb.history.aaa027javaweb20220726.web.servlet; /**
  * @exception
  */
 
-import com.alibaba.fastjson.JSON;
-import com.stssm.github.io.javaweb.aaa027javaweb20220726.pojo.Bbb029TbBrand;
-import com.stssm.github.io.javaweb.aaa027javaweb20220726.service.Bbb031brandService;
-import com.stssm.github.io.javaweb.aaa027javaweb20220726.service.impl.Bbb030BrandServiceImpl;
+import com.alibaba.fastjson2.JSON;
+import wo1261931780.stjavaWeb.history.aaa027javaweb20220726.pojo.Bbb029TbBrand;
+import wo1261931780.stjavaWeb.history.aaa027javaweb20220726.service.Bbb031brandService;
+import wo1261931780.stjavaWeb.history.aaa027javaweb20220726.service.impl.Bbb030BrandServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

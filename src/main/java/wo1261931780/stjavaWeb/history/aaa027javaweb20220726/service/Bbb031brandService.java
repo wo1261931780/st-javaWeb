@@ -1,6 +1,6 @@
 package wo1261931780.stjavaWeb.history.aaa027javaweb20220726.service;
 
-import com.stssm.github.io.javaweb.aaa027javaweb20220726.pojo.Bbb029TbBrand;
+import wo1261931780.stjavaWeb.history.aaa027javaweb20220726.pojo.Bbb029TbBrand;
 
 import java.util.List;
 

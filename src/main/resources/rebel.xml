@@ -9,13 +9,13 @@
 	<id>webDemoApp</id>
 
 	<classpath>
-		<dir name="C:/Users/64234/Documents/GitHub/st-javaweb.github.io/webDemoApp/target/classes">
+		<dir name="C:/Users/64234/Documents/GitHub/st-javaWeb/webDemoApp/target/classes">
 		</dir>
 	</classpath>
 
 	<web>
 		<link target="/">
-			<dir name="C:/Users/64234/Documents/GitHub/st-javaweb.github.io/webDemoApp/src/main/webapp">
+			<dir name="C:/Users/64234/Documents/GitHub/st-javaWeb/webDemoApp/src/main/webapp">
 			</dir>
 		</link>
 	</web>

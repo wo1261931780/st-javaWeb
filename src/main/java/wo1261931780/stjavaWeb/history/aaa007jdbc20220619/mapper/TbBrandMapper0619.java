@@ -1,7 +1,7 @@
 package wo1261931780.stjavaWeb.history.aaa007jdbc20220619.mapper;
 
-import com.stssm.github.io.javaweb.aaa007jdbc20220619.pojo.TbBrand0619;
 import org.apache.ibatis.annotations.Param;
+import wo1261931780.stjavaWeb.history.aaa007jdbc20220619.pojo.TbBrand0619;
 
 import java.util.List;
 import java.util.Map;

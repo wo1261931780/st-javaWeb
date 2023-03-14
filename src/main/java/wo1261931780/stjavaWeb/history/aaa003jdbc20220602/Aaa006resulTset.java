@@ -9,7 +9,7 @@ import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.LOG_S
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
- * Package:com.stssm.github.io.javaweb.aaa003jdbc20220602
+ * Package:wo1261931780.stjavaWeb.history.aaa003jdbc20220602
  * Bbb010User:  wo1261931780@gmail.com
  * Time:  2022-06-21-26  星期二
  *

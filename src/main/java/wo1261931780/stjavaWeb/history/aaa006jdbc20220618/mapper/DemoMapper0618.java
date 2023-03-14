@@ -1,13 +1,13 @@
 package wo1261931780.stjavaWeb.history.aaa006jdbc20220618.mapper;
 
-import com.stssm.github.io.javaweb.aaa006jdbc20220618.pojo.DemoPojo0618;
+import wo1261931780.stjavaWeb.history.aaa006jdbc20220618.pojo.DemoPojo0618;
 
 import java.util.List;
 
 /**
  * Created by Intellij IDEA.
  * Project:st-ssm.github.io
- * Package:com.stssm.github.io.javaweb.aaa004JDBC2022年6月18日.mapper
+ * Package:wo1261931780.stjavaWeb.history.aaa004JDBC2022年6月18日.mapper
  * Bbb010User:  liujiajun_junw
  *
  * @author liujiajun_junw

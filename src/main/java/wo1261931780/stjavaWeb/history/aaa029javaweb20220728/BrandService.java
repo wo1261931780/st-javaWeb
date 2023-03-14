@@ -1,6 +1,5 @@
 package wo1261931780.stjavaWeb.history.aaa029javaweb20220728;
 
-import com.itheima.pojo.PageBean;
 
 import java.util.List;
 
@@ -38,7 +37,7 @@ public interface BrandService {
 	 * @param pageSize    每页展示条数
 	 * @return
 	 */
-	PageBean<Brand> selectByPage(int currentPage, int pageSize);
+	// PageBean<Brand> selectByPage(int currentPage, int pageSize);
 
 	/**
 	 * 分页条件查询
@@ -48,7 +47,7 @@ public interface BrandService {
 	 * @param brand
 	 * @return
 	 */
-	PageBean<Brand> selectByPageAndCondition(int currentPage, int pageSize, Brand brand);
+	// PageBean<Brand> selectByPageAndCondition(int currentPage, int pageSize, Brand brand);
 
 
 	/**

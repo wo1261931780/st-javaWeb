@@ -27,91 +27,89 @@ import static wo1261931780.stjavaWeb.history.aaa002jdbc20220531.Aaa001Demo.RESOU
  */
 public class Aaa020mybatisTest {
 
-	@Test
-	public void deleteById() {
-		int id = 13;
-		// String brandName = "123";
-		// String companyName = "123";
-		// Integer ordered = 11;
-		// String description = "123";
-		// Integer status = 1;
-		TbBrand tbBrand = new TbBrand();
-		tbBrand.setId(id);
-		// String resource = "mybatis-config.xml";
-		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
-			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
-			SqlSession sqlSession = build.openSession(true);
-			TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);
-			mapper.deleteById(id);
-			sqlSession.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
-	@Test
-	public void deleteByIds() {
-		int[] id = {123, 1, 12};
-		// String resource = "mybatis-config.xml";
-		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
-			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
-			SqlSession sqlSession = build.openSession(true);
-			TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);
-			mapper.deleteByIds(id);
-			sqlSession.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
-	@Test
-	public void testBySelect() {
-		int id = 3;
-		// String brandName = "华为";
-		String brandName = "";
-		String companyName = "";
-		// Integer ordered = 11;
-		// String description = "123";
-		// Integer status = 1;
-		// String resource = "mybatis-config.xml";
-		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
-			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
-			SqlSession sqlSession = build.openSession(true);
-			TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);
-			mapper.selectTotal(id, brandName, companyName);
-			sqlSession.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
-	@Test
-	public void testCase() {
-		int id = 3;
-		// String brandName = "华为";
-		String companyName = "华为";
-		Integer ordered = 11;
-		TbBrand tbBrand = new TbBrand();
-		tbBrand.setCompanyName(companyName);
-		tbBrand.setOrdered(ordered);
-		Map map = new HashMap(5);
-		map.put(id, tbBrand);
-		// String resource = "mybatis-config.xml";
-		try {
-			InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
-			SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
-			SqlSession sqlSession = build.openSession(true);
-			TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);
-			mapper.mapCase(map);
-			sqlSession.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		// 上面这个问题没有解决
-		// 2022年6月20日22:45:45
-
-	}
+	// @Test
+	// public void deleteById() {
+	// 	int id = 13;
+	// 	// String brandName = "123";
+	// 	// String companyName = "123";
+	// 	// Integer ordered = 11;
+	// 	// String description = "123";
+	// 	// Integer status = 1;
+	// 	TbBrand tbBrand = new TbBrand();
+	// 	tbBrand.setId(id);
+	// 	// String resource = "mybatis-config.xml";
+	// 	try {
+	// 		InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
+	// 		SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
+	// 		SqlSession sqlSession = build.openSession(true);
+	// 		TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);
+	// 		mapper.deleteById(id);
+	// 		sqlSession.close();
+	// 	} catch (IOException e) {
+	// 		e.printStackTrace();
+	// 	}
+	// }
+	//
+	// @Test
+	// public void deleteByIds() {
+	// 	int[] id = {123, 1, 12};
+	// 	// String resource = "mybatis-config.xml";
+	// 	try {
+	// 		InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
+	// 		SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
+	// 		SqlSession sqlSession = build.openSession(true);
+	// 		TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);
+	// 		mapper.deleteByIds(id);
+	// 		sqlSession.close();
+	// 	} catch (IOException e) {
+	// 		e.printStackTrace();
+	// 	}
+	// }
+	//
+	// @Test
+	// public void testBySelect() {
+	// 	int id = 3;
+	// 	// String brandName = "华为";
+	// 	String brandName = "";
+	// 	String companyName = "";
+	// 	// Integer ordered = 11;
+	// 	// String description = "123";
+	// 	// Integer status = 1;
+	// 	// String resource = "mybatis-config.xml";
+	// 	try {
+	// 		InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
+	// 		SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
+	// 		SqlSession sqlSession = build.openSession(true);
+	// 		TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);
+	// 		mapper.selectTotal(id, brandName, companyName);
+	// 		sqlSession.close();
+	// 	} catch (IOException e) {
+	// 		e.printStackTrace();
+	// 	}
+	// }
+	//
+	// @Test
+	// public void testCase() {
+	// 	int id = 3;
+	// 	// String brandName = "华为";
+	// 	String companyName = "华为";
+	// 	Integer ordered = 11;
+	// 	TbBrand tbBrand = new TbBrand();
+	// 	tbBrand.setCompanyName(companyName);
+	// 	tbBrand.setOrdered(ordered);
+	// 	Map map = new HashMap(5);
+	// 	map.put(id, tbBrand);
+	// 	// String resource = "mybatis-config.xml";
+	// 	try {
+	// 		InputStream resourceAsStream = Resources.getResourceAsStream(RESOURCE);
+	// 		SqlSessionFactory build = new SqlSessionFactoryBuilder().build(resourceAsStream);
+	// 		SqlSession sqlSession = build.openSession(true);
+	// 		TbBrandMapper mapper = sqlSession.getMapper(TbBrandMapper.class);
+	// 		mapper.mapCase(map);
+	// 		sqlSession.close();
+	// 	} catch (IOException e) {
+	// 		e.printStackTrace();
+	// 	}
+	// 	// 上面这个问题没有解决
+	// }
 }

@@ -1,6 +1,6 @@
 package wo1261931780.stjavaWeb.history.aaa019javaweb20220711.mapper;
 
-import com.stssm.github.io.javaweb.aaa019javaweb20220711.pojo.User;
+import wo1261931780.stjavaWeb.history.aaa019javaweb20220711.pojo.User;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
