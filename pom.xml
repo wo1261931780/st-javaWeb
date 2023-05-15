@@ -137,7 +137,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
-			<version>3.0.5</version>
+			<version>3.0.6</version>
 		</dependency>
 		<!--Spring Session WEB-->
 		<!--为管理用户会话信息提供API和实现。-->
