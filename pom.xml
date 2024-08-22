@@ -113,7 +113,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
-			<version>3.3.1</version>
+			<version>3.3.2</version>
 		</dependency>
 		<!--相比来说，jetty更加轻量，而且拓展性更强-->
 		<!--tomcat是apache的，而jetty是eclipse的-->
