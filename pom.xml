@@ -64,14 +64,14 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
-			<version>3.3.2</version>
+			<version>3.3.3</version>
 		</dependency>
 		<!--Spring Boot DevTools 开发人员工具-->
 		<!--提供快速的应用重启、LiveReload和配置，以增强开发体验。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
-			<version>3.3.2</version>
+			<version>3.3.3</version>
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
@@ -80,7 +80,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
-			<version>3.3.2</version>
+			<version>3.3.3</version>
 			<optional>true</optional>
 			<!--添加以后，可以避免自动装配报错-->
 		</dependency>
